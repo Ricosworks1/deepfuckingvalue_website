@@ -97,9 +97,11 @@
   dd.emph { font-size: 1.25rem; font-weight: 600; color: var(--navy); }
   dd .note { display: block; font-family: var(--f-body); font-size: 0.75rem; color: var(--ink-faint); margin-top: 0.2rem; }
 
-  .facts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.9375rem; }
-  .facts li { display: flex; gap: 0.6rem; align-items: baseline; color: var(--ink-soft); }
-  .facts li::before { content: "✓"; color: var(--ok); font-weight: 700; flex-shrink: 0; }
+  .facts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9375rem; }
+  .facts li { display: grid; grid-template-columns: 1.1em 1fr; gap: 0.5rem; align-items: baseline; color: var(--ink-soft); }
+  .facts li::before { content: "✓"; color: var(--ok); font-weight: 700; }
+  .facts strong { color: var(--ink); }
+  .facts code { font-family: var(--f-mono); font-size: 0.875em; }
 
   .verify-box { background: var(--red-sunk); border: 2px solid var(--red); }
   .verify-box h2 { color: var(--red); }
@@ -159,16 +161,16 @@
   <div class="panel">
     <h2>What this page can and cannot do</h2>
     <ul class="facts">
-      <li><strong>No token approval is ever requested.</strong> The only transaction is
-        <code>claim()</code>, which takes no parameters.</li>
-      <li><strong>Tokens can only go to you.</strong> The contract sends to the caller —
-        there is no recipient field for anyone to alter.</li>
-      <li><strong>Checking costs nothing.</strong> Reading your balance is free and requires
-        no signature.</li>
-      <li><strong>No deadline, ever.</strong> Vesting releases on its own schedule. Claim
-        today or in five years; nothing expires.</li>
-      <li><strong>This page loads no external code.</strong> No libraries, no CDN — one
-        small script you can read in full.</li>
+      <li><span><strong>No token approval is ever requested.</strong> The only transaction is
+        <code>claim()</code>, which takes no parameters.</span></li>
+      <li><span><strong>Tokens can only go to you.</strong> The contract sends to the caller —
+        there is no recipient field for anyone to alter.</span></li>
+      <li><span><strong>Checking costs nothing.</strong> Reading your balance is free and requires
+        no signature.</span></li>
+      <li><span><strong>No deadline, ever.</strong> Vesting releases on its own schedule. Claim
+        today or in five years; nothing expires.</span></li>
+      <li><span><strong>This page loads no external code.</strong> No libraries, no CDN — one
+        small script you can read in full.</span></li>
     </ul>
   </div>
 
