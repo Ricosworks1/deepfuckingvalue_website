@@ -1,10 +1,26 @@
 # Security headers for Cloudflare Pages.
-# The site is 100% static with ZERO JavaScript, so the policy can be
-# maximally strict: nothing may load, connect, or execute except the
-# inline stylesheet and the embedded data: URIs for the logo and font.
+#
+# Two policies. The marketing site runs ZERO JavaScript, so its policy omits
+# script-src entirely — falling back to `default-src 'none'`, which means no
+# script can execute there under any circumstances, injected or otherwise.
+#
+# The claim app needs JavaScript for wallet access, so it gets its own policy:
+# script-src 'self' allows only same-origin files (app.js) and still blocks
+# every inline or third-party script. connect-src stays 'none' because wallet
+# calls travel through the injected EIP-1193 provider, not through the page.
 
 /*
   Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+/claim/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
