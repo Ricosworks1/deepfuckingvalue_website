@@ -271,6 +271,14 @@
 
   .callout strong { color: var(--navy); }
 
+  .donate {
+    font-family: var(--f-mono); font-size: 0.8125rem; word-break: break-all;
+    background: var(--paper); border: 2px solid var(--rule); border-radius: 8px;
+    padding: 0.6rem 0.8rem; margin-top: 0.25rem;
+  }
+  .donate a { color: var(--navy); text-decoration: none; }
+  .donate a:hover { color: var(--red); }
+
   /* ---------- verify ---------- */
   .verify { border: 3px solid var(--red); border-radius: 16px; background: var(--red-sunk); padding: clamp(1.25rem, 3.5vw, 2.25rem); }
   .verify h3 { color: var(--red); font-family: var(--f-hand); font-size: 1.875rem; }
@@ -407,7 +415,7 @@
           <span class="alloc-pct">0.35%</span>
           <div class="alloc-bar"><div class="alloc-fill" style="width:0.35%"></div></div>
           <div class="alloc-meta">
-            <span>491,353,345.96 DFV</span><span>community + team, spent by proposal</span>
+            <span>491,353,345.96 DFV</span><span>community-controlled, spent by proposal</span>
           </div>
         </div>
 
@@ -422,9 +430,13 @@
       </div>
 
       <div class="callout">
-        <p><strong>No team allocation.</strong> There is no founder tranche and no advisor
-        tranche. Whatever the team receives comes out of the DAO treasury — the same 0.35%
-        the community controls, spent by proposal, in public.</p>
+        <p><strong>No team allocation.</strong> There is no founder tranche, no advisor
+        tranche, and no salary line anywhere in the supply. The team works on DFV largely
+        pro bono.</p>
+        <p>If you want to support the work, gifts and donations are welcome at the main
+        DFV address — entirely voluntary, and nothing is owed in return:</p>
+        <p class="donate"><a href="https://etherscan.io/address/0xdF80e38699bb963a91c5F04F83378A597995932a"
+          rel="noopener">0xdF80e38699bb963a91c5F04F83378A597995932a</a></p>
       </div>
     </div>
   </section>
