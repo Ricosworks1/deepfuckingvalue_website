@@ -73,6 +73,22 @@ function formatAmount(raw) {
 
 const shortAddr = (a) => a.slice(0, 6) + '…' + a.slice(-4);
 
+function fmtDate(ms) {
+  return new Date(ms).toLocaleDateString(undefined, {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
+}
+
+/* Human-readable gap between two timestamps: years/months for long spans,
+   days when the date is close enough to count down to. */
+function daysBetween(from, to) {
+  const days = Math.ceil((to - from) / 86400000);
+  if (days < 60) return `${days} day${days === 1 ? '' : 's'}`;
+  const months = Math.round(days / 30.44);
+  if (months < 24) return `${months} months`;
+  return `${(days / 365.25).toFixed(1)} years`;
+}
+
 /* ---------- provider access ---------- */
 
 function provider() {
@@ -152,14 +168,22 @@ function renderPosition(claimable, pool) {
     add('Available now', formatAmount(claimable) + ' DFV', null, true);
     add('Still locked', formatAmount(locked > 0n ? locked : 0n) + ' DFV');
 
-    const cliffEnd = Number(pool.start + pool.cliffDuration) * 1000;
     const now = Date.now();
+    const startMs   = Number(pool.start) * 1000;
+    const cliffEnd  = Number(pool.start + pool.cliffDuration) * 1000;
+    const fullyMs   = Number(pool.start + pool.cliffDuration + pool.periodDuration * pool.periodCount) * 1000;
+
+    add('Vesting started', fmtDate(startMs));
+
     if (now < cliffEnd) {
-      const days = Math.ceil((cliffEnd - now) / 86400000);
-      add('Cliff ends', new Date(cliffEnd).toLocaleDateString(undefined, {
-        year: 'numeric', month: 'long', day: 'numeric',
-      }), `${days} day${days === 1 ? '' : 's'} to go — nothing is claimable before this`);
+      add('Cliff ends', fmtDate(cliffEnd),
+        `${daysBetween(now, cliffEnd)} to go — nothing is claimable before this`);
+    } else {
+      add('Cliff ended', fmtDate(cliffEnd), 'tokens are releasing continuously');
     }
+
+    add('Fully vested', fmtDate(fullyMs),
+      now < fullyMs ? `${daysBetween(now, fullyMs)} remaining` : 'complete');
   } else {
     add('Available now', formatAmount(claimable) + ' DFV', null, true);
   }
