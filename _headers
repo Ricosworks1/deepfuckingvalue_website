@@ -25,6 +25,12 @@
 /index.html
   Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
+# Trading leaderboard — generated nightly, also zero JavaScript. The numbers
+# are computed at build time and baked into the HTML, so this page needs no
+# script and no network access of its own.
+/leaderboard/*
+  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
 # Claim app — needs JavaScript for wallet access. script-src 'self' permits only
 # same-origin files (app.js) and still blocks every inline and third-party
 # script. connect-src stays 'none': wallet calls go through the injected
