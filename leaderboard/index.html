@@ -85,6 +85,32 @@
 
   .empty { padding: 1.5rem; border: 2px dashed var(--rule); border-radius: 12px; color: var(--ink-soft); font-size: 0.9375rem; margin: 0; }
 
+  /* ---------- prize banner ---------- */
+  .prize {
+    margin-top: 2rem;
+    border: 3px solid var(--red);
+    border-radius: 16px;
+    background: var(--red-sunk);
+    padding: clamp(1.1rem, 3.5vw, 1.75rem);
+  }
+  .prize h2 { color: var(--red); margin-bottom: 0.5rem; }
+  .prize p { margin: 0 0 0.75rem; font-size: 0.9375rem; color: var(--ink-soft); max-width: 62ch; }
+  .prize p:last-child { margin-bottom: 0; }
+  .prize strong { color: var(--ink); }
+  .prize-lead { font-size: 1.0625rem !important; color: var(--ink) !important; }
+  .prize-holder {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem;
+    margin: 1rem 0; padding: 0.85rem 1rem; border-radius: 10px;
+    background: var(--paper); border: 2px solid var(--red);
+  }
+  .prize-holder .who { font-family: var(--f-mono); font-size: 0.9375rem; font-weight: 600; }
+  .prize-holder .amt { font-family: var(--f-mono); font-size: 0.9375rem; color: var(--navy); font-weight: 600; margin-left: auto; }
+  .prize-holder .tagline { font-size: 0.6875rem; font-family: var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); flex-basis: 100%; }
+
+  @media (max-width: 40rem) {
+    .prize-holder .amt { margin-left: 0; }
+  }
+
   .downloads { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
   .dl { display: inline-flex; align-items: center; gap: 0.5ch; font-family: var(--f-mono); font-size: 0.8125rem; font-weight: 600; padding: 0.65rem 1.1rem; border-radius: 999px; border: 2px solid var(--navy); color: var(--navy); text-decoration: none; }
   .dl:hover { background: var(--navy); color: var(--paper); }
@@ -109,6 +135,31 @@
     once a day — nothing here is typed in by hand, and the raw data is downloadable
     below.
   </p>
+
+  <div class="prize">
+    <h2>10% of pool revenue to the top trader</h2>
+    <p class="prize-lead">
+      Every month, the address with the highest trading volume receives
+      <strong>10% of all revenue the DFV pool generates</strong> that month.
+    </p>
+    <div class="prize-holder">
+      <span class="tagline">Currently leading — August 2026</span>
+      <span class="who">nobody yet</span>
+      <span class="amt">first trade takes the lead</span>
+    </div>
+    <p>
+      Pool revenue means the trading fees the DFV liquidity position earns. Payment is
+      made <strong>on-chain</strong>, so every distribution appears on Etherscan and can be
+      checked against the volume figures on this page. The ranking is rebuilt from the
+      blockchain daily and the underlying data is downloadable below — nothing is decided
+      behind closed doors.
+    </p>
+    <p>
+      The month runs from the 1st to the last day, UTC. Ranking is by USDC volume, buys and
+      sells counted together. Wash trading is self-defeating: fees paid to climb the board
+      exceed the share returned.
+    </p>
+  </div>
 
   <dl class="stats">
     <div class="stat"><dt>Trades, all time</dt><dd>24</dd></div>
