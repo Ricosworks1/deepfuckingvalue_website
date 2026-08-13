@@ -179,6 +179,23 @@
 
   .banner a:hover { border-bottom-color: #fff; }
 
+  /* Phones: drop the redundant date line, tighten the units, and let the
+     label sit on its own row so the digits never wrap mid-countdown. */
+  @media (max-width: 40rem) {
+    .banner { gap: 0.4rem 0.75rem; padding: 0.6rem 0.9rem; }
+    .banner-date { display: none; }
+    .banner-label { flex-basis: 100%; font-size: 0.8125rem; }
+    .cd { gap: 0.3rem; }
+    .cd-unit { padding: 0.15rem 0.4rem; gap: 0.2ch; }
+    .cd-unit b { font-size: 0.875rem; }
+    .cd-unit i { font-size: 0.5625rem; letter-spacing: 0.05em; }
+    .banner a { font-size: 0.75rem; }
+  }
+
+  @media (max-width: 24rem) {
+    .banner a { flex-basis: 100%; }
+  }
+
   /* ---------- masthead ---------- */
   .masthead {
     position: sticky; top: 0; z-index: 20;
@@ -397,6 +414,13 @@
   .vesting-meta span:first-child { color: var(--navy); font-weight: 600; }
 
   @media (prefers-reduced-motion: reduce) { .vesting-fill { transition: none; } }
+
+  @media (max-width: 40rem) {
+    .vesting { padding: 0.9rem 1rem 1rem; margin-top: 2rem; }
+    .vesting-head { gap: 0.25rem; }
+    .vesting-pct { font-size: 1.125rem; }
+    .vesting-meta { gap: 0.25rem 0.9rem; font-size: 0.6875rem; }
+  }
 
   .donate {
     font-family: var(--f-mono); font-size: 0.8125rem; word-break: break-all;
