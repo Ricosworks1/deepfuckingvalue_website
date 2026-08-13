@@ -35,16 +35,19 @@ jobs:
       - name: Render the leaderboard page
         run: node scripts/build-leaderboard.mjs
 
-      - name: Commit only if something actually changed
+      - name: Commit only if the trade data actually changed
         run: |
           git config user.name  "DFV leaderboard bot"
           git config user.email "actions@users.noreply.github.com"
 
-          # index.html always contains a fresh "last rebuilt" timestamp, so it
-          # is deliberately excluded from the change check — otherwise every
-          # run would produce a commit and a redeploy for no reason.
-          if git diff --quiet -- leaderboard/trades.json leaderboard/trades.csv leaderboard/leaderboard.csv; then
-            echo "No new trades since the last run. Nothing to publish."
+          # Only the CSVs are compared. index.html and trades.json both carry a
+          # "generated at" timestamp that changes on every single run, so
+          # including them here would mean committing and redeploying nightly
+          # even when nobody has traded. The CSVs contain trade data and
+          # nothing else, which makes them the honest signal.
+          if git diff --quiet -- leaderboard/trades.csv leaderboard/leaderboard.csv; then
+            echo "No new trades since the last run. Discarding the rebuild."
+            git checkout -- leaderboard/
             exit 0
           fi
 
