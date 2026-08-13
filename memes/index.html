@@ -1,0 +1,209 @@
+<title>Meme Maker — DFV</title>
+<meta name="description" content="Make a DFV meme in your browser. Nothing uploads, nothing is stored.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal; font-weight: 400; font-display: swap;
+    src: url(/assets/architects-daughter.woff2) format('woff2');
+  }
+
+  :root {
+    --paper: #ffffff; --paper-sunk: #f3f4f4;
+    --navy: #223f84; --ink: #1b2540; --ink-soft: #515b78; --ink-faint: #8b93a8;
+    --red: #e32c4d; --red-sunk: #fdeef1;
+    --rule: #dfe4ed; --on-accent: #ffffff;
+    --f-hand: 'Architects Daughter', 'Bradley Hand', cursive;
+    --f-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --f-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --gut: clamp(1.1rem, 4vw, 2rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0e1730; --paper-sunk: #121d3a;
+      --navy: #9db4ec; --ink: #e7ecf7; --ink-soft: #a9b3cc; --ink-faint: #737d99;
+      --red: #ff5573; --red-sunk: #2c1421;
+      --rule: #25314f; --on-accent: #0e1730;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0e1730; --paper-sunk: #121d3a;
+    --navy: #9db4ec; --ink: #e7ecf7; --ink-soft: #a9b3cc; --ink-faint: #737d99;
+    --red: #ff5573; --red-sunk: #2c1421;
+    --rule: #25314f; --on-accent: #0e1730;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--f-body); line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 64rem; margin: 0 auto; padding: clamp(1.5rem, 5vw, 3rem) var(--gut) 4rem; }
+
+  a { color: var(--red); }
+  :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 4px; }
+
+  .back { display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--ink-soft); text-decoration: none; margin-bottom: 1.5rem; }
+  .back:hover { color: var(--red); }
+
+  h1 { font-family: var(--f-hand); font-size: clamp(2.25rem, 1.5rem + 3vw, 3.5rem); color: var(--navy); margin: 0; line-height: 1; }
+  .sub { color: var(--ink-soft); margin: 0.75rem 0 0; max-width: 54ch; }
+
+  .studio {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: clamp(1.25rem, 3vw, 2.25rem);
+    margin-top: 2.25rem;
+    align-items: start;
+  }
+
+  @media (max-width: 54rem) { .studio { grid-template-columns: 1fr; } }
+
+  .stage { border: 2px solid var(--rule); border-radius: 14px; padding: 0.75rem; background: var(--paper-sunk); }
+  canvas { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; }
+
+  .panel { display: flex; flex-direction: column; gap: 1.4rem; }
+
+  fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+  legend { font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); padding: 0; margin-bottom: 0.35rem; }
+
+  label { font-size: 0.8125rem; font-weight: 600; color: var(--ink-soft); }
+
+  input[type="text"], select {
+    width: 100%; font-family: inherit; font-size: 0.9375rem;
+    padding: 0.6rem 0.7rem; border: 2px solid var(--rule); border-radius: 8px;
+    background: var(--paper); color: var(--ink);
+  }
+  input[type="text"]:focus, select:focus { border-color: var(--navy); }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .swatch {
+    width: 2.25rem; height: 2.25rem; border-radius: 8px; cursor: pointer;
+    border: 3px solid var(--rule); padding: 0;
+  }
+  .swatch[aria-pressed="true"] { border-color: var(--red); transform: scale(1.06); }
+
+  .file-row { display: flex; flex-direction: column; gap: 0.35rem; }
+  input[type="file"] { font-size: 0.8125rem; color: var(--ink-soft); }
+  #file-name { font-family: var(--f-mono); font-size: 0.6875rem; color: var(--ink-faint); word-break: break-all; }
+
+  .row { display: flex; align-items: center; gap: 0.6rem; }
+  .row label { font-weight: 500; font-size: 0.875rem; }
+  input[type="range"] { width: 100%; accent-color: var(--red); }
+  input[type="checkbox"] { accent-color: var(--red); width: 1rem; height: 1rem; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+  .btn {
+    font-family: inherit; font-size: 0.9375rem; font-weight: 700;
+    padding: 0.75rem 1.25rem; border-radius: 999px; cursor: pointer;
+    border: 2px solid var(--red); background: var(--red); color: var(--on-accent);
+    flex: 1 1 auto;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn-quiet { background: transparent; color: var(--red); }
+
+  .note { margin-top: 2.5rem; background: var(--paper-sunk); border-left: 4px solid var(--navy); border-radius: 8px; padding: 1rem 1.2rem; font-size: 0.9375rem; color: var(--ink-soft); }
+  .note p { margin: 0 0 0.55rem; max-width: 64ch; }
+  .note p:last-child { margin-bottom: 0; }
+  .note strong { color: var(--ink); }
+
+  footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 2px solid var(--rule); font-size: 0.8125rem; color: var(--ink-faint); }
+</style>
+
+<div class="wrap">
+
+  <a class="back" href="/">← Back to dfv.fun</a>
+
+  <h1>Meme Maker</h1>
+  <p class="sub">
+    Commandment x says spread joy and humour above all. Here are the tools.
+    Everything happens on your device — nothing is uploaded, nothing is saved.
+  </p>
+
+  <div class="studio">
+
+    <div class="stage">
+      <canvas id="canvas" width="1080" height="1080" role="img"
+              aria-label="Live preview of the meme you are making"></canvas>
+    </div>
+
+    <div class="panel">
+
+      <fieldset>
+        <legend>Background</legend>
+        <div class="swatches">
+          <button class="swatch" type="button" data-color="#ffffff" style="background:#ffffff" aria-pressed="true" title="White"></button>
+          <button class="swatch" type="button" data-color="#223f84" style="background:#223f84" aria-pressed="false" title="DFV navy"></button>
+          <button class="swatch" type="button" data-color="#e32c4d" style="background:#e32c4d" aria-pressed="false" title="DFV red"></button>
+          <button class="swatch" type="button" data-color="#111111" style="background:#111111" aria-pressed="false" title="Black"></button>
+          <button class="swatch" type="button" data-color="#bac5d7" style="background:#bac5d7" aria-pressed="false" title="Pale blue"></button>
+        </div>
+        <div class="file-row">
+          <label for="upload">…or use your own picture</label>
+          <input type="file" id="upload" accept="image/*">
+          <span id="file-name"></span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Words</legend>
+        <label for="top">Top line</label>
+        <input type="text" id="top" maxlength="80" placeholder="when the cliff">
+        <label for="bottom">Bottom line</label>
+        <input type="text" id="bottom" maxlength="80" placeholder="finally ends">
+      </fieldset>
+
+      <fieldset>
+        <legend>The cat</legend>
+        <div class="row">
+          <input type="checkbox" id="cat-on" checked>
+          <label for="cat-on">Show the cat</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="cat-flip">
+          <label for="cat-flip">Flip it</label>
+        </div>
+        <label for="cat-size">Size</label>
+        <input type="range" id="cat-size" min="15" max="100" value="55">
+        <label for="cat-pos">Position</label>
+        <select id="cat-pos">
+          <option value="bottom-right" selected>Bottom right</option>
+          <option value="bottom-left">Bottom left</option>
+          <option value="top-right">Top right</option>
+          <option value="top-left">Top left</option>
+          <option value="center">Centre</option>
+        </select>
+      </fieldset>
+
+      <div class="actions">
+        <button class="btn" type="button" id="download">↓ Download PNG</button>
+      </div>
+      <div class="actions">
+        <button class="btn btn-quiet" type="button" id="surprise">Surprise me</button>
+        <button class="btn btn-quiet" type="button" id="reset">Clear</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">
+    <p><strong>Nothing leaves your browser.</strong> When you pick a picture it is read
+    directly into the page and drawn onto the canvas. There is no upload, no server, and
+    no storage — this page cannot make a network request at all.</p>
+    <p>Made something good? Post it and tag us. The best ones get shared.</p>
+  </div>
+
+  <footer>
+    The DFV cat is our mark — use it for DFV memes freely. Please don't use it to
+    impersonate the project, and never attach it to a claim link.
+  </footer>
+
+</div>
+
+<script src="app.js" defer></script>
