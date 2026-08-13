@@ -17,13 +17,16 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
 
-# Marketing site — no script-src at all, so `default-src 'none'` applies to
-# scripts. No JavaScript can execute here under any circumstances.
+# Home page — runs one same-origin script, /assets/countdown.js, which ticks
+# the cliff countdown and the vesting progress bar from hardcoded constants.
+# script-src 'self' permits that file and nothing else: no inline script, no
+# third-party script, and connect-src stays absent so the page cannot make a
+# network request of any kind.
 /
-  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
 /index.html
-  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
 # Trading leaderboard — generated nightly, also zero JavaScript. The numbers
 # are computed at build time and baked into the HTML, so this page needs no
