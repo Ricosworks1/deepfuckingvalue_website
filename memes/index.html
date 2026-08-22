@@ -62,7 +62,22 @@
     align-items: start;
   }
 
-  .stage {
+  /* ---------- phones ----------
+     The preview sticks to the top of the screen while the controls scroll
+     underneath, so you can always see what you are changing.
+
+     .studio becomes a plain block rather than a grid: a sticky grid item can
+     only travel within its own grid area, which on a single-column layout is
+     just the height of the item itself — so it would not stick at all. */
+  @media (max-width: 54rem) {
+    .studio { display: block; margin-top: 1.25rem; }
+
+    .wrap { padding-top: 1rem; }
+    h1 { font-size: 1.875rem; }
+    .back { margin-bottom: 0.9rem; }
+    .sub { display: none; }          /* the privacy note at the foot says the same */
+
+    .stage {
       position: sticky;
       top: 0;
       z-index: 20;
@@ -144,20 +159,6 @@
   .note strong { color: var(--ink); }
 
   footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 2px solid var(--rule); font-size: 0.8125rem; color: var(--ink-faint); }
-  /* ---------- phones ----------
-     The preview sticks to the top of the screen while the controls scroll
-     underneath, so you can always see what you are changing.
-
-     .studio becomes a plain block rather than a grid: a sticky grid item can
-     only travel within its own grid area, which on a single-column layout is
-     just the height of the item itself — so it would not stick at all. */
-  @media (max-width: 54rem) {
-    .studio { display: block; margin-top: 1.25rem; }
-
-    .wrap { padding-top: 1rem; }
-    h1 { font-size: 1.875rem; }
-    .back { margin-bottom: 0.9rem; }
-    .sub { display: none; }          /* the privacy note at the foot says the same */
 </style>
 
 <div class="wrap">
