@@ -26,6 +26,7 @@ const state = {
   style: 'impact',      // impact | caption | quote
   upper: true,
   motion: 'none',       // none | zoom | shake | pop | slide
+  textScale: 1,         // 0.5 – 1.8, multiplies the auto-fitted size
 };
 
 const cat = new Image();
@@ -58,14 +59,24 @@ function wrap(text, maxWidth) {
   return lines;
 }
 
-/* Fit text into a box, returning the chosen size and its lines. */
+/* Fit text into a box, returning the chosen size and its lines.
+
+   startSize is the natural size for the style; the visitor's size control
+   multiplies it. Asking for bigger text is allowed to use more lines, so the
+   line limit scales too — but the block is always shrunk back if it would
+   overflow the frame, so text can never run off the canvas. */
 function fit(text, maxWidth, startSize, maxLines, minSize) {
-  let size = startSize;
+  const scale = state.textScale;
+  const lineCap = Math.max(1, Math.round(maxLines * Math.max(1, scale)));
+  const heightCap = SIZE * (scale > 1 ? 0.46 : 0.4);
+
+  let size = Math.round(startSize * scale);
   let lines;
   for (;;) {
     ctx.font = fontFor(size);
     lines = wrap(text, maxWidth);
-    if (lines.length <= maxLines || size <= minSize) break;
+    const blockHeight = lines.length * size * 1.2;
+    if ((lines.length <= lineCap && blockHeight <= heightCap) || size <= minSize) break;
     size -= 4;
   }
   return { size, lines };
@@ -311,6 +322,11 @@ $('cat-on').addEventListener('change', (e) => { state.catOn = e.target.checked; 
 $('cat-flip').addEventListener('change', (e) => { state.catFlip = e.target.checked; render(); });
 $('cat-size').addEventListener('input', (e) => { state.catScale = e.target.value / 100; render(); });
 $('cat-pos').addEventListener('change', (e) => { state.catPos = e.target.value; render(); });
+$('text-size').addEventListener('input', (e) => {
+  state.textScale = Number(e.target.value) / 100;
+  $('text-size-out').textContent = e.target.value + '%';
+  render();
+});
 $('motion').addEventListener('change', (e) => { state.motion = e.target.value; render(); });
 
 const PROMPTS = [
@@ -335,6 +351,8 @@ $('reset').addEventListener('click', () => {
   state.top = state.bottom = '';
   $('top').value = $('bottom').value = '';
   state.bgImage = null; state.bg = '#ffffff';
+  state.textScale = 1;
+  $('text-size').value = 100; $('text-size-out').textContent = '100%';
   $('file-name').textContent = ''; $('upload').value = '';
   selectSwatch(document.querySelector('.swatch[data-color="#ffffff"]'));
   render();
