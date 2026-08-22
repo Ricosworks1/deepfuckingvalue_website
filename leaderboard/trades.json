@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-21T22:28:10.024Z",
+  "generatedAt": "2026-08-22T07:03:21.296Z",
   "token": "0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07",
   "pool": "0x000000000004444c5dc75cB358380D2e3dE08A90",
   "quote": "USDC",
   "venue": "Uniswap V4",
-  "rpcCalls": 32,
+  "rpcCalls": 38,
   "trades": [
     {
       "hash": "0xf917700e70549217dbf72af38fe1e5b853e2bbd5c351bd96f5d19c829693b718",
@@ -255,6 +255,66 @@
       "dfv": 353545.38812785386,
       "usdc": 80.663872,
       "gasUsed": 376396
+    },
+    {
+      "hash": "0x73e4be0f6bd03aecd8f360bdde37a30f9a70dcd09f7a0e1ec62c014cdcd25041",
+      "block": 25808993,
+      "timestamp": "2026-08-22T06:48:47.000Z",
+      "trader": "0x01031ea895b673925344535796c928791f461750",
+      "side": "buy",
+      "dfv": 5819789.04363527,
+      "usdc": 1368.381573,
+      "gasUsed": 184572
+    },
+    {
+      "hash": "0x9cd096806fb88686b9f16fa89c710d89ac596a8beeeda214632465a91c74c7e0",
+      "block": 25808998,
+      "timestamp": "2026-08-22T06:49:47.000Z",
+      "trader": "0x01031ea895b673925344535796c928791f461750",
+      "side": "sell",
+      "dfv": 6000000,
+      "usdc": 1379.686728,
+      "gasUsed": 198803
+    },
+    {
+      "hash": "0x68da7e5de8760fbb70cabfc67d5a5e51e4fb7f5e57a9d925ce6ff3e498589437",
+      "block": 25809002,
+      "timestamp": "2026-08-22T06:50:35.000Z",
+      "trader": "0x01031ea895b673925344535796c928791f461750",
+      "side": "buy",
+      "dfv": 5869400.768179946,
+      "usdc": 1379.686728,
+      "gasUsed": 146962
+    },
+    {
+      "hash": "0xebbe1fb5b5950a2e4cb99f2fff0db144625de39209515ee6db062b30ca887b65",
+      "block": 25809006,
+      "timestamp": "2026-08-22T06:51:23.000Z",
+      "trader": "0x01031ea895b673925344535796c928791f461750",
+      "side": "sell",
+      "dfv": 5869400,
+      "usdc": 1349.654154,
+      "gasUsed": 160298
+    },
+    {
+      "hash": "0x0f45895070de9d2dab739db53f0edb2f86f05a5978d74c8c09786a284a3791e9",
+      "block": 25809032,
+      "timestamp": "2026-08-22T06:56:47.000Z",
+      "trader": "0x01031ea895b673925344535796c928791f461750",
+      "side": "buy",
+      "dfv": 428726.54726767103,
+      "usdc": 100,
+      "gasUsed": 150113
+    },
+    {
+      "hash": "0xfa88258d700833aed5a73fc8afe85653dc03727ad3f7d628f36cd4ede6501792",
+      "block": 25809039,
+      "timestamp": "2026-08-22T06:58:11.000Z",
+      "trader": "0x01031ea895b673925344535796c928791f461750",
+      "side": "sell",
+      "dfv": 942720,
+      "usdc": 214.924554,
+      "gasUsed": 143206
     }
   ],
   "liquidity": [
