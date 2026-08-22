@@ -28,6 +28,12 @@
 /index.html
   Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
+# DAO page — one same-origin script that reads your balance, voting power and
+# delegate through your wallet, and can send exactly one transaction:
+# delegate(address). connect-src stays absent; all RPC goes via the wallet.
+/dao/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
 # Meme maker — draws to a canvas in the browser. It needs img-src 'self' for
 # the cat, data: for pictures the visitor chooses (read via FileReader), and
 # blob: for the rendered download. connect-src stays absent, so a picture

@@ -35,6 +35,11 @@ jobs:
       - name: Render the leaderboard page
         run: node scripts/build-leaderboard.mjs
 
+      - name: Refresh DAO state
+        env:
+          ALCHEMY_RPC_URL: ${{ secrets.ALCHEMY_RPC_URL }}
+        run: node scripts/fetch-dao.mjs && node scripts/build-dao.mjs
+
       - name: Commit only if the trade data actually changed
         run: |
           git config user.name  "DFV leaderboard bot"
@@ -45,13 +50,14 @@ jobs:
           # including them here would mean committing and redeploying nightly
           # even when nobody has traded. The CSVs contain trade data and
           # nothing else, which makes them the honest signal.
-          if git diff --quiet -- leaderboard/trades.csv leaderboard/leaderboard.csv; then
+          if git diff --quiet -- leaderboard/trades.csv leaderboard/leaderboard.csv \
+             && git diff --quiet -I'"generatedAt"' -- dao/state.json; then
             echo "No new trades since the last run. Discarding the rebuild."
-            git checkout -- leaderboard/
+            git checkout -- leaderboard/ dao/
             exit 0
           fi
 
-          git add leaderboard/
+          git add leaderboard/ dao/
           git commit -m "chore: rebuild trading leaderboard $(date -u +%Y-%m-%d)"
           git push
           echo "Published updated leaderboard."

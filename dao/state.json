@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-08-22T07:30:43.733Z",
+  "addresses": {
+    "token": "0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07",
+    "dao": "0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508",
+    "timelock": "0x43ACaFdA67E62a6248183830E03e6E4D3F823eDc",
+    "vesting": "0xdE3Cb3D571F575D3AfAA73b61A6041522eF02D0e",
+    "treasury": "0xaF786e8cDD7E4390BD629bfDec8f090268FE2934",
+    "pool": "0x000000000004444c5dc75cB358380D2e3dE08A90"
+  },
+  "governance": {
+    "votingDelaySeconds": 1209600,
+    "votingPeriodSeconds": 2592000,
+    "proposalThreshold": 694200000,
+    "quorumNumerator": 15,
+    "quorumDenominator": 100,
+    "quorumPercent": 15,
+    "quorumTokens": 20826000000,
+    "clockMode": "timestamp"
+  },
+  "supply": {
+    "total": 138840000000,
+    "inPool": 117490583691.16783,
+    "inVesting": 20827343222.732647,
+    "inTreasury": 491353345.96,
+    "inDao": 0,
+    "inTimelock": 0,
+    "potentiallyVotable": 522073086.09952164
+  },
+  "treasury": {
+    "address": "0xaF786e8cDD7E4390BD629bfDec8f090268FE2934",
+    "balance": 491353345.96,
+    "type": "Gnosis Safe",
+    "owners": [
+      "0x71b83d53fed1154901c58b8a7ff9569ac1d45c25",
+      "0x015fc9c8b333aeb7a91fd966bbfe6ff9a0ef8331",
+      "0x6ff356d67b2499fb8da1fc00ea445044d2d4fe15",
+      "0xf0549a19854a95f702db29badc7ca05d1bf8f378",
+      "0x24f56a1804bc9b4d0882d6462433c42ae1c882fe",
+      "0x01031ea895b673925344535796c928791f461750"
+    ],
+    "threshold": 2,
+    "delegate": "0x0000000000000000000000000000000000000000"
+  },
+  "price": 0.00023157106595774523,
+  "proposals": []
+}
