@@ -238,7 +238,7 @@
   .brand-short { display: none; }
 
   /* ---------- phone menu ---------- */
-  .menu { display: none; position: relative; }
+  .menu { display: none; }
   .menu summary {
     list-style: none; cursor: pointer; display: flex; align-items: center;
     justify-content: center; width: 2.75rem; height: 2.75rem; margin-right: -0.5rem;
@@ -252,23 +252,27 @@
   .menu[open] .bars i:nth-child(2) { opacity: 0; }
   .menu[open] .bars i:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+  /* The panel is positioned against the masthead rather than the button, so it
+     spans the full width of the screen whatever the phone. The masthead is
+     sticky, which already makes it a containing block for this. */
   .menu-panel {
-    position: absolute; right: -0.5rem; top: calc(100% + 0.5rem);
-    min-width: min(17rem, calc(100vw - 2rem));
-    background: var(--paper); border: 2px solid var(--rule); border-radius: 14px;
-    box-shadow: 0 14px 40px rgba(0,0,0,.16);
-    display: flex; flex-direction: column; padding: 0.4rem; z-index: 40;
+    position: absolute;
+    left: 0; right: 0; top: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #dfe4ed;
+    box-shadow: 0 16px 34px rgba(15, 23, 48, .14);
+    display: flex; flex-direction: column;
+    padding: 0.25rem 0 0.5rem;
+    z-index: 40;
   }
   .menu-panel a {
-    font-size: 1rem; font-weight: 600; color: var(--ink); text-decoration: none;
-    padding: 0.7rem 0.8rem; border-radius: 9px;
+    font-size: 1.0625rem; font-weight: 600;
+    color: #1b2540; text-decoration: none;
+    padding: 0.95rem var(--gut);
+    border-bottom: 1px solid #eef1f6;
   }
-  .menu-panel a:hover, .menu-panel a:focus-visible { background: var(--paper-sunk); color: var(--navy); }
-  .menu-cta {
-    margin-top: 0.3rem; background: var(--red); color: var(--on-accent) !important;
-    text-align: center; font-weight: 700;
-  }
-  .menu-cta:hover { opacity: .9; background: var(--red); }
+  .menu-panel a:last-child { border-bottom: 0; }
+  .menu-panel a:hover, .menu-panel a:focus-visible { background: #f3f4f4; color: #223f84; }
 
   /* Swap the inline links for the burger before they can crowd the wordmark. */
   @media (max-width: 60rem) {
@@ -566,7 +570,6 @@
         <a href="/leaderboard/">Trading Leaderboard</a>
         <a href="/memes/">Meme Maker</a>
         <a href="/memes/gallery/">Meme History</a>
-        <a class="menu-cta" href="/claim/">Claim your DFV →</a>
       </nav>
     </details>
   </div>
