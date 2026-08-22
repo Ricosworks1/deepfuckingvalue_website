@@ -276,7 +276,9 @@
     .menu { display: block; }
   }
 
-  @media (max-width: 26rem) {
+  /* Only the very narrowest phones lose the wordmark; it fits comfortably
+     from about 340px upward alongside the menu button. */
+  @media (max-width: 21rem) {
     .brand-full { display: none; }
     .brand-short { display: inline; }
   }
