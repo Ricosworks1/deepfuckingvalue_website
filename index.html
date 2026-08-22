@@ -72,8 +72,11 @@
 
   * { box-sizing: border-box; }
 
+  html { overflow-x: hidden; }
+
   body {
     margin: 0;
+    overflow-x: hidden;
     background: var(--paper);
     color: var(--ink);
     font-family: var(--f-body);
@@ -182,9 +185,10 @@
   /* Phones: drop the redundant date line, tighten the units, and let the
      label sit on its own row so the digits never wrap mid-countdown. */
   @media (max-width: 40rem) {
-    .banner { gap: 0.4rem 0.75rem; padding: 0.6rem 0.9rem; }
+    .banner { gap: 0.35rem 0.6rem; padding: 0.55rem 0.8rem; }
     .banner-date { display: none; }
-    .banner-label { flex-basis: 100%; font-size: 0.8125rem; }
+    .banner-label { font-size: 0.8125rem; }
+    .banner.is-live .banner-label { flex-basis: 100%; }
     .cd { gap: 0.3rem; }
     .cd-unit { padding: 0.15rem 0.4rem; gap: 0.2ch; }
     .cd-unit b { font-size: 0.875rem; }
@@ -217,7 +221,7 @@
     letter-spacing: 0.01em;
   }
 
-  .navlinks { display: flex; gap: clamp(0.75rem, 2.5vw, 1.75rem); }
+  .navlinks { display: flex; gap: clamp(0.6rem, 2vw, 1.75rem); }
 
   .navlinks a {
     font-family: var(--f-body);
@@ -231,7 +235,51 @@
 
   .navlinks a:hover { color: var(--navy); border-bottom-color: var(--red); }
 
-  @media (max-width: 46rem) { .navlinks a[data-opt] { display: none; } }
+  .brand-short { display: none; }
+
+  /* ---------- phone menu ---------- */
+  .menu { display: none; position: relative; }
+  .menu summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center;
+    justify-content: center; width: 2.75rem; height: 2.75rem; margin-right: -0.5rem;
+    border-radius: 10px; -webkit-tap-highlight-color: transparent;
+  }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu summary:hover { background: var(--paper-sunk); }
+  .bars { display: flex; flex-direction: column; gap: 4px; width: 22px; }
+  .bars i { display: block; height: 2.5px; border-radius: 2px; background: var(--navy); transition: transform .18s, opacity .18s; }
+  .menu[open] .bars i:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .menu[open] .bars i:nth-child(2) { opacity: 0; }
+  .menu[open] .bars i:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .menu-panel {
+    position: absolute; right: -0.5rem; top: calc(100% + 0.5rem);
+    min-width: min(17rem, calc(100vw - 2rem));
+    background: var(--paper); border: 2px solid var(--rule); border-radius: 14px;
+    box-shadow: 0 14px 40px rgba(0,0,0,.16);
+    display: flex; flex-direction: column; padding: 0.4rem; z-index: 40;
+  }
+  .menu-panel a {
+    font-size: 1rem; font-weight: 600; color: var(--ink); text-decoration: none;
+    padding: 0.7rem 0.8rem; border-radius: 9px;
+  }
+  .menu-panel a:hover, .menu-panel a:focus-visible { background: var(--paper-sunk); color: var(--navy); }
+  .menu-cta {
+    margin-top: 0.3rem; background: var(--red); color: var(--on-accent) !important;
+    text-align: center; font-weight: 700;
+  }
+  .menu-cta:hover { opacity: .9; background: var(--red); }
+
+  /* Swap the inline links for the burger before they can crowd the wordmark. */
+  @media (max-width: 60rem) {
+    .navlinks { display: none; }
+    .menu { display: block; }
+  }
+
+  @media (max-width: 26rem) {
+    .brand-full { display: none; }
+    .brand-short { display: inline; }
+  }
 
   /* ---------- hero ---------- */
   .hero {
@@ -484,16 +532,36 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="#top">DeepFuckingValue</a>
+    <a class="brand" href="#top"><span class="brand-full">DeepFuckingValue</span><span class="brand-short">DFV</span></a>
+
     <nav class="navlinks" aria-label="Sections">
       <a href="#about">What is DFV</a>
       <a href="#nomics">DFVNomics</a>
-      <a href="#commandments" data-opt>Commandments</a>
+      <a href="#commandments">Commandments</a>
       <a href="/dao/">DAO</a>
       <a href="/leaderboard/">Leaderboard</a>
-      <a href="/memes/" data-opt>Memes</a>
+      <a href="/memes/">Memes</a>
       <a href="#claim">Claim</a>
     </nav>
+
+    <!-- Phone menu. <details> is a native disclosure: it opens and closes with
+         no JavaScript, is keyboard accessible, and cannot break if a script
+         fails to load. -->
+    <details class="menu" id="menu">
+      <summary aria-label="Menu">
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </summary>
+      <nav class="menu-panel" aria-label="Sections">
+        <a href="#about">What is DFV</a>
+        <a href="#nomics">DFVNomics</a>
+        <a href="#commandments">The 10 Commandments</a>
+        <a href="/dao/">The DAO</a>
+        <a href="/leaderboard/">Trading Leaderboard</a>
+        <a href="/memes/">Meme Maker</a>
+        <a href="/memes/gallery/">Meme History</a>
+        <a class="menu-cta" href="/claim/">Claim your DFV →</a>
+      </nav>
+    </details>
   </div>
 </header>
 
