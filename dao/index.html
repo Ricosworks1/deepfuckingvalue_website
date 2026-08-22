@@ -46,13 +46,13 @@
   .panel{border:2px solid var(--rule);border-radius:14px;padding:clamp(1.1rem,3vw,1.6rem);background:var(--paper)}
   .panel + .panel{margin-top:1rem}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:1.25rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem, 100%), 1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:1.25rem}
   .cell{background:var(--paper);padding:.95rem 1.05rem;display:flex;flex-direction:column;gap:.2rem}
   .cell dt{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-family:var(--f-mono)}
   .cell dd{margin:0;font-family:var(--f-mono);font-size:1.25rem;font-weight:600;letter-spacing:-.03em;color:var(--navy);font-variant-numeric:tabular-nums}
   .cell .sub2{font-size:.6875rem;color:var(--ink-faint);font-family:var(--f-body);letter-spacing:0}
 
-  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem;margin-top:1.5rem}
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(15rem, 100%), 1fr));gap:1.5rem;margin-top:1.5rem}
   .why div{border-top:3px solid var(--navy);padding-top:.9rem}
   .why p{font-size:.9375rem;color:var(--ink-soft)}
 
@@ -142,8 +142,8 @@
     <p>Read live from <span class="addr">0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508</span>. These are not our description of the rules — they are the rules.</p>
 
     <dl class="grid">
-      <div class="cell"><dt>To propose</dt><dd>694,200,000</dd><span class="sub2">DFV delegated · ≈ $160,757</span></div>
-      <div class="cell"><dt>Quorum</dt><dd>15%</dd><span class="sub2">20,826,000,000 DFV · ≈ $4,822,699</span></div>
+      <div class="cell"><dt>To propose</dt><dd>694,200,000</dd><span class="sub2">DFV delegated · ≈ $161,293</span></div>
+      <div class="cell"><dt>Quorum</dt><dd>15%</dd><span class="sub2">20,826,000,000 DFV · ≈ $4,838,787</span></div>
       <div class="cell"><dt>Delay before voting</dt><dd>14 days</dd><span class="sub2">after a proposal is filed</span></div>
       <div class="cell"><dt>Voting window</dt><dd>30 days</dd><span class="sub2">then a timelock before execution</span></div>
     </dl>
@@ -157,7 +157,7 @@
       </div>
       <div>
         <h3>Expensive on purpose</h3>
-        <p>Filing a proposal needs 694,200,000 DFV delegated — roughly $160,757 at
+        <p>Filing a proposal needs 694,200,000 DFV delegated — roughly $161,293 at
         the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.</p>
       </div>
       <div>
@@ -172,7 +172,7 @@
   <section>
     <h2>Where things stand</h2>
     <p>
-      Most DFV cannot vote. 117,490,583,691 sits in the Uniswap pool and 20,827,343,223 is
+      Most DFV cannot vote. 117,490,583,691 sits in the Uniswap pool and 20,826,625,407 is
       locked in the vesting contract — neither delegates, so neither has a voice. Voting power only
       exists once tokens are held in a wallet <em>and</em> delegated.
     </p>
@@ -181,11 +181,11 @@
       <dl class="kv">
         <dt>Total supply</dt><dd>138,840,000,000</dd>
         <dt>In the Uniswap pool — cannot vote</dt><dd>117,490,583,691</dd>
-        <dt>Locked in vesting — cannot vote</dt><dd>20,827,343,223</dd>
-        <dt>Could vote, if delegated</dt><dd>522,073,086</dd>
+        <dt>Locked in vesting — cannot vote</dt><dd>20,826,625,407</dd>
+        <dt>Could vote, if delegated</dt><dd>522,790,902</dd>
         <dt>Needed for quorum</dt><dd>20,826,000,000</dd>
       </dl>
-      <div class="track"><div class="fill" style="width:2.507%"></div></div>
+      <div class="track"><div class="fill" style="width:2.510%"></div></div>
       <p style="font-size:.8125rem;color:var(--ink-faint);margin:0">
         2.51% of the tokens needed for quorum currently exist in a form that could vote.
       </p>
@@ -193,9 +193,9 @@
 
     <div class="status">
       <p><strong>Governance is not active yet.</strong> Quorum needs 20,826,000,000 DFV of delegated
-      votes, and at most 522,073,086 could vote today even if every holder delegated.
+      votes, and at most 522,790,902 could vote today even if every holder delegated.
       That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —
-      roughly $4,822,699 of tokens must move into voting hands before the DAO can decide anything.
+      roughly $4,838,787 of tokens must move into voting hands before the DAO can decide anything.
       Until then this page is honest about it rather than pretending otherwise.</p>
     </div>
   </section>
@@ -257,7 +257,7 @@
   </section>
 
   <footer>
-    Figures read from Ethereum mainnet Sat, 22 Aug 2026 07:30:43 GMT and refreshed daily.
+    Figures read from Ethereum mainnet Sat, 22 Aug 2026 22:25:46 GMT and refreshed daily.
     Your balance, voting power and delegate are read live from your own wallet.
   </footer>
 
