@@ -10,6 +10,8 @@
 
 'use strict';
 
+import { saveMeme } from '/assets/meme-store.js';
+
 const SIZE = 1080;
 const CAT_SRC = '/assets/dfv-cat.png';
 const $ = (id) => document.getElementById(id);
@@ -237,7 +239,12 @@ function saveBlob(blob, name) {
 
 $('download').addEventListener('click', () => {
   render();
-  canvas.toBlob((b) => b && saveBlob(b, 'dfv-meme.png'), 'image/png');
+  canvas.toBlob((b) => {
+    if (!b) return;
+    saveBlob(b, 'dfv-meme.png');
+    // Keep a copy in this browser's history. Never leaves the device.
+    saveMeme(b, { kind: 'image', ext: 'png', top: state.top, bottom: state.bottom, style: state.style });
+  }, 'image/png');
 });
 
 function pickVideoType() {
@@ -283,7 +290,9 @@ $('record').addEventListener('click', async () => {
   await done;
 
   const ext = type.startsWith('video/mp4') ? 'mp4' : 'webm';
-  saveBlob(new Blob(chunks, { type }), `dfv-meme.${ext}`);
+  const videoBlob = new Blob(chunks, { type });
+  saveBlob(videoBlob, `dfv-meme.${ext}`);
+  saveMeme(videoBlob, { kind: 'video', ext, top: state.top, bottom: state.bottom, style: state.style, seconds });
   msg.textContent = `Saved as .${ext}` + (ext === 'webm' ? ' — X may need MP4; Telegram accepts WebM fine.' : '');
   btn.disabled = false;
   render();
