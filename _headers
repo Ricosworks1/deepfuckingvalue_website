@@ -39,7 +39,7 @@
 # blob: for the rendered download. connect-src stays absent, so a picture
 # physically cannot be sent anywhere: the page has no way to make a request.
 /memes/*
-  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src blob:; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
 # Trading leaderboard — generated nightly, also zero JavaScript. The numbers
 # are computed at build time and baked into the HTML, so this page needs no
