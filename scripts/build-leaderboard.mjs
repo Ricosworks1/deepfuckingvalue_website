@@ -264,6 +264,17 @@ const html = `<title>Trading Leaderboard — DFV</title>
     .prize-holder .amt { margin-left: 0; }
   }
 
+  .quicklinks { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+  .ql {
+    display: inline-flex; align-items: center; gap: 0.4ch;
+    font-size: 0.8125rem; font-weight: 700; text-decoration: none;
+    padding: 0.6rem 1.05rem; border-radius: 999px;
+    border: 2px solid var(--red); background: var(--red); color: var(--on-accent);
+  }
+  .ql:hover { opacity: 0.9; }
+  .ql-quiet { background: transparent; color: var(--red); }
+  .ql-quiet:hover { background: var(--red-sunk); opacity: 1; }
+
   .downloads { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
   .dl { display: inline-flex; align-items: center; gap: 0.5ch; font-family: var(--f-mono); font-size: 0.8125rem; font-weight: 600; padding: 0.65rem 1.1rem; border-radius: 999px; border: 2px solid var(--navy); color: var(--navy); text-decoration: none; }
   .dl:hover { background: var(--navy); color: var(--paper); }
@@ -288,6 +299,12 @@ const html = `<title>Trading Leaderboard — DFV</title>
     once a day — nothing here is typed in by hand, and the raw data is downloadable
     below.
   </p>
+
+  <div class="quicklinks">
+    <a class="ql" href="https://app.uniswap.org/explore/tokens/ethereum/${esc(token)}" rel="noopener">Trade DFV on Uniswap ↗</a>
+    <a class="ql ql-quiet" href="https://etherscan.io/token/${esc(token)}" rel="noopener">Token on Etherscan ↗</a>
+    <a class="ql ql-quiet" href="https://etherscan.io/address/${esc(pool)}" rel="noopener">V4 PoolManager ↗</a>
+  </div>
 
   <div class="prize">
     <h2>10% of pool revenue to the top trader</h2>
