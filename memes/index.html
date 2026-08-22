@@ -62,52 +62,7 @@
     align-items: start;
   }
 
-  /* ---------- phones ----------
-     The preview sticks to the top of the screen while the controls scroll
-     underneath, so you can always see what you are changing.
 
-     .studio becomes a plain block rather than a grid: a sticky grid item can
-     only travel within its own grid area, which on a single-column layout is
-     just the height of the item itself — so it would not stick at all. */
-  @media (max-width: 54rem) {
-    .studio { display: block; margin-top: 1.25rem; }
-
-    .wrap { padding-top: 1rem; }
-    h1 { font-size: 1.875rem; }
-    .back { margin-bottom: 0.9rem; }
-    .sub { display: none; }          /* the privacy note at the foot says the same */
-
-    .stage {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      /* full-bleed so the sticky band covers the page edge to edge */
-      margin: 0 calc(var(--gut) * -1);
-      padding: 0.6rem var(--gut) 0.7rem;
-      background: var(--paper);
-      border: 0;
-      border-bottom: 2px solid var(--rule);
-      border-radius: 0;
-    }
-
-    /* Square canvas: capping the width also caps the height. */
-    canvas { width: min(100%, 50vh); margin: 0 auto; }
-
-    .panel { margin-top: 1.4rem; gap: 1.6rem; }
-
-    /* Comfortable tap targets on the controls that get used most. */
-    input[type="text"], select { font-size: 1rem; padding: 0.7rem 0.75rem; }
-    .btn { padding: 0.85rem 1.25rem; }
-  }
-
-  /* Short phones in landscape, or very small screens: give the preview less
-     height so the first controls stay reachable. */
-  /* Short phones — an iPhone SE is only 667px tall. Cap by height so the
-     caption field clears the sticky preview instead of hiding beneath it. */
-  @media (max-width: 54rem) and (max-height: 760px) {
-    canvas { width: min(100%, 40vh); }
-    .panel { margin-top: 1.1rem; gap: 1.3rem; }
-  }
 
   .stage { border: 2px solid var(--rule); border-radius: 14px; padding: 0.75rem; background: var(--paper-sunk); }
   canvas { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; }
@@ -159,6 +114,53 @@
   .note strong { color: var(--ink); }
 
   footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 2px solid var(--rule); font-size: 0.8125rem; color: var(--ink-faint); }
+
+  /* ---------- phones ----------
+     The preview sticks to the top of the screen while the controls scroll
+     underneath, so you can always see what you are changing.
+
+     .studio becomes a plain block rather than a grid: a sticky grid item can
+     only travel within its own grid area, which on a single-column layout is
+     just the height of the item itself — so it would not stick at all. */
+  @media (max-width: 54rem) {
+    .studio { display: block; margin-top: 1.25rem; }
+
+    .wrap { padding-top: 1rem; }
+    h1 { font-size: 1.875rem; }
+    .back { margin-bottom: 0.9rem; }
+    .sub { display: none; }          /* the privacy note at the foot says the same */
+
+    .stage {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      /* full-bleed so the sticky band covers the page edge to edge */
+      margin: 0 calc(var(--gut) * -1);
+      padding: 0.6rem var(--gut) 0.7rem;
+      background: var(--paper);
+      border: 0;
+      border-bottom: 2px solid var(--rule);
+      border-radius: 0;
+    }
+
+    /* Square canvas: capping the width also caps the height. */
+    canvas { width: min(100%, 50vh); margin: 0 auto; }
+
+    .panel { margin-top: 1.4rem; gap: 1.6rem; }
+
+    /* Comfortable tap targets on the controls that get used most. */
+    input[type="text"], select { font-size: 1rem; padding: 0.7rem 0.75rem; }
+    .btn { padding: 0.85rem 1.25rem; }
+  }
+
+  /* Short phones in landscape, or very small screens: give the preview less
+     height so the first controls stay reachable. */
+  /* Short phones — an iPhone SE is only 667px tall. Cap by height so the
+     caption field clears the sticky preview instead of hiding beneath it. */
+  @media (max-width: 54rem) and (max-height: 760px) {
+    canvas { width: min(100%, 40vh); }
+    .panel { margin-top: 1.1rem; gap: 1.3rem; }
+  }
 </style>
 
 <div class="wrap">
