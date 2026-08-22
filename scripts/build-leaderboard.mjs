@@ -214,7 +214,7 @@ const html = `<title>Trading Leaderboard — DFV</title>
   section { margin-top: clamp(2.5rem, 6vw, 4rem); }
   .lede { color: var(--ink-soft); font-size: 0.9375rem; margin: 0 0 1.25rem; max-width: 62ch; }
 
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; margin-top: 2rem; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; margin-top: 2rem; }
   .stat { background: var(--paper); padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.2rem; }
   .stat dt { font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); font-family: var(--f-mono); }
   .stat dd { margin: 0; font-family: var(--f-mono); font-size: 1.375rem; font-weight: 600; letter-spacing: -0.03em; color: var(--navy); font-variant-numeric: tabular-nums; }

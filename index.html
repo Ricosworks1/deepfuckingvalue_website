@@ -290,6 +290,9 @@
     padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2rem, 5vw, 3.5rem);
   }
 
+  .hero > * { min-width: 0; }
+  .hero img { max-width: 100%; }
+
   @media (max-width: 54rem) {
     .hero { grid-template-columns: 1fr; text-align: center; }
     .hero p, .hero .hero-cta { margin-inline: auto; }
@@ -379,7 +382,8 @@
   }
 
   /* ---------- commandments ---------- */
-  .commandments { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.5rem 2.5rem; }
+  .commandments > * { min-width: 0; }
+  .commandments { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr)); gap: 1.5rem 2.5rem; }
 
   .cmd { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.875rem; align-items: baseline; }
 
@@ -392,7 +396,8 @@
   .cmd p { grid-column: 2; font-size: 0.9375rem; color: var(--ink-soft); }
 
   /* ---------- claim steps ---------- */
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.75rem; }
+  .steps > * { min-width: 0; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); gap: 1.75rem; }
 
   .step { display: flex; flex-direction: column; gap: 0.625rem; padding-top: 1rem; border-top: 3px solid var(--navy); }
   .step .eyebrow { color: var(--red); }
