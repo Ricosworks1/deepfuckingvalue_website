@@ -541,17 +541,21 @@
   footer nav a { color: var(--ink-soft); text-decoration: none; }
   footer nav a:hover { color: var(--red); }
 /*i18n:css*/
-  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale);
-             font-family: var(--f-body); font-size: 0.8125rem; }
-  .langbar ul { max-width: 68rem; margin: 0 auto; padding: 0.4rem 1.25rem; list-style: none;
-                display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; align-items: center; }
-  .langbar li { margin: 0; }
-  .langbar a { color: var(--ink-soft); text-decoration: none; padding: 0.15rem 0; }
-  .langbar a:hover { color: var(--red); text-decoration: underline; }
-  .langbar [aria-current="true"] { color: var(--ink); font-weight: 700; text-decoration: none; }
-  .langbar .lb-label { color: var(--ink-faint); margin-right: 0.25rem; }
+  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
+  .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
+                display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem; }
+  .langbar li { margin: 0; display: flex; }
+  /* padding gives a ~44px tap target around a 30px flag, which is the mobile
+     guideline; the flag itself stays small enough not to shout. */
+  .langbar a, .langbar span { display: block; line-height: 0; border-radius: 4px;
+                              padding: 7px 6px; border: 1px solid transparent; }
+  .langbar .flag { display: block; border-radius: 2px; }
+  .langbar a { opacity: 0.45; transition: opacity 0.12s ease; }
+  .langbar a:hover, .langbar a:focus-visible { opacity: 1; }
+  .langbar a:focus-visible { outline: 2px solid var(--red); outline-offset: 1px; }
+  .langbar [aria-current="true"] { opacity: 1; border-color: var(--red); }
 /*/i18n:css*/</style>
-<!--i18n:langbar--><div class="langbar"><ul><li class="lb-label" aria-hidden="true">Language</li><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><span aria-current="true" lang="de">Deutsch</span></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></div><!--/i18n:langbar-->
+<!--i18n:langbar--><div class="langbar"><nav aria-label="Language"><ul><li><a href="/" hreflang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><clipPath id="dfvuk"><rect width="24" height="16" rx="2"/></clipPath><g clip-path="url(#dfvuk)"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.9"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5.3"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="3.2"/></g><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/fr/" hreflang="fr" title="Français" aria-label="Français"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" fill="#fff" rx="2"/><path d="M0 2a2 2 0 012-2h6v16H2a2 2 0 01-2-2z" fill="#002654"/><path d="M16 0h6a2 2 0 012 2v12a2 2 0 01-2 2h-6z" fill="#ED2939"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><span aria-current="true" title="Deutsch" aria-label="Deutsch"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v3.33H0z" fill="#000"/><rect y="5.33" width="24" height="5.34" fill="#DD0000"/><path d="M0 10.67h24V14a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#FFCE00"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></span></li><li><a href="/es/" hreflang="es" title="Español" aria-label="Español"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v2H0z" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/><path d="M0 12h24v2a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#AA151B"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/vi/" hreflang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DA251D"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FF0" transform="translate(12 8) scale(4.6)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/zh/" hreflang="zh-Hans" title="简体中文" aria-label="简体中文"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DE2910"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(5 5) scale(3)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 2.2) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 4.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 7.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 9.8) scale(1.05)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li></ul></nav></div><!--/i18n:langbar-->
 
 <div class="banner" id="cliff-banner" data-deadline="1787225987">
   <span class="banner-label" id="cliff-label">Vesting-Claims starten in</span>

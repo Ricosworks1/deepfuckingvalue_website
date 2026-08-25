@@ -22,6 +22,7 @@ SITE = ROOT
 sys.path.insert(0, HERE)
 from site_i18n import render, h, build_fuzzy
 from langs import LANGS, PAGES, by_code, prefix, FONT_FAMILY
+from flags import flag
 import fonts
 
 # Output goes straight into the deployed tree. The English pages are both the
@@ -47,29 +48,38 @@ def strip_generated(html):
     return html
 
 SWITCHER_CSS = """
-  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale);
-             font-family: var(--f-body); font-size: 0.8125rem; }
-  .langbar ul { max-width: 68rem; margin: 0 auto; padding: 0.4rem 1.25rem; list-style: none;
-                display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; align-items: center; }
-  .langbar li { margin: 0; }
-  .langbar a { color: var(--ink-soft); text-decoration: none; padding: 0.15rem 0; }
-  .langbar a:hover { color: var(--red); text-decoration: underline; }
-  .langbar [aria-current="true"] { color: var(--ink); font-weight: 700; text-decoration: none; }
-  .langbar .lb-label { color: var(--ink-faint); margin-right: 0.25rem; }
+  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
+  .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
+                display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem; }
+  .langbar li { margin: 0; display: flex; }
+  /* padding gives a ~44px tap target around a 30px flag, which is the mobile
+     guideline; the flag itself stays small enough not to shout. */
+  .langbar a, .langbar span { display: block; line-height: 0; border-radius: 4px;
+                              padding: 7px 6px; border: 1px solid transparent; }
+  .langbar .flag { display: block; border-radius: 2px; }
+  .langbar a { opacity: 0.45; transition: opacity 0.12s ease; }
+  .langbar a:hover, .langbar a:focus-visible { opacity: 1; }
+  .langbar a:focus-visible { outline: 2px solid var(--red); outline-offset: 1px; }
+  .langbar [aria-current="true"] { opacity: 1; border-color: var(--red); }
 """
 
 def switcher(active, page):
+    """Flags only, centred. A flag is a country and not a language, so the
+    name still rides along in title= and aria-label= for hover and for screen
+    readers - the visual is a flag, the accessible name is the language."""
     items = []
     for l in LANGS:
         href = f"{prefix(l['code'])}/{page}".replace("/index.html", "/")
         if not href.startswith("/"): href = "/" + href
+        svg, name = flag(l["code"]), l["native"]
         if l["code"] == active:
-            items.append(f'<li><span aria-current="true" lang="{l["tag"]}">{l["native"]}</span></li>')
+            items.append(f'<li><span aria-current="true" title="{name}" '
+                         f'aria-label="{name}">{svg}</span></li>')
         else:
-            items.append(f'<li><a href="{href}" hreflang="{l["tag"]}" lang="{l["tag"]}">{l["native"]}</a></li>')
-    return ('<div class="langbar"><ul>'
-            f'<li class="lb-label" aria-hidden="true">Language</li>{"".join(items)}'
-            '</ul></div>')
+            items.append(f'<li><a href="{href}" hreflang="{l["tag"]}" title="{name}" '
+                         f'aria-label="{name}">{svg}</a></li>')
+    return ('<div class="langbar"><nav aria-label="Language"><ul>'
+            f'{"".join(items)}</ul></nav></div>')
 
 def hreflangs(page):
     out = []
