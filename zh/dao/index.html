@@ -1,0 +1,264 @@
+<!--i18n:head--><!doctype html>
+<html lang="zh-Hans">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="en" href="https://dfv.fun/dao/">
+<link rel="alternate" hreflang="fr" href="https://dfv.fun/fr/dao/">
+<link rel="alternate" hreflang="de" href="https://dfv.fun/de/dao/">
+<link rel="alternate" hreflang="es" href="https://dfv.fun/es/dao/">
+<link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/dao/">
+<link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/dao/">
+<link rel="alternate" hreflang="x-default" href="https://dfv.fun/dao/"><!--/i18n:head-->
+<title>DAO — DFV</title>
+<meta name="description" content="DFV 治理如何运作：委托投票权、发起提案、做出决定。刻意做得慢，刻意做得贵。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(data:font/woff2;base64,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) format('woff2');
+  }
+
+  :root {
+    --paper:#ffffff; --paper-sunk:#f3f4f4;
+    --navy:#223f84; --ink:#1b2540; --ink-soft:#515b78; --ink-faint:#8b93a8;
+    --red:#e32c4d; --red-sunk:#fdeef1;
+    --ok:#1a7f4b; --ok-sunk:#e8f5ee; --warn:#8a6100; --warn-sunk:#fdf3dd;
+    --rule:#dfe4ed; --on-accent:#ffffff;
+    --f-hand: 'Architects Daughter', "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --gut:clamp(1.1rem,4vw,2rem);
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --paper:#0e1730; --paper-sunk:#121d3a; --navy:#9db4ec; --ink:#e7ecf7;
+    --ink-soft:#a9b3cc; --ink-faint:#737d99; --red:#ff5573; --red-sunk:#2c1421;
+    --ok:#5fd39b; --ok-sunk:#0f2a1f; --warn:#e0b451; --warn-sunk:#2a2211;
+    --rule:#25314f; --on-accent:#0e1730; } }
+  :root[data-theme="dark"]{
+    --paper:#0e1730; --paper-sunk:#121d3a; --navy:#9db4ec; --ink:#e7ecf7;
+    --ink-soft:#a9b3cc; --ink-faint:#737d99; --red:#ff5573; --red-sunk:#2c1421;
+    --ok:#5fd39b; --ok-sunk:#0f2a1f; --warn:#e0b451; --warn-sunk:#2a2211;
+    --rule:#25314f; --on-accent:#0e1730; }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:52rem;margin:0 auto;padding:clamp(1.5rem,5vw,3rem) var(--gut) 4rem}
+  a{color:var(--red)}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+  .back{display:inline-block;font-size:.875rem;font-weight:600;color:var(--ink-soft);text-decoration:none;margin-bottom:1.5rem}
+  .back:hover{color:var(--red)}
+  h1{font-family:var(--f-hand);font-size:clamp(2.25rem,1.5rem + 3vw,3.5rem);color:var(--navy);margin:0;line-height:1}
+  h2{font-family:var(--f-hand);font-size:clamp(1.6rem,1.2rem + 1.5vw,2.25rem);color:var(--navy);margin:0 0 .5rem;line-height:1.1}
+  h3{font-size:1rem;color:var(--navy);margin:0 0 .3rem}
+  .sub{color:var(--ink-soft);margin:.9rem 0 0;max-width:58ch}
+  section{margin-top:clamp(2.5rem,6vw,3.75rem)}
+  p{margin:0 0 .85rem;max-width:64ch}
+  p:last-child{margin-bottom:0}
+
+  .panel{border:2px solid var(--rule);border-radius:14px;padding:clamp(1.1rem,3vw,1.6rem);background:var(--paper)}
+  .panel + .panel{margin-top:1rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem, 100%), 1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:1.25rem}
+  .cell{background:var(--paper);padding:.95rem 1.05rem;display:flex;flex-direction:column;gap:.2rem}
+  .cell dt{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-family:var(--f-mono)}
+  .cell dd{margin:0;font-family:var(--f-mono);font-size:1.25rem;font-weight:600;letter-spacing:-.03em;color:var(--navy);font-variant-numeric:tabular-nums}
+  .cell .sub2{font-size:.6875rem;color:var(--ink-faint);font-family:var(--f-body);letter-spacing:0}
+
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(15rem, 100%), 1fr));gap:1.5rem;margin-top:1.5rem}
+  .why div{border-top:3px solid var(--navy);padding-top:.9rem}
+  .why p{font-size:.9375rem;color:var(--ink-soft)}
+
+  .status{border-left:4px solid var(--warn);background:var(--warn-sunk);border-radius:8px;padding:1rem 1.2rem;margin-top:1.25rem;font-size:.9375rem}
+  .status strong{color:var(--warn)}
+
+  .track{height:.75rem;background:var(--paper-sunk);border:2px solid var(--rule);border-radius:999px;overflow:hidden;margin:.75rem 0 .5rem}
+  .fill{height:100%;background:var(--navy);min-width:2px}
+
+  .btn{font-family:inherit;font-size:.9375rem;font-weight:700;padding:.8rem 1.4rem;border-radius:999px;cursor:pointer;border:2px solid var(--red);background:var(--red);color:var(--on-accent)}
+  .btn:hover:not(:disabled){opacity:.9}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn-quiet{background:transparent;color:var(--red)}
+  .actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+  input[type=text]{width:100%;font-family:var(--f-mono);font-size:.875rem;padding:.65rem .7rem;border:2px solid var(--rule);border-radius:8px;background:var(--paper);color:var(--ink);margin-top:.5rem}
+  input[type=text]:focus{border-color:var(--navy)}
+
+  .msg{margin-top:.9rem;font-size:.9375rem;padding:.7rem .9rem;border-radius:8px;background:var(--paper-sunk);color:var(--ink-soft)}
+  .msg-warn{background:var(--warn-sunk);color:var(--warn)}
+  .msg-ok{background:var(--ok-sunk);color:var(--ok)}
+
+  dl.kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
+  dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
+  dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
+
+  table{width:100%;border-collapse:collapse;font-family:var(--f-mono);font-size:.8125rem}
+  th{text-align:left;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding:0 1rem .55rem 0;border-bottom:2px solid var(--navy);white-space:nowrap}
+  td{padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+  .scroll{overflow-x:auto}
+  td a{color:var(--red);text-decoration:none}
+
+  .empty{padding:1.5rem;border:2px dashed var(--rule);border-radius:12px;color:var(--ink-soft);font-size:.9375rem;margin-top:1rem}
+  footer{margin-top:3rem;padding-top:1.25rem;border-top:2px solid var(--rule);font-size:.8125rem;color:var(--ink-faint)}
+  .addr{font-family:var(--f-mono);word-break:break-all}
+/*i18n:css*/
+  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale);
+             font-family: var(--f-body); font-size: 0.8125rem; }
+  .langbar ul { max-width: 68rem; margin: 0 auto; padding: 0.4rem 1.25rem; list-style: none;
+                display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; align-items: center; }
+  .langbar li { margin: 0; }
+  .langbar a { color: var(--ink-soft); text-decoration: none; padding: 0.15rem 0; }
+  .langbar a:hover { color: var(--red); text-decoration: underline; }
+  .langbar [aria-current="true"] { color: var(--ink); font-weight: 700; text-decoration: none; }
+  .langbar .lb-label { color: var(--ink-faint); margin-right: 0.25rem; }
+/*/i18n:css*/</style>
+<!--i18n:langbar--><div class="langbar"><ul><li class="lb-label" aria-hidden="true">Language</li><li><a href="/dao/" hreflang="en" lang="en">English</a></li><li><a href="/fr/dao/" hreflang="fr" lang="fr">Français</a></li><li><a href="/de/dao/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/es/dao/" hreflang="es" lang="es">Español</a></li><li><a href="/vi/dao/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><span aria-current="true" lang="zh-Hans">简体中文</span></li></ul></div><!--/i18n:langbar-->
+
+<div class="wrap">
+
+  <a class="back" href="/zh/">← 返回 dfv.fun</a>
+
+  <h1>DAO 治理</h1>
+  <p class="sub">
+    DFV 由持有并委托 DFV 的人治理。本页的一切都直接从合约读取——界面只能做代码允许的事，别的什么都做不了。
+  </p>
+
+  <!-- ===== step 1: delegate ===== -->
+  <section>
+    <h2>第一步：委托</h2>
+    <p>在你完成委托之前，持有 DFV <strong>不会给你任何投票权</strong>——委托给自己也算。几乎所有人都栽在这一点上。一笔交易，做一次，你的余额就开始计票。</p>
+
+    <div class="panel" id="wallet-panel">
+      <button class="btn" type="button" id="connect">连接钱包</button>
+      <div class="msg" id="connect-msg" hidden></div>
+
+      <dl class="kv" id="you" hidden>
+        <dt>你的地址</dt><dd id="you-addr">—</dd>
+        <dt>DFV 余额</dt><dd id="you-bal">—</dd>
+        <dt>投票权</dt><dd id="you-votes">—</dd>
+        <dt>当前委托给</dt><dd id="you-del">—</dd>
+      </dl>
+
+      <div id="delegate-area" hidden>
+        <div class="actions">
+          <button class="btn" type="button" id="self">委托给自己</button>
+          <button class="btn btn-quiet" type="button" id="other-toggle">委托给其他地址</button>
+        </div>
+        <div id="other-area" hidden>
+          <input type="text" id="other-addr" placeholder="要委托的 0x… 地址" spellcheck="false">
+          <div class="actions">
+            <button class="btn" type="button" id="other-go">委托给该地址</button>
+          </div>
+        </div>
+        <div class="msg" id="delegate-msg" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== the rules ===== -->
+  <section>
+    <h2>已部署的规则</h2>
+    <p>实时读取自 <span class="addr">0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508</span>。这不是我们对规则的描述——这就是规则。</p>
+
+    <dl class="grid">
+      <div class="cell"><dt>发起提案需要</dt><dd>694,200,000</dd><span class="sub2">已委托的 DFV · ≈ $161,293</span></div>
+      <div class="cell"><dt>法定票数</dt><dd>15%</dd><span class="sub2">20,826,000,000 DFV · ≈ $4,838,787</span></div>
+      <div class="cell"><dt>投票前的延迟</dt><dd>14 天</dd><span class="sub2">提案提交之后</span></div>
+      <div class="cell"><dt>投票窗口</dt><dd>30 天</dd><span class="sub2">之后还有执行前的时间锁</span></div>
+    </dl>
+
+    <div class="why">
+      <div>
+        <h3>故意做得慢</h3>
+        <p>提案后 14 天才开放投票，再给 30 天投票——从提案到决定最少 44 天。长到没人会被催促，也长到借来的代币根本撑不完一场治理攻击。</p>
+      </div>
+      <div>
+        <h3>故意做得贵</h3>
+        <p>提交一份提案需要委托 694,200,000 DFV——按当前市价约合 $161,293。所以提案要付出真实的信念代价，垃圾提案被彻底定价出局。</p>
+      </div>
+      <div>
+        <h3>买来的，不是发的</h3>
+        <p>投票权不是发放的。它是在公开市场上买来、再委托出去的。每一张票背后，都是一个和所有人出同样价格买下发言权的人。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== where things stand ===== -->
+  <section>
+    <h2>目前的状况</h2>
+    <p>大部分 DFV 无法投票。117,491,635,415 枚躺在 Uniswap 池里，20,824,073,139 枚锁在归属合约里——两者都不做委托，所以都没有发言权。只有当代币既被钱包持有<em>又</em>完成委托，投票权才存在。</p>
+
+    <div class="panel">
+      <dl class="kv">
+        <dt>总供应量</dt><dd>138,840,000,000</dd>
+        <dt>在 Uniswap 池中 — 不能投票</dt><dd>117,491,635,415</dd>
+        <dt>锁在归属合约中 — 不能投票</dt><dd>20,824,073,139</dd>
+        <dt>若完成委托，可以投票</dt><dd>524,291,446</dd>
+        <dt>达到法定票数所需</dt><dd>20,826,000,000</dd>
+      </dl>
+      <div class="track"><div class="fill" style="width:2.517%"></div></div>
+      <p style="font-size:.8125rem;color:var(--ink-faint);margin:0">
+        达到法定票数所需的代币中，目前只有 252% 处于可以投票的状态。
+      </p>
+    </div>
+
+    <div class="status">
+      <p><strong>治理尚未启动。</strong>法定票数需要 20,826,000,000 DFV 的委托票，而即使今天所有持有者全部委托，最多也只有 524,291,446 枚能投票。随着 DFV 被从池中买走、归属代币被领取并委托，这个缺口才会缩小——大约价值 $4,838,787 的代币必须落到能投票的手里，DAO 才能决定任何事。在那之前，本页宁可直说，也不装作已经可以。</p>
+    </div>
+  </section>
+
+  <!-- ===== proposals ===== -->
+  <section>
+    <h2>提案</h2>
+    <div class="empty">
+      目前没有任何提案。第一份提案需要单一地址被委托 694,200,000 DFV。一旦有了，它会出现在这里，附带实时状态、票数统计，以及每一条记录在链上的投票理由。
+    </div>
+  </section>
+
+  <!-- ===== treasury ===== -->
+  <section>
+    <h2>国库</h2>
+    <p>491,353,345.96 DFV 存放在一个 <strong>2/6 多签 Gnosis Safe</strong> 里，地址是 <span class="addr">0xaF786e8cDD7E4390BD629bfDec8f090268FE2934</span>。</p>
+    <p>
+      把话说明白，因为这很重要：DAO 合约自己动不了这笔钱。投票做决定，Safe 的签名人执行。多签的存在是为了让国库不会毁于一次失误或一把私钥——代价是花这笔钱除了投票，还需要人签名。
+    </p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Safe 所有者</th><th scope="col">在 Etherscan 上</th></tr></thead>
+      <tbody>
+        <tr><td>0x71b8…5c25</td><td><a href="https://etherscan.io/address/0x71b83d53fed1154901c58b8a7ff9569ac1d45c25" rel="noopener">0x71b83d53fed1154901c58b8a7ff9569ac1d45c25</a></td></tr>
+        <tr><td>0x015f…8331</td><td><a href="https://etherscan.io/address/0x015fc9c8b333aeb7a91fd966bbfe6ff9a0ef8331" rel="noopener">0x015fc9c8b333aeb7a91fd966bbfe6ff9a0ef8331</a></td></tr>
+        <tr><td>0x6ff3…fe15</td><td><a href="https://etherscan.io/address/0x6ff356d67b2499fb8da1fc00ea445044d2d4fe15" rel="noopener">0x6ff356d67b2499fb8da1fc00ea445044d2d4fe15</a></td></tr>
+        <tr><td>0xf054…f378</td><td><a href="https://etherscan.io/address/0xf0549a19854a95f702db29badc7ca05d1bf8f378" rel="noopener">0xf0549a19854a95f702db29badc7ca05d1bf8f378</a></td></tr>
+        <tr><td>0x24f5…82fe</td><td><a href="https://etherscan.io/address/0x24f56a1804bc9b4d0882d6462433c42ae1c882fe" rel="noopener">0x24f56a1804bc9b4d0882d6462433c42ae1c882fe</a></td></tr>
+        <tr><td>0x0103…1750</td><td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener">0x01031ea895b673925344535796c928791f461750</a></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- ===== contracts ===== -->
+  <section>
+    <h2>合约</h2>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">作用</th><th scope="col">地址</th></tr></thead>
+      <tbody>
+        <tr><td>DAO（Governor）</td><td><a href="https://etherscan.io/address/0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508" rel="noopener">0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508</a></td></tr>
+        <tr><td>TimeLock</td><td><a href="https://etherscan.io/address/0x43ACaFdA67E62a6248183830E03e6E4D3F823eDc" rel="noopener">0x43ACaFdA67E62a6248183830E03e6E4D3F823eDc</a></td></tr>
+        <tr><td>DFV 代币</td><td><a href="https://etherscan.io/address/0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07" rel="noopener">0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07</a></td></tr>
+        <tr><td>国库 Safe</td><td><a href="https://etherscan.io/address/0xaF786e8cDD7E4390BD629bfDec8f090268FE2934" rel="noopener">0xaF786e8cDD7E4390BD629bfDec8f090268FE2934</a></td></tr>
+        <tr><td>归属解锁</td><td><a href="https://etherscan.io/address/0xdE3Cb3D571F575D3AfAA73b61A6041522eF02D0e" rel="noopener">0xdE3Cb3D571F575D3AfAA73b61A6041522eF02D0e</a></td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:1rem;font-size:.9375rem;color:var(--ink-soft)">
+      代币本身不可更改：六个函数，不能增发、不能销毁、不能暂停、不能升级、没有所有者。现在的供应量就是永远的供应量。治理参数存在 DAO 合约上，只有通过的提案才能改动。
+    </p>
+  </section>
+
+  <footer>
+    Figures read from Ethereum mainnet Mon, 24 Aug 2026 22:29:43 GMT and refreshed daily.
+    Your balance, voting power and delegate are read live from your own wallet.
+  </footer>
+
+</div>
+
+<script src="app.js" defer></script>

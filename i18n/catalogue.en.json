@@ -1,0 +1,3018 @@
+{
+ "strings": {
+  "87e8d78753": {
+   "text": "DFV — Deep Fucking Value",
+   "kind": "text"
+  },
+  "3e5f502f9a": {
+   "text": "A fair and transparent meme coin that radically revolutionizes crypto tokenomics. 138.84 billion DFV, 84.51% in public liquidity, every number verifiable on-chain.",
+   "kind": "attr"
+  },
+  "2d62a16755": {
+   "text": "Vesting claims open in",
+   "kind": "text"
+  },
+  "5548ae4f34": {
+   "text": "days",
+   "kind": "text"
+  },
+  "0a5dc1533c": {
+   "text": "20 Aug 2026 · 11:39 UTC",
+   "kind": "text"
+  },
+  "cfd719389a": {
+   "text": "Go to claim →",
+   "kind": "text"
+  },
+  "9f3eee5feb": {
+   "text": "DeepFuckingValue",
+   "kind": "text"
+  },
+  "a8dac215bd": {
+   "text": "DFV",
+   "kind": "text"
+  },
+  "7ff5a6dafd": {
+   "text": "Sections",
+   "kind": "attr"
+  },
+  "bce1c6be3c": {
+   "text": "What is DFV",
+   "kind": "text"
+  },
+  "3dd7ea9e19": {
+   "text": "DFVNomics",
+   "kind": "text"
+  },
+  "bb53ec8ed7": {
+   "text": "Commandments",
+   "kind": "text"
+  },
+  "33ba5412e8": {
+   "text": "DAO",
+   "kind": "text"
+  },
+  "0381247a69": {
+   "text": "Leaderboard",
+   "kind": "text"
+  },
+  "7456a251e7": {
+   "text": "Memes",
+   "kind": "text"
+  },
+  "dc4e08a408": {
+   "text": "Claim",
+   "kind": "text"
+  },
+  "57f5f5efbc": {
+   "text": "Menu",
+   "kind": "attr"
+  },
+  "97b4f05220": {
+   "text": "The 10 Commandments",
+   "kind": "text"
+  },
+  "8a5cbf4957": {
+   "text": "The DAO",
+   "kind": "text"
+  },
+  "3f0bc97f09": {
+   "text": "Trading Leaderboard",
+   "kind": "text"
+  },
+  "4105c7c1d0": {
+   "text": "Meme Maker",
+   "kind": "text"
+  },
+  "fc7cff75cf": {
+   "text": "Meme History",
+   "kind": "text"
+  },
+  "5dc7225cfc": {
+   "text": "Deep <0>Fucking</0> Value.",
+   "kind": "block"
+  },
+  "c04811eabe": {
+   "text": "A fair and transparent meme coin that radically revolutionizes crypto\n        tokenomics — 84.51% of every token sitting in a public pool, and not one\n        of them held back for insiders.",
+   "kind": "text"
+  },
+  "3d2395ee2e": {
+   "text": "Claim your DFV",
+   "kind": "text"
+  },
+  "04322c2671": {
+   "text": "See the DFVNomics",
+   "kind": "text"
+  },
+  "68af0462b6": {
+   "text": "The DFV cat: a hand-drawn white cat in red glasses, raising both middle fingers, above the DeepFuckingValue wordmark",
+   "kind": "attr"
+  },
+  "3b554b5f9d": {
+   "text": "A meme with receipts.",
+   "kind": "text"
+  },
+  "4bb0ee06ca": {
+   "text": "DFV takes its name from the most famous act of conviction in retail investing\n          history — holding when every incentive said sell. It is a meme coin, and it is\n          not shy about that. What it refuses to be is the other kind of meme coin: the\n          one with a hidden team wallet, an unannounced unlock, and a founder quietly\n          exiting into his own community.",
+   "kind": "text"
+  },
+  "b120e7c9b2": {
+   "text": "So the tokenomics were built the other way round. There is no team allocation.\n          There is no private round waiting to dump. There is no mint function, so the\n          supply that exists is the supply that will always exist. 84.51% of every DFV\n          token was placed into a public Uniswap pool at launch, where anyone can see it\n          and anyone can trade against it.",
+   "kind": "text"
+  },
+  "a5b7f52480": {
+   "text": "The 15% that isn't liquid belongs to the Blind Believers — the people who backed\n          this before there was anything to back. It is locked in a vesting contract for\n          five years, with nothing at all released in year one. Governance runs on-chain\n          through a DAO with a timelock, so no decision takes effect the moment it passes.",
+   "kind": "text"
+  },
+  "94654e6bad": {
+   "text": "Where every single token went.",
+   "kind": "text"
+  },
+  "93b7247cf4": {
+   "text": "138,840,000,000 DFV",
+   "kind": "text"
+  },
+  "5882b3b30a": {
+   "text": "Uniswap V4 — public liquidity",
+   "kind": "text"
+  },
+  "43de4fa3fd": {
+   "text": "117,334,651,306.91 DFV",
+   "kind": "text"
+  },
+  "b0c7366b1f": {
+   "text": "DFV/USDC",
+   "kind": "text"
+  },
+  "ae5abcd76d": {
+   "text": "tradable by anyone, from day one",
+   "kind": "text"
+  },
+  "a4d085d035": {
+   "text": "Blind Believers — locked in vesting",
+   "kind": "text"
+  },
+  "9b1fff8b64": {
+   "text": "20,828,377,491.30 DFV",
+   "kind": "text"
+  },
+  "2502460532": {
+   "text": "30 addresses",
+   "kind": "text"
+  },
+  "261f8ca549": {
+   "text": "1-year cliff, then 5 years",
+   "kind": "text"
+  },
+  "8d9e570b39": {
+   "text": "DAO treasury",
+   "kind": "text"
+  },
+  "c101f2b3da": {
+   "text": "491,353,345.96 DFV",
+   "kind": "text"
+  },
+  "047e45d343": {
+   "text": "community-controlled, spent by proposal",
+   "kind": "text"
+  },
+  "9f0a6955c0": {
+   "text": "Community purchases",
+   "kind": "text"
+  },
+  "b3741aa22f": {
+   "text": "185,617,855.83 DFV",
+   "kind": "text"
+  },
+  "9acbe475a9": {
+   "text": "22 addresses",
+   "kind": "text"
+  },
+  "9bb5a73dfd": {
+   "text": "unlocked",
+   "kind": "text"
+  },
+  "a5149eea6d": {
+   "text": "<0>No team allocation.</0> There is no founder tranche, no advisor\n        tranche, and no salary line anywhere in the supply. The team works on DFV largely\n        pro bono.",
+   "kind": "block"
+  },
+  "866ea8aeaf": {
+   "text": "If you want to support the work, gifts and donations are welcome at the main\n        DFV address — entirely voluntary, and nothing is owed in return:",
+   "kind": "text"
+  },
+  "c4810fb0b1": {
+   "text": "Our core values",
+   "kind": "text"
+  },
+  "b008841820": {
+   "text": "The 10 Commandments.",
+   "kind": "text"
+  },
+  "c899427033": {
+   "text": "We are driven by the following 10 commandments that define the whole business model.",
+   "kind": "text"
+  },
+  "9c269948ec": {
+   "text": "i.",
+   "kind": "text"
+  },
+  "6edee0fe58": {
+   "text": "Thou Shalt Have No Other Memes Before DFV",
+   "kind": "text"
+  },
+  "7339f1b34b": {
+   "text": "DFV shall do everything to become the GREATEST OF ALL MEMES, ensuring it is the only meme worthy of worship in the crypto world.",
+   "kind": "text"
+  },
+  "7250f54a9a": {
+   "text": "ii.",
+   "kind": "text"
+  },
+  "6e712006df": {
+   "text": "Thou Shalt Uphold Integrity Above All",
+   "kind": "text"
+  },
+  "a04da09c9a": {
+   "text": "DFV shall maintain the highest ethical standards, holding transparency, fairness, and community-driven decisions as core principles.",
+   "kind": "text"
+  },
+  "92869a4a24": {
+   "text": "iii.",
+   "kind": "text"
+  },
+  "6d77b9a4b1": {
+   "text": "Thou Shalt Protect the Community",
+   "kind": "text"
+  },
+  "d6c4477299": {
+   "text": "The community's well-being is paramount, and all mechanisms, including penalties, are designed to prevent exploitation and ensure fair treatment.",
+   "kind": "text"
+  },
+  "0f7eeb686b": {
+   "text": "iv.",
+   "kind": "text"
+  },
+  "bafa1b4bd0": {
+   "text": "Thou Shalt Be Transparent",
+   "kind": "text"
+  },
+  "978993376f": {
+   "text": "All purchase prices shall be official and transparent, eliminating hidden or manipulated valuations.",
+   "kind": "text"
+  },
+  "4b39a2047e": {
+   "text": "v.",
+   "kind": "text"
+  },
+  "c740cbf95e": {
+   "text": "Thou Shalt Stand Against Dumping",
+   "kind": "text"
+  },
+  "6986be8294": {
+   "text": "No investor shall dump tokens on the community. A sky-high burn penalty will be applied to any investor sale without community approval.",
+   "kind": "text"
+  },
+  "43e184ded9": {
+   "text": "vi.",
+   "kind": "text"
+  },
+  "68ae140e33": {
+   "text": "Thou Shalt Ask the Community for the Final Commandments",
+   "kind": "text"
+  },
+  "0e1bddb982": {
+   "text": "DFV shall honor its community by seeking their wisdom to craft the remaining commandments, ensuring that the project is shaped by the very people it serves.",
+   "kind": "text"
+  },
+  "0ab5e7cd13": {
+   "text": "vii.",
+   "kind": "text"
+  },
+  "85f438be86": {
+   "text": "Thou Shalt Reward Loyalty",
+   "kind": "text"
+  },
+  "b7caebfbb9": {
+   "text": "DFV shall celebrate and reward its most loyal supporters. Those who hold steadfast will receive benefits that grow with their commitment to the project.",
+   "kind": "text"
+  },
+  "cba29c9314": {
+   "text": "viii.",
+   "kind": "text"
+  },
+  "22a926af3e": {
+   "text": "Thou Shalt Innovate Relentlessly",
+   "kind": "text"
+  },
+  "6ea5a1b856": {
+   "text": "DFV shall constantly evolve, seeking new ideas, innovations, and strategies to stay ahead in the meme coin landscape. Stagnation is not an option.",
+   "kind": "text"
+  },
+  "496e9e9235": {
+   "text": "ix.",
+   "kind": "text"
+  },
+  "b737b0d22a": {
+   "text": "Thou Shalt Foster Education",
+   "kind": "text"
+  },
+  "96a302b625": {
+   "text": "DFV shall empower its community with knowledge, providing resources to help every member make informed decisions.",
+   "kind": "text"
+  },
+  "914ba315ca": {
+   "text": "x.",
+   "kind": "text"
+  },
+  "944e507516": {
+   "text": "Thou Shalt Spread Joy and Humor Above All",
+   "kind": "text"
+  },
+  "22ca2294d3": {
+   "text": "DFV is here to make the crypto world more fun. With every post, meme, and community interaction, DFV shall spread joy, laughter, and positivity.",
+   "kind": "text"
+  },
+  "4c98202d2a": {
+   "text": "Vesting",
+   "kind": "text"
+  },
+  "348ff20a2a": {
+   "text": "How to claim.",
+   "kind": "text"
+  },
+  "be6b7edae9": {
+   "text": "Claiming is only for the <0>30 Blind Believer addresses</0> in the\n          vesting contract. If your wallet isn't one of them, there is nothing to claim\n          here — and anyone telling you otherwise is trying to rob you.",
+   "kind": "block"
+  },
+  "6bac23c6df": {
+   "text": "Step 1",
+   "kind": "text"
+  },
+  "0c298264cb": {
+   "text": "Check before you connect",
+   "kind": "text"
+  },
+  "d8073de4f9": {
+   "text": "The vesting contract has a public read function, <0>getClaimableAmount</0>. You can call it on Etherscan with your address and see exactly what's available — no wallet connection, no signature, no risk.",
+   "kind": "block"
+  },
+  "aefbadf917": {
+   "text": "Step 2",
+   "kind": "text"
+  },
+  "ff93f1ffb2": {
+   "text": "Wait for the cliff",
+   "kind": "text"
+  },
+  "582d8da6f9": {
+   "text": "Nothing unlocks in the first year. Zero percent is released at the start, and after the one-year cliff your allocation begins releasing continuously — second by second — across five years.",
+   "kind": "text"
+  },
+  "27030a62f7": {
+   "text": "Step 3",
+   "kind": "text"
+  },
+  "a1d256cd14": {
+   "text": "Call claim",
+   "kind": "text"
+  },
+  "bd5964d075": {
+   "text": "When you have a balance available, <0>claim()</0> sends it to your wallet. Tokens are never pushed to you automatically; they wait in the contract until you ask for them.",
+   "kind": "block"
+  },
+  "79fc372dc7": {
+   "text": "Good to know",
+   "kind": "text"
+  },
+  "af1c4ddead": {
+   "text": "Someone else can pay the gas",
+   "kind": "text"
+  },
+  "a23eeab24f": {
+   "text": "<0>claimFor(address)</0> lets anyone trigger a claim on a beneficiary's behalf. The tokens always go to the beneficiary — never to the caller — so there is no way to redirect them.",
+   "kind": "block"
+  },
+  "0d65f51f45": {
+   "text": "<0>There is no claim deadline and no rush.</0> Vesting releases on its\n        own schedule whether you claim daily or once in five years. Any \"claim now or lose\n        it\" message is a scam — urgency is the oldest trick there is.",
+   "kind": "block"
+  },
+  "7c4ef51146": {
+   "text": "Blind Believers tranche — released so far",
+   "kind": "text"
+  },
+  "50c5adc410": {
+   "text": "0.00 DFV",
+   "kind": "text"
+  },
+  "e66eb3edff": {
+   "text": "of 20,828,377,491.30 DFV",
+   "kind": "text"
+  },
+  "520fef117c": {
+   "text": "fully vested 19 Aug 2031",
+   "kind": "text"
+  },
+  "3217368ebb": {
+   "text": "Open the claim app",
+   "kind": "text"
+  },
+  "698cdc2fb9": {
+   "text": "Stay safe",
+   "kind": "text"
+  },
+  "e2659dc01c": {
+   "text": "Check all three. Always.",
+   "kind": "text"
+  },
+  "43a103a729": {
+   "text": "DFV speaks in three places",
+   "kind": "text"
+  },
+  "fc7a685f0a": {
+   "text": "Our X account, our Telegram, and this website. Real news appears on all three and\n          the details match. If something appears in only one place — or the three don't\n          agree — treat it as compromised and wait.",
+   "kind": "text"
+  },
+  "408d44ec05": {
+   "text": "We will <0>never</0> DM you first, and never send you a claim link.",
+   "kind": "block"
+  },
+  "b894c3e289": {
+   "text": "We will <0>never</0> ask for your seed phrase or private key. Nobody legitimate ever will.",
+   "kind": "block"
+  },
+  "8eceacd8a1": {
+   "text": "Reach our channels by clicking the links below, not by typing or searching. Lookalike names are the point of the trick.",
+   "kind": "text"
+  },
+  "8fda68c168": {
+   "text": "Check any contract you're asked to sign against the addresses in the table below.",
+   "kind": "text"
+  },
+  "5d2a116b6e": {
+   "text": "𝕏 @DeepFuckinVaIue",
+   "kind": "text"
+  },
+  "edbea9ff1a": {
+   "text": "Telegram",
+   "kind": "text"
+  },
+  "d34c52046a": {
+   "text": "GitHub — contracts",
+   "kind": "text"
+  },
+  "f825ce45a9": {
+   "text": "Uniswap",
+   "kind": "text"
+  },
+  "32767bc87c": {
+   "text": "Contracts",
+   "kind": "text"
+  },
+  "f034cc145b": {
+   "text": "Don't trust us. Read the code.",
+   "kind": "text"
+  },
+  "8285b2b30e": {
+   "text": "Deployed on Ethereum mainnet. The source is public on GitHub under an MIT licence, and every contract is verified on Etherscan — so the code you read is provably the code that runs.",
+   "kind": "text"
+  },
+  "5a0ba3bb83": {
+   "text": "Contract",
+   "kind": "text"
+  },
+  "d70f93df5e": {
+   "text": "Address",
+   "kind": "text"
+  },
+  "ca032b5844": {
+   "text": "What it does",
+   "kind": "text"
+  },
+  "1bce0fda3a": {
+   "text": "DFVToken",
+   "kind": "text"
+  },
+  "026f7c8cc5": {
+   "text": "the token itself",
+   "kind": "text"
+  },
+  "0c40593bb4": {
+   "text": "DFVVesting",
+   "kind": "text"
+  },
+  "31547bd6a8": {
+   "text": "Blind Believer lockup + claiming",
+   "kind": "text"
+  },
+  "857d573fe5": {
+   "text": "DFVDAO",
+   "kind": "text"
+  },
+  "79702a4fd2": {
+   "text": "proposals and voting",
+   "kind": "text"
+  },
+  "20ef03c701": {
+   "text": "TimeLock",
+   "kind": "text"
+  },
+  "29374c6376": {
+   "text": "delay before anything executes",
+   "kind": "text"
+  },
+  "7ff9917596": {
+   "text": "DFV is a community meme coin. Nothing here is investment advice, an offer, or a\n      promise of anything. Crypto can go to zero, and memes especially. Never risk what\n      you can't afford to lose.",
+   "kind": "text"
+  },
+  "ebac8c4d9a": {
+   "text": "Elsewhere",
+   "kind": "attr"
+  },
+  "5442e2b64f": {
+   "text": "GitHub",
+   "kind": "text"
+  },
+  "2683115107": {
+   "text": "Etherscan",
+   "kind": "text"
+  },
+  "51579fb046": {
+   "text": "Claim — DFV",
+   "kind": "text"
+  },
+  "4bcf8ddb9d": {
+   "text": "Claim your vested DFV. For the 30 Blind Believer addresses only.",
+   "kind": "attr"
+  },
+  "68b3e230d5": {
+   "text": "← Back to dfv.fun",
+   "kind": "text"
+  },
+  "a782d4f46d": {
+   "text": "For the <0>30 Blind Believer addresses</0> in the vesting contract. If your\n    wallet isn't one of them, there is nothing here to claim — and nobody can change that.",
+   "kind": "block"
+  },
+  "0f9b861fd1": {
+   "text": "1 — Connect your wallet",
+   "kind": "text"
+  },
+  "ffee40873d": {
+   "text": "Connect wallet",
+   "kind": "text"
+  },
+  "4199084f49": {
+   "text": "Switch to Ethereum mainnet",
+   "kind": "text"
+  },
+  "e3e77fd219": {
+   "text": "Connected as",
+   "kind": "text"
+  },
+  "80d4a0ea53": {
+   "text": "2 — Your vesting position",
+   "kind": "text"
+  },
+  "87acfa7878": {
+   "text": "This address has no vesting allocation. That's expected for almost everyone —\n      only 30 addresses were ever given one.",
+   "kind": "text"
+  },
+  "c61db642b8": {
+   "text": "3 — Claim",
+   "kind": "text"
+  },
+  "64f5c9d235": {
+   "text": "Nothing available to claim yet",
+   "kind": "text"
+  },
+  "6c95c2016a": {
+   "text": "What this page can and cannot do",
+   "kind": "text"
+  },
+  "6d0ea76112": {
+   "text": "No token approval is ever requested.",
+   "kind": "text"
+  },
+  "8f875fedbc": {
+   "text": "The only transaction is",
+   "kind": "text"
+  },
+  "0259a98c44": {
+   "text": ", which takes no parameters.",
+   "kind": "text"
+  },
+  "28d58aa9a9": {
+   "text": "Tokens can only go to you.",
+   "kind": "text"
+  },
+  "244ce72a3d": {
+   "text": "The contract sends to the caller —\n        there is no recipient field for anyone to alter.",
+   "kind": "text"
+  },
+  "309e06942a": {
+   "text": "Checking costs nothing.",
+   "kind": "text"
+  },
+  "32672f43b3": {
+   "text": "Reading your balance is free and requires\n        no signature.",
+   "kind": "text"
+  },
+  "762f566865": {
+   "text": "No deadline, ever.",
+   "kind": "text"
+  },
+  "c5e00b1005": {
+   "text": "Vesting releases on its own schedule. Claim\n        today or in five years; nothing expires.",
+   "kind": "text"
+  },
+  "19bc9a5caf": {
+   "text": "This page loads no external code.",
+   "kind": "text"
+  },
+  "7d87cde7a3": {
+   "text": "No libraries, no CDN — one\n        small script you can read in full.",
+   "kind": "text"
+  },
+  "e674bd2201": {
+   "text": "Verify before you sign",
+   "kind": "text"
+  },
+  "9cdadd45b1": {
+   "text": "Your wallet will show you the contract address. It must match this exactly —\n      if it doesn't, reject the transaction.",
+   "kind": "text"
+  },
+  "bffa0588e7": {
+   "text": "Vesting contract",
+   "kind": "text"
+  },
+  "0ba876f0f3": {
+   "text": "DFV token",
+   "kind": "text"
+  },
+  "1669fe253c": {
+   "text": "Prefer not to connect at all? Read\n      <0>getClaimableAmount on Etherscan</0>\n      with your address — free, no wallet, no signature.",
+   "kind": "block"
+  },
+  "6733991071": {
+   "text": "We will never DM you a claim link. The only real one is\n      <0>dfv.fun</0>, confirmed on our X and Telegram.",
+   "kind": "block"
+  },
+  "cc34926fec": {
+   "text": "DFV is a community meme coin. Nothing here is investment advice. Always read what your\n    wallet asks you to sign.",
+   "kind": "text"
+  },
+  "cf0076e16f": {
+   "text": "The DAO — DFV",
+   "kind": "text"
+  },
+  "c1ffed4faf": {
+   "text": "How DFV governance works: delegate your vote, propose, and decide. Deliberately slow, deliberately expensive.",
+   "kind": "attr"
+  },
+  "d2ba6c56b6": {
+   "text": "DFV is governed by whoever holds and delegates DFV. Everything on this page is read\n    straight from the contracts — the interface can do exactly what the code allows, and\n    nothing else.",
+   "kind": "text"
+  },
+  "c5d28bd2f6": {
+   "text": "First: delegate",
+   "kind": "text"
+  },
+  "5fc2946864": {
+   "text": "Holding DFV gives you <0>no voting power at all</0> until you delegate it —\n      including to yourself. This catches nearly everyone. One transaction, once, and your\n      balance starts counting.",
+   "kind": "block"
+  },
+  "0a967aa35f": {
+   "text": "Your address",
+   "kind": "text"
+  },
+  "b79fcd90bc": {
+   "text": "DFV balance",
+   "kind": "text"
+  },
+  "a980cedfaf": {
+   "text": "Voting power",
+   "kind": "text"
+  },
+  "7b1046e996": {
+   "text": "Currently delegated to",
+   "kind": "text"
+  },
+  "21b18629ab": {
+   "text": "Delegate to myself",
+   "kind": "text"
+  },
+  "4c56c44f17": {
+   "text": "Delegate to someone else",
+   "kind": "text"
+  },
+  "21c4ce582e": {
+   "text": "0x… address to delegate to",
+   "kind": "attr"
+  },
+  "4274586249": {
+   "text": "Delegate to this address",
+   "kind": "text"
+  },
+  "a2292a1f54": {
+   "text": "The rules, as deployed",
+   "kind": "text"
+  },
+  "5df9360173": {
+   "text": "Read live from <0>0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508</0>. These are not our description of the rules — they are the rules.",
+   "kind": "block"
+  },
+  "1137468cfd": {
+   "text": "To propose",
+   "kind": "text"
+  },
+  "39221d6380": {
+   "text": "DFV delegated · ≈ $161,293",
+   "kind": "text"
+  },
+  "fdaafe2d97": {
+   "text": "Quorum",
+   "kind": "text"
+  },
+  "3597724f31": {
+   "text": "20,826,000,000 DFV · ≈ $4,838,787",
+   "kind": "text"
+  },
+  "19f804c3f6": {
+   "text": "Delay before voting",
+   "kind": "text"
+  },
+  "176e595a08": {
+   "text": "14 days",
+   "kind": "text"
+  },
+  "5fe922e61e": {
+   "text": "after a proposal is filed",
+   "kind": "text"
+  },
+  "9c57b01d5d": {
+   "text": "Voting window",
+   "kind": "text"
+  },
+  "7d4278a875": {
+   "text": "30 days",
+   "kind": "text"
+  },
+  "2c8c11468e": {
+   "text": "then a timelock before execution",
+   "kind": "text"
+  },
+  "c7c26db6bb": {
+   "text": "Slow on purpose",
+   "kind": "text"
+  },
+  "4ce1229b2a": {
+   "text": "14 days before voting opens, then 30 days to vote —\n        44 days minimum from proposal to decision. Long\n        enough that nobody is rushed, and far too long for a borrowed-token governance attack to survive.",
+   "kind": "text"
+  },
+  "ad166741f9": {
+   "text": "Expensive on purpose",
+   "kind": "text"
+  },
+  "f25569aead": {
+   "text": "Filing a proposal needs 694,200,000 DFV delegated — roughly $161,293 at\n        the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.",
+   "kind": "text"
+  },
+  "50e635e87c": {
+   "text": "Bought, not granted",
+   "kind": "text"
+  },
+  "43b2e6b02c": {
+   "text": "Voting power is not handed out. It is bought on the open market and delegated. Every vote\n        represents someone who paid for their say at the same price as everyone else.",
+   "kind": "text"
+  },
+  "9e9297acf0": {
+   "text": "Where things stand",
+   "kind": "text"
+  },
+  "ff091a64aa": {
+   "text": "Most DFV cannot vote. 117,491,635,415 sits in the Uniswap pool and 20,824,073,139 is\n      locked in the vesting contract — neither delegates, so neither has a voice. Voting power only\n      exists once tokens are held in a wallet <0>and</0> delegated.",
+   "kind": "block"
+  },
+  "f359fc7949": {
+   "text": "Total supply",
+   "kind": "text"
+  },
+  "cf73633d6b": {
+   "text": "In the Uniswap pool — cannot vote",
+   "kind": "text"
+  },
+  "239f54ad2f": {
+   "text": "Locked in vesting — cannot vote",
+   "kind": "text"
+  },
+  "75b8cb0b63": {
+   "text": "Could vote, if delegated",
+   "kind": "text"
+  },
+  "0a1b0b8c8c": {
+   "text": "Needed for quorum",
+   "kind": "text"
+  },
+  "b0536c9386": {
+   "text": "2.52% of the tokens needed for quorum currently exist in a form that could vote.",
+   "kind": "text"
+  },
+  "edc79ebe24": {
+   "text": "<0>Governance is not active yet.</0> Quorum needs 20,826,000,000 DFV of delegated\n      votes, and at most 524,291,446 could vote today even if every holder delegated.\n      That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —\n      roughly $4,838,787 of tokens must move into voting hands before the DAO can decide anything.\n      Until then this page is honest about it rather than pretending otherwise.",
+   "kind": "block"
+  },
+  "ef44f4b732": {
+   "text": "Proposals",
+   "kind": "text"
+  },
+  "e8be68e660": {
+   "text": "No proposals have been filed. The first requires 694,200,000 DFV delegated to a single\n      address. When one exists it will appear here, with its live state, tallies and every vote reason\n      recorded on-chain.",
+   "kind": "text"
+  },
+  "d1b1702fb9": {
+   "text": "The treasury",
+   "kind": "text"
+  },
+  "7df32fd66b": {
+   "text": "491,353,345.96 DFV is held in a <0>2-of-6\n      Gnosis Safe</0> at <1>0xaF786e8cDD7E4390BD629bfDec8f090268FE2934</1>.",
+   "kind": "block"
+  },
+  "c64e28d0df": {
+   "text": "Being explicit, because it matters: the DAO contract cannot move these funds by itself. A vote\n      decides, and the Safe signers execute. The multisig exists so the treasury cannot be lost to a\n      single mistake or a single key — the trade-off is that spending it takes a human signature as well\n      as a vote.",
+   "kind": "text"
+  },
+  "f3e53c4dd6": {
+   "text": "Safe owner",
+   "kind": "text"
+  },
+  "a37956d7b1": {
+   "text": "On Etherscan",
+   "kind": "text"
+  },
+  "97211a8888": {
+   "text": "What",
+   "kind": "text"
+  },
+  "e2d315e848": {
+   "text": "DAO (Governor)",
+   "kind": "text"
+  },
+  "c1889f9fb4": {
+   "text": "Treasury Safe",
+   "kind": "text"
+  },
+  "a11fab5bd5": {
+   "text": "The token itself is immutable: six functions, no mint, no burn, no pause, no upgrade, no owner.\n      The supply that exists is the supply that will always exist. Governance parameters live on the DAO\n      contract and can only be changed by a passed proposal.",
+   "kind": "text"
+  },
+  "9c8fa4fdc6": {
+   "text": "Figures read from Ethereum mainnet Mon, 24 Aug 2026 22:29:43 GMT and refreshed daily.\n    Your balance, voting power and delegate are read live from your own wallet.",
+   "kind": "text"
+  },
+  "66cbdd8e53": {
+   "text": "Trading Leaderboard — DFV",
+   "kind": "text"
+  },
+  "c1b00ff1d0": {
+   "text": "Every DFV trade on Uniswap V4, ranked by volume. Updated daily. Full data downloadable as CSV.",
+   "kind": "attr"
+  },
+  "7920b5fd2c": {
+   "text": "Every DFV trade on Uniswap V4, ranked by volume. Rebuilt from the blockchain\n    once a day — nothing here is typed in by hand, and the raw data is downloadable\n    below.",
+   "kind": "text"
+  },
+  "ebe0ab9bf6": {
+   "text": "Trade DFV on Uniswap ↗",
+   "kind": "text"
+  },
+  "d1a1bce929": {
+   "text": "Token on Etherscan ↗",
+   "kind": "text"
+  },
+  "1da693d3f5": {
+   "text": "V4 PoolManager ↗",
+   "kind": "text"
+  },
+  "a4e4c7a930": {
+   "text": "10% of pool revenue to the top trader",
+   "kind": "text"
+  },
+  "5d4d750391": {
+   "text": "Every month, the address with the highest trading volume receives\n      <0>10% of all revenue the DFV pool generates</0> that month.",
+   "kind": "block"
+  },
+  "7489923b61": {
+   "text": "Currently leading — August 2026",
+   "kind": "text"
+  },
+  "977e6d1149": {
+   "text": "$5,792.33 volume",
+   "kind": "text"
+  },
+  "ce7c06657a": {
+   "text": "Pool revenue means the trading fees the DFV liquidity position earns. Payment is\n      made <0>on-chain</0>, so every distribution appears on Etherscan and can be\n      checked against the volume figures on this page. The ranking is rebuilt from the\n      blockchain daily and the underlying data is downloadable below — nothing is decided\n      behind closed doors.",
+   "kind": "block"
+  },
+  "5be58aa8a9": {
+   "text": "The month runs from the 1st to the last day, UTC. Ranking is by USDC volume, buys and\n      sells counted together. Wash trading is self-defeating: fees paid to climb the board\n      exceed the share returned.",
+   "kind": "text"
+  },
+  "85a42dcf17": {
+   "text": "Trades, all time",
+   "kind": "text"
+  },
+  "84ff3f938e": {
+   "text": "Traders",
+   "kind": "text"
+  },
+  "5a27f465c2": {
+   "text": "DFV traded",
+   "kind": "text"
+  },
+  "3b18e8e332": {
+   "text": "Volume",
+   "kind": "text"
+  },
+  "1b4785331d": {
+   "text": "This month",
+   "kind": "text"
+  },
+  "5e447fba9a": {
+   "text": "August 2026 — resets on the first of each month. Ranked by USDC volume.",
+   "kind": "text"
+  },
+  "de5e044899": {
+   "text": "Trader",
+   "kind": "text"
+  },
+  "597b1092b3": {
+   "text": "Trades",
+   "kind": "text"
+  },
+  "10065554d7": {
+   "text": "DFV bought",
+   "kind": "text"
+  },
+  "91a438f2cf": {
+   "text": "DFV sold",
+   "kind": "text"
+  },
+  "45b0f85126": {
+   "text": "Volume (USDC)",
+   "kind": "text"
+  },
+  "dbad49d891": {
+   "text": "All time",
+   "kind": "text"
+  },
+  "55e483021f": {
+   "text": "Every trader since the pool opened, ranked by total USDC volume.",
+   "kind": "text"
+  },
+  "cce25eb2b5": {
+   "text": "Month by month",
+   "kind": "text"
+  },
+  "29745d7356": {
+   "text": "Each month kept, so the history never disappears when the leaderboard resets.",
+   "kind": "text"
+  },
+  "082bc378cd": {
+   "text": "Month",
+   "kind": "text"
+  },
+  "5e88193cd6": {
+   "text": "DFV volume",
+   "kind": "text"
+  },
+  "691721b558": {
+   "text": "USDC volume",
+   "kind": "text"
+  },
+  "e9d859cd59": {
+   "text": "August 2026 <0>current</0>",
+   "kind": "block"
+  },
+  "db71b26bfd": {
+   "text": "June 2026",
+   "kind": "text"
+  },
+  "6d3548265f": {
+   "text": "Every trade",
+   "kind": "text"
+  },
+  "424623f41d": {
+   "text": "The complete ledger, newest first. Each row links to the transaction on Etherscan so you can verify it yourself.",
+   "kind": "text"
+  },
+  "eb9a4bc1c0": {
+   "text": "Date",
+   "kind": "text"
+  },
+  "26528381ea": {
+   "text": "Side",
+   "kind": "text"
+  },
+  "17011de7fc": {
+   "text": "USDC",
+   "kind": "text"
+  },
+  "766e40fff4": {
+   "text": "Tx",
+   "kind": "text"
+  },
+  "dee2dd34f4": {
+   "text": "sell",
+   "kind": "text"
+  },
+  "8f3a075439": {
+   "text": "view",
+   "kind": "text"
+  },
+  "a066f07017": {
+   "text": "buy",
+   "kind": "text"
+  },
+  "a2c1cc81f2": {
+   "text": "Take the data",
+   "kind": "text"
+  },
+  "a74ec292f9": {
+   "text": "Plain CSV, no signup, no API key. Open it in a spreadsheet and check our arithmetic.",
+   "kind": "text"
+  },
+  "ce1a4c5872": {
+   "text": "↓ trades.csv — every trade",
+   "kind": "text"
+  },
+  "06f618bf77": {
+   "text": "↓ leaderboard.csv — totals per trader",
+   "kind": "text"
+  },
+  "e5d5dc7661": {
+   "text": "↓ trades.json — raw",
+   "kind": "text"
+  },
+  "8e4f627087": {
+   "text": "How this is built",
+   "kind": "text"
+  },
+  "2247f2ed89": {
+   "text": "Every DFV transfer in or out of the Uniswap V4 PoolManager is collected, then\n      each transaction is checked against the events the pool itself emitted. Only\n      transactions containing a <0>Swap</0> event are counted as trades.",
+   "kind": "block"
+  },
+  "49e065a4f1": {
+   "text": "<0>This is why the numbers are honest.</0> 5 transactions\n      moved DFV in or out of the pool as <1>liquidity</1> rather than trading — including the\n      initial provision of roughly 117.5 billion DFV. Counting those as \"sales\" would\n      inflate volume by a factor of thousands. They are excluded, and listed separately\n      in the raw JSON.",
+   "kind": "block"
+  },
+  "b8e8015175": {
+   "text": "The trader shown is the account that signed the transaction, not the router\n      contract that appears as the counterparty in the transfer — so aggregators and\n      routers never appear on the leaderboard in place of real people.",
+   "kind": "text"
+  },
+  "d37a76b55a": {
+   "text": "Token <0>0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07</0> · pool <1>0x000000000004444c5dc75cB358380D2e3dE08A90</1> · quoted in USDC.",
+   "kind": "block"
+  },
+  "1b162801b5": {
+   "text": "Last rebuilt Mon, 24 Aug 2026 22:29:43 GMT. Updated daily at midnight\n    Central European Time. Data comes from Ethereum mainnet and can be reproduced by\n    anyone — the build script is in the repository.",
+   "kind": "text"
+  },
+  "037250ee8f": {
+   "text": "Meme Maker — DFV",
+   "kind": "text"
+  },
+  "f6455060ae": {
+   "text": "Make a DFV meme in your browser. Nothing uploads, nothing is stored.",
+   "kind": "attr"
+  },
+  "bdfa844a1c": {
+   "text": "Commandment x says spread joy and humour above all. Here are the tools.\n    Everything happens on your device — nothing is uploaded, nothing is saved.",
+   "kind": "text"
+  },
+  "83004e5c47": {
+   "text": "Live preview of the meme you are making",
+   "kind": "attr"
+  },
+  "64dd60fe1a": {
+   "text": "Background",
+   "kind": "text"
+  },
+  "37619fc130": {
+   "text": "White",
+   "kind": "attr"
+  },
+  "511a68e1d6": {
+   "text": "DFV navy",
+   "kind": "attr"
+  },
+  "caedf235c8": {
+   "text": "DFV red",
+   "kind": "attr"
+  },
+  "b406fb57b2": {
+   "text": "Black",
+   "kind": "attr"
+  },
+  "0e0fc1c214": {
+   "text": "Pale blue",
+   "kind": "attr"
+  },
+  "7cd5762f24": {
+   "text": "…or use your own picture",
+   "kind": "text"
+  },
+  "d26d55c7f8": {
+   "text": "Words",
+   "kind": "text"
+  },
+  "99a0efc6cf": {
+   "text": "Style",
+   "kind": "text"
+  },
+  "512c519544": {
+   "text": "Impact — classic meme",
+   "kind": "text"
+  },
+  "4a7849986b": {
+   "text": "Caption bar — white band",
+   "kind": "text"
+  },
+  "13799c704a": {
+   "text": "Quote — serif over a scrim",
+   "kind": "text"
+  },
+  "c09fa739a9": {
+   "text": "SHOUTING (uppercase)",
+   "kind": "text"
+  },
+  "7ae214fa56": {
+   "text": "Top line",
+   "kind": "text"
+  },
+  "a842bef5d2": {
+   "text": "Your text here",
+   "kind": "attr"
+  },
+  "831741ea14": {
+   "text": "Bottom line",
+   "kind": "text"
+  },
+  "da8223b075": {
+   "text": "Text size — <0>100%</0>",
+   "kind": "block"
+  },
+  "d6f84922d5": {
+   "text": "The cat",
+   "kind": "text"
+  },
+  "81b2aa02ea": {
+   "text": "Show the cat",
+   "kind": "text"
+  },
+  "d45ac477ac": {
+   "text": "Flip it",
+   "kind": "text"
+  },
+  "b7152342a2": {
+   "text": "Size",
+   "kind": "text"
+  },
+  "cf1c85adba": {
+   "text": "Position",
+   "kind": "text"
+  },
+  "c2fc57681a": {
+   "text": "Bottom right",
+   "kind": "text"
+  },
+  "1a7ce96fd0": {
+   "text": "Bottom left",
+   "kind": "text"
+  },
+  "c1cc898f94": {
+   "text": "Top right",
+   "kind": "text"
+  },
+  "04b38cf935": {
+   "text": "Top left",
+   "kind": "text"
+  },
+  "16e5447a80": {
+   "text": "Centre",
+   "kind": "text"
+  },
+  "bc17c1f017": {
+   "text": "Video",
+   "kind": "text"
+  },
+  "dc812752b7": {
+   "text": "Movement",
+   "kind": "text"
+  },
+  "18c6af5d51": {
+   "text": "None — still frame",
+   "kind": "text"
+  },
+  "b93646db26": {
+   "text": "Slow zoom",
+   "kind": "text"
+  },
+  "1cee99ef61": {
+   "text": "Shake",
+   "kind": "text"
+  },
+  "f552bc7ecb": {
+   "text": "Text pops in",
+   "kind": "text"
+  },
+  "ebce137c6a": {
+   "text": "Text slides in",
+   "kind": "text"
+  },
+  "3bade34ecb": {
+   "text": "Length",
+   "kind": "text"
+  },
+  "aca3514915": {
+   "text": "3 seconds",
+   "kind": "text"
+  },
+  "76c664a81d": {
+   "text": "5 seconds",
+   "kind": "text"
+  },
+  "04ccd7191c": {
+   "text": "8 seconds",
+   "kind": "text"
+  },
+  "a8c20c0ed3": {
+   "text": "● Record video",
+   "kind": "text"
+  },
+  "b942303bc6": {
+   "text": "↓ Download PNG",
+   "kind": "text"
+  },
+  "92898d554d": {
+   "text": "Surprise me",
+   "kind": "text"
+  },
+  "719ea396ad": {
+   "text": "Clear",
+   "kind": "text"
+  },
+  "7f22a48a5f": {
+   "text": "<0>Nothing leaves your browser.</0> When you pick a picture it is read\n    directly into the page and drawn onto the canvas. There is no upload, no server, and\n    no storage — this page cannot make a network request at all.",
+   "kind": "block"
+  },
+  "9681397623": {
+   "text": "<0>Video works the same way.</0> The clip is recorded from the canvas in your browser with MediaRecorder — a built-in browser feature — and saved straight to your device. MP4 where your browser supports it, WebM otherwise.",
+   "kind": "block"
+  },
+  "552cef6bd6": {
+   "text": "Every meme you download is also kept in <0>your meme history</0> — stored in this browser only, never uploaded.",
+   "kind": "block"
+  },
+  "ba5a0f5419": {
+   "text": "Made something good? Post it and tag us. The best ones get shared.",
+   "kind": "text"
+  },
+  "457f79e731": {
+   "text": "The DFV cat is our mark — use it for DFV memes freely. Please don't use it to\n    impersonate the project, and never attach it to a claim link.",
+   "kind": "text"
+  },
+  "520f610850": {
+   "text": "Meme History — DFV",
+   "kind": "text"
+  },
+  "8abcd09f3e": {
+   "text": "Every DFV meme you have made, kept in your own browser.",
+   "kind": "attr"
+  },
+  "c143ea46db": {
+   "text": "← Back to the meme maker",
+   "kind": "text"
+  },
+  "e8b9ce3c2a": {
+   "text": "Your meme history",
+   "kind": "text"
+  },
+  "416e887549": {
+   "text": "Every meme you download is kept here automatically, newest first, with the date it was made.\n    It lives in this browser and has never been uploaded anywhere.",
+   "kind": "text"
+  },
+  "7640428ae1": {
+   "text": "Make another",
+   "kind": "text"
+  },
+  "08170580cb": {
+   "text": "Delete all",
+   "kind": "text"
+  },
+  "f1f7160fd6": {
+   "text": "Nothing here yet. Make a meme and download it — it will appear automatically.",
+   "kind": "text"
+  },
+  "147a78f866": {
+   "text": "<0>This history is yours alone.</0> It is stored in your browser, not on a server,\n    so nobody else can see it — and it will not follow you to another device or survive clearing\n    your site data.",
+   "kind": "block"
+  },
+  "cf604145b3": {
+   "text": "There is no shared public gallery, because publishing everyone's uploads would mean running\n    an upload endpoint and moderating whatever arrives on it. If you want your meme seen, post it in\n    the community channels.",
+   "kind": "text"
+  }
+ },
+ "occurrences": {
+  "index.html": [
+   {
+    "hash": "87e8d78753",
+    "kind": "text"
+   },
+   {
+    "hash": "3e5f502f9a",
+    "kind": "attr"
+   },
+   {
+    "hash": "2d62a16755",
+    "kind": "text"
+   },
+   {
+    "hash": "5548ae4f34",
+    "kind": "text"
+   },
+   {
+    "hash": "0a5dc1533c",
+    "kind": "text"
+   },
+   {
+    "hash": "cfd719389a",
+    "kind": "text"
+   },
+   {
+    "hash": "9f3eee5feb",
+    "kind": "text"
+   },
+   {
+    "hash": "a8dac215bd",
+    "kind": "text"
+   },
+   {
+    "hash": "7ff5a6dafd",
+    "kind": "attr"
+   },
+   {
+    "hash": "bce1c6be3c",
+    "kind": "text"
+   },
+   {
+    "hash": "3dd7ea9e19",
+    "kind": "text"
+   },
+   {
+    "hash": "bb53ec8ed7",
+    "kind": "text"
+   },
+   {
+    "hash": "33ba5412e8",
+    "kind": "text"
+   },
+   {
+    "hash": "0381247a69",
+    "kind": "text"
+   },
+   {
+    "hash": "7456a251e7",
+    "kind": "text"
+   },
+   {
+    "hash": "dc4e08a408",
+    "kind": "text"
+   },
+   {
+    "hash": "57f5f5efbc",
+    "kind": "attr"
+   },
+   {
+    "hash": "7ff5a6dafd",
+    "kind": "attr"
+   },
+   {
+    "hash": "bce1c6be3c",
+    "kind": "text"
+   },
+   {
+    "hash": "3dd7ea9e19",
+    "kind": "text"
+   },
+   {
+    "hash": "97b4f05220",
+    "kind": "text"
+   },
+   {
+    "hash": "8a5cbf4957",
+    "kind": "text"
+   },
+   {
+    "hash": "3f0bc97f09",
+    "kind": "text"
+   },
+   {
+    "hash": "4105c7c1d0",
+    "kind": "text"
+   },
+   {
+    "hash": "fc7cff75cf",
+    "kind": "text"
+   },
+   {
+    "hash": "5dc7225cfc",
+    "kind": "block"
+   },
+   {
+    "hash": "c04811eabe",
+    "kind": "text"
+   },
+   {
+    "hash": "3d2395ee2e",
+    "kind": "text"
+   },
+   {
+    "hash": "04322c2671",
+    "kind": "text"
+   },
+   {
+    "hash": "68af0462b6",
+    "kind": "attr"
+   },
+   {
+    "hash": "bce1c6be3c",
+    "kind": "text"
+   },
+   {
+    "hash": "3b554b5f9d",
+    "kind": "text"
+   },
+   {
+    "hash": "4bb0ee06ca",
+    "kind": "text"
+   },
+   {
+    "hash": "b120e7c9b2",
+    "kind": "text"
+   },
+   {
+    "hash": "a5b7f52480",
+    "kind": "text"
+   },
+   {
+    "hash": "3dd7ea9e19",
+    "kind": "text"
+   },
+   {
+    "hash": "94654e6bad",
+    "kind": "text"
+   },
+   {
+    "hash": "93b7247cf4",
+    "kind": "text"
+   },
+   {
+    "hash": "5882b3b30a",
+    "kind": "text"
+   },
+   {
+    "hash": "43de4fa3fd",
+    "kind": "text"
+   },
+   {
+    "hash": "b0c7366b1f",
+    "kind": "text"
+   },
+   {
+    "hash": "ae5abcd76d",
+    "kind": "text"
+   },
+   {
+    "hash": "a4d085d035",
+    "kind": "text"
+   },
+   {
+    "hash": "9b1fff8b64",
+    "kind": "text"
+   },
+   {
+    "hash": "2502460532",
+    "kind": "text"
+   },
+   {
+    "hash": "261f8ca549",
+    "kind": "text"
+   },
+   {
+    "hash": "8d9e570b39",
+    "kind": "text"
+   },
+   {
+    "hash": "c101f2b3da",
+    "kind": "text"
+   },
+   {
+    "hash": "047e45d343",
+    "kind": "text"
+   },
+   {
+    "hash": "9f0a6955c0",
+    "kind": "text"
+   },
+   {
+    "hash": "b3741aa22f",
+    "kind": "text"
+   },
+   {
+    "hash": "9acbe475a9",
+    "kind": "text"
+   },
+   {
+    "hash": "9bb5a73dfd",
+    "kind": "text"
+   },
+   {
+    "hash": "a5149eea6d",
+    "kind": "block"
+   },
+   {
+    "hash": "866ea8aeaf",
+    "kind": "text"
+   },
+   {
+    "hash": "c4810fb0b1",
+    "kind": "text"
+   },
+   {
+    "hash": "b008841820",
+    "kind": "text"
+   },
+   {
+    "hash": "c899427033",
+    "kind": "text"
+   },
+   {
+    "hash": "9c269948ec",
+    "kind": "text"
+   },
+   {
+    "hash": "6edee0fe58",
+    "kind": "text"
+   },
+   {
+    "hash": "7339f1b34b",
+    "kind": "text"
+   },
+   {
+    "hash": "7250f54a9a",
+    "kind": "text"
+   },
+   {
+    "hash": "6e712006df",
+    "kind": "text"
+   },
+   {
+    "hash": "a04da09c9a",
+    "kind": "text"
+   },
+   {
+    "hash": "92869a4a24",
+    "kind": "text"
+   },
+   {
+    "hash": "6d77b9a4b1",
+    "kind": "text"
+   },
+   {
+    "hash": "d6c4477299",
+    "kind": "text"
+   },
+   {
+    "hash": "0f7eeb686b",
+    "kind": "text"
+   },
+   {
+    "hash": "bafa1b4bd0",
+    "kind": "text"
+   },
+   {
+    "hash": "978993376f",
+    "kind": "text"
+   },
+   {
+    "hash": "4b39a2047e",
+    "kind": "text"
+   },
+   {
+    "hash": "c740cbf95e",
+    "kind": "text"
+   },
+   {
+    "hash": "6986be8294",
+    "kind": "text"
+   },
+   {
+    "hash": "43e184ded9",
+    "kind": "text"
+   },
+   {
+    "hash": "68ae140e33",
+    "kind": "text"
+   },
+   {
+    "hash": "0e1bddb982",
+    "kind": "text"
+   },
+   {
+    "hash": "0ab5e7cd13",
+    "kind": "text"
+   },
+   {
+    "hash": "85f438be86",
+    "kind": "text"
+   },
+   {
+    "hash": "b7caebfbb9",
+    "kind": "text"
+   },
+   {
+    "hash": "cba29c9314",
+    "kind": "text"
+   },
+   {
+    "hash": "22a926af3e",
+    "kind": "text"
+   },
+   {
+    "hash": "6ea5a1b856",
+    "kind": "text"
+   },
+   {
+    "hash": "496e9e9235",
+    "kind": "text"
+   },
+   {
+    "hash": "b737b0d22a",
+    "kind": "text"
+   },
+   {
+    "hash": "96a302b625",
+    "kind": "text"
+   },
+   {
+    "hash": "914ba315ca",
+    "kind": "text"
+   },
+   {
+    "hash": "944e507516",
+    "kind": "text"
+   },
+   {
+    "hash": "22ca2294d3",
+    "kind": "text"
+   },
+   {
+    "hash": "4c98202d2a",
+    "kind": "text"
+   },
+   {
+    "hash": "348ff20a2a",
+    "kind": "text"
+   },
+   {
+    "hash": "be6b7edae9",
+    "kind": "block"
+   },
+   {
+    "hash": "6bac23c6df",
+    "kind": "text"
+   },
+   {
+    "hash": "0c298264cb",
+    "kind": "text"
+   },
+   {
+    "hash": "d8073de4f9",
+    "kind": "block"
+   },
+   {
+    "hash": "aefbadf917",
+    "kind": "text"
+   },
+   {
+    "hash": "ff93f1ffb2",
+    "kind": "text"
+   },
+   {
+    "hash": "582d8da6f9",
+    "kind": "text"
+   },
+   {
+    "hash": "27030a62f7",
+    "kind": "text"
+   },
+   {
+    "hash": "a1d256cd14",
+    "kind": "text"
+   },
+   {
+    "hash": "bd5964d075",
+    "kind": "block"
+   },
+   {
+    "hash": "79fc372dc7",
+    "kind": "text"
+   },
+   {
+    "hash": "af1c4ddead",
+    "kind": "text"
+   },
+   {
+    "hash": "a23eeab24f",
+    "kind": "block"
+   },
+   {
+    "hash": "0d65f51f45",
+    "kind": "block"
+   },
+   {
+    "hash": "7c4ef51146",
+    "kind": "text"
+   },
+   {
+    "hash": "50c5adc410",
+    "kind": "text"
+   },
+   {
+    "hash": "e66eb3edff",
+    "kind": "text"
+   },
+   {
+    "hash": "520fef117c",
+    "kind": "text"
+   },
+   {
+    "hash": "3217368ebb",
+    "kind": "text"
+   },
+   {
+    "hash": "698cdc2fb9",
+    "kind": "text"
+   },
+   {
+    "hash": "e2659dc01c",
+    "kind": "text"
+   },
+   {
+    "hash": "43a103a729",
+    "kind": "text"
+   },
+   {
+    "hash": "fc7a685f0a",
+    "kind": "text"
+   },
+   {
+    "hash": "408d44ec05",
+    "kind": "block"
+   },
+   {
+    "hash": "b894c3e289",
+    "kind": "block"
+   },
+   {
+    "hash": "8eceacd8a1",
+    "kind": "text"
+   },
+   {
+    "hash": "8fda68c168",
+    "kind": "text"
+   },
+   {
+    "hash": "5d2a116b6e",
+    "kind": "text"
+   },
+   {
+    "hash": "edbea9ff1a",
+    "kind": "text"
+   },
+   {
+    "hash": "d34c52046a",
+    "kind": "text"
+   },
+   {
+    "hash": "f825ce45a9",
+    "kind": "text"
+   },
+   {
+    "hash": "32767bc87c",
+    "kind": "text"
+   },
+   {
+    "hash": "f034cc145b",
+    "kind": "text"
+   },
+   {
+    "hash": "8285b2b30e",
+    "kind": "text"
+   },
+   {
+    "hash": "5a0ba3bb83",
+    "kind": "text"
+   },
+   {
+    "hash": "d70f93df5e",
+    "kind": "text"
+   },
+   {
+    "hash": "ca032b5844",
+    "kind": "text"
+   },
+   {
+    "hash": "1bce0fda3a",
+    "kind": "text"
+   },
+   {
+    "hash": "026f7c8cc5",
+    "kind": "text"
+   },
+   {
+    "hash": "0c40593bb4",
+    "kind": "text"
+   },
+   {
+    "hash": "31547bd6a8",
+    "kind": "text"
+   },
+   {
+    "hash": "857d573fe5",
+    "kind": "text"
+   },
+   {
+    "hash": "79702a4fd2",
+    "kind": "text"
+   },
+   {
+    "hash": "20ef03c701",
+    "kind": "text"
+   },
+   {
+    "hash": "29374c6376",
+    "kind": "text"
+   },
+   {
+    "hash": "7ff9917596",
+    "kind": "text"
+   },
+   {
+    "hash": "ebac8c4d9a",
+    "kind": "attr"
+   },
+   {
+    "hash": "edbea9ff1a",
+    "kind": "text"
+   },
+   {
+    "hash": "5442e2b64f",
+    "kind": "text"
+   },
+   {
+    "hash": "2683115107",
+    "kind": "text"
+   }
+  ],
+  "claim/index.html": [
+   {
+    "hash": "51579fb046",
+    "kind": "text"
+   },
+   {
+    "hash": "4bcf8ddb9d",
+    "kind": "attr"
+   },
+   {
+    "hash": "68b3e230d5",
+    "kind": "text"
+   },
+   {
+    "hash": "3d2395ee2e",
+    "kind": "text"
+   },
+   {
+    "hash": "a782d4f46d",
+    "kind": "block"
+   },
+   {
+    "hash": "0f9b861fd1",
+    "kind": "text"
+   },
+   {
+    "hash": "ffee40873d",
+    "kind": "text"
+   },
+   {
+    "hash": "4199084f49",
+    "kind": "text"
+   },
+   {
+    "hash": "e3e77fd219",
+    "kind": "text"
+   },
+   {
+    "hash": "80d4a0ea53",
+    "kind": "text"
+   },
+   {
+    "hash": "87acfa7878",
+    "kind": "text"
+   },
+   {
+    "hash": "c61db642b8",
+    "kind": "text"
+   },
+   {
+    "hash": "64f5c9d235",
+    "kind": "text"
+   },
+   {
+    "hash": "6c95c2016a",
+    "kind": "text"
+   },
+   {
+    "hash": "6d0ea76112",
+    "kind": "text"
+   },
+   {
+    "hash": "8f875fedbc",
+    "kind": "text"
+   },
+   {
+    "hash": "0259a98c44",
+    "kind": "text"
+   },
+   {
+    "hash": "28d58aa9a9",
+    "kind": "text"
+   },
+   {
+    "hash": "244ce72a3d",
+    "kind": "text"
+   },
+   {
+    "hash": "309e06942a",
+    "kind": "text"
+   },
+   {
+    "hash": "32672f43b3",
+    "kind": "text"
+   },
+   {
+    "hash": "762f566865",
+    "kind": "text"
+   },
+   {
+    "hash": "c5e00b1005",
+    "kind": "text"
+   },
+   {
+    "hash": "19bc9a5caf",
+    "kind": "text"
+   },
+   {
+    "hash": "7d87cde7a3",
+    "kind": "text"
+   },
+   {
+    "hash": "e674bd2201",
+    "kind": "text"
+   },
+   {
+    "hash": "9cdadd45b1",
+    "kind": "text"
+   },
+   {
+    "hash": "bffa0588e7",
+    "kind": "text"
+   },
+   {
+    "hash": "0ba876f0f3",
+    "kind": "text"
+   },
+   {
+    "hash": "1669fe253c",
+    "kind": "block"
+   },
+   {
+    "hash": "6733991071",
+    "kind": "block"
+   },
+   {
+    "hash": "cc34926fec",
+    "kind": "text"
+   }
+  ],
+  "dao/index.html": [
+   {
+    "hash": "cf0076e16f",
+    "kind": "text"
+   },
+   {
+    "hash": "c1ffed4faf",
+    "kind": "attr"
+   },
+   {
+    "hash": "68b3e230d5",
+    "kind": "text"
+   },
+   {
+    "hash": "8a5cbf4957",
+    "kind": "text"
+   },
+   {
+    "hash": "d2ba6c56b6",
+    "kind": "text"
+   },
+   {
+    "hash": "c5d28bd2f6",
+    "kind": "text"
+   },
+   {
+    "hash": "5fc2946864",
+    "kind": "block"
+   },
+   {
+    "hash": "ffee40873d",
+    "kind": "text"
+   },
+   {
+    "hash": "0a967aa35f",
+    "kind": "text"
+   },
+   {
+    "hash": "b79fcd90bc",
+    "kind": "text"
+   },
+   {
+    "hash": "a980cedfaf",
+    "kind": "text"
+   },
+   {
+    "hash": "7b1046e996",
+    "kind": "text"
+   },
+   {
+    "hash": "21b18629ab",
+    "kind": "text"
+   },
+   {
+    "hash": "4c56c44f17",
+    "kind": "text"
+   },
+   {
+    "hash": "21c4ce582e",
+    "kind": "attr"
+   },
+   {
+    "hash": "4274586249",
+    "kind": "text"
+   },
+   {
+    "hash": "a2292a1f54",
+    "kind": "text"
+   },
+   {
+    "hash": "5df9360173",
+    "kind": "block"
+   },
+   {
+    "hash": "1137468cfd",
+    "kind": "text"
+   },
+   {
+    "hash": "39221d6380",
+    "kind": "text"
+   },
+   {
+    "hash": "fdaafe2d97",
+    "kind": "text"
+   },
+   {
+    "hash": "3597724f31",
+    "kind": "text"
+   },
+   {
+    "hash": "19f804c3f6",
+    "kind": "text"
+   },
+   {
+    "hash": "176e595a08",
+    "kind": "text"
+   },
+   {
+    "hash": "5fe922e61e",
+    "kind": "text"
+   },
+   {
+    "hash": "9c57b01d5d",
+    "kind": "text"
+   },
+   {
+    "hash": "7d4278a875",
+    "kind": "text"
+   },
+   {
+    "hash": "2c8c11468e",
+    "kind": "text"
+   },
+   {
+    "hash": "c7c26db6bb",
+    "kind": "text"
+   },
+   {
+    "hash": "4ce1229b2a",
+    "kind": "text"
+   },
+   {
+    "hash": "ad166741f9",
+    "kind": "text"
+   },
+   {
+    "hash": "f25569aead",
+    "kind": "text"
+   },
+   {
+    "hash": "50e635e87c",
+    "kind": "text"
+   },
+   {
+    "hash": "43b2e6b02c",
+    "kind": "text"
+   },
+   {
+    "hash": "9e9297acf0",
+    "kind": "text"
+   },
+   {
+    "hash": "ff091a64aa",
+    "kind": "block"
+   },
+   {
+    "hash": "f359fc7949",
+    "kind": "text"
+   },
+   {
+    "hash": "cf73633d6b",
+    "kind": "text"
+   },
+   {
+    "hash": "239f54ad2f",
+    "kind": "text"
+   },
+   {
+    "hash": "75b8cb0b63",
+    "kind": "text"
+   },
+   {
+    "hash": "0a1b0b8c8c",
+    "kind": "text"
+   },
+   {
+    "hash": "b0536c9386",
+    "kind": "text"
+   },
+   {
+    "hash": "edc79ebe24",
+    "kind": "block"
+   },
+   {
+    "hash": "ef44f4b732",
+    "kind": "text"
+   },
+   {
+    "hash": "e8be68e660",
+    "kind": "text"
+   },
+   {
+    "hash": "d1b1702fb9",
+    "kind": "text"
+   },
+   {
+    "hash": "7df32fd66b",
+    "kind": "block"
+   },
+   {
+    "hash": "c64e28d0df",
+    "kind": "text"
+   },
+   {
+    "hash": "f3e53c4dd6",
+    "kind": "text"
+   },
+   {
+    "hash": "a37956d7b1",
+    "kind": "text"
+   },
+   {
+    "hash": "32767bc87c",
+    "kind": "text"
+   },
+   {
+    "hash": "97211a8888",
+    "kind": "text"
+   },
+   {
+    "hash": "d70f93df5e",
+    "kind": "text"
+   },
+   {
+    "hash": "e2d315e848",
+    "kind": "text"
+   },
+   {
+    "hash": "20ef03c701",
+    "kind": "text"
+   },
+   {
+    "hash": "0ba876f0f3",
+    "kind": "text"
+   },
+   {
+    "hash": "c1889f9fb4",
+    "kind": "text"
+   },
+   {
+    "hash": "4c98202d2a",
+    "kind": "text"
+   },
+   {
+    "hash": "a11fab5bd5",
+    "kind": "text"
+   },
+   {
+    "hash": "9c8fa4fdc6",
+    "kind": "text"
+   }
+  ],
+  "leaderboard/index.html": [
+   {
+    "hash": "66cbdd8e53",
+    "kind": "text"
+   },
+   {
+    "hash": "c1b00ff1d0",
+    "kind": "attr"
+   },
+   {
+    "hash": "68b3e230d5",
+    "kind": "text"
+   },
+   {
+    "hash": "3f0bc97f09",
+    "kind": "text"
+   },
+   {
+    "hash": "7920b5fd2c",
+    "kind": "text"
+   },
+   {
+    "hash": "ebe0ab9bf6",
+    "kind": "text"
+   },
+   {
+    "hash": "d1a1bce929",
+    "kind": "text"
+   },
+   {
+    "hash": "1da693d3f5",
+    "kind": "text"
+   },
+   {
+    "hash": "a4e4c7a930",
+    "kind": "text"
+   },
+   {
+    "hash": "5d4d750391",
+    "kind": "block"
+   },
+   {
+    "hash": "7489923b61",
+    "kind": "text"
+   },
+   {
+    "hash": "977e6d1149",
+    "kind": "text"
+   },
+   {
+    "hash": "ce7c06657a",
+    "kind": "block"
+   },
+   {
+    "hash": "5be58aa8a9",
+    "kind": "text"
+   },
+   {
+    "hash": "85a42dcf17",
+    "kind": "text"
+   },
+   {
+    "hash": "84ff3f938e",
+    "kind": "text"
+   },
+   {
+    "hash": "5a27f465c2",
+    "kind": "text"
+   },
+   {
+    "hash": "3b18e8e332",
+    "kind": "text"
+   },
+   {
+    "hash": "1b4785331d",
+    "kind": "text"
+   },
+   {
+    "hash": "5e447fba9a",
+    "kind": "text"
+   },
+   {
+    "hash": "de5e044899",
+    "kind": "text"
+   },
+   {
+    "hash": "597b1092b3",
+    "kind": "text"
+   },
+   {
+    "hash": "10065554d7",
+    "kind": "text"
+   },
+   {
+    "hash": "91a438f2cf",
+    "kind": "text"
+   },
+   {
+    "hash": "45b0f85126",
+    "kind": "text"
+   },
+   {
+    "hash": "dbad49d891",
+    "kind": "text"
+   },
+   {
+    "hash": "55e483021f",
+    "kind": "text"
+   },
+   {
+    "hash": "de5e044899",
+    "kind": "text"
+   },
+   {
+    "hash": "597b1092b3",
+    "kind": "text"
+   },
+   {
+    "hash": "10065554d7",
+    "kind": "text"
+   },
+   {
+    "hash": "91a438f2cf",
+    "kind": "text"
+   },
+   {
+    "hash": "45b0f85126",
+    "kind": "text"
+   },
+   {
+    "hash": "cce25eb2b5",
+    "kind": "text"
+   },
+   {
+    "hash": "29745d7356",
+    "kind": "text"
+   },
+   {
+    "hash": "082bc378cd",
+    "kind": "text"
+   },
+   {
+    "hash": "597b1092b3",
+    "kind": "text"
+   },
+   {
+    "hash": "84ff3f938e",
+    "kind": "text"
+   },
+   {
+    "hash": "5e88193cd6",
+    "kind": "text"
+   },
+   {
+    "hash": "691721b558",
+    "kind": "text"
+   },
+   {
+    "hash": "e9d859cd59",
+    "kind": "block"
+   },
+   {
+    "hash": "db71b26bfd",
+    "kind": "text"
+   },
+   {
+    "hash": "6d3548265f",
+    "kind": "text"
+   },
+   {
+    "hash": "424623f41d",
+    "kind": "text"
+   },
+   {
+    "hash": "eb9a4bc1c0",
+    "kind": "text"
+   },
+   {
+    "hash": "de5e044899",
+    "kind": "text"
+   },
+   {
+    "hash": "26528381ea",
+    "kind": "text"
+   },
+   {
+    "hash": "a8dac215bd",
+    "kind": "text"
+   },
+   {
+    "hash": "17011de7fc",
+    "kind": "text"
+   },
+   {
+    "hash": "766e40fff4",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a2c1cc81f2",
+    "kind": "text"
+   },
+   {
+    "hash": "a74ec292f9",
+    "kind": "text"
+   },
+   {
+    "hash": "ce1a4c5872",
+    "kind": "text"
+   },
+   {
+    "hash": "06f618bf77",
+    "kind": "text"
+   },
+   {
+    "hash": "e5d5dc7661",
+    "kind": "text"
+   },
+   {
+    "hash": "8e4f627087",
+    "kind": "text"
+   },
+   {
+    "hash": "2247f2ed89",
+    "kind": "block"
+   },
+   {
+    "hash": "49e065a4f1",
+    "kind": "block"
+   },
+   {
+    "hash": "b8e8015175",
+    "kind": "text"
+   },
+   {
+    "hash": "d37a76b55a",
+    "kind": "block"
+   },
+   {
+    "hash": "1b162801b5",
+    "kind": "text"
+   }
+  ],
+  "memes/index.html": [
+   {
+    "hash": "037250ee8f",
+    "kind": "text"
+   },
+   {
+    "hash": "f6455060ae",
+    "kind": "attr"
+   },
+   {
+    "hash": "68b3e230d5",
+    "kind": "text"
+   },
+   {
+    "hash": "4105c7c1d0",
+    "kind": "text"
+   },
+   {
+    "hash": "bdfa844a1c",
+    "kind": "text"
+   },
+   {
+    "hash": "83004e5c47",
+    "kind": "attr"
+   },
+   {
+    "hash": "64dd60fe1a",
+    "kind": "text"
+   },
+   {
+    "hash": "37619fc130",
+    "kind": "attr"
+   },
+   {
+    "hash": "511a68e1d6",
+    "kind": "attr"
+   },
+   {
+    "hash": "caedf235c8",
+    "kind": "attr"
+   },
+   {
+    "hash": "b406fb57b2",
+    "kind": "attr"
+   },
+   {
+    "hash": "0e0fc1c214",
+    "kind": "attr"
+   },
+   {
+    "hash": "7cd5762f24",
+    "kind": "text"
+   },
+   {
+    "hash": "d26d55c7f8",
+    "kind": "text"
+   },
+   {
+    "hash": "99a0efc6cf",
+    "kind": "text"
+   },
+   {
+    "hash": "512c519544",
+    "kind": "text"
+   },
+   {
+    "hash": "4a7849986b",
+    "kind": "text"
+   },
+   {
+    "hash": "13799c704a",
+    "kind": "text"
+   },
+   {
+    "hash": "c09fa739a9",
+    "kind": "text"
+   },
+   {
+    "hash": "7ae214fa56",
+    "kind": "text"
+   },
+   {
+    "hash": "a842bef5d2",
+    "kind": "attr"
+   },
+   {
+    "hash": "831741ea14",
+    "kind": "text"
+   },
+   {
+    "hash": "a842bef5d2",
+    "kind": "attr"
+   },
+   {
+    "hash": "da8223b075",
+    "kind": "block"
+   },
+   {
+    "hash": "d6f84922d5",
+    "kind": "text"
+   },
+   {
+    "hash": "81b2aa02ea",
+    "kind": "text"
+   },
+   {
+    "hash": "d45ac477ac",
+    "kind": "text"
+   },
+   {
+    "hash": "b7152342a2",
+    "kind": "text"
+   },
+   {
+    "hash": "cf1c85adba",
+    "kind": "text"
+   },
+   {
+    "hash": "c2fc57681a",
+    "kind": "text"
+   },
+   {
+    "hash": "1a7ce96fd0",
+    "kind": "text"
+   },
+   {
+    "hash": "c1cc898f94",
+    "kind": "text"
+   },
+   {
+    "hash": "04b38cf935",
+    "kind": "text"
+   },
+   {
+    "hash": "16e5447a80",
+    "kind": "text"
+   },
+   {
+    "hash": "bc17c1f017",
+    "kind": "text"
+   },
+   {
+    "hash": "dc812752b7",
+    "kind": "text"
+   },
+   {
+    "hash": "18c6af5d51",
+    "kind": "text"
+   },
+   {
+    "hash": "b93646db26",
+    "kind": "text"
+   },
+   {
+    "hash": "1cee99ef61",
+    "kind": "text"
+   },
+   {
+    "hash": "f552bc7ecb",
+    "kind": "text"
+   },
+   {
+    "hash": "ebce137c6a",
+    "kind": "text"
+   },
+   {
+    "hash": "3bade34ecb",
+    "kind": "text"
+   },
+   {
+    "hash": "aca3514915",
+    "kind": "text"
+   },
+   {
+    "hash": "76c664a81d",
+    "kind": "text"
+   },
+   {
+    "hash": "04ccd7191c",
+    "kind": "text"
+   },
+   {
+    "hash": "a8c20c0ed3",
+    "kind": "text"
+   },
+   {
+    "hash": "b942303bc6",
+    "kind": "text"
+   },
+   {
+    "hash": "92898d554d",
+    "kind": "text"
+   },
+   {
+    "hash": "719ea396ad",
+    "kind": "text"
+   },
+   {
+    "hash": "7f22a48a5f",
+    "kind": "block"
+   },
+   {
+    "hash": "9681397623",
+    "kind": "block"
+   },
+   {
+    "hash": "552cef6bd6",
+    "kind": "block"
+   },
+   {
+    "hash": "ba5a0f5419",
+    "kind": "text"
+   },
+   {
+    "hash": "457f79e731",
+    "kind": "text"
+   }
+  ],
+  "memes/gallery/index.html": [
+   {
+    "hash": "520f610850",
+    "kind": "text"
+   },
+   {
+    "hash": "8abcd09f3e",
+    "kind": "attr"
+   },
+   {
+    "hash": "c143ea46db",
+    "kind": "text"
+   },
+   {
+    "hash": "e8b9ce3c2a",
+    "kind": "text"
+   },
+   {
+    "hash": "416e887549",
+    "kind": "text"
+   },
+   {
+    "hash": "7640428ae1",
+    "kind": "text"
+   },
+   {
+    "hash": "08170580cb",
+    "kind": "text"
+   },
+   {
+    "hash": "f1f7160fd6",
+    "kind": "text"
+   },
+   {
+    "hash": "147a78f866",
+    "kind": "block"
+   },
+   {
+    "hash": "cf604145b3",
+    "kind": "text"
+   }
+  ]
+ }
+}

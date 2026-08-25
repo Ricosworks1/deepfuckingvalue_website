@@ -1,0 +1,647 @@
+<!--i18n:head--><!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="en" href="https://dfv.fun/leaderboard/">
+<link rel="alternate" hreflang="fr" href="https://dfv.fun/fr/leaderboard/">
+<link rel="alternate" hreflang="de" href="https://dfv.fun/de/leaderboard/">
+<link rel="alternate" hreflang="es" href="https://dfv.fun/es/leaderboard/">
+<link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/leaderboard/">
+<link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/leaderboard/">
+<link rel="alternate" hreflang="x-default" href="https://dfv.fun/leaderboard/"><!--/i18n:head-->
+<title>Ranking de trading — DFV</title>
+<meta name="description" content="Todas las operaciones de DFV en Uniswap V4, ordenadas por volumen. Actualizado a diario. Datos completos descargables en CSV.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(data:font/woff2;base64,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) format('woff2');
+  }
+
+  :root {
+    --paper: #ffffff; --paper-sunk: #f3f4f4;
+    --navy: #223f84; --ink: #1b2540; --ink-soft: #515b78; --ink-faint: #8b93a8;
+    --red: #e32c4d; --red-sunk: #fdeef1;
+    --buy: #1a7f4b; --sell: #c0392b;
+    --rule: #dfe4ed; --on-accent: #ffffff;
+    --f-hand: 'Architects Daughter', 'Bradley Hand', cursive;
+    --f-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --f-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --gut: clamp(1.1rem, 4vw, 2.25rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0e1730; --paper-sunk: #121d3a;
+      --navy: #9db4ec; --ink: #e7ecf7; --ink-soft: #a9b3cc; --ink-faint: #737d99;
+      --red: #ff5573; --red-sunk: #2c1421;
+      --buy: #5fd39b; --sell: #ff7a6b;
+      --rule: #25314f; --on-accent: #0e1730;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0e1730; --paper-sunk: #121d3a;
+    --navy: #9db4ec; --ink: #e7ecf7; --ink-soft: #a9b3cc; --ink-faint: #737d99;
+    --red: #ff5573; --red-sunk: #2c1421;
+    --buy: #5fd39b; --sell: #ff7a6b;
+    --rule: #25314f; --on-accent: #0e1730;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--f-body); line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 62rem; margin: 0 auto; padding: clamp(1.5rem, 5vw, 3rem) var(--gut) 4rem; }
+
+  a { color: var(--red); }
+  :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 3px; }
+
+  .back { display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--ink-soft); text-decoration: none; margin-bottom: 1.5rem; }
+  .back:hover { color: var(--red); }
+
+  h1 { font-family: var(--f-hand); font-size: clamp(2.25rem, 1.5rem + 3vw, 3.5rem); color: var(--navy); margin: 0; line-height: 1; }
+  h2 { font-family: var(--f-hand); font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.25rem); color: var(--navy); margin: 0 0 0.25rem; line-height: 1.1; }
+  .sub { color: var(--ink-soft); margin: 0.75rem 0 0; max-width: 60ch; }
+
+  section { margin-top: clamp(2.5rem, 6vw, 4rem); }
+  .lede { color: var(--ink-soft); font-size: 0.9375rem; margin: 0 0 1.25rem; max-width: 62ch; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; margin-top: 2rem; }
+  .stat { background: var(--paper); padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat dt { font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); font-family: var(--f-mono); }
+  .stat dd { margin: 0; font-family: var(--f-mono); font-size: 1.375rem; font-weight: 600; letter-spacing: -0.03em; color: var(--navy); font-variant-numeric: tabular-nums; }
+
+  .scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+  th { text-align: left; font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-family: var(--f-mono); padding: 0.75rem 0.9rem; border-bottom: 2px solid var(--rule); white-space: nowrap; background: var(--paper-sunk); }
+  td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--rule); white-space: nowrap; font-family: var(--f-mono); }
+  tr:last-child td { border-bottom: 0; }
+  .r { text-align: right; }
+  .rank { color: var(--ink-faint); font-weight: 600; }
+  .strong { font-weight: 600; color: var(--navy); }
+  .buy { color: var(--buy); }
+  .sell { color: var(--sell); }
+  td a { text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--red) 30%, transparent); }
+
+  .tag { display: inline-block; font-size: 0.6875rem; font-family: var(--f-mono); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.15rem 0.45rem; border-radius: 4px; }
+  .tag-buy { background: color-mix(in srgb, var(--buy) 15%, transparent); color: var(--buy); }
+  .tag-sell { background: color-mix(in srgb, var(--sell) 15%, transparent); color: var(--sell); }
+  .tag-now { background: var(--red-sunk); color: var(--red); }
+
+  .empty { padding: 1.5rem; border: 2px dashed var(--rule); border-radius: 12px; color: var(--ink-soft); font-size: 0.9375rem; margin: 0; }
+
+  /* ---------- prize banner ---------- */
+  .prize {
+    margin-top: 2rem;
+    border: 3px solid var(--red);
+    border-radius: 16px;
+    background: var(--red-sunk);
+    padding: clamp(1.1rem, 3.5vw, 1.75rem);
+  }
+  .prize h2 { color: var(--red); margin-bottom: 0.5rem; }
+  .prize p { margin: 0 0 0.75rem; font-size: 0.9375rem; color: var(--ink-soft); max-width: 62ch; }
+  .prize p:last-child { margin-bottom: 0; }
+  .prize strong { color: var(--ink); }
+  .prize-lead { font-size: 1.0625rem !important; color: var(--ink) !important; }
+  .prize-holder {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem;
+    margin: 1rem 0; padding: 0.85rem 1rem; border-radius: 10px;
+    background: var(--paper); border: 2px solid var(--red);
+  }
+  .prize-holder .who { font-family: var(--f-mono); font-size: 0.9375rem; font-weight: 600; }
+  .prize-holder .amt { font-family: var(--f-mono); font-size: 0.9375rem; color: var(--navy); font-weight: 600; margin-left: auto; }
+  .prize-holder .tagline { font-size: 0.6875rem; font-family: var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); flex-basis: 100%; }
+
+  @media (max-width: 40rem) {
+    .prize-holder .amt { margin-left: 0; }
+  }
+
+  .quicklinks { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+  .ql {
+    display: inline-flex; align-items: center; gap: 0.4ch;
+    font-size: 0.8125rem; font-weight: 700; text-decoration: none;
+    padding: 0.6rem 1.05rem; border-radius: 999px;
+    border: 2px solid var(--red); background: var(--red); color: var(--on-accent);
+  }
+  .ql:hover { opacity: 0.9; }
+  .ql-quiet { background: transparent; color: var(--red); }
+  .ql-quiet:hover { background: var(--red-sunk); opacity: 1; }
+
+  .downloads { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+  .dl { display: inline-flex; align-items: center; gap: 0.5ch; font-family: var(--f-mono); font-size: 0.8125rem; font-weight: 600; padding: 0.65rem 1.1rem; border-radius: 999px; border: 2px solid var(--navy); color: var(--navy); text-decoration: none; }
+  .dl:hover { background: var(--navy); color: var(--paper); }
+
+  .method { background: var(--paper-sunk); border-left: 4px solid var(--navy); border-radius: 8px; padding: 1.1rem 1.3rem; font-size: 0.9375rem; color: var(--ink-soft); }
+  .method p { margin: 0 0 0.6rem; max-width: 64ch; }
+  .method p:last-child { margin-bottom: 0; }
+  .method code { font-family: var(--f-mono); font-size: 0.875em; }
+  .method strong { color: var(--ink); }
+
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 2px solid var(--rule); font-size: 0.8125rem; color: var(--ink-faint); }
+  .addr { font-family: var(--f-mono); word-break: break-all; }
+/*i18n:css*/
+  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale);
+             font-family: var(--f-body); font-size: 0.8125rem; }
+  .langbar ul { max-width: 68rem; margin: 0 auto; padding: 0.4rem 1.25rem; list-style: none;
+                display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; align-items: center; }
+  .langbar li { margin: 0; }
+  .langbar a { color: var(--ink-soft); text-decoration: none; padding: 0.15rem 0; }
+  .langbar a:hover { color: var(--red); text-decoration: underline; }
+  .langbar [aria-current="true"] { color: var(--ink); font-weight: 700; text-decoration: none; }
+  .langbar .lb-label { color: var(--ink-faint); margin-right: 0.25rem; }
+/*/i18n:css*/</style>
+<!--i18n:langbar--><div class="langbar"><ul><li class="lb-label" aria-hidden="true">Language</li><li><a href="/leaderboard/" hreflang="en" lang="en">English</a></li><li><a href="/fr/leaderboard/" hreflang="fr" lang="fr">Français</a></li><li><a href="/de/leaderboard/" hreflang="de" lang="de">Deutsch</a></li><li><span aria-current="true" lang="es">Español</span></li><li><a href="/vi/leaderboard/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="/zh/leaderboard/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></div><!--/i18n:langbar-->
+
+<div class="wrap">
+
+  <a class="back" href="/es/">← Volver a dfv.fun</a>
+
+  <h1>Ranking de trading</h1>
+  <p class="sub">
+    Todas las operaciones de DFV en Uniswap V4, ordenadas por volumen. Se reconstruye desde la blockchain una vez al día: aquí no hay nada escrito a mano, y los datos en bruto se pueden descargar abajo.
+  </p>
+
+  <div class="quicklinks">
+    <a class="ql" href="https://app.uniswap.org/explore/tokens/ethereum/0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07" rel="noopener">Operar DFV en Uniswap ↗</a>
+    <a class="ql ql-quiet" href="https://etherscan.io/token/0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07" rel="noopener">Token en Etherscan ↗</a>
+    <a class="ql ql-quiet" href="https://etherscan.io/address/0x000000000004444c5dc75cB358380D2e3dE08A90" rel="noopener">V4 PoolManager ↗</a>
+  </div>
+
+  <div class="prize">
+    <h2>El 10 % de los ingresos del pool para el trader nº 1</h2>
+    <p class="prize-lead">Cada mes, la dirección con mayor volumen de trading recibe <strong>el 10 % de todos los ingresos que genera el pool de DFV</strong> ese mes.</p>
+    <div class="prize-holder">
+      <span class="tagline">Ahora mismo en cabeza — agosto de 2026</span>
+      <span class="who"><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></span>
+      <span class="amt">$5 792,33 de volumen</span>
+    </div>
+    <p>Los ingresos del pool son las comisiones de trading que gana la posición de liquidez de DFV. El pago se hace <strong>on-chain</strong>, así que cada reparto aparece en Etherscan y se puede contrastar con las cifras de volumen de esta página. El ranking se reconstruye desde la blockchain a diario y los datos de origen se pueden descargar abajo: aquí no se decide nada a puerta cerrada.</p>
+    <p>
+      El mes va del día 1 al último día, en UTC. El ranking es por volumen en USDC, sumando compras y ventas. El wash trading es contraproducente: las comisiones que pagas por subir en la tabla superan la parte que te devuelven.
+    </p>
+  </div>
+
+  <dl class="stats">
+    <div class="stat"><dt>Operaciones, histórico</dt><dd>32</dd></div>
+    <div class="stat"><dt>Traders</dt><dd>10</dd></div>
+    <div class="stat"><dt>DFV negociados</dt><dd>201,002,988</dd></div>
+    <div class="stat"><dt>Volumen</dt><dd>$56,092.33</dd></div>
+  </dl>
+
+  <section>
+    <h2>Este mes</h2>
+    <p class="lede">Agosto de 2026 — se reinicia el día 1 de cada mes. Ordenado por volumen en USDC.</p>
+    <div class="scroll"><table>
+  <thead><tr>
+    <th scope="col">#</th><th scope="col">Trader</th><th scope="col" class="r">Operaciones</th>
+    <th scope="col" class="r">DFV comprados</th><th scope="col" class="r">DFV vendidos</th>
+    <th scope="col" class="r">Volumen (USDC)</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="rank">1</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td class="r">6</td>
+      <td class="r buy">12,117,916</td>
+      <td class="r sell">12,812,120</td>
+      <td class="r strong">$5,792.33</td>
+    </tr>
+    <tr>
+      <td class="rank">2</td>
+      <td><a href="https://etherscan.io/address/0xbd34dc3fbb661612aabcadaf758caa6e22787297" rel="noopener" title="0xbd34dc3fbb661612aabcadaf758caa6e22787297">0xbd34…7297</a></td>
+      <td class="r">1</td>
+      <td class="r buy">—</td>
+      <td class="r sell">353,545</td>
+      <td class="r strong">$80.66</td>
+    </tr>
+    <tr>
+      <td class="rank">3</td>
+      <td><a href="https://etherscan.io/address/0x7b1d81ba131f551da2f70f7c2363b45dbd451d83" rel="noopener" title="0x7b1d81ba131f551da2f70f7c2363b45dbd451d83">0x7b1d…1d83</a></td>
+      <td class="r">1</td>
+      <td class="r buy">—</td>
+      <td class="r sell">1,051,724</td>
+      <td class="r strong">$0.00</td>
+    </tr>
+  </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Histórico</h2>
+    <p class="lede">Todos los traders desde que abrió el pool, ordenados por volumen total en USDC.</p>
+    <div class="scroll"><table>
+  <thead><tr>
+    <th scope="col">#</th><th scope="col">Trader</th><th scope="col" class="r">Operaciones</th>
+    <th scope="col" class="r">DFV comprados</th><th scope="col" class="r">DFV vendidos</th>
+    <th scope="col" class="r">Volumen (USDC)</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="rank">1</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td class="r">8</td>
+      <td class="r buy">9,430,935</td>
+      <td class="r sell">93,291,446</td>
+      <td class="r strong">$26,200.89</td>
+    </tr>
+    <tr>
+      <td class="rank">2</td>
+      <td><a href="https://etherscan.io/address/0xfc0b0316797021918d2a961bbdb4589ac0723d44" rel="noopener" title="0xfc0b0316797021918d2a961bbdb4589ac0723d44">0xfc0b…3d44</a></td>
+      <td class="r">3</td>
+      <td class="r buy">—</td>
+      <td class="r sell">70,781,931</td>
+      <td class="r strong">$23,716.17</td>
+    </tr>
+    <tr>
+      <td class="rank">3</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td class="r">7</td>
+      <td class="r buy">12,120,449</td>
+      <td class="r sell">12,812,120</td>
+      <td class="r strong">$5,793.33</td>
+    </tr>
+    <tr>
+      <td class="rank">4</td>
+      <td><a href="https://etherscan.io/address/0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd" rel="noopener" title="0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd">0xc2bb…5cfd</a></td>
+      <td class="r">5</td>
+      <td class="r buy">433,422</td>
+      <td class="r sell">145,660</td>
+      <td class="r strong">$189.01</td>
+    </tr>
+    <tr>
+      <td class="rank">5</td>
+      <td><a href="https://etherscan.io/address/0x11e8c97b1cfaa0b633803a503cdd034a6a970693" rel="noopener" title="0x11e8c97b1cfaa0b633803a503cdd034a6a970693">0x11e8…0693</a></td>
+      <td class="r">2</td>
+      <td class="r buy">127,329</td>
+      <td class="r sell">127,329</td>
+      <td class="r strong">$99.54</td>
+    </tr>
+    <tr>
+      <td class="rank">6</td>
+      <td><a href="https://etherscan.io/address/0xbd34dc3fbb661612aabcadaf758caa6e22787297" rel="noopener" title="0xbd34dc3fbb661612aabcadaf758caa6e22787297">0xbd34…7297</a></td>
+      <td class="r">1</td>
+      <td class="r buy">—</td>
+      <td class="r sell">353,545</td>
+      <td class="r strong">$80.66</td>
+    </tr>
+    <tr>
+      <td class="rank">7</td>
+      <td><a href="https://etherscan.io/address/0xa0f08163f032309af1fb0ff51435b9c70a4ef436" rel="noopener" title="0xa0f08163f032309af1fb0ff51435b9c70a4ef436">0xa0f0…f436</a></td>
+      <td class="r">1</td>
+      <td class="r buy">25,310</td>
+      <td class="r sell">—</td>
+      <td class="r strong">$9.99</td>
+    </tr>
+    <tr>
+      <td class="rank">8</td>
+      <td><a href="https://etherscan.io/address/0x3a84004fc37aa2a9be2178c1ed303db8d9e60dcf" rel="noopener" title="0x3a84004fc37aa2a9be2178c1ed303db8d9e60dcf">0x3a84…0dcf</a></td>
+      <td class="r">2</td>
+      <td class="r buy">3,988</td>
+      <td class="r sell">2,991</td>
+      <td class="r strong">$2.73</td>
+    </tr>
+    <tr>
+      <td class="rank">9</td>
+      <td><a href="https://etherscan.io/address/0x7b1d81ba131f551da2f70f7c2363b45dbd451d83" rel="noopener" title="0x7b1d81ba131f551da2f70f7c2363b45dbd451d83">0x7b1d…1d83</a></td>
+      <td class="r">1</td>
+      <td class="r buy">—</td>
+      <td class="r sell">1,051,724</td>
+      <td class="r strong">$0.00</td>
+    </tr>
+    <tr>
+      <td class="rank">10</td>
+      <td><a href="https://etherscan.io/address/0xac2332bdd1f29e86b3a282cbe3bee4aa338d35e2" rel="noopener" title="0xac2332bdd1f29e86b3a282cbe3bee4aa338d35e2">0xac23…35e2</a></td>
+      <td class="r">2</td>
+      <td class="r buy">—</td>
+      <td class="r sell">294,808</td>
+      <td class="r strong">$0.00</td>
+    </tr>
+  </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Mes a mes</h2>
+    <p class="lede">Se guarda cada mes, para que el historial no desaparezca cuando el ranking se reinicia.</p>
+    <div class="scroll"><table>
+  <thead><tr><th scope="col">Mes</th><th scope="col" class="r">Operaciones</th>
+  <th scope="col" class="r">Traders</th><th scope="col" class="r">Volumen en DFV</th>
+  <th scope="col" class="r">Volumen en USDC</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Agosto de 2026 <span class="tag tag-now">actual</span></td>
+      <td class="r">8</td>
+      <td class="r">3</td>
+      <td class="r">26,335,305</td>
+      <td class="r strong">$5,873.00</td>
+    </tr>
+    <tr>
+      <td>Junio de 2026</td>
+      <td class="r">24</td>
+      <td class="r">8</td>
+      <td class="r">174,667,683</td>
+      <td class="r strong">$50,219.33</td>
+    </tr>
+  </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Todas las operaciones</h2>
+    <p class="lede">El registro completo, de más reciente a más antiguo. Cada fila enlaza con la transacción en Etherscan para que lo verifiques tú mismo.</p>
+    <div class="scroll"><table>
+  <thead><tr>
+    <th scope="col">Fecha</th><th scope="col">Trader</th><th scope="col">Tipo</th>
+    <th scope="col" class="r">DFV</th><th scope="col" class="r">USDC</th><th scope="col">Tx</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>2026-08-23</td>
+      <td><a href="https://etherscan.io/address/0x7b1d81ba131f551da2f70f7c2363b45dbd451d83" rel="noopener" title="0x7b1d81ba131f551da2f70f7c2363b45dbd451d83">0x7b1d…1d83</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">1,051,724</td>
+      <td class="r">$0.00</td>
+      <td><a href="https://etherscan.io/tx/0x8f4cbe5e3f3bccf5ab5651d07acb995c07389dd4f5e2ee8b0247a63cf82cbad0" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-22</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">942,720</td>
+      <td class="r">$214.92</td>
+      <td><a href="https://etherscan.io/tx/0xfa88258d700833aed5a73fc8afe85653dc03727ad3f7d628f36cd4ede6501792" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-22</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">428,727</td>
+      <td class="r">$100.00</td>
+      <td><a href="https://etherscan.io/tx/0x0f45895070de9d2dab739db53f0edb2f86f05a5978d74c8c09786a284a3791e9" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-22</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">5,869,400</td>
+      <td class="r">$1,349.65</td>
+      <td><a href="https://etherscan.io/tx/0xebbe1fb5b5950a2e4cb99f2fff0db144625de39209515ee6db062b30ca887b65" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-22</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">5,869,401</td>
+      <td class="r">$1,379.69</td>
+      <td><a href="https://etherscan.io/tx/0x68da7e5de8760fbb70cabfc67d5a5e51e4fb7f5e57a9d925ce6ff3e498589437" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-22</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">6,000,000</td>
+      <td class="r">$1,379.69</td>
+      <td><a href="https://etherscan.io/tx/0x9cd096806fb88686b9f16fa89c710d89ac596a8beeeda214632465a91c74c7e0" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-22</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">5,819,789</td>
+      <td class="r">$1,368.38</td>
+      <td><a href="https://etherscan.io/tx/0x73e4be0f6bd03aecd8f360bdde37a30f9a70dcd09f7a0e1ec62c014cdcd25041" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-08-21</td>
+      <td><a href="https://etherscan.io/address/0xbd34dc3fbb661612aabcadaf758caa6e22787297" rel="noopener" title="0xbd34dc3fbb661612aabcadaf758caa6e22787297">0xbd34…7297</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">353,545</td>
+      <td class="r">$80.66</td>
+      <td><a href="https://etherscan.io/tx/0x27425769972480eec173603ffe54e114ac819c9c2125b75fac0ee8638e05df59" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-25</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">3,474,117</td>
+      <td class="r">$797.83</td>
+      <td><a href="https://etherscan.io/tx/0x308736f75c3417a28b266b6e3b87f3be55eafe63529503c8f4541fc7475ee1a7" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-25</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">3,414,117</td>
+      <td class="r">$800.00</td>
+      <td><a href="https://etherscan.io/tx/0x35651ffefe4eed9b2fff73471a7f659c1914c909262f26701dbeca0f7b33f090" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-25</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">3,500,262</td>
+      <td class="r">$803.92</td>
+      <td><a href="https://etherscan.io/tx/0x5a6812b1429b42857138396547e7dc390fe3fc7fc45844ae472d4e3b766e7e7f" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-25</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">1,787,907</td>
+      <td class="r">$420.00</td>
+      <td><a href="https://etherscan.io/tx/0xf6e0c58776204470c6e6075a781841e24bbfd871ff53046cd26153227fb3588f" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-25</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">5,317,067</td>
+      <td class="r">$1,230.43</td>
+      <td><a href="https://etherscan.io/tx/0x65c514526ce8d7b1776ac581956f59abf488c5126c502627b456e2aeca05ba93" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-25</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">4,228,911</td>
+      <td class="r">$1,000.00</td>
+      <td><a href="https://etherscan.io/tx/0x88842f7b57a9f1d060f9dabc03fe203cefb87bd049f950b0beb35c1cdd5dfbde" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-22</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">80,000,000</td>
+      <td class="r">$20,853.23</td>
+      <td><a href="https://etherscan.io/tx/0xcf64dd4772f6f41f833f17ac6f10cf4ec35d54f67a4963cf649c4bde7068feca" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-22</td>
+      <td><a href="https://etherscan.io/address/0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef" rel="noopener" title="0xe53b3858db46ebf3e0eb6cc531a94e4c49c11aef">0xe53b…1aef</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">1,000,000</td>
+      <td class="r">$295.48</td>
+      <td><a href="https://etherscan.io/tx/0xc700795355584fcc9deedcc8c57593ebfff79f580044464b16a7a26eb80337f7" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-21</td>
+      <td><a href="https://etherscan.io/address/0xfc0b0316797021918d2a961bbdb4589ac0723d44" rel="noopener" title="0xfc0b0316797021918d2a961bbdb4589ac0723d44">0xfc0b…3d44</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">25,781,931</td>
+      <td class="r">$7,969.20</td>
+      <td><a href="https://etherscan.io/tx/0x1591bb18f0bdb5c9b570ea211aae711970479437102962c4052ffbd7465e8120" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-21</td>
+      <td><a href="https://etherscan.io/address/0xfc0b0316797021918d2a961bbdb4589ac0723d44" rel="noopener" title="0xfc0b0316797021918d2a961bbdb4589ac0723d44">0xfc0b…3d44</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">25,000,000</td>
+      <td class="r">$8,433.45</td>
+      <td><a href="https://etherscan.io/tx/0x6a8a140ba1fb48b88cf495b484f75f52c7eef74c538e09fba0a826e01f2e510c" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-21</td>
+      <td><a href="https://etherscan.io/address/0xfc0b0316797021918d2a961bbdb4589ac0723d44" rel="noopener" title="0xfc0b0316797021918d2a961bbdb4589ac0723d44">0xfc0b…3d44</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">20,000,000</td>
+      <td class="r">$7,313.53</td>
+      <td><a href="https://etherscan.io/tx/0x8f72372f5c321b8835f7e5c88fef1964a2bf953d438600185d43258be77a416d" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-12</td>
+      <td><a href="https://etherscan.io/address/0x3a84004fc37aa2a9be2178c1ed303db8d9e60dcf" rel="noopener" title="0x3a84004fc37aa2a9be2178c1ed303db8d9e60dcf">0x3a84…0dcf</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">2,991</td>
+      <td class="r">$1.16</td>
+      <td><a href="https://etherscan.io/tx/0xc33cbba966e1ff8ac1a0f334c24e98973401e367e10b6406f7b15a3bef53c28f" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-12</td>
+      <td><a href="https://etherscan.io/address/0xac2332bdd1f29e86b3a282cbe3bee4aa338d35e2" rel="noopener" title="0xac2332bdd1f29e86b3a282cbe3bee4aa338d35e2">0xac23…35e2</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">98,269</td>
+      <td class="r">$0.00</td>
+      <td><a href="https://etherscan.io/tx/0x481dcfebb50bc236ae991fff418fc5ca6483f1c0bf905d47f875edd5d5944053" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-09</td>
+      <td><a href="https://etherscan.io/address/0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd" rel="noopener" title="0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd">0xc2bb…5cfd</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">95,921</td>
+      <td class="r">$37.12</td>
+      <td><a href="https://etherscan.io/tx/0x7a23a86c719233811f654831ec9e2890f63f0c3b94144969adaa1db60b3a9600" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-09</td>
+      <td><a href="https://etherscan.io/address/0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd" rel="noopener" title="0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd">0xc2bb…5cfd</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">383,683</td>
+      <td class="r">$150.20</td>
+      <td><a href="https://etherscan.io/tx/0x738c005c6cb2f62ecfd05ec45bfa86fbbd47b879baed6e0a296c94f6d0190e59" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-09</td>
+      <td><a href="https://etherscan.io/address/0xac2332bdd1f29e86b3a282cbe3bee4aa338d35e2" rel="noopener" title="0xac2332bdd1f29e86b3a282cbe3bee4aa338d35e2">0xac23…35e2</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">196,539</td>
+      <td class="r">$0.00</td>
+      <td><a href="https://etherscan.io/tx/0x42da4593dc8abc5836d39b0c27744b68a5d286f9abe995fa68d5c03d013930cf" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd" rel="noopener" title="0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd">0xc2bb…5cfd</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">49,740</td>
+      <td class="r">$0.00</td>
+      <td><a href="https://etherscan.io/tx/0xcf26243be078cef8cee743f8572be6426ec453589199c06a89058c7e60b2fd2e" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd" rel="noopener" title="0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd">0xc2bb…5cfd</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">45,437</td>
+      <td class="r">$0.00</td>
+      <td><a href="https://etherscan.io/tx/0x4b8a13e0797f084fdf1caf64c371b148c0ccec62b700c49cb61322cceecdba7a" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0x11e8c97b1cfaa0b633803a503cdd034a6a970693" rel="noopener" title="0x11e8c97b1cfaa0b633803a503cdd034a6a970693">0x11e8…0693</a></td>
+      <td><span class="tag tag-sell">venta</span></td>
+      <td class="r">127,329</td>
+      <td class="r">$49.27</td>
+      <td><a href="https://etherscan.io/tx/0xa7d2630d29460b7c1b8d262353cd8fc1ff699ade61eb116905e7be2f5404f8fc" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0x11e8c97b1cfaa0b633803a503cdd034a6a970693" rel="noopener" title="0x11e8c97b1cfaa0b633803a503cdd034a6a970693">0x11e8…0693</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">127,329</td>
+      <td class="r">$50.27</td>
+      <td><a href="https://etherscan.io/tx/0xa0620fb5c70bc65fda093e1a35cd415181c09515889b98a645de12fba5f3ff02" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0x3a84004fc37aa2a9be2178c1ed303db8d9e60dcf" rel="noopener" title="0x3a84004fc37aa2a9be2178c1ed303db8d9e60dcf">0x3a84…0dcf</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">3,988</td>
+      <td class="r">$1.57</td>
+      <td><a href="https://etherscan.io/tx/0xf7ec52b0c78183db1885cb634b5c1622ba9c2430115562c41f6ac05d695f63c4" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0xa0f08163f032309af1fb0ff51435b9c70a4ef436" rel="noopener" title="0xa0f08163f032309af1fb0ff51435b9c70a4ef436">0xa0f0…f436</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">25,310</td>
+      <td class="r">$9.99</td>
+      <td><a href="https://etherscan.io/tx/0xb53b87b8b441d6288d489c448e8e6e6d7c254bbce5332aebdc94dc01d4270afc" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0x01031ea895b673925344535796c928791f461750" rel="noopener" title="0x01031ea895b673925344535796c928791f461750">0x0103…1750</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">2,533</td>
+      <td class="r">$1.00</td>
+      <td><a href="https://etherscan.io/tx/0xb9b925c2461f4248a3d25c64c6b3533c39cb39199cfcdb41293d78a2eef320a1" rel="noopener">ver</a></td>
+    </tr>
+    <tr>
+      <td>2026-06-08</td>
+      <td><a href="https://etherscan.io/address/0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd" rel="noopener" title="0xc2bb3fb8fe69d82485d9a7ae645787770fda5cfd">0xc2bb…5cfd</a></td>
+      <td><span class="tag tag-buy">compra</span></td>
+      <td class="r">4,302</td>
+      <td class="r">$1.70</td>
+      <td><a href="https://etherscan.io/tx/0xf917700e70549217dbf72af38fe1e5b853e2bbd5c351bd96f5d19c829693b718" rel="noopener">ver</a></td>
+    </tr>
+  </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Llévate los datos</h2>
+    <p class="lede">CSV plano, sin registro, sin API key. Ábrelo en una hoja de cálculo y comprueba nuestras cuentas.</p>
+    <div class="downloads">
+      <a class="dl" href="/leaderboard/trades.csv" download>↓ trades.csv — todas las operaciones</a>
+      <a class="dl" href="/leaderboard/leaderboard.csv" download>↓ leaderboard.csv — totales por trader</a>
+      <a class="dl" href="/leaderboard/trades.json" download>↓ trades.json — en bruto</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cómo se construye esto</h2>
+    <div class="method">
+      <p>Se recopila cada transferencia de DFV que entra o sale del PoolManager de Uniswap V4 y luego se contrasta cada transacción con los eventos que el propio pool emitió. Solo se cuentan como operaciones las transacciones que contienen un evento <code>Swap</code>.</p>
+      <p><strong>Por esto las cifras son honestas.</strong> 5 transacciones movieron DFV dentro o fuera del pool como <em>liquidez</em>, no como trading, incluida la provisión inicial de unos 117 500 millones de DFV. Contarlas como «ventas» inflaría el volumen por un factor de miles. Están excluidas y se listan aparte en el JSON en bruto.</p>
+      <p>El trader que se muestra es la cuenta que firmó la transacción, no el contrato del router que aparece como contraparte en la transferencia; así los agregadores y los routers nunca aparecen en el ranking en lugar de personas reales.</p>
+      <p>Token <span class="addr">0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07</span> · pool <span class="addr">0x000000000004444c5dc75cB358380D2e3dE08A90</span> · cotizado en USDC.</p>
+    </div>
+  </section>
+
+  <footer>
+    Last rebuilt Mon, 24 Aug 2026 22:29:43 GMT. Updated daily at midnight
+    Central European Time. Data comes from Ethereum mainnet and can be reproduced by
+    anyone — the build script is in the repository.
+  </footer>
+
+</div>
