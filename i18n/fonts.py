@@ -10,7 +10,7 @@ subset, which contains Latin Extended-A and NO basic ASCII. 'Architects
 Daughter' has therefore never rendered the English headings at all - they fall
 back to Bradley Hand on macOS and Segoe Print on Windows.
 """
-import base64, re, urllib.parse, urllib.request, os, json
+import base64, hashlib, re, urllib.parse, urllib.request, os, json
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
@@ -35,7 +35,12 @@ def subset_b64(family: str, chars: str) -> tuple[str, int]:
     chars = chars + BASE
     os.makedirs(CACHE, exist_ok=True)
     wanted = "".join(sorted(set(chars) - set("\r\n\t")))
-    key = os.path.join(CACHE, f"{family.replace(' ','')}-{abs(hash(wanted)) % (10**12)}.woff2")
+    # hashlib, not hash(): Python randomises string hashing per process, so a
+    # hash()-based filename never hits the cache across runs and every build
+    # would re-fetch from Google Fonts. In CI that is a nightly dependency on
+    # a third party being up.
+    digest = hashlib.sha1(wanted.encode()).hexdigest()[:16]
+    key = os.path.join(CACHE, f"{family.replace(' ', '')}-{digest}.woff2")
     if os.path.exists(key):
         raw = open(key, "rb").read()
         return base64.b64encode(raw).decode(), len(raw)

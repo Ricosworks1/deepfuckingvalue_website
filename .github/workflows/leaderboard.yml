@@ -57,7 +57,15 @@ jobs:
             exit 0
           fi
 
-          git add leaderboard/ dao/
+          # build-leaderboard.mjs and build-dao.mjs render those two pages from
+          # their own templates, which know nothing about the language bar, the
+          # charset, or the translations. Without this the two English pages
+          # silently lose their language switcher and the five mirrors keep
+          # yesterday's figures. finalize.py is idempotent, so it only rewrites
+          # what actually changed.
+          python3 i18n/finalize.py
+
+          git add -A
           git commit -m "chore: rebuild trading leaderboard $(date -u +%Y-%m-%d)"
           git push
           echo "Published updated leaderboard."

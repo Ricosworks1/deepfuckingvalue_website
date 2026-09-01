@@ -52,16 +52,25 @@ async function rpc(method, params) {
     rpcCalls++;
     const body = await res.json();
     if (body.error) {
-      // Free-tier rate limiting — back off and retry rather than losing data.
-      if (/rate|limit|429/i.test(JSON.stringify(body.error))) {
+      /* Back off and retry anything transient rather than losing the whole
+         night's run. This used to match only /rate|limit|429/, which meant
+         Alchemy's -32001 "Unable to complete request at this time" — a plain
+         server-side hiccup — fell through and failed the job. It did exactly
+         that on 1 September 2026, and the next scheduled run succeeded
+         untouched, which is the signature of a retryable error. */
+      const e = JSON.stringify(body.error);
+      const transient =
+        /rate|limit|429|503|timeout|timed out|temporarily|try again|unable to complete|internal error|bad gateway/i.test(e) ||
+        [-32000, -32001, -32005, -32603].includes(body.error.code);
+      if (transient) {
         await new Promise((r) => setTimeout(r, 1200 * (attempt + 1)));
         continue;
       }
-      throw new Error(`${method}: ${JSON.stringify(body.error).slice(0, 200)}`);
+      throw new Error(`${method}: ${e.slice(0, 200)}`);
     }
     return body.result;
   }
-  throw new Error(`${method}: still rate-limited after 5 attempts`);
+  throw new Error(`${method}: still failing after 5 attempts`);
 }
 
 /* Every page of an asset-transfer query. */
