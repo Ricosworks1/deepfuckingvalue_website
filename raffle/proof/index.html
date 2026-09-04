@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/proof/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/proof/"><!--/i18n:head-->
 <title>The rehearsal — DFV Raffle</title>
-<meta name="description" content="A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink randomness, before the raffle took a single real entry. Every transaction is public.">
+<meta name="description" content="A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink VRF randomness, before the raffle took a single real entry. Every transaction is public.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -139,7 +139,7 @@
   <h1>The rehearsal</h1>
   <p class="sub">
     Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet
-    with our own money — real USDC, real Chainlink randomness, at one fifty-thousandth of the
+    with our own money — real USDC, real Chainlink VRF randomness, at one fifty-thousandth of the
     size. It worked. Every transaction below is on the public chain and you can open all of them.
   </p>
 
@@ -163,7 +163,7 @@
       <tbody>
         <tr><td>First ticket bought</td><td class="evi"><a href="https://etherscan.io/tx/0xd6abe8689f51e07df0b44928796362c5c9e4ce6df7028457a8ff52aa7ea90181" rel="noopener">0xd6abe868…a90181</a></td></tr>
         <tr><td>…39 more purchase transactions</td><td>2,000 tickets, 20.00 USDC in total</td></tr>
-        <tr><td>Draw requested from Chainlink</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td>Draw requested from Chainlink VRF</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
         <tr><td><strong>Randomness delivered and round settled</strong></td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
       </tbody>
     </table></div>
@@ -200,7 +200,7 @@
     <p>
       We deliberately do <em>not</em> use block data for this. A block proposer can see values
       like <span class="addr">prevrandao</span> before publishing, and could quietly re-roll a
-      draw worth a million dollars. Chainlink costs more and is worth it.
+      draw worth a million dollars. Chainlink VRF costs more and is worth it.
     </p>
     <div class="scroll"><table>
       <tbody>

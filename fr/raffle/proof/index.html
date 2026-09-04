@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/proof/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/proof/"><!--/i18n:head-->
 <title>La répétition — Tombola DFV</title>
-<meta name="description" content="Un tour de tombola complet, joué sur le mainnet Ethereum avec de vrais USDC et un vrai aléa Chainlink, avant que la tombola n'accepte la moindre participation réelle. Chaque transaction est publique.">
+<meta name="description" content="A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink VRF randomness, before the raffle took a single real entry. Every transaction is public.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -138,7 +138,9 @@
 
   <h1>La répétition</h1>
   <p class="sub">
-    Avant que la tombola n'accepte la moindre participation réelle, nous avons fait tourner un tour complet sur le mainnet Ethereum avec notre propre argent — de vrais USDC, un vrai aléa Chainlink, à un cinquante-millième de la taille. Ça a marché. Chaque transaction ci-dessous est sur la chaîne publique et vous pouvez toutes les ouvrir.
+    Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet
+    with our own money — real USDC, real Chainlink VRF randomness, at one fifty-thousandth of the
+    size. It worked. Every transaction below is on the public chain and you can open all of them.
   </p>
 
   <div class="status" style="border-left-color:var(--ok);background:var(--ok-sunk)">
@@ -160,7 +162,7 @@
       <tbody>
         <tr><td>Premier billet acheté</td><td class="evi"><a href="https://etherscan.io/tx/0xd6abe8689f51e07df0b44928796362c5c9e4ce6df7028457a8ff52aa7ea90181" rel="noopener">0xd6abe868…a90181</a></td></tr>
         <tr><td>…39 autres transactions d'achat</td><td>2 000 billets, 20,00 USDC au total</td></tr>
-        <tr><td>Tirage demandé à Chainlink</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td>Draw requested from Chainlink VRF</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
         <tr><td><strong>Aléa livré et tour réglé</strong></td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
       </tbody>
     </table></div>
@@ -185,7 +187,11 @@
   <section>
     <h2>L'aléa</h2>
     <p>Les gagnants sont tirés par <strong>Chainlink VRF v2.5</strong>, qui produit un nombre aléatoire accompagné d'une preuve cryptographique qu'il n'a pas été altéré. La preuve est vérifiée on-chain avant que notre contrat ait le droit de s'en servir. Personne — ni nous, ni un mineur, ni Chainlink — ne peut choisir les gagnants.</p>
-    <p>Nous n'utilisons délibérément <em>pas</em> les données de bloc pour cela. Un proposeur de bloc peut voir des valeurs comme <span class="addr">prevrandao</span> avant publication, et pourrait discrètement relancer un tirage valant un million de dollars. Chainlink coûte plus cher et le vaut.</p>
+    <p>
+      We deliberately do <em>not</em> use block data for this. A block proposer can see values
+      like <span class="addr">prevrandao</span> before publishing, and could quietly re-roll a
+      draw worth a million dollars. Chainlink VRF costs more and is worth it.
+    </p>
     <div class="scroll"><table>
       <tbody>
         <tr><td>Requête</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
