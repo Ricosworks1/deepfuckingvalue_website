@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-09-04T18:23:12.026Z",
- "raffle": "0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D",
+ "generatedAt": "2026-09-04T21:23:19.949Z",
+ "raffle": null,
  "round": null,
  "ticketsSold": 0,
  "ticketsTotal": 0,
  "participants": [],
  "complete": true,
- "note": "the round is open and no tickets have been sold yet"
+ "note": "no raffle contract configured yet"
 }
