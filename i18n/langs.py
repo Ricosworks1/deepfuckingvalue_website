@@ -21,7 +21,8 @@ CJK_STACK = ('"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", '
              '"Noto Sans CJK SC", "Source Han Sans SC", sans-serif')
 
 PAGES = ["index.html", "claim/index.html", "dao/index.html",
-         "leaderboard/index.html", "memes/index.html", "memes/gallery/index.html"]
+         "leaderboard/index.html", "memes/index.html", "memes/gallery/index.html",
+         "raffle/index.html", "raffle/proof/index.html"]
 
 def by_code(code):
     return next(l for l in LANGS if l["code"] == code)

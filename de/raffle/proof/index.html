@@ -1,0 +1,278 @@
+<!doctype html><!--i18n:head-->
+<html lang="de">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="en" href="https://dfv.fun/raffle/proof/">
+<link rel="alternate" hreflang="fr" href="https://dfv.fun/fr/raffle/proof/">
+<link rel="alternate" hreflang="de" href="https://dfv.fun/de/raffle/proof/">
+<link rel="alternate" hreflang="es" href="https://dfv.fun/es/raffle/proof/">
+<link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/raffle/proof/">
+<link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/proof/">
+<link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/proof/"><!--/i18n:head-->
+<title>The rehearsal — DFV Raffle</title>
+<meta name="description" content="A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink randomness, before the raffle took a single real entry. Every transaction is public.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(data:font/woff2;base64,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) format('woff2');
+  }
+
+  :root {
+    --paper:#ffffff; --paper-sunk:#f3f4f4;
+    --navy:#223f84; --ink:#1b2540; --ink-soft:#515b78; --ink-faint:#8b93a8;
+    --red:#e32c4d; --red-sunk:#fdeef1;
+    --ok:#1a7f4b; --ok-sunk:#e8f5ee; --warn:#8a6100; --warn-sunk:#fdf3dd;
+    --rule:#dfe4ed; --on-accent:#ffffff;
+    --f-hand:'Architects Daughter','Bradley Hand',cursive;
+    --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --gut:clamp(1.1rem,4vw,2rem);
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --paper:#0e1730; --paper-sunk:#121d3a; --navy:#9db4ec; --ink:#e7ecf7;
+    --ink-soft:#a9b3cc; --ink-faint:#737d99; --red:#ff5573; --red-sunk:#2c1421;
+    --ok:#5fd39b; --ok-sunk:#0f2a1f; --warn:#e0b451; --warn-sunk:#2a2211;
+    --rule:#25314f; --on-accent:#0e1730; } }
+  :root[data-theme="dark"]{
+    --paper:#0e1730; --paper-sunk:#121d3a; --navy:#9db4ec; --ink:#e7ecf7;
+    --ink-soft:#a9b3cc; --ink-faint:#737d99; --red:#ff5573; --red-sunk:#2c1421;
+    --ok:#5fd39b; --ok-sunk:#0f2a1f; --warn:#e0b451; --warn-sunk:#2a2211;
+    --rule:#25314f; --on-accent:#0e1730; }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:52rem;margin:0 auto;padding:clamp(1.5rem,5vw,3rem) var(--gut) 4rem}
+  a{color:var(--red)}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+  .back{display:inline-block;font-size:.875rem;font-weight:600;color:var(--ink-soft);text-decoration:none;margin-bottom:1.5rem}
+  .back:hover{color:var(--red)}
+  h1{font-family:var(--f-hand);font-size:clamp(2.25rem,1.5rem + 3vw,3.5rem);color:var(--navy);margin:0;line-height:1}
+  h2{font-family:var(--f-hand);font-size:clamp(1.6rem,1.2rem + 1.5vw,2.25rem);color:var(--navy);margin:0 0 .5rem;line-height:1.1}
+  h3{font-size:1rem;color:var(--navy);margin:0 0 .3rem}
+  .sub{color:var(--ink-soft);margin:.9rem 0 0;max-width:58ch}
+  section{margin-top:clamp(2.5rem,6vw,3.75rem)}
+  p{margin:0 0 .85rem;max-width:64ch}
+  p:last-child{margin-bottom:0}
+
+  .panel{border:2px solid var(--rule);border-radius:14px;padding:clamp(1.1rem,3vw,1.6rem);background:var(--paper)}
+  .panel + .panel{margin-top:1rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem, 100%), 1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:1.25rem}
+  .cell{background:var(--paper);padding:.95rem 1.05rem;display:flex;flex-direction:column;gap:.2rem}
+  .cell dt{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-family:var(--f-mono)}
+  .cell dd{margin:0;font-family:var(--f-mono);font-size:1.25rem;font-weight:600;letter-spacing:-.03em;color:var(--navy);font-variant-numeric:tabular-nums}
+  .cell .sub2{font-size:.6875rem;color:var(--ink-faint);font-family:var(--f-body);letter-spacing:0}
+
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(15rem, 100%), 1fr));gap:1.5rem;margin-top:1.5rem}
+  .why div{border-top:3px solid var(--navy);padding-top:.9rem}
+  .why p{font-size:.9375rem;color:var(--ink-soft)}
+
+  .status{border-left:4px solid var(--warn);background:var(--warn-sunk);border-radius:8px;padding:1rem 1.2rem;margin-top:1.25rem;font-size:.9375rem}
+  .status strong{color:var(--warn)}
+
+  .track{height:.75rem;background:var(--paper-sunk);border:2px solid var(--rule);border-radius:999px;overflow:hidden;margin:.75rem 0 .5rem}
+  .fill{height:100%;background:var(--navy);min-width:2px}
+
+  .btn{font-family:inherit;font-size:.9375rem;font-weight:700;padding:.8rem 1.4rem;border-radius:999px;cursor:pointer;border:2px solid var(--red);background:var(--red);color:var(--on-accent)}
+  .btn:hover:not(:disabled){opacity:.9}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn-quiet{background:transparent;color:var(--red)}
+  .actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+  input[type=text]{width:100%;font-family:var(--f-mono);font-size:.875rem;padding:.65rem .7rem;border:2px solid var(--rule);border-radius:8px;background:var(--paper);color:var(--ink);margin-top:.5rem}
+  input[type=text]:focus{border-color:var(--navy)}
+
+  .msg{margin-top:.9rem;font-size:.9375rem;padding:.7rem .9rem;border-radius:8px;background:var(--paper-sunk);color:var(--ink-soft)}
+  .msg-warn{background:var(--warn-sunk);color:var(--warn)}
+  .msg-ok{background:var(--ok-sunk);color:var(--ok)}
+
+  dl.kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
+  dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
+  dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
+
+  table{width:100%;border-collapse:collapse;font-family:var(--f-mono);font-size:.8125rem}
+  th{text-align:left;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding:0 1rem .55rem 0;border-bottom:2px solid var(--navy);white-space:nowrap}
+  td{padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+  .scroll{overflow-x:auto}
+  td a{color:var(--red);text-decoration:none}
+
+  .empty{padding:1.5rem;border:2px dashed var(--rule);border-radius:12px;color:var(--ink-soft);font-size:.9375rem;margin-top:1rem}
+  footer{margin-top:3rem;padding-top:1.25rem;border-top:2px solid var(--rule);font-size:.8125rem;color:var(--ink-faint)}
+  .addr{font-family:var(--f-mono);word-break:break-all}
+
+  .evi{font-family:var(--f-mono);font-size:.8125rem;word-break:break-all}
+  .ok-badge{display:inline-block;background:var(--ok-sunk);color:var(--ok);border-radius:999px;
+            padding:.15rem .7rem;font-size:.75rem;font-weight:700;letter-spacing:.04em;
+            text-transform:uppercase;font-family:var(--f-mono)}
+  .tickets{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:1rem}
+  .tickets span{font-family:var(--f-mono);font-size:.75rem;background:var(--paper-sunk);
+                border:1px solid var(--rule);border-radius:5px;padding:.12rem .4rem;color:var(--ink-soft)}
+  .tickets span.watch{background:var(--red-sunk);color:var(--red);border-color:var(--red);font-weight:700}
+  .tall{max-height:22rem;overflow-y:auto;border:1px solid var(--rule);border-radius:10px}
+  .tall table{margin:0}
+  ul.plain{list-style:none;padding:0;margin:.5rem 0 0}
+  ul.plain li{font-family:var(--f-mono);font-size:.8125rem;padding:.2rem 0}
+
+/*i18n:css*/
+  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
+  .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
+                display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem; }
+  .langbar li { margin: 0; display: flex; }
+  /* padding gives a ~44px tap target around a 30px flag, which is the mobile
+     guideline; the flag itself stays small enough not to shout. */
+  .langbar a, .langbar span { display: block; line-height: 0; border-radius: 4px;
+                              padding: 7px 6px; border: 1px solid transparent; }
+  .langbar .flag { display: block; border-radius: 2px; }
+  .langbar a { opacity: 0.45; transition: opacity 0.12s ease; }
+  .langbar a:hover, .langbar a:focus-visible { opacity: 1; }
+  .langbar a:focus-visible { outline: 2px solid var(--red); outline-offset: 1px; }
+  .langbar [aria-current="true"] { opacity: 1; border-color: var(--red); }
+/*/i18n:css*/</style>
+<!--i18n:langbar--><div class="langbar"><nav aria-label="Language"><ul><li><a href="/raffle/proof/" hreflang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><clipPath id="dfvuk"><rect width="24" height="16" rx="2"/></clipPath><g clip-path="url(#dfvuk)"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.9"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5.3"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="3.2"/></g><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/fr/raffle/proof/" hreflang="fr" title="Français" aria-label="Français"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" fill="#fff" rx="2"/><path d="M0 2a2 2 0 012-2h6v16H2a2 2 0 01-2-2z" fill="#002654"/><path d="M16 0h6a2 2 0 012 2v12a2 2 0 01-2 2h-6z" fill="#ED2939"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><span aria-current="true" title="Deutsch" aria-label="Deutsch"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v3.33H0z" fill="#000"/><rect y="5.33" width="24" height="5.34" fill="#DD0000"/><path d="M0 10.67h24V14a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#FFCE00"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></span></li><li><a href="/es/raffle/proof/" hreflang="es" title="Español" aria-label="Español"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v2H0z" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/><path d="M0 12h24v2a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#AA151B"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/vi/raffle/proof/" hreflang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DA251D"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FF0" transform="translate(12 8) scale(4.6)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/zh/raffle/proof/" hreflang="zh-Hans" title="简体中文" aria-label="简体中文"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DE2910"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(5 5) scale(3)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 2.2) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 4.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 7.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 9.8) scale(1.05)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li></ul></nav></div><!--/i18n:langbar-->
+<div class="wrap">
+
+  <a class="back" href="/raffle/">← Back to the raffle</a>
+
+  <h1>The rehearsal</h1>
+  <p class="sub">
+    Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet
+    with our own money — real USDC, real Chainlink randomness, at one fifty-thousandth of the
+    size. It worked. Every transaction below is on the public chain and you can open all of them.
+  </p>
+
+  <div class="status" style="border-left-color:var(--ok);background:var(--ok-sunk)">
+    <strong style="color:var(--ok)">Settled and fully paid.</strong>
+    2,000 tickets sold, 100 winners drawn by Chainlink VRF, all 99 cash prizes delivered,
+    and <strong>nothing left stranded</strong> in the contract.
+  </div>
+
+  <section>
+    <h2>What happened, in order</h2>
+    <dl class="grid">
+      <div class="cell"><dt>Round opened</dt><dd>11:33</dd><span class="sub2">4 Sep 2026 UTC</span></div>
+      <div class="cell"><dt>Draw requested</dt><dd>11:42</dd><span class="sub2">after 2,000/2,000 sold</span></div>
+      <div class="cell"><dt>Randomness arrived</dt><dd>84 s</dd><span class="sub2">Chainlink VRF v2.5</span></div>
+      <div class="cell"><dt>Every prize paid</dt><dd>11:44</dd><span class="sub2">5 batches, 99 winners</span></div>
+    </dl>
+
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Step</th><th scope="col">Auf Etherscan</th></tr></thead>
+      <tbody>
+        <tr><td>First ticket bought</td><td class="evi"><a href="https://etherscan.io/tx/0xd6abe8689f51e07df0b44928796362c5c9e4ce6df7028457a8ff52aa7ea90181" rel="noopener">0xd6abe868…a90181</a></td></tr>
+        <tr><td>…39 more purchase transactions</td><td>2,000 tickets, 20.00 USDC in total</td></tr>
+        <tr><td>Draw requested from Chainlink</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td><strong>Randomness delivered and round settled</strong></td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 style="margin-top:1.5rem">The five payout transactions</h3>
+    <ul class="plain"><li><a href="https://etherscan.io/tx/0xd864c345b8d0ee8a60b5bdc3c52610b9631ac4617efe4fb2caf9b0d5f2be6735" rel="noopener">0xd864c345…be6735</a></li><li><a href="https://etherscan.io/tx/0x2d62b5afdf009917f00102440cf7155c478b106c29bdc36a5584297caa1d7319" rel="noopener">0x2d62b5af…1d7319</a></li><li><a href="https://etherscan.io/tx/0x5d7558443120eb11db6f37371cc88157a05f47c3b90e7cb0aefa1f050bd79275" rel="noopener">0x5d755844…d79275</a></li><li><a href="https://etherscan.io/tx/0x7b3ab6732c8f31e4094951de55bcd934f1821ca1c2b418949279b43cd979fe99" rel="noopener">0x7b3ab673…79fe99</a></li><li><a href="https://etherscan.io/tx/0x6c73daf12c64105a1c2a10c094399e7f014c8c183f253218816ed786d8ce92ba" rel="noopener">0x6c73daf1…ce92ba</a></li></ul>
+  </section>
+
+  <section>
+    <h2>The money, reconciled</h2>
+    <p>
+      The round collected 20.00 USDC and paid out 20.00 USDC. Because this was a rehearsal, the
+      same address was the house <em>and</em> every winner, so all of it came back — but the
+      contract did not know that, and split it exactly as it will in a real round.
+    </p>
+    <dl class="grid">
+      <div class="cell"><dt>Collected</dt><dd>20.00</dd><span class="sub2">2,000 × 0.01 USDC</span></div>
+      <div class="cell"><dt>Prize budget</dt><dd>8.16</dd><span class="sub2">40.8% of the pot</span></div>
+      <div class="cell"><dt>To 99 winners</dt><dd>7.92</dd><span class="sub2">0.08 USDC each</span></div>
+      <div class="cell"><dt>To the house</dt><dd>12.08</dd><span class="sub2">including the watch value</span></div>
+      <div class="cell"><dt>Left in contract</dt><dd style="color:var(--ok)">0.00</dd><span class="sub2">nothing stranded</span></div>
+      <div class="cell"><dt>Cost to run</dt><dd>0.0049</dd><span class="sub2">ETH of gas, whole round</span></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>The randomness</h2>
+    <p>
+      Winners are drawn by <strong>Chainlink VRF v2.5</strong>, which produces a random number
+      together with a cryptographic proof that it was not tampered with. The proof is verified
+      on-chain before our contract is allowed to use it. Nobody — not us, not a miner, not
+      Chainlink — can pick the winners.
+    </p>
+    <p>
+      We deliberately do <em>not</em> use block data for this. A block proposer can see values
+      like <span class="addr">prevrandao</span> before publishing, and could quietly re-roll a
+      draw worth a million dollars. Chainlink costs more and is worth it.
+    </p>
+    <div class="scroll"><table>
+      <tbody>
+        <tr><td>Request</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td>Fulfilment</td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
+        <tr><td>Time to answer</td><td>84 Sekunden</td></tr>
+        <tr><td>LINK actually charged</td><td>0.017217 of 50 held in reserve</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 style="margin-top:1.75rem">The 100 winning tickets it produced</h3>
+    <p style="font-size:.9375rem;color:var(--ink-soft)">
+      All 100 distinct, all inside the 0–1,999 range. The first drawn ticket
+      (<strong>1501</strong>, in red) takes the watch; the other 99 take cash.
+    </p>
+    <div class="tickets">
+      <span class="watch">1501</span><span class="">1097</span><span class="">56</span><span class="">1962</span><span class="">468</span><span class="">1576</span><span class="">75</span><span class="">251</span><span class="">998</span><span class="">731</span><span class="">1999</span><span class="">391</span><span class="">766</span><span class="">1672</span><span class="">1065</span><span class="">869</span><span class="">1547</span><span class="">146</span><span class="">1788</span><span class="">887</span><span class="">558</span><span class="">1040</span><span class="">395</span><span class="">1370</span><span class="">846</span><span class="">1631</span><span class="">1581</span><span class="">696</span><span class="">755</span><span class="">986</span><span class="">1652</span><span class="">1664</span><span class="">625</span><span class="">1123</span><span class="">847</span><span class="">52</span><span class="">1471</span><span class="">895</span><span class="">747</span><span class="">598</span><span class="">1092</span><span class="">1755</span><span class="">1585</span><span class="">1514</span><span class="">763</span><span class="">1235</span><span class="">179</span><span class="">1503</span><span class="">913</span><span class="">1003</span><span class="">245</span><span class="">555</span><span class="">1388</span><span class="">213</span><span class="">619</span><span class="">1485</span><span class="">935</span><span class="">610</span><span class="">715</span><span class="">107</span><span class="">1158</span><span class="">965</span><span class="">1764</span><span class="">660</span><span class="">1453</span><span class="">1175</span><span class="">1810</span><span class="">659</span><span class="">633</span><span class="">47</span><span class="">830</span><span class="">743</span><span class="">201</span><span class="">461</span><span class="">589</span><span class="">1510</span><span class="">1919</span><span class="">883</span><span class="">1297</span><span class="">478</span><span class="">121</span><span class="">1829</span><span class="">1634</span><span class="">1523</span><span class="">1749</span><span class="">989</span><span class="">1386</span><span class="">576</span><span class="">741</span><span class="">480</span><span class="">258</span><span class="">1371</span><span class="">1206</span><span class="">1941</span><span class="">1400</span><span class="">484</span><span class="">1410</span><span class="">686</span><span class="">108</span><span class="">812</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Every prize, as paid</h2>
+    <p style="font-size:.9375rem;color:var(--ink-soft)">
+      In the order the contract delivered them. Ticket 1501 is absent because it won
+      the watch, which is a physical object handed over off-chain rather than a transfer.
+    </p>
+    <div class="tall scroll"><table>
+      <thead><tr><th scope="col">#</th><th scope="col">Winning ticket</th><th scope="col">USDC paid</th></tr></thead>
+      <tbody><tr><td>1</td><td>1097</td><td>0.08</td></tr><tr><td>2</td><td>56</td><td>0.08</td></tr><tr><td>3</td><td>1962</td><td>0.08</td></tr><tr><td>4</td><td>468</td><td>0.08</td></tr><tr><td>5</td><td>1576</td><td>0.08</td></tr><tr><td>6</td><td>75</td><td>0.08</td></tr><tr><td>7</td><td>251</td><td>0.08</td></tr><tr><td>8</td><td>998</td><td>0.08</td></tr><tr><td>9</td><td>731</td><td>0.08</td></tr><tr><td>10</td><td>1999</td><td>0.08</td></tr><tr><td>11</td><td>391</td><td>0.08</td></tr><tr><td>12</td><td>766</td><td>0.08</td></tr><tr><td>13</td><td>1672</td><td>0.08</td></tr><tr><td>14</td><td>1065</td><td>0.08</td></tr><tr><td>15</td><td>869</td><td>0.08</td></tr><tr><td>16</td><td>1547</td><td>0.08</td></tr><tr><td>17</td><td>146</td><td>0.08</td></tr><tr><td>18</td><td>1788</td><td>0.08</td></tr><tr><td>19</td><td>887</td><td>0.08</td></tr><tr><td>20</td><td>558</td><td>0.08</td></tr><tr><td>21</td><td>1040</td><td>0.08</td></tr><tr><td>22</td><td>395</td><td>0.08</td></tr><tr><td>23</td><td>1370</td><td>0.08</td></tr><tr><td>24</td><td>846</td><td>0.08</td></tr><tr><td>25</td><td>1631</td><td>0.08</td></tr><tr><td>26</td><td>1581</td><td>0.08</td></tr><tr><td>27</td><td>696</td><td>0.08</td></tr><tr><td>28</td><td>755</td><td>0.08</td></tr><tr><td>29</td><td>986</td><td>0.08</td></tr><tr><td>30</td><td>1652</td><td>0.08</td></tr><tr><td>31</td><td>1664</td><td>0.08</td></tr><tr><td>32</td><td>625</td><td>0.08</td></tr><tr><td>33</td><td>1123</td><td>0.08</td></tr><tr><td>34</td><td>847</td><td>0.08</td></tr><tr><td>35</td><td>52</td><td>0.08</td></tr><tr><td>36</td><td>1471</td><td>0.08</td></tr><tr><td>37</td><td>895</td><td>0.08</td></tr><tr><td>38</td><td>747</td><td>0.08</td></tr><tr><td>39</td><td>598</td><td>0.08</td></tr><tr><td>40</td><td>1092</td><td>0.08</td></tr><tr><td>41</td><td>1755</td><td>0.08</td></tr><tr><td>42</td><td>1585</td><td>0.08</td></tr><tr><td>43</td><td>1514</td><td>0.08</td></tr><tr><td>44</td><td>763</td><td>0.08</td></tr><tr><td>45</td><td>1235</td><td>0.08</td></tr><tr><td>46</td><td>179</td><td>0.08</td></tr><tr><td>47</td><td>1503</td><td>0.08</td></tr><tr><td>48</td><td>913</td><td>0.08</td></tr><tr><td>49</td><td>1003</td><td>0.08</td></tr><tr><td>50</td><td>245</td><td>0.08</td></tr><tr><td>51</td><td>555</td><td>0.08</td></tr><tr><td>52</td><td>1388</td><td>0.08</td></tr><tr><td>53</td><td>213</td><td>0.08</td></tr><tr><td>54</td><td>619</td><td>0.08</td></tr><tr><td>55</td><td>1485</td><td>0.08</td></tr><tr><td>56</td><td>935</td><td>0.08</td></tr><tr><td>57</td><td>610</td><td>0.08</td></tr><tr><td>58</td><td>715</td><td>0.08</td></tr><tr><td>59</td><td>107</td><td>0.08</td></tr><tr><td>60</td><td>1158</td><td>0.08</td></tr><tr><td>61</td><td>965</td><td>0.08</td></tr><tr><td>62</td><td>1764</td><td>0.08</td></tr><tr><td>63</td><td>660</td><td>0.08</td></tr><tr><td>64</td><td>1453</td><td>0.08</td></tr><tr><td>65</td><td>1175</td><td>0.08</td></tr><tr><td>66</td><td>1810</td><td>0.08</td></tr><tr><td>67</td><td>659</td><td>0.08</td></tr><tr><td>68</td><td>633</td><td>0.08</td></tr><tr><td>69</td><td>47</td><td>0.08</td></tr><tr><td>70</td><td>830</td><td>0.08</td></tr><tr><td>71</td><td>743</td><td>0.08</td></tr><tr><td>72</td><td>201</td><td>0.08</td></tr><tr><td>73</td><td>461</td><td>0.08</td></tr><tr><td>74</td><td>589</td><td>0.08</td></tr><tr><td>75</td><td>1510</td><td>0.08</td></tr><tr><td>76</td><td>1919</td><td>0.08</td></tr><tr><td>77</td><td>883</td><td>0.08</td></tr><tr><td>78</td><td>1297</td><td>0.08</td></tr><tr><td>79</td><td>478</td><td>0.08</td></tr><tr><td>80</td><td>121</td><td>0.08</td></tr><tr><td>81</td><td>1829</td><td>0.08</td></tr><tr><td>82</td><td>1634</td><td>0.08</td></tr><tr><td>83</td><td>1523</td><td>0.08</td></tr><tr><td>84</td><td>1749</td><td>0.08</td></tr><tr><td>85</td><td>989</td><td>0.08</td></tr><tr><td>86</td><td>1386</td><td>0.08</td></tr><tr><td>87</td><td>576</td><td>0.08</td></tr><tr><td>88</td><td>741</td><td>0.08</td></tr><tr><td>89</td><td>480</td><td>0.08</td></tr><tr><td>90</td><td>258</td><td>0.08</td></tr><tr><td>91</td><td>1371</td><td>0.08</td></tr><tr><td>92</td><td>1206</td><td>0.08</td></tr><tr><td>93</td><td>1941</td><td>0.08</td></tr><tr><td>94</td><td>1400</td><td>0.08</td></tr><tr><td>95</td><td>484</td><td>0.08</td></tr><tr><td>96</td><td>1410</td><td>0.08</td></tr><tr><td>97</td><td>686</td><td>0.08</td></tr><tr><td>98</td><td>108</td><td>0.08</td></tr><tr><td>99</td><td>812</td><td>0.08</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>What this does and does not prove</h2>
+    <div class="why">
+      <div>
+        <h3>It proves the machine runs</h3>
+        <p>Real USDC moved, real randomness arrived, the arithmetic came out exact, and the
+        contract emptied itself to the last cent without anyone intervening.</p>
+      </div>
+      <div>
+        <h3>It does not replace an audit</h3>
+        <p>A working rehearsal shows the contract does the right thing when nobody is attacking
+        it. That is a different question from whether it resists someone with a million dollars
+        to win, and only a professional audit answers the second.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contracts</h2>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Was</th><th scope="col">Adresse</th></tr></thead>
+      <tbody>
+        <tr><td>Rehearsal raffle</td><td class="evi"><a href="https://etherscan.io/address/0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D" rel="noopener">0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D</a></td></tr>
+        <tr><td>Keeper (runs it unattended)</td><td class="evi"><a href="https://etherscan.io/address/0xFEA128525A0787FC512Cd815AA0c5Ab34B1c7e1e" rel="noopener">0xFEA128525A0787FC512Cd815AA0c5Ab34B1c7e1e</a></td></tr>
+        <tr><td>USDC</td><td class="evi"><a href="https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" rel="noopener">0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</a></td></tr>
+        <tr><td>Chainlink VRF coordinator</td><td class="evi"><a href="https://etherscan.io/address/0xD7f86b4b8Cae7D942340FF628F82735b7a20893a" rel="noopener">0xD7f86b4b8Cae7D942340FF628F82735b7a20893a</a></td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:1rem;font-size:.9375rem;color:var(--ink-soft)">
+      This rehearsal contract is <strong>not</strong> the one a real round will use. It is
+      configured at one fifty-thousandth scale, and its house and guardian addresses are the
+      test wallet. The production contract is deployed separately and its address will be
+      published here and on the raffle page before it accepts a single ticket.
+    </p>
+  </section>
+
+  <footer>
+    Every figure on this page was read from Ethereum mainnet on 4 September 2026 and is fixed —
+    this is a record of a completed round, not a live view. Verify any of it on Etherscan.
+  </footer>
+
+</div>
+

@@ -12,7 +12,8 @@ sys.path.insert(0, HERE)
 from site_i18n import locate, render, h
 
 PAGES = ["index.html", "claim/index.html", "dao/index.html",
-         "leaderboard/index.html", "memes/index.html", "memes/gallery/index.html"]
+         "leaderboard/index.html", "memes/index.html", "memes/gallery/index.html",
+         "raffle/index.html", "raffle/proof/index.html"]
 
 def extract():
     strings, occ = {}, {}
@@ -48,7 +49,8 @@ def inject(lang):
         open(target, "w", encoding="utf-8").write(out)
         print(f"  {lang}/{p:26} {done:>4}/{len(spans)} strings translated")
     # copy the page-local scripts unchanged; they are translated separately
-    for js in ["claim/app.js", "dao/app.js", "memes/app.js", "memes/gallery/app.js"]:
+    for js in ["claim/app.js", "dao/app.js", "memes/app.js", "memes/gallery/app.js",
+               "raffle/app.js"]:
         s, d = os.path.join(SITE, js), os.path.join(dest, js)
         if os.path.exists(s):
             os.makedirs(os.path.dirname(d), exist_ok=True); shutil.copy2(s, d)

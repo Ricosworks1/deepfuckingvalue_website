@@ -175,7 +175,8 @@ def build(code):
     # page-local scripts ride along unchanged
     import shutil
     if code != "en":
-        for js in ["claim/app.js", "dao/app.js", "memes/app.js", "memes/gallery/app.js"]:
+        for js in ["claim/app.js", "dao/app.js", "memes/app.js", "memes/gallery/app.js",
+                   "raffle/app.js"]:
             s = os.path.join(SITE, js)
             if os.path.exists(s):
                 d = os.path.join(OUT, prefix(code).lstrip("/"), js)

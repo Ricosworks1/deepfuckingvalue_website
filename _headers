@@ -94,6 +94,63 @@
 /zh/leaderboard/*
   Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
+# Raffle entry - needs JavaScript for wallet access. It can send exactly two
+# transactions: USDC.approve for the exact cost of the tickets being bought,
+# and enter(count). connect-src 'none': every read and write goes through
+# the injected EIP-1193 provider, never through the page.
+/raffle/
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/raffle/index.html
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/raffle/app.js
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/fr/raffle/
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/fr/raffle/index.html
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/fr/raffle/app.js
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/de/raffle/
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/de/raffle/index.html
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/de/raffle/app.js
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/es/raffle/
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/es/raffle/index.html
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/es/raffle/app.js
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/vi/raffle/
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/vi/raffle/index.html
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/vi/raffle/app.js
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/zh/raffle/
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/zh/raffle/index.html
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/zh/raffle/app.js
+  Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data:; font-src data:; connect-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# Raffle rehearsal record - a fixed account of a round that already settled.
+# Every figure was read off the chain at build time and baked into the
+# HTML, so there is no script-src at all.
+/raffle/proof/*
+  Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/fr/raffle/proof/*
+  Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/de/raffle/proof/*
+  Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/es/raffle/proof/*
+  Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/vi/raffle/proof/*
+  Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+/zh/raffle/proof/*
+  Content-Security-Policy: default-src 'none'; img-src data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
 # Claim app - needs JavaScript for wallet access. script-src 'self' permits
 # only app.js and still blocks every inline and third-party script.
 # connect-src 'none': wallet calls go through the injected EIP-1193

@@ -1,0 +1,280 @@
+<!doctype html><!--i18n:head-->
+<html lang="es">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="en" href="https://dfv.fun/raffle/">
+<link rel="alternate" hreflang="fr" href="https://dfv.fun/fr/raffle/">
+<link rel="alternate" hreflang="de" href="https://dfv.fun/de/raffle/">
+<link rel="alternate" hreflang="es" href="https://dfv.fun/es/raffle/">
+<link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/raffle/">
+<link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/">
+<link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/"><!--/i18n:head-->
+<title>The raffle — DFV</title>
+<meta name="description" content="Ten thousand tickets, one hundred winners, drawn by Chainlink. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(data:font/woff2;base64,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) format('woff2');
+  }
+
+  :root {
+    --paper:#ffffff; --paper-sunk:#f3f4f4;
+    --navy:#223f84; --ink:#1b2540; --ink-soft:#515b78; --ink-faint:#8b93a8;
+    --red:#e32c4d; --red-sunk:#fdeef1;
+    --ok:#1a7f4b; --ok-sunk:#e8f5ee; --warn:#8a6100; --warn-sunk:#fdf3dd;
+    --rule:#dfe4ed; --on-accent:#ffffff;
+    --f-hand:'Architects Daughter','Bradley Hand',cursive;
+    --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --gut:clamp(1.1rem,4vw,2rem);
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --paper:#0e1730; --paper-sunk:#121d3a; --navy:#9db4ec; --ink:#e7ecf7;
+    --ink-soft:#a9b3cc; --ink-faint:#737d99; --red:#ff5573; --red-sunk:#2c1421;
+    --ok:#5fd39b; --ok-sunk:#0f2a1f; --warn:#e0b451; --warn-sunk:#2a2211;
+    --rule:#25314f; --on-accent:#0e1730; } }
+  :root[data-theme="dark"]{
+    --paper:#0e1730; --paper-sunk:#121d3a; --navy:#9db4ec; --ink:#e7ecf7;
+    --ink-soft:#a9b3cc; --ink-faint:#737d99; --red:#ff5573; --red-sunk:#2c1421;
+    --ok:#5fd39b; --ok-sunk:#0f2a1f; --warn:#e0b451; --warn-sunk:#2a2211;
+    --rule:#25314f; --on-accent:#0e1730; }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:52rem;margin:0 auto;padding:clamp(1.5rem,5vw,3rem) var(--gut) 4rem}
+  a{color:var(--red)}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+  .back{display:inline-block;font-size:.875rem;font-weight:600;color:var(--ink-soft);text-decoration:none;margin-bottom:1.5rem}
+  .back:hover{color:var(--red)}
+  h1{font-family:var(--f-hand);font-size:clamp(2.25rem,1.5rem + 3vw,3.5rem);color:var(--navy);margin:0;line-height:1}
+  h2{font-family:var(--f-hand);font-size:clamp(1.6rem,1.2rem + 1.5vw,2.25rem);color:var(--navy);margin:0 0 .5rem;line-height:1.1}
+  h3{font-size:1rem;color:var(--navy);margin:0 0 .3rem}
+  .sub{color:var(--ink-soft);margin:.9rem 0 0;max-width:58ch}
+  section{margin-top:clamp(2.5rem,6vw,3.75rem)}
+  p{margin:0 0 .85rem;max-width:64ch}
+  p:last-child{margin-bottom:0}
+
+  .panel{border:2px solid var(--rule);border-radius:14px;padding:clamp(1.1rem,3vw,1.6rem);background:var(--paper)}
+  .panel + .panel{margin-top:1rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem, 100%), 1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:1.25rem}
+  .cell{background:var(--paper);padding:.95rem 1.05rem;display:flex;flex-direction:column;gap:.2rem}
+  .cell dt{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-family:var(--f-mono)}
+  .cell dd{margin:0;font-family:var(--f-mono);font-size:1.25rem;font-weight:600;letter-spacing:-.03em;color:var(--navy);font-variant-numeric:tabular-nums}
+  .cell .sub2{font-size:.6875rem;color:var(--ink-faint);font-family:var(--f-body);letter-spacing:0}
+
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(15rem, 100%), 1fr));gap:1.5rem;margin-top:1.5rem}
+  .why div{border-top:3px solid var(--navy);padding-top:.9rem}
+  .why p{font-size:.9375rem;color:var(--ink-soft)}
+
+  .status{border-left:4px solid var(--warn);background:var(--warn-sunk);border-radius:8px;padding:1rem 1.2rem;margin-top:1.25rem;font-size:.9375rem}
+  .status strong{color:var(--warn)}
+
+  .track{height:.75rem;background:var(--paper-sunk);border:2px solid var(--rule);border-radius:999px;overflow:hidden;margin:.75rem 0 .5rem}
+  .fill{height:100%;background:var(--navy);min-width:2px}
+
+  .btn{font-family:inherit;font-size:.9375rem;font-weight:700;padding:.8rem 1.4rem;border-radius:999px;cursor:pointer;border:2px solid var(--red);background:var(--red);color:var(--on-accent)}
+  .btn:hover:not(:disabled){opacity:.9}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn-quiet{background:transparent;color:var(--red)}
+  .actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+  input[type=text]{width:100%;font-family:var(--f-mono);font-size:.875rem;padding:.65rem .7rem;border:2px solid var(--rule);border-radius:8px;background:var(--paper);color:var(--ink);margin-top:.5rem}
+  input[type=text]:focus{border-color:var(--navy)}
+
+  .msg{margin-top:.9rem;font-size:.9375rem;padding:.7rem .9rem;border-radius:8px;background:var(--paper-sunk);color:var(--ink-soft)}
+  .msg-warn{background:var(--warn-sunk);color:var(--warn)}
+  .msg-ok{background:var(--ok-sunk);color:var(--ok)}
+
+  dl.kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
+  dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
+  dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
+
+  table{width:100%;border-collapse:collapse;font-family:var(--f-mono);font-size:.8125rem}
+  th{text-align:left;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding:0 1rem .55rem 0;border-bottom:2px solid var(--navy);white-space:nowrap}
+  td{padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+  .scroll{overflow-x:auto}
+  td a{color:var(--red);text-decoration:none}
+
+  .empty{padding:1.5rem;border:2px dashed var(--rule);border-radius:12px;color:var(--ink-soft);font-size:.9375rem;margin-top:1rem}
+  footer{margin-top:3rem;padding-top:1.25rem;border-top:2px solid var(--rule);font-size:.8125rem;color:var(--ink-faint)}
+  .addr{font-family:var(--f-mono);word-break:break-all}
+
+  .evi{font-family:var(--f-mono);font-size:.8125rem;word-break:break-all}
+  input[type=text],input[type=number]{font-family:var(--f-mono);font-size:1rem;padding:.6rem .8rem;
+    border:2px solid var(--rule);border-radius:9px;background:var(--paper);color:var(--ink);width:100%;max-width:16rem}
+  input:focus{border-color:var(--navy);outline:none}
+  .odds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));gap:1.25rem;margin-top:1.5rem}
+  .odds div{border-top:3px solid var(--red);padding-top:.9rem}
+  .odds p{font-size:.9375rem;color:var(--ink-soft)}
+  .big{font-family:var(--f-mono);font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;
+       font-variant-numeric:tabular-nums;line-height:1}
+
+/*i18n:css*/
+  .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
+  .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
+                display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem; }
+  .langbar li { margin: 0; display: flex; }
+  /* padding gives a ~44px tap target around a 30px flag, which is the mobile
+     guideline; the flag itself stays small enough not to shout. */
+  .langbar a, .langbar span { display: block; line-height: 0; border-radius: 4px;
+                              padding: 7px 6px; border: 1px solid transparent; }
+  .langbar .flag { display: block; border-radius: 2px; }
+  .langbar a { opacity: 0.45; transition: opacity 0.12s ease; }
+  .langbar a:hover, .langbar a:focus-visible { opacity: 1; }
+  .langbar a:focus-visible { outline: 2px solid var(--red); outline-offset: 1px; }
+  .langbar [aria-current="true"] { opacity: 1; border-color: var(--red); }
+/*/i18n:css*/</style>
+<!--i18n:langbar--><div class="langbar"><nav aria-label="Language"><ul><li><a href="/raffle/" hreflang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><clipPath id="dfvuk"><rect width="24" height="16" rx="2"/></clipPath><g clip-path="url(#dfvuk)"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.9"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5.3"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="3.2"/></g><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/fr/raffle/" hreflang="fr" title="Français" aria-label="Français"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" fill="#fff" rx="2"/><path d="M0 2a2 2 0 012-2h6v16H2a2 2 0 01-2-2z" fill="#002654"/><path d="M16 0h6a2 2 0 012 2v12a2 2 0 01-2 2h-6z" fill="#ED2939"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/de/raffle/" hreflang="de" title="Deutsch" aria-label="Deutsch"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v3.33H0z" fill="#000"/><rect y="5.33" width="24" height="5.34" fill="#DD0000"/><path d="M0 10.67h24V14a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#FFCE00"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><span aria-current="true" title="Español" aria-label="Español"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v2H0z" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/><path d="M0 12h24v2a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#AA151B"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></span></li><li><a href="/vi/raffle/" hreflang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DA251D"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FF0" transform="translate(12 8) scale(4.6)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/zh/raffle/" hreflang="zh-Hans" title="简体中文" aria-label="简体中文"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DE2910"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(5 5) scale(3)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 2.2) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 4.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 7.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 9.8) scale(1.05)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li></ul></nav></div><!--/i18n:langbar-->
+<div class="wrap">
+
+  <a class="back" href="/es/">← Volver a dfv.fun</a>
+
+  <h1>The raffle</h1>
+  <p class="sub">
+    Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink — a Rolex and
+    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its
+    own. Nobody can stop it, delay it, or choose who wins.
+  </p>
+
+  <!-- ===== not deployed yet ===== -->
+  <div id="not-live">
+    <div class="status">
+      <strong>Not open yet.</strong> The contract has been built and rehearsed in full on
+      Ethereum mainnet, but it has not been audited, and it will not take a single real ticket
+      until it has been. When it opens, this page becomes the place to enter.
+      <br><br>
+      In the meantime you can read
+      <a href="/raffle/proof/">exactly what the rehearsal did</a> — a complete round with real
+      money, every transaction public.
+    </div>
+  </div>
+
+  <!-- ===== live round ===== -->
+  <div id="live-area" hidden>
+    <section>
+      <h2>This round</h2>
+      <div class="track"><div class="fill" id="r-fill" style="width:0%"></div></div>
+      <p style="font-size:.9375rem;color:var(--ink-soft)">
+        <span id="r-sold">—</span> of <span id="r-total">—</span> tickets sold
+        (<span id="r-pct">—</span>) · <span id="r-left">—</span> left
+      </p>
+
+      <dl class="grid">
+        <div class="cell"><dt>Ticket price</dt><dd><span id="r-price">—</span></dd><span class="sub2">USDC</span></div>
+        <div class="cell"><dt>In the pot</dt><dd><span id="r-pot">—</span></dd><span class="sub2">USDC collected so far</span></div>
+        <div class="cell"><dt>Round</dt><dd>#<span id="r-round">—</span></dd><span class="sub2">rounds run back to back</span></div>
+      </dl>
+
+      <div class="status" id="draw-note" hidden>
+        <strong>The draw is running.</strong> Chainlink is producing the randomness for this
+        round. Entries reopen automatically with the next one.
+      </div>
+    </section>
+
+    <section>
+      <h2>Enter</h2>
+      <div class="panel">
+        <button class="btn" type="button" id="connect">Conectar wallet</button>
+        <div class="msg" id="connect-msg" hidden></div>
+
+        <dl class="kv" id="you" hidden>
+          <dt>Tu dirección</dt><dd id="you-addr">—</dd>
+          <dt>Your tickets this round</dt><dd id="you-tickets">—</dd>
+          <dt>Your USDC</dt><dd id="you-usdc">—</dd>
+        </dl>
+
+        <div id="buy-area" hidden>
+          <label for="count">How many tickets?</label>
+          <input type="text" id="count" inputmode="numeric" placeholder="1" spellcheck="false">
+          <div class="msg" id="quote" hidden></div>
+          <div class="actions">
+            <button class="btn" type="button" id="buy">Buy tickets</button>
+          </div>
+          <div class="msg" id="buy-msg" hidden></div>
+        </div>
+      </div>
+      <p style="margin-top:1rem;font-size:.9375rem;color:var(--ink-soft)">
+        Buying takes two transactions: approving the exact USDC these tickets cost, then the
+        purchase itself. The approval is never unlimited, and this page can send no other
+        transaction of any kind.
+      </p>
+    </section>
+  </div>
+
+  <section>
+    <h2>How a round works</h2>
+    <dl class="grid">
+      <div class="cell"><dt>Tickets</dt><dd>10,000</dd><span class="sub2">100 USDC each</span></div>
+      <div class="cell"><dt>Winners</dt><dd>100</dd><span class="sub2">1 watch + 99 cash</span></div>
+      <div class="cell"><dt>Cash prize</dt><dd>4,000</dd><span class="sub2">USDC, to each of 99</span></div>
+      <div class="cell"><dt>Odds</dt><dd>1 in 100</dd><span class="sub2">per ticket</span></div>
+    </dl>
+
+    <div class="odds">
+      <div>
+        <h3>It draws itself</h3>
+        <p>The moment the last ticket sells, or six months after the first one, the draw
+        triggers. Anyone can trigger it, and a keeper does it automatically — so it does not
+        depend on us being awake, or willing.</p>
+      </div>
+      <div>
+        <h3>Nobody picks the winners</h3>
+        <p>Chainlink VRF produces the randomness with a proof that is checked on-chain before
+        the contract can use it. We deliberately do not use block data, which a miner could
+        re-roll.</p>
+      </div>
+      <div>
+        <h3>There is no admin</h3>
+        <p>No owner, no pause, no upgrade, no withdrawal function. The house address is fixed
+        at deployment and no code path sends USDC anywhere else. Nothing can be changed
+        afterwards — including by us.</p>
+      </div>
+      <div>
+        <h3>You can always take your prize</h3>
+        <p>Prizes are paid out in batches automatically, but if that ever stops, a winner can
+        pull their own prize directly from the contract at any time. It does not expire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where the money goes</h2>
+    <p>
+      <strong>40.8% of everything collected is paid back out as prizes</strong> — the watch plus
+      the ninety-nine cash prizes. The rest is the house's. That share is fixed in the contract
+      and cannot be changed.
+    </p>
+    <p>
+      This holds whether the round fills or not. A round that sells nine thousand tickets pays
+      the same 40.8%, scaled down, so nobody gains from a round failing to fill. Below 500
+      tickets the round is cancelled instead and buyers take back 80% of what they paid.
+    </p>
+    <div class="status">
+      <strong>Be clear-eyed about this.</strong> A raffle is not an investment. Most tickets win
+      nothing, and the expected return on a ticket is less than what you paid for it. Only buy
+      what you are happy to lose.
+    </div>
+  </section>
+
+  <section>
+    <h2>It has already been run, with real money</h2>
+    <p>
+      Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of
+      the size — real USDC, real Chainlink randomness, our own money. Two thousand tickets,
+      one hundred winners, every prize delivered, nothing left in the contract.
+    </p>
+    <p><a href="/raffle/proof/"><strong>See the rehearsal, transaction by transaction →</strong></a></p>
+  </section>
+
+  <footer>
+    Round figures are read live from Ethereum mainnet through your own wallet — this page makes
+    no network requests of its own. The raffle is unaudited and not yet open.
+  </footer>
+
+</div>
+
+<script src="app.js" defer></script>

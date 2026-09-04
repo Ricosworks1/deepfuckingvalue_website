@@ -56,6 +56,23 @@ FAMILIES = [
      "Trading leaderboard - generated nightly, zero JavaScript. The numbers are\n"
      "# computed at build time and baked into the HTML, so no script-src at all."),
 
+    # Listed path by path rather than as /raffle/*, because that would also
+    # match /raffle/proof/ - and Cloudflare applies EVERY matching rule, so the
+    # proof page would receive two CSP headers and be handed the intersection
+    # of two policies written for different pages.
+    ("raffle", ["/raffle/", "/raffle/index.html", "/raffle/app.js"],
+     csp("script-src 'self'", "img-src data:", "font-src data:", "connect-src 'none'"),
+     "Raffle entry - needs JavaScript for wallet access. It can send exactly two\n"
+     "# transactions: USDC.approve for the exact cost of the tickets being bought,\n"
+     "# and enter(count). connect-src 'none': every read and write goes through\n"
+     "# the injected EIP-1193 provider, never through the page."),
+
+    ("raffle-proof", ["/raffle/proof/*"],
+     csp("img-src data:", "font-src data:"),
+     "Raffle rehearsal record - a fixed account of a round that already settled.\n"
+     "# Every figure was read off the chain at build time and baked into the\n"
+     "# HTML, so there is no script-src at all."),
+
     ("claim", ["/claim/*"],
      csp("script-src 'self'", "img-src data:", "font-src data:", "connect-src 'none'"),
      "Claim app - needs JavaScript for wallet access. script-src 'self' permits\n"
