@@ -31,7 +31,7 @@ import fonts
 # identical to running it once.
 OUT = SITE
 
-HEAD_OPEN, HEAD_CLOSE = "<!--i18n:head-->", "<!--/i18n:head-->"
+HEAD_OPEN, HEAD_CLOSE = "<!doctype html><!--i18n:head-->", "<!--/i18n:head-->"
 BAR_OPEN, BAR_CLOSE = "<!--i18n:langbar-->", "<!--/i18n:langbar-->"
 CSS_OPEN, CSS_CLOSE = "/*i18n:css*/", "/*/i18n:css*/"
 
@@ -164,7 +164,7 @@ def build(code):
         out = re.sub(r"</style>", "</style>\n" + BAR_OPEN + switcher(code, page) + BAR_CLOSE,
                      out, count=1)
 
-        prologue = (f'{HEAD_OPEN}<!doctype html>\n<html lang="{L["tag"]}">\n'
+        prologue = (f'{HEAD_OPEN}\n<html lang="{L["tag"]}">\n'
                     f'<meta charset="utf-8">\n{hreflangs(page)}{HEAD_CLOSE}\n')
         out = prologue + out
 

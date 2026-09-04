@@ -1,0 +1,40 @@
+name: Audit the site
+
+# Runs on every push and every pull request. The site has no build step and is
+# served straight from this repo, so anything committed here is live within a
+# minute — which makes this the only gate between a mistake and production.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the audit's dependencies
+        run: pip install -r i18n/requirements-dev.txt
+
+      - name: Audit
+        run: python3 i18n/check.py
+
+      - name: The build must leave no uncommitted changes
+        # check.py rebuilds as part of its idempotency test. If that produces a
+        # diff, someone edited a generated page by hand instead of editing the
+        # English source or a catalogue, and the next nightly run would silently
+        # revert their work.
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::Rebuilding changed tracked files. Edit the English source or a catalogue, then run: python3 i18n/finalize.py"
+            git diff --stat
+            exit 1
+          fi
+          echo "Working tree clean after a rebuild."

@@ -27,6 +27,13 @@ jobs:
         with:
           node-version: '22'
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the audit's dependencies
+        run: pip install -r i18n/requirements-dev.txt
+
       - name: Fetch trades from Ethereum
         env:
           ALCHEMY_RPC_URL: ${{ secrets.ALCHEMY_RPC_URL }}
@@ -64,6 +71,10 @@ jobs:
           # yesterday's figures. finalize.py is idempotent, so it only rewrites
           # what actually changed.
           python3 i18n/finalize.py
+
+          # Never publish a rebuild that fails the audit. Without this a bad
+          # nightly run goes live and is only noticed by accident.
+          python3 i18n/check.py
 
           git add -A
           git commit -m "chore: rebuild trading leaderboard $(date -u +%Y-%m-%d)"
