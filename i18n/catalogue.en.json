@@ -1448,12 +1448,40 @@
    "text": "Buying takes two transactions: approving the exact USDC these tickets cost, then the\n        purchase itself. The approval is never unlimited, and this page can send no other\n        transaction of any kind.",
    "kind": "text"
   },
-  "7612359705": {
-   "text": "How a round works",
+  "efecd2d05d": {
+   "text": "Who is in this round",
+   "kind": "text"
+  },
+  "b3b996ccb2": {
+   "text": "Every ticket bought, by wallet. Read from Ethereum mainnet and refreshed\n      hourly — this is the chain's own record, not ours.",
+   "kind": "text"
+  },
+  "b60862f485": {
+   "text": "Wallet",
    "kind": "text"
   },
   "5c622a5170": {
    "text": "Tickets",
+   "kind": "text"
+  },
+  "a5ecf5aed8": {
+   "text": "Share of the round",
+   "kind": "text"
+  },
+  "4776a56fbe": {
+   "text": "No tickets have been sold yet.",
+   "kind": "text"
+  },
+  "e94ba4781e": {
+   "text": "This list may be incomplete — the contract reports a different number of tickets sold.",
+   "kind": "text"
+  },
+  "5c7514fc5c": {
+   "text": "Holding several tickets gives several independent chances, and one wallet\n      can win more than once.",
+   "kind": "text"
+  },
+  "7612359705": {
+   "text": "How a round works",
    "kind": "text"
   },
   "84cc517aa7": {
@@ -3673,6 +3701,38 @@
    },
    {
     "hash": "50d01737cb",
+    "kind": "text"
+   },
+   {
+    "hash": "efecd2d05d",
+    "kind": "text"
+   },
+   {
+    "hash": "b3b996ccb2",
+    "kind": "text"
+   },
+   {
+    "hash": "b60862f485",
+    "kind": "text"
+   },
+   {
+    "hash": "5c622a5170",
+    "kind": "text"
+   },
+   {
+    "hash": "a5ecf5aed8",
+    "kind": "text"
+   },
+   {
+    "hash": "4776a56fbe",
+    "kind": "text"
+   },
+   {
+    "hash": "e94ba4781e",
+    "kind": "text"
+   },
+   {
+    "hash": "5c7514fc5c",
     "kind": "text"
    },
    {

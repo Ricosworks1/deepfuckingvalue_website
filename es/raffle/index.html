@@ -200,6 +200,31 @@
   </div>
 
   <section>
+    <h2>Who is in this round</h2>
+    <p style="font-size:.9375rem;color:var(--ink-soft)">
+      Every ticket bought, by wallet. Read from Ethereum mainnet and refreshed
+      hourly — this is the chain's own record, not ours.
+    </p>
+
+    <div class="scroll"><table>
+      <thead><tr>
+        <th scope="col">Wallet</th>
+        <th scope="col">Boletos</th>
+        <th scope="col">Share of the round</th>
+      </tr></thead>
+      <tbody id="participants">
+        <tr id="p-empty"><td colspan="3">No tickets have been sold yet.</td></tr>
+        <tr id="p-partial" hidden><td colspan="3">This list may be incomplete — the contract reports a different number of tickets sold.</td></tr>
+<!--participants:start--><!--participants:end-->
+      </tbody>
+    </table></div>
+    <p id="participants-note" style="margin-top:.75rem;font-size:.875rem;color:var(--ink-faint)">
+      Holding several tickets gives several independent chances, and one wallet
+      can win more than once.
+    </p>
+  </section>
+
+  <section>
     <h2>Cómo funciona una ronda</h2>
     <dl class="grid">
       <div class="cell"><dt>Boletos</dt><dd>10,000</dd><span class="sub2">100 USDC cada uno</span></div>

@@ -1,0 +1,73 @@
+name: Refresh raffle participants
+
+# Hourly. A round runs for up to six months, so the list changes slowly most of
+# the time and quickly in the hours before it fills. Hourly covers both without
+# hammering the RPC.
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: raffle
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the audit's dependencies
+        run: pip install -r i18n/requirements-dev.txt
+
+      - name: Read the round from Ethereum
+        env:
+          ALCHEMY_RPC_URL: ${{ secrets.ALCHEMY_RPC_URL }}
+          # Empty until the production raffle is deployed. With it unset the
+          # script writes an empty file and the page keeps its waiting state,
+          # so this workflow is safe to run before launch.
+          RAFFLE_ADDRESS: ${{ vars.RAFFLE_ADDRESS }}
+        run: node scripts/fetch-raffle.mjs
+
+      - name: Render the participants table
+        run: node scripts/build-raffle.mjs
+
+      - name: Rebuild the language mirrors
+        # build-raffle.mjs edits the English page only. Without this the five
+        # mirrors keep the previous hour's table.
+        run: python3 i18n/finalize.py
+
+      - name: Audit before publishing
+        run: python3 i18n/check.py
+
+      - name: Commit only if the participants actually changed
+        run: |
+          git config user.name  "DFV raffle bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          # participants.json carries a generatedAt timestamp that changes on
+          # every run, so it is compared with that line ignored. Otherwise the
+          # site would be redeployed hourly whether or not anyone bought a
+          # ticket.
+          if git diff --quiet -I'"generatedAt"' -- raffle/participants.json \
+             && git diff --quiet -- raffle/index.html; then
+            echo "Nobody has bought a ticket since the last run. Discarding."
+            git checkout -- .
+            exit 0
+          fi
+
+          git add -A
+          git commit -m "chore: refresh raffle participants $(date -u +%Y-%m-%d\ %H:%M) UTC"
+          git push
