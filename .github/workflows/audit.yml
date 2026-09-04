@@ -26,6 +26,12 @@ jobs:
       - name: Audit
         run: python3 i18n/check.py
 
+      - name: The audit must be able to fail
+        # Breaks the site on purpose, once per class of bug we have actually
+        # hit, and asserts check.py notices each one. A check that never fires
+        # reads as coverage and provides none.
+        run: bash i18n/selftest.sh
+
       - name: The build must leave no uncommitted changes
         # check.py rebuilds as part of its idempotency test. If that produces a
         # diff, someone edited a generated page by hand instead of editing the
