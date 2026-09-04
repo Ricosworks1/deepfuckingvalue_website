@@ -1344,6 +1344,10 @@
    "text": "Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF — a Rolex and\n    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its\n    own. Nobody can stop it, delay it, or choose who wins.",
    "kind": "text"
   },
+  "25b74b6339": {
+   "text": "The DFV cat in red glasses over the Singapore skyline at dusk, beside the words: onchain raffle with Chainlink VRF on Ethereum mainnet, for Token 2049 Singapore.",
+   "kind": "attr"
+  },
   "3ad2a4c195": {
    "text": "This round",
    "kind": "text"
@@ -3514,6 +3518,10 @@
    {
     "hash": "94960a7794",
     "kind": "text"
+   },
+   {
+    "hash": "25b74b6339",
+    "kind": "attr"
    },
    {
     "hash": "3ad2a4c195",

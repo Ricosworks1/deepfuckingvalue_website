@@ -60,8 +60,8 @@ FAMILIES = [
     # match /raffle/proof/ - and Cloudflare applies EVERY matching rule, so the
     # proof page would receive two CSP headers and be handed the intersection
     # of two policies written for different pages.
-    ("raffle", ["/raffle/", "/raffle/index.html", "/raffle/app.js"],
-     csp("script-src 'self'", "img-src data:", "font-src data:", "connect-src 'none'"),
+    ("raffle", ["/raffle/", "/raffle/index.html", "/raffle/app.js", "/raffle/hero.webp"],
+     csp("script-src 'self'", "img-src 'self' data:", "font-src data:", "connect-src 'none'"),
      "Raffle entry - needs JavaScript for wallet access. It can send exactly two\n"
      "# transactions: USDC.approve for the exact cost of the tickets being bought,\n"
      "# and enter(count). connect-src 'none': every read and write goes through\n"

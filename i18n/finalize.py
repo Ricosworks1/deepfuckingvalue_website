@@ -90,7 +90,11 @@ def hreflangs(page):
                .replace("/index.html", "/"))
     return "\n".join(out)
 
-INTERNAL = re.compile(r'href="(/(?:claim|dao|leaderboard|memes)/[^"]*|/)"')
+# Every page family that has language mirrors. A family missing from this
+# list keeps its English href in all five mirrors, so a French reader
+# clicking it lands back on the English site - which is exactly what
+# happened to /raffle/ until it was added here.
+INTERNAL = re.compile(r'href="(/(?:claim|dao|leaderboard|memes|raffle)/[^"]*|/)"')
 # A bare filename with no slash, e.g. href="trades.csv" on the leaderboard.
 # These are data files that exist once, at the English path, and are rebuilt
 # nightly by the GitHub Action. A language mirror must point at that one copy

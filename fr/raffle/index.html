@@ -90,6 +90,12 @@
   .msg-ok{background:var(--ok-sunk);color:var(--ok)}
 
   dl[hidden]{display:none!important}
+  .hero{display:block;width:100%;max-width:30rem;height:auto;margin:1.75rem auto 0;
+        border-radius:14px;border:2px solid var(--rule)}
+  @media (prefers-reduced-motion:no-preference){
+    .hero{animation:heroIn .7s ease-out both}
+    @keyframes heroIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
   .kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
   dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
   dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
@@ -140,6 +146,9 @@
     ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its
     own. Nobody can stop it, delay it, or choose who wins.
   </p>
+
+  <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
+       alt="The DFV cat in red glasses over the Singapore skyline at dusk, beside the words: onchain raffle with Chainlink VRF on Ethereum mainnet, for Token 2049 Singapore.">
 
   <!-- ===== live round ===== -->
   <div id="live-area">
@@ -245,7 +254,7 @@
       the size — real USDC, real Chainlink VRF randomness, our own money. Two thousand tickets,
       one hundred winners, every prize delivered, nothing left in the contract.
     </p>
-    <p><a href="/raffle/proof/"><strong>Voir la répétition, transaction par transaction →</strong></a></p>
+    <p><a href="/fr/raffle/proof/"><strong>Voir la répétition, transaction par transaction →</strong></a></p>
   </section>
 
   <footer>
