@@ -89,7 +89,8 @@
   .msg-warn{background:var(--warn-sunk);color:var(--warn)}
   .msg-ok{background:var(--ok-sunk);color:var(--ok)}
 
-  dl.kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
+  dl[hidden]{display:none!important}
+  .kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
   dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
   dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
 
@@ -173,9 +174,9 @@
         <div class="msg" id="connect-msg" hidden></div>
 
         <dl class="kv" id="you" hidden>
-          <dt>Votre adresse</dt><dd id="you-addr">—</dd>
-          <dt>Vos billets pour ce tour</dt><dd id="you-tickets">—</dd>
-          <dt>Vos USDC</dt><dd id="you-usdc">—</dd>
+          <dt>Votre adresse</dt><dd id="you-addr">connect to see</dd>
+          <dt>Vos billets pour ce tour</dt><dd id="you-tickets">connect to see</dd>
+          <dt>Vos USDC</dt><dd id="you-usdc">connect to see</dd>
         </dl>
 
         <div id="buy-area" hidden>

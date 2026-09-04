@@ -282,7 +282,16 @@ function boot() {
      With no contract deployed, the controls stay disabled as they are in the
      markup and NO handlers are attached, so there is no code path from a click
      to a transaction — the buttons are inert twice over, not merely greyed. */
-  if (!RAFFLE) return;
+  if (!RAFFLE) {
+    /* Preview. Show the whole entry flow so the page reads exactly as it will
+       once the raffle opens — the wallet panel and the ticket controls, with
+       their placeholder values. Nothing is wired up and every control stays
+       disabled as the markup left it, so there is no path from a click to a
+       transaction. */
+    show($('you'));
+    show($('buy-area'));
+    return;
+  }
 
   hide($('preview-note'));
   const c = $('connect'); if (c) { c.disabled = false; c.addEventListener('click', connect); }

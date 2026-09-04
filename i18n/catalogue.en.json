@@ -1392,6 +1392,10 @@
    "text": "This is exactly how entering will work. The\n        buttons are switched off until the contract is deployed and audited —\n        there is nothing yet for them to send a transaction to.",
    "kind": "text"
   },
+  "6faa30941b": {
+   "text": "connect to see",
+   "kind": "text"
+  },
   "d8889b8d01": {
    "text": "Your tickets this round",
    "kind": "text"
@@ -3572,11 +3576,23 @@
     "kind": "text"
    },
    {
+    "hash": "6faa30941b",
+    "kind": "text"
+   },
+   {
     "hash": "d8889b8d01",
     "kind": "text"
    },
    {
+    "hash": "6faa30941b",
+    "kind": "text"
+   },
+   {
     "hash": "845588abc8",
+    "kind": "text"
+   },
+   {
+    "hash": "6faa30941b",
     "kind": "text"
    },
    {
