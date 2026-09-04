@@ -276,10 +276,11 @@ async function waitFor(hash) {
 /* ---------- boot ---------- */
 
 function boot() {
-  // Not deployed yet: leave the page in its "not open" state and wire nothing.
-  if (!RAFFLE) { show($('not-live')); hide($('live-area')); return; }
+  /* Not deployed yet: leave the entry section hidden and wire nothing up, so
+     the page cannot send a transaction before there is a contract to send it
+     to. Setting RAFFLE above is the switch that opens the raffle. */
+  if (!RAFFLE) { hide($('live-area')); return; }
   show($('live-area'));
-  hide($('not-live'));
 
   const c = $('connect'); if (c) c.addEventListener('click', connect);
   const b = $('buy');     if (b) b.addEventListener('click', buy);
