@@ -8,16 +8,6 @@
 <link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/dao/">
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/dao/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/dao/"><!--/i18n:head-->
-<!--i18n:head--><!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<link rel="alternate" hreflang="en" href="https://dfv.fun/dao/">
-<link rel="alternate" hreflang="fr" href="https://dfv.fun/fr/dao/">
-<link rel="alternate" hreflang="de" href="https://dfv.fun/de/dao/">
-<link rel="alternate" hreflang="es" href="https://dfv.fun/es/dao/">
-<link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/dao/">
-<link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/dao/">
-<link rel="alternate" hreflang="x-default" href="https://dfv.fun/dao/"><!--/i18n:head-->
 <title>DAO — DFV</title>
 <meta name="description" content="Cách quản trị DFV vận hành: delegate quyền bỏ phiếu, đề xuất và ra quyết định. Cố tình chậm, cố tình đắt.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,8 +89,7 @@
   .msg-warn{background:var(--warn-sunk);color:var(--warn)}
   .msg-ok{background:var(--ok-sunk);color:var(--ok)}
 
-  dl[hidden]{display:none!important}
-  .kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
+  dl.kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
   dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
   dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
 
@@ -177,8 +166,8 @@
     <p>Đọc trực tiếp từ <span class="addr">0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508</span>. Đây không phải mô tả của chúng tôi về luật — đây chính là luật.</p>
 
     <dl class="grid">
-      <div class="cell"><dt>Để đề xuất</dt><dd>694,200,000</dd><span class="sub2">DFV delegated · ≈ $159,969</span></div>
-      <div class="cell"><dt>Quorum</dt><dd>15%</dd><span class="sub2">20,826,000,000 DFV · ≈ $4,799,069</span></div>
+      <div class="cell"><dt>Để đề xuất</dt><dd>694,200,000</dd><span class="sub2">DFV delegated · ≈ $157,324</span></div>
+      <div class="cell"><dt>Quorum</dt><dd>15%</dd><span class="sub2">20,826,000,000 DFV · ≈ $4,719,725</span></div>
       <div class="cell"><dt>Độ trễ trước khi bỏ phiếu</dt><dd>14 ngày</dd><span class="sub2">sau khi một đề xuất được nộp</span></div>
       <div class="cell"><dt>Thời gian bỏ phiếu</dt><dd>30 ngày</dd><span class="sub2">rồi một timelock trước khi thực thi</span></div>
     </dl>
@@ -190,7 +179,7 @@
       </div>
       <div>
         <h3>Đắt là cố ý</h3>
-        <p>Filing a proposal needs 694,200,000 DFV delegated — roughly $159,969 at
+        <p>Filing a proposal needs 694,200,000 DFV delegated — roughly $157,324 at
         the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.</p>
       </div>
       <div>
@@ -204,7 +193,7 @@
   <section>
     <h2>Tình hình hiện tại</h2>
     <p>
-      Most DFV cannot vote. 117,495,846,526 sits in the Uniswap pool and 20,821,732,113 is
+      Most DFV cannot vote. 117,495,970,894 sits in the Uniswap pool and 20,812,006,112 is
       locked in the vesting contract — neither delegates, so neither has a voice. Voting power only
       exists once tokens are held in a wallet <em>and</em> delegated.
     </p>
@@ -212,22 +201,22 @@
     <div class="panel">
       <dl class="kv">
         <dt>Tổng cung</dt><dd>138,840,000,000</dd>
-        <dt>Trong pool Uniswap — không bỏ phiếu được</dt><dd>117,495,846,526</dd>
-        <dt>Khoá trong vesting — không bỏ phiếu được</dt><dd>20,821,732,113</dd>
-        <dt>Có thể bỏ phiếu, nếu được delegate</dt><dd>522,421,361</dd>
+        <dt>Trong pool Uniswap — không bỏ phiếu được</dt><dd>117,495,970,894</dd>
+        <dt>Khoá trong vesting — không bỏ phiếu được</dt><dd>20,812,006,112</dd>
+        <dt>Có thể bỏ phiếu, nếu được delegate</dt><dd>532,022,994</dd>
         <dt>Cần để đạt quorum</dt><dd>20,826,000,000</dd>
       </dl>
-      <div class="track"><div class="fill" style="width:2.509%"></div></div>
+      <div class="track"><div class="fill" style="width:2.555%"></div></div>
       <p style="font-size:.8125rem;color:var(--ink-faint);margin:0">
-        Hiện chỉ 2.51% số token cần cho quorum tồn tại ở dạng có thể bỏ phiếu.
+        Hiện chỉ 255% số token cần cho quorum tồn tại ở dạng có thể bỏ phiếu.
       </p>
     </div>
 
     <div class="status">
       <p><strong>Governance is not active yet.</strong> Quorum needs 20,826,000,000 DFV of delegated
-      votes, and at most 522,421,361 could vote today even if every holder delegated.
+      votes, and at most 532,022,994 could vote today even if every holder delegated.
       That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —
-      roughly $4,799,069 of tokens must move into voting hands before the DAO can decide anything.
+      roughly $4,719,725 of tokens must move into voting hands before the DAO can decide anything.
       Until then this page is honest about it rather than pretending otherwise.</p>
     </div>
   </section>
@@ -279,7 +268,8 @@
   </section>
 
   <footer>
-    Số liệu đọc từ Ethereum mainnet lúc Thứ Hai, 31/08/2026 00:57:05 GMT và được làm mới hằng ngày. Số dư, quyền bỏ phiếu và địa chỉ bạn đang delegate được đọc trực tiếp từ ví của chính bạn.
+    Figures read from Ethereum mainnet Fri, 04 Sep 2026 23:49:04 GMT and refreshed daily.
+    Your balance, voting power and delegate are read live from your own wallet.
   </footer>
 
 </div>
