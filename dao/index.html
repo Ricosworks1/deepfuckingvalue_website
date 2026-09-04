@@ -99,7 +99,8 @@
   .msg-warn{background:var(--warn-sunk);color:var(--warn)}
   .msg-ok{background:var(--ok-sunk);color:var(--ok)}
 
-  dl.kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
+  dl[hidden]{display:none!important}
+  .kv{display:grid;grid-template-columns:1fr auto;gap:.6rem 1.25rem;margin:0;align-items:baseline}
   dl.kv dt{color:var(--ink-soft);font-size:.9375rem}
   dl.kv dd{margin:0;text-align:right;font-family:var(--f-mono);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--navy);font-weight:600}
 
