@@ -8,30 +8,6 @@
    "text": "A fair and transparent meme coin that radically revolutionizes crypto tokenomics. 138.84 billion DFV, 84.51% in public liquidity, every number verifiable on-chain.",
    "kind": "attr"
   },
-  "89b86ab0e6": {
-   "text": "Language",
-   "kind": "attr"
-  },
-  "649df08a44": {
-   "text": "English",
-   "kind": "attr"
-  },
-  "2ca514ebd7": {
-   "text": "Français",
-   "kind": "attr"
-  },
-  "a6a7709266": {
-   "text": "Deutsch",
-   "kind": "attr"
-  },
-  "2001ca082b": {
-   "text": "Español",
-   "kind": "attr"
-  },
-  "4993440c23": {
-   "text": "Tiếng Việt",
-   "kind": "attr"
-  },
   "2d62a16755": {
    "text": "Vesting claims open in",
    "kind": "text"
@@ -1372,8 +1348,8 @@
    "text": "This round",
    "kind": "text"
   },
-  "dcdd0ab5a6": {
-   "text": "<0>—</0> of <1>—</1> tickets sold\n        (<2>—</2>) · <3>—</3> left",
+  "a5d04ac952": {
+   "text": "<0>0</0> of <1>10,000</1> tickets sold\n        (<2>0.0%</2>) · <3>10,000</3> left",
    "kind": "block"
   },
   "da5935590c": {
@@ -1406,6 +1382,14 @@
   },
   "2b9eceb7a8": {
    "text": "Enter",
+   "kind": "text"
+  },
+  "915be879ba": {
+   "text": "Preview.",
+   "kind": "text"
+  },
+  "f739ad3438": {
+   "text": "This is exactly how entering will work. The\n        buttons are switched off until the contract is deployed and audited —\n        there is nothing yet for them to send a transaction to.",
    "kind": "text"
   },
   "d8889b8d01": {
@@ -1805,50 +1789,6 @@
    },
    {
     "hash": "3e5f502f9a",
-    "kind": "attr"
-   },
-   {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
     "kind": "attr"
    },
    {
@@ -2422,50 +2362,6 @@
     "kind": "attr"
    },
    {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
     "hash": "68b3e230d5",
     "kind": "text"
    },
@@ -2593,50 +2489,6 @@
    },
    {
     "hash": "c1ffed4faf",
-    "kind": "attr"
-   },
-   {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
     "kind": "attr"
    },
    {
@@ -2879,50 +2731,6 @@
    },
    {
     "hash": "c1b00ff1d0",
-    "kind": "attr"
-   },
-   {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
     "kind": "attr"
    },
    {
@@ -3432,50 +3240,6 @@
     "kind": "attr"
    },
    {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
     "hash": "68b3e230d5",
     "kind": "text"
    },
@@ -3694,50 +3458,6 @@
     "kind": "attr"
    },
    {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
     "hash": "c143ea46db",
     "kind": "text"
    },
@@ -3780,50 +3500,6 @@
     "kind": "attr"
    },
    {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
     "hash": "68b3e230d5",
     "kind": "text"
    },
@@ -3840,7 +3516,7 @@
     "kind": "text"
    },
    {
-    "hash": "dcdd0ab5a6",
+    "hash": "a5d04ac952",
     "kind": "block"
    },
    {
@@ -3877,6 +3553,14 @@
    },
    {
     "hash": "2b9eceb7a8",
+    "kind": "text"
+   },
+   {
+    "hash": "915be879ba",
+    "kind": "text"
+   },
+   {
+    "hash": "f739ad3438",
     "kind": "text"
    },
    {
@@ -4023,50 +3707,6 @@
    },
    {
     "hash": "2112e90a39",
-    "kind": "attr"
-   },
-   {
-    "hash": "89b86ab0e6",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "649df08a44",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "2ca514ebd7",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "a6a7709266",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "2001ca082b",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
-    "kind": "attr"
-   },
-   {
-    "hash": "4993440c23",
     "kind": "attr"
    },
    {

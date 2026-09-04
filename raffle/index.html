@@ -141,19 +141,19 @@
   </p>
 
   <!-- ===== live round ===== -->
-  <div id="live-area" hidden>
+  <div id="live-area">
     <section>
       <h2>This round</h2>
       <div class="track"><div class="fill" id="r-fill" style="width:0%"></div></div>
       <p style="font-size:.9375rem;color:var(--ink-soft)">
-        <span id="r-sold">—</span> of <span id="r-total">—</span> tickets sold
-        (<span id="r-pct">—</span>) · <span id="r-left">—</span> left
+        <span id="r-sold">0</span> of <span id="r-total">10,000</span> tickets sold
+        (<span id="r-pct">0.0%</span>) · <span id="r-left">10,000</span> left
       </p>
 
       <dl class="grid">
-        <div class="cell"><dt>Ticket price</dt><dd><span id="r-price">—</span></dd><span class="sub2">USDC</span></div>
-        <div class="cell"><dt>In the pot</dt><dd><span id="r-pot">—</span></dd><span class="sub2">USDC collected so far</span></div>
-        <div class="cell"><dt>Round</dt><dd>#<span id="r-round">—</span></dd><span class="sub2">rounds run back to back</span></div>
+        <div class="cell"><dt>Ticket price</dt><dd><span id="r-price">100.00</span></dd><span class="sub2">USDC</span></div>
+        <div class="cell"><dt>In the pot</dt><dd><span id="r-pot">0</span></dd><span class="sub2">USDC collected so far</span></div>
+        <div class="cell"><dt>Round</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">rounds run back to back</span></div>
       </dl>
 
       <div class="status" id="draw-note" hidden>
@@ -164,8 +164,15 @@
 
     <section>
       <h2>Enter</h2>
+
+      <div class="status" id="preview-note">
+        <strong>Preview.</strong> This is exactly how entering will work. The
+        buttons are switched off until the contract is deployed and audited —
+        there is nothing yet for them to send a transaction to.
+      </div>
+
       <div class="panel">
-        <button class="btn" type="button" id="connect">Connect wallet</button>
+        <button class="btn" type="button" id="connect" disabled>Connect wallet</button>
         <div class="msg" id="connect-msg" hidden></div>
 
         <dl class="kv" id="you" hidden>
@@ -176,10 +183,10 @@
 
         <div id="buy-area" hidden>
           <label for="count">How many tickets?</label>
-          <input type="text" id="count" inputmode="numeric" placeholder="1" spellcheck="false">
+          <input type="text" id="count" inputmode="numeric" placeholder="1" spellcheck="false" disabled>
           <div class="msg" id="quote" hidden></div>
           <div class="actions">
-            <button class="btn" type="button" id="buy">Buy tickets</button>
+            <button class="btn" type="button" id="buy" disabled>Buy tickets</button>
           </div>
           <div class="msg" id="buy-msg" hidden></div>
         </div>

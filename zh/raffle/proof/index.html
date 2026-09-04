@@ -8,8 +8,8 @@
 <link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/raffle/proof/">
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/proof/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/proof/"><!--/i18n:head-->
-<title>The rehearsal — DFV Raffle</title>
-<meta name="description" content="A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink randomness, before the raffle took a single real entry. Every transaction is public.">
+<title>预演 — DFV 抽奖</title>
+<meta name="description" content="在抽奖接受任何一笔真实参与之前，我们用真的 USDC 和真的 Chainlink 随机数，在以太坊主网上完整跑了一轮。每一笔交易都是公开的。">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -134,118 +134,95 @@
 <!--i18n:langbar--><div class="langbar"><nav aria-label="Language"><ul><li><a href="/raffle/proof/" hreflang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><clipPath id="dfvuk"><rect width="24" height="16" rx="2"/></clipPath><g clip-path="url(#dfvuk)"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.9"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5.3"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="3.2"/></g><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/fr/raffle/proof/" hreflang="fr" title="Français" aria-label="Français"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" fill="#fff" rx="2"/><path d="M0 2a2 2 0 012-2h6v16H2a2 2 0 01-2-2z" fill="#002654"/><path d="M16 0h6a2 2 0 012 2v12a2 2 0 01-2 2h-6z" fill="#ED2939"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/de/raffle/proof/" hreflang="de" title="Deutsch" aria-label="Deutsch"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v3.33H0z" fill="#000"/><rect y="5.33" width="24" height="5.34" fill="#DD0000"/><path d="M0 10.67h24V14a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#FFCE00"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/es/raffle/proof/" hreflang="es" title="Español" aria-label="Español"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><path d="M0 2a2 2 0 012-2h20a2 2 0 012 2v2H0z" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/><path d="M0 12h24v2a2 2 0 01-2 2H2a2 2 0 01-2-2z" fill="#AA151B"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><a href="/vi/raffle/proof/" hreflang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DA251D"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FF0" transform="translate(12 8) scale(4.6)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></a></li><li><span aria-current="true" title="简体中文" aria-label="简体中文"><svg class="flag" viewBox="0 0 24 16" width="30" height="20" aria-hidden="true" focusable="false"><rect width="24" height="16" rx="2" fill="#DE2910"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(5 5) scale(3)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 2.2) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 4.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(12.2 7.6) scale(1.05)"/><path d="M0,-1L.225-.309.951-.309.363.118.588.809 0 .382-.588.809-.363.118-.951-.309-.225-.309Z" fill="#FFDE00" transform="translate(10.2 9.8) scale(1.05)"/><rect x=".25" y=".25" width="23.5" height="15.5" rx="1.5" fill="none" stroke="rgba(0,0,0,.28)" stroke-width=".5"/></svg></span></li></ul></nav></div><!--/i18n:langbar-->
 <div class="wrap">
 
-  <a class="back" href="/raffle/">← Back to the raffle</a>
+  <a class="back" href="/raffle/">← 返回抽奖</a>
 
-  <h1>The rehearsal</h1>
+  <h1>预演</h1>
   <p class="sub">
-    Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet
-    with our own money — real USDC, real Chainlink randomness, at one fifty-thousandth of the
-    size. It worked. Every transaction below is on the public chain and you can open all of them.
+    在抽奖接受任何一笔真实参与之前，我们用自己的钱在以太坊主网上完整跑了一轮——真的 USDC，真的 Chainlink 随机数，规模是五万分之一。它跑通了。下面每一笔交易都在公开链上，你可以全部打开看。
   </p>
 
   <div class="status" style="border-left-color:var(--ok);background:var(--ok-sunk)">
-    <strong style="color:var(--ok)">Settled and fully paid.</strong>
-    2,000 tickets sold, 100 winners drawn by Chainlink VRF, all 99 cash prizes delivered,
-    and <strong>nothing left stranded</strong> in the contract.
+    <strong style="color:var(--ok)">已结算，且全额支付。</strong>
+    售出 2,000 张券，Chainlink VRF 开出 100 位中奖者，全部 99 份现金奖发放完毕，而且 <strong>没有任何资金滞留</strong> 在合约里。
   </div>
 
   <section>
-    <h2>What happened, in order</h2>
+    <h2>依次发生了什么</h2>
     <dl class="grid">
-      <div class="cell"><dt>Round opened</dt><dd>11:33</dd><span class="sub2">4 Sep 2026 UTC</span></div>
-      <div class="cell"><dt>Draw requested</dt><dd>11:42</dd><span class="sub2">after 2,000/2,000 sold</span></div>
-      <div class="cell"><dt>Randomness arrived</dt><dd>84 s</dd><span class="sub2">Chainlink VRF v2.5</span></div>
-      <div class="cell"><dt>Every prize paid</dt><dd>11:44</dd><span class="sub2">5 batches, 99 winners</span></div>
+      <div class="cell"><dt>本轮开启</dt><dd>11:33</dd><span class="sub2">2026 年 9 月 4 日 UTC</span></div>
+      <div class="cell"><dt>发起开奖请求</dt><dd>11:42</dd><span class="sub2">在售出 2,000/2,000 之后</span></div>
+      <div class="cell"><dt>随机数抵达</dt><dd>84 秒</dd><span class="sub2">Chainlink VRF v2.5</span></div>
+      <div class="cell"><dt>所有奖金已支付</dt><dd>11:44</dd><span class="sub2">5 批，99 位中奖者</span></div>
     </dl>
 
     <div class="scroll"><table>
-      <thead><tr><th scope="col">Step</th><th scope="col">在 Etherscan 上</th></tr></thead>
+      <thead><tr><th scope="col">步骤</th><th scope="col">在 Etherscan 上</th></tr></thead>
       <tbody>
-        <tr><td>First ticket bought</td><td class="evi"><a href="https://etherscan.io/tx/0xd6abe8689f51e07df0b44928796362c5c9e4ce6df7028457a8ff52aa7ea90181" rel="noopener">0xd6abe868…a90181</a></td></tr>
-        <tr><td>…39 more purchase transactions</td><td>2,000 tickets, 20.00 USDC in total</td></tr>
-        <tr><td>Draw requested from Chainlink</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
-        <tr><td><strong>Randomness delivered and round settled</strong></td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
+        <tr><td>买下第一张券</td><td class="evi"><a href="https://etherscan.io/tx/0xd6abe8689f51e07df0b44928796362c5c9e4ce6df7028457a8ff52aa7ea90181" rel="noopener">0xd6abe868…a90181</a></td></tr>
+        <tr><td>…另外 39 笔购买交易</td><td>2,000 张券，合计 20.00 USDC</td></tr>
+        <tr><td>向 Chainlink 发起开奖请求</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td><strong>随机数送达，本轮结算</strong></td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
       </tbody>
     </table></div>
 
-    <h3 style="margin-top:1.5rem">The five payout transactions</h3>
+    <h3 style="margin-top:1.5rem">五笔发奖交易</h3>
     <ul class="plain"><li><a href="https://etherscan.io/tx/0xd864c345b8d0ee8a60b5bdc3c52610b9631ac4617efe4fb2caf9b0d5f2be6735" rel="noopener">0xd864c345…be6735</a></li><li><a href="https://etherscan.io/tx/0x2d62b5afdf009917f00102440cf7155c478b106c29bdc36a5584297caa1d7319" rel="noopener">0x2d62b5af…1d7319</a></li><li><a href="https://etherscan.io/tx/0x5d7558443120eb11db6f37371cc88157a05f47c3b90e7cb0aefa1f050bd79275" rel="noopener">0x5d755844…d79275</a></li><li><a href="https://etherscan.io/tx/0x7b3ab6732c8f31e4094951de55bcd934f1821ca1c2b418949279b43cd979fe99" rel="noopener">0x7b3ab673…79fe99</a></li><li><a href="https://etherscan.io/tx/0x6c73daf12c64105a1c2a10c094399e7f014c8c183f253218816ed786d8ce92ba" rel="noopener">0x6c73daf1…ce92ba</a></li></ul>
   </section>
 
   <section>
-    <h2>The money, reconciled</h2>
-    <p>
-      The round collected 20.00 USDC and paid out 20.00 USDC. Because this was a rehearsal, the
-      same address was the house <em>and</em> every winner, so all of it came back — but the
-      contract did not know that, and split it exactly as it will in a real round.
-    </p>
+    <h2>账目核对</h2>
+    <p>这一轮收进 20.00 USDC，付出 20.00 USDC。因为这是预演，同一个地址既是庄家<em>也是</em>每一位中奖者，所以钱全都回来了——但合约并不知道这件事，它完全按照真实一轮的方式做了分配。</p>
     <dl class="grid">
-      <div class="cell"><dt>Collected</dt><dd>20.00</dd><span class="sub2">2,000 × 0.01 USDC</span></div>
-      <div class="cell"><dt>Prize budget</dt><dd>8.16</dd><span class="sub2">40.8% of the pot</span></div>
-      <div class="cell"><dt>To 99 winners</dt><dd>7.92</dd><span class="sub2">0.08 USDC each</span></div>
-      <div class="cell"><dt>To the house</dt><dd>12.08</dd><span class="sub2">including the watch value</span></div>
-      <div class="cell"><dt>Left in contract</dt><dd style="color:var(--ok)">0.00</dd><span class="sub2">nothing stranded</span></div>
-      <div class="cell"><dt>Cost to run</dt><dd>0.0049</dd><span class="sub2">ETH of gas, whole round</span></div>
+      <div class="cell"><dt>收进</dt><dd>20.00</dd><span class="sub2">2,000 × 0.01 USDC</span></div>
+      <div class="cell"><dt>奖金预算</dt><dd>8.16</dd><span class="sub2">奖池的 40.8%</span></div>
+      <div class="cell"><dt>发给 99 位中奖者</dt><dd>7.92</dd><span class="sub2">每人 0.08 USDC</span></div>
+      <div class="cell"><dt>归庄家</dt><dd>12.08</dd><span class="sub2">含手表价值</span></div>
+      <div class="cell"><dt>合约中剩余</dt><dd style="color:var(--ok)">0.00</dd><span class="sub2">没有资金滞留</span></div>
+      <div class="cell"><dt>运行成本</dt><dd>0.0049</dd><span class="sub2">ETH 的 gas，整轮</span></div>
     </dl>
   </section>
 
   <section>
-    <h2>The randomness</h2>
-    <p>
-      Winners are drawn by <strong>Chainlink VRF v2.5</strong>, which produces a random number
-      together with a cryptographic proof that it was not tampered with. The proof is verified
-      on-chain before our contract is allowed to use it. Nobody — not us, not a miner, not
-      Chainlink — can pick the winners.
-    </p>
-    <p>
-      We deliberately do <em>not</em> use block data for this. A block proposer can see values
-      like <span class="addr">prevrandao</span> before publishing, and could quietly re-roll a
-      draw worth a million dollars. Chainlink costs more and is worth it.
-    </p>
+    <h2>随机数</h2>
+    <p>中奖者由 <strong>Chainlink VRF v2.5</strong> 开出，它在给出随机数的同时附上一份密码学证明，证明这个数没有被动过手脚。证明会先在链上验证通过，我们的合约才被允许使用它。没有人——不是我们，不是矿工，也不是 Chainlink——能挑选中奖者。</p>
+    <p>我们刻意<em>不</em>用区块数据来做这件事。出块者在广播之前就能看到 <span class="addr">prevrandao</span> 这类值，完全可以悄悄把一次价值百万美元的开奖重掷一遍。Chainlink 更贵，但值这个价。</p>
     <div class="scroll"><table>
       <tbody>
-        <tr><td>Request</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
-        <tr><td>Fulfilment</td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
-        <tr><td>Time to answer</td><td>84 秒</td></tr>
-        <tr><td>LINK actually charged</td><td>0.017217 of 50 held in reserve</td></tr>
+        <tr><td>请求</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td>履行</td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
+        <tr><td>应答耗时</td><td>84 秒</td></tr>
+        <tr><td>实际扣除的 LINK</td><td>持有 50 作为储备，实扣 0.017217</td></tr>
       </tbody>
     </table></div>
 
-    <h3 style="margin-top:1.75rem">The 100 winning tickets it produced</h3>
-    <p style="font-size:.9375rem;color:var(--ink-soft)">
-      All 100 distinct, all inside the 0–1,999 range. The first drawn ticket
-      (<strong>1501</strong>, in red) takes the watch; the other 99 take cash.
-    </p>
+    <h3 style="margin-top:1.75rem">它开出的 100 张中奖券</h3>
+    <p style="font-size:.9375rem;color:var(--ink-soft)">100 张全部互不相同，全部落在 0–1,999 区间内。第一张被开出的券（<strong>1501</strong>，红色）拿走手表；其余 99 张拿现金。</p>
     <div class="tickets">
       <span class="watch">1501</span><span class="">1097</span><span class="">56</span><span class="">1962</span><span class="">468</span><span class="">1576</span><span class="">75</span><span class="">251</span><span class="">998</span><span class="">731</span><span class="">1999</span><span class="">391</span><span class="">766</span><span class="">1672</span><span class="">1065</span><span class="">869</span><span class="">1547</span><span class="">146</span><span class="">1788</span><span class="">887</span><span class="">558</span><span class="">1040</span><span class="">395</span><span class="">1370</span><span class="">846</span><span class="">1631</span><span class="">1581</span><span class="">696</span><span class="">755</span><span class="">986</span><span class="">1652</span><span class="">1664</span><span class="">625</span><span class="">1123</span><span class="">847</span><span class="">52</span><span class="">1471</span><span class="">895</span><span class="">747</span><span class="">598</span><span class="">1092</span><span class="">1755</span><span class="">1585</span><span class="">1514</span><span class="">763</span><span class="">1235</span><span class="">179</span><span class="">1503</span><span class="">913</span><span class="">1003</span><span class="">245</span><span class="">555</span><span class="">1388</span><span class="">213</span><span class="">619</span><span class="">1485</span><span class="">935</span><span class="">610</span><span class="">715</span><span class="">107</span><span class="">1158</span><span class="">965</span><span class="">1764</span><span class="">660</span><span class="">1453</span><span class="">1175</span><span class="">1810</span><span class="">659</span><span class="">633</span><span class="">47</span><span class="">830</span><span class="">743</span><span class="">201</span><span class="">461</span><span class="">589</span><span class="">1510</span><span class="">1919</span><span class="">883</span><span class="">1297</span><span class="">478</span><span class="">121</span><span class="">1829</span><span class="">1634</span><span class="">1523</span><span class="">1749</span><span class="">989</span><span class="">1386</span><span class="">576</span><span class="">741</span><span class="">480</span><span class="">258</span><span class="">1371</span><span class="">1206</span><span class="">1941</span><span class="">1400</span><span class="">484</span><span class="">1410</span><span class="">686</span><span class="">108</span><span class="">812</span>
     </div>
   </section>
 
   <section>
-    <h2>Every prize, as paid</h2>
+    <h2>每一份奖，按实际支付情况</h2>
     <p style="font-size:.9375rem;color:var(--ink-soft)">
-      In the order the contract delivered them. Ticket 1501 is absent because it won
-      the watch, which is a physical object handed over off-chain rather than a transfer.
+      按合约发放的先后顺序排列。1501 号券不在表内，因为它中的是手表——那是一件线下交付的实物，而不是一笔转账。
     </p>
     <div class="tall scroll"><table>
-      <thead><tr><th scope="col">#</th><th scope="col">Winning ticket</th><th scope="col">USDC paid</th></tr></thead>
+      <thead><tr><th scope="col">#</th><th scope="col">中奖券</th><th scope="col">已付 USDC</th></tr></thead>
       <tbody><tr><td>1</td><td>1097</td><td>0.08</td></tr><tr><td>2</td><td>56</td><td>0.08</td></tr><tr><td>3</td><td>1962</td><td>0.08</td></tr><tr><td>4</td><td>468</td><td>0.08</td></tr><tr><td>5</td><td>1576</td><td>0.08</td></tr><tr><td>6</td><td>75</td><td>0.08</td></tr><tr><td>7</td><td>251</td><td>0.08</td></tr><tr><td>8</td><td>998</td><td>0.08</td></tr><tr><td>9</td><td>731</td><td>0.08</td></tr><tr><td>10</td><td>1999</td><td>0.08</td></tr><tr><td>11</td><td>391</td><td>0.08</td></tr><tr><td>12</td><td>766</td><td>0.08</td></tr><tr><td>13</td><td>1672</td><td>0.08</td></tr><tr><td>14</td><td>1065</td><td>0.08</td></tr><tr><td>15</td><td>869</td><td>0.08</td></tr><tr><td>16</td><td>1547</td><td>0.08</td></tr><tr><td>17</td><td>146</td><td>0.08</td></tr><tr><td>18</td><td>1788</td><td>0.08</td></tr><tr><td>19</td><td>887</td><td>0.08</td></tr><tr><td>20</td><td>558</td><td>0.08</td></tr><tr><td>21</td><td>1040</td><td>0.08</td></tr><tr><td>22</td><td>395</td><td>0.08</td></tr><tr><td>23</td><td>1370</td><td>0.08</td></tr><tr><td>24</td><td>846</td><td>0.08</td></tr><tr><td>25</td><td>1631</td><td>0.08</td></tr><tr><td>26</td><td>1581</td><td>0.08</td></tr><tr><td>27</td><td>696</td><td>0.08</td></tr><tr><td>28</td><td>755</td><td>0.08</td></tr><tr><td>29</td><td>986</td><td>0.08</td></tr><tr><td>30</td><td>1652</td><td>0.08</td></tr><tr><td>31</td><td>1664</td><td>0.08</td></tr><tr><td>32</td><td>625</td><td>0.08</td></tr><tr><td>33</td><td>1123</td><td>0.08</td></tr><tr><td>34</td><td>847</td><td>0.08</td></tr><tr><td>35</td><td>52</td><td>0.08</td></tr><tr><td>36</td><td>1471</td><td>0.08</td></tr><tr><td>37</td><td>895</td><td>0.08</td></tr><tr><td>38</td><td>747</td><td>0.08</td></tr><tr><td>39</td><td>598</td><td>0.08</td></tr><tr><td>40</td><td>1092</td><td>0.08</td></tr><tr><td>41</td><td>1755</td><td>0.08</td></tr><tr><td>42</td><td>1585</td><td>0.08</td></tr><tr><td>43</td><td>1514</td><td>0.08</td></tr><tr><td>44</td><td>763</td><td>0.08</td></tr><tr><td>45</td><td>1235</td><td>0.08</td></tr><tr><td>46</td><td>179</td><td>0.08</td></tr><tr><td>47</td><td>1503</td><td>0.08</td></tr><tr><td>48</td><td>913</td><td>0.08</td></tr><tr><td>49</td><td>1003</td><td>0.08</td></tr><tr><td>50</td><td>245</td><td>0.08</td></tr><tr><td>51</td><td>555</td><td>0.08</td></tr><tr><td>52</td><td>1388</td><td>0.08</td></tr><tr><td>53</td><td>213</td><td>0.08</td></tr><tr><td>54</td><td>619</td><td>0.08</td></tr><tr><td>55</td><td>1485</td><td>0.08</td></tr><tr><td>56</td><td>935</td><td>0.08</td></tr><tr><td>57</td><td>610</td><td>0.08</td></tr><tr><td>58</td><td>715</td><td>0.08</td></tr><tr><td>59</td><td>107</td><td>0.08</td></tr><tr><td>60</td><td>1158</td><td>0.08</td></tr><tr><td>61</td><td>965</td><td>0.08</td></tr><tr><td>62</td><td>1764</td><td>0.08</td></tr><tr><td>63</td><td>660</td><td>0.08</td></tr><tr><td>64</td><td>1453</td><td>0.08</td></tr><tr><td>65</td><td>1175</td><td>0.08</td></tr><tr><td>66</td><td>1810</td><td>0.08</td></tr><tr><td>67</td><td>659</td><td>0.08</td></tr><tr><td>68</td><td>633</td><td>0.08</td></tr><tr><td>69</td><td>47</td><td>0.08</td></tr><tr><td>70</td><td>830</td><td>0.08</td></tr><tr><td>71</td><td>743</td><td>0.08</td></tr><tr><td>72</td><td>201</td><td>0.08</td></tr><tr><td>73</td><td>461</td><td>0.08</td></tr><tr><td>74</td><td>589</td><td>0.08</td></tr><tr><td>75</td><td>1510</td><td>0.08</td></tr><tr><td>76</td><td>1919</td><td>0.08</td></tr><tr><td>77</td><td>883</td><td>0.08</td></tr><tr><td>78</td><td>1297</td><td>0.08</td></tr><tr><td>79</td><td>478</td><td>0.08</td></tr><tr><td>80</td><td>121</td><td>0.08</td></tr><tr><td>81</td><td>1829</td><td>0.08</td></tr><tr><td>82</td><td>1634</td><td>0.08</td></tr><tr><td>83</td><td>1523</td><td>0.08</td></tr><tr><td>84</td><td>1749</td><td>0.08</td></tr><tr><td>85</td><td>989</td><td>0.08</td></tr><tr><td>86</td><td>1386</td><td>0.08</td></tr><tr><td>87</td><td>576</td><td>0.08</td></tr><tr><td>88</td><td>741</td><td>0.08</td></tr><tr><td>89</td><td>480</td><td>0.08</td></tr><tr><td>90</td><td>258</td><td>0.08</td></tr><tr><td>91</td><td>1371</td><td>0.08</td></tr><tr><td>92</td><td>1206</td><td>0.08</td></tr><tr><td>93</td><td>1941</td><td>0.08</td></tr><tr><td>94</td><td>1400</td><td>0.08</td></tr><tr><td>95</td><td>484</td><td>0.08</td></tr><tr><td>96</td><td>1410</td><td>0.08</td></tr><tr><td>97</td><td>686</td><td>0.08</td></tr><tr><td>98</td><td>108</td><td>0.08</td></tr><tr><td>99</td><td>812</td><td>0.08</td></tr></tbody>
     </table></div>
   </section>
 
   <section>
-    <h2>What this does and does not prove</h2>
+    <h2>这证明了什么，又没证明什么</h2>
     <div class="why">
       <div>
-        <h3>It proves the machine runs</h3>
-        <p>Real USDC moved, real randomness arrived, the arithmetic came out exact, and the
-        contract emptied itself to the last cent without anyone intervening.</p>
+        <h3>它证明这台机器跑得起来</h3>
+        <p>真的 USDC 动了，真的随机数到了，算术分毫不差，合约在无人干预的情况下把自己清空到最后一分钱。</p>
       </div>
       <div>
-        <h3>It does not replace an audit</h3>
-        <p>A working rehearsal shows the contract does the right thing when nobody is attacking
-        it. That is a different question from whether it resists someone with a million dollars
-        to win, and only a professional audit answers the second.</p>
+        <h3>它替代不了一次审计</h3>
+        <p>一次跑通的预演说明的是：在没有人攻击它的时候，合约做的是对的事。至于它能不能扛住一个有一百万美元可赢的人，那是另一个问题，只有专业审计能回答。</p>
       </div>
     </div>
   </section>
@@ -255,23 +232,17 @@
     <div class="scroll"><table>
       <thead><tr><th scope="col">作用</th><th scope="col">地址</th></tr></thead>
       <tbody>
-        <tr><td>Rehearsal raffle</td><td class="evi"><a href="https://etherscan.io/address/0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D" rel="noopener">0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D</a></td></tr>
-        <tr><td>Keeper (runs it unattended)</td><td class="evi"><a href="https://etherscan.io/address/0xFEA128525A0787FC512Cd815AA0c5Ab34B1c7e1e" rel="noopener">0xFEA128525A0787FC512Cd815AA0c5Ab34B1c7e1e</a></td></tr>
+        <tr><td>预演用抽奖合约</td><td class="evi"><a href="https://etherscan.io/address/0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D" rel="noopener">0x65B0A55B0d303381b4bf0aF95D9c1cb67E257a1D</a></td></tr>
+        <tr><td>Keeper（无人值守运行）</td><td class="evi"><a href="https://etherscan.io/address/0xFEA128525A0787FC512Cd815AA0c5Ab34B1c7e1e" rel="noopener">0xFEA128525A0787FC512Cd815AA0c5Ab34B1c7e1e</a></td></tr>
         <tr><td>USDC</td><td class="evi"><a href="https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" rel="noopener">0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</a></td></tr>
-        <tr><td>Chainlink VRF coordinator</td><td class="evi"><a href="https://etherscan.io/address/0xD7f86b4b8Cae7D942340FF628F82735b7a20893a" rel="noopener">0xD7f86b4b8Cae7D942340FF628F82735b7a20893a</a></td></tr>
+        <tr><td>Chainlink VRF 协调器</td><td class="evi"><a href="https://etherscan.io/address/0xD7f86b4b8Cae7D942340FF628F82735b7a20893a" rel="noopener">0xD7f86b4b8Cae7D942340FF628F82735b7a20893a</a></td></tr>
       </tbody>
     </table></div>
-    <p style="margin-top:1rem;font-size:.9375rem;color:var(--ink-soft)">
-      This rehearsal contract is <strong>not</strong> the one a real round will use. It is
-      configured at one fifty-thousandth scale, and its house and guardian addresses are the
-      test wallet. The production contract is deployed separately and its address will be
-      published here and on the raffle page before it accepts a single ticket.
-    </p>
+    <p style="margin-top:1rem;font-size:.9375rem;color:var(--ink-soft)">这个预演合约<strong>不是</strong>真实一轮会使用的那一个。它按五万分之一的规模配置，庄家和 guardian 地址都是测试钱包。生产合约会单独部署，它的地址会在这里和抽奖页面上公布，然后才会接受第一张券。</p>
   </section>
 
   <footer>
-    Every figure on this page was read from Ethereum mainnet on 4 September 2026 and is fixed —
-    this is a record of a completed round, not a live view. Verify any of it on Etherscan.
+    本页每一个数字都于 2026 年 9 月 4 日从以太坊主网读取并固定下来——这是一轮已完成回合的记录，不是实时视图。其中任何一项都可以在 Etherscan 上核实。
   </footer>
 
 </div>

@@ -276,15 +276,18 @@ async function waitFor(hash) {
 /* ---------- boot ---------- */
 
 function boot() {
-  /* Not deployed yet: leave the entry section hidden and wire nothing up, so
-     the page cannot send a transaction before there is a contract to send it
-     to. Setting RAFFLE above is the switch that opens the raffle. */
-  if (!RAFFLE) { hide($('live-area')); return; }
-  show($('live-area'));
+  /* The entry panel is always rendered, so the page shows exactly how entering
+     will work. What changes is whether it is connected to anything.
 
-  const c = $('connect'); if (c) c.addEventListener('click', connect);
-  const b = $('buy');     if (b) b.addEventListener('click', buy);
-  const n = $('count');   if (n) n.addEventListener('input', quote);
+     With no contract deployed, the controls stay disabled as they are in the
+     markup and NO handlers are attached, so there is no code path from a click
+     to a transaction — the buttons are inert twice over, not merely greyed. */
+  if (!RAFFLE) return;
+
+  hide($('preview-note'));
+  const c = $('connect'); if (c) { c.disabled = false; c.addEventListener('click', connect); }
+  const b = $('buy');     if (b) { b.disabled = false; b.addEventListener('click', buy); }
+  const n = $('count');   if (n) { n.disabled = false; n.addEventListener('input', quote); }
 
   if (window.ethereum && window.ethereum.on) {
     window.ethereum.on('accountsChanged', function () { location.reload(); });

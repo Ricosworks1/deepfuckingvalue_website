@@ -52,6 +52,10 @@
    "text": "DAO",
    "kind": "text"
   },
+  "ac37b40b76": {
+   "text": "Raffle",
+   "kind": "text"
+  },
   "0381247a69": {
    "text": "Leaderboard",
    "kind": "text"
@@ -74,6 +78,10 @@
   },
   "8a5cbf4957": {
    "text": "The DAO",
+   "kind": "text"
+  },
+  "8bc8671440": {
+   "text": "The Raffle",
    "kind": "text"
   },
   "3f0bc97f09": {
@@ -724,16 +732,16 @@
    "text": "To propose",
    "kind": "text"
   },
-  "4006167b45": {
-   "text": "DFV delegated · ≈ $160,757",
+  "1bd1e4502e": {
+   "text": "DFV delegated · ≈ $159,969",
    "kind": "text"
   },
   "fdaafe2d97": {
    "text": "Quorum",
    "kind": "text"
   },
-  "b218c139d5": {
-   "text": "20,826,000,000 DFV · ≈ $4,822,699",
+  "367c1cb0da": {
+   "text": "20,826,000,000 DFV · ≈ $4,799,069",
    "kind": "text"
   },
   "19f804c3f6": {
@@ -772,8 +780,8 @@
    "text": "Expensive on purpose",
    "kind": "text"
   },
-  "ef4b4e44fa": {
-   "text": "Filing a proposal needs 694,200,000 DFV delegated — roughly $160,757 at\n        the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.",
+  "27072e686d": {
+   "text": "Filing a proposal needs 694,200,000 DFV delegated — roughly $159,969 at\n        the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.",
    "kind": "text"
   },
   "50e635e87c": {
@@ -788,8 +796,8 @@
    "text": "Where things stand",
    "kind": "text"
   },
-  "15c3d99646": {
-   "text": "Most DFV cannot vote. 117,490,583,691 sits in the Uniswap pool and 20,827,343,223 is\n      locked in the vesting contract — neither delegates, so neither has a voice. Voting power only\n      exists once tokens are held in a wallet <0>and</0> delegated.",
+  "1e112acd8f": {
+   "text": "Most DFV cannot vote. 117,495,846,526 sits in the Uniswap pool and 20,821,732,113 is\n      locked in the vesting contract — neither delegates, so neither has a voice. Voting power only\n      exists once tokens are held in a wallet <0>and</0> delegated.",
    "kind": "block"
   },
   "f359fc7949": {
@@ -816,8 +824,8 @@
    "text": "2.51% of the tokens needed for quorum currently exist in a form that could vote.",
    "kind": "text"
   },
-  "6e58941e2e": {
-   "text": "<0>Governance is not active yet.</0> Quorum needs 20,826,000,000 DFV of delegated\n      votes, and at most 522,073,086 could vote today even if every holder delegated.\n      That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —\n      roughly $4,822,699 of tokens must move into voting hands before the DAO can decide anything.\n      Until then this page is honest about it rather than pretending otherwise.",
+  "d3f8a9c0d8": {
+   "text": "<0>Governance is not active yet.</0> Quorum needs 20,826,000,000 DFV of delegated\n      votes, and at most 522,421,361 could vote today even if every holder delegated.\n      That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —\n      roughly $4,799,069 of tokens must move into voting hands before the DAO can decide anything.\n      Until then this page is honest about it rather than pretending otherwise.",
    "kind": "block"
   },
   "ef44f4b732": {
@@ -864,8 +872,8 @@
    "text": "The token itself is immutable: six functions, no mint, no burn, no pause, no upgrade, no owner.\n      The supply that exists is the supply that will always exist. Governance parameters live on the DAO\n      contract and can only be changed by a passed proposal.",
    "kind": "text"
   },
-  "4e83bda44c": {
-   "text": "Figures read from Ethereum mainnet Sat, 22 Aug 2026 07:30:43 GMT and refreshed daily.\n    Your balance, voting power and delegate are read live from your own wallet.",
+  "7515b98ce7": {
+   "text": "Figures read from Ethereum mainnet Mon, 31 Aug 2026 00:57:05 GMT and refreshed daily.\n    Your balance, voting power and delegate are read live from your own wallet.",
    "kind": "text"
   },
   "66cbdd8e53": {
@@ -1072,8 +1080,8 @@
    "text": "Token <0>0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07</0> · pool <1>0x000000000004444c5dc75cB358380D2e3dE08A90</1> · quoted in USDC.",
    "kind": "block"
   },
-  "9f3ab34f60": {
-   "text": "Last rebuilt Sat, 22 Aug 2026 07:03:21 GMT. Updated daily at midnight\n    Central European Time. Data comes from Ethereum mainnet and can be reproduced by\n    anyone — the build script is in the repository.",
+  "1c7af64151": {
+   "text": "Last rebuilt Mon, 31 Aug 2026 00:57:04 GMT. Updated daily at midnight\n    Central European Time. Data comes from Ethereum mainnet and can be reproduced by\n    anyone — the build script is in the repository.",
    "kind": "text"
   },
   "037250ee8f": {
@@ -1319,6 +1327,458 @@
   "cf604145b3": {
    "text": "There is no shared public gallery, because publishing everyone's uploads would mean running\n    an upload endpoint and moderating whatever arrives on it. If you want your meme seen, post it in\n    the community channels.",
    "kind": "text"
+  },
+  "93d9c6c27b": {
+   "text": "The raffle — DFV",
+   "kind": "text"
+  },
+  "13fa69caef": {
+   "text": "Ten thousand tickets, one hundred winners, drawn by Chainlink. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.",
+   "kind": "attr"
+  },
+  "762f8dfae8": {
+   "text": "The raffle",
+   "kind": "text"
+  },
+  "05ab502f18": {
+   "text": "Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink — a Rolex and\n    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its\n    own. Nobody can stop it, delay it, or choose who wins.",
+   "kind": "text"
+  },
+  "3ad2a4c195": {
+   "text": "This round",
+   "kind": "text"
+  },
+  "a5d04ac952": {
+   "text": "<0>0</0> of <1>10,000</1> tickets sold\n        (<2>0.0%</2>) · <3>10,000</3> left",
+   "kind": "block"
+  },
+  "da5935590c": {
+   "text": "Ticket price",
+   "kind": "text"
+  },
+  "ad6a982801": {
+   "text": "In the pot",
+   "kind": "text"
+  },
+  "80957e66c8": {
+   "text": "USDC collected so far",
+   "kind": "text"
+  },
+  "ec7b598335": {
+   "text": "Round",
+   "kind": "text"
+  },
+  "3ef939e1a4": {
+   "text": "rounds run back to back",
+   "kind": "text"
+  },
+  "f2a7793147": {
+   "text": "The draw is running.",
+   "kind": "text"
+  },
+  "ea6baf7da4": {
+   "text": "Chainlink is producing the randomness for this\n        round. Entries reopen automatically with the next one.",
+   "kind": "text"
+  },
+  "2b9eceb7a8": {
+   "text": "Enter",
+   "kind": "text"
+  },
+  "915be879ba": {
+   "text": "Preview.",
+   "kind": "text"
+  },
+  "f739ad3438": {
+   "text": "This is exactly how entering will work. The\n        buttons are switched off until the contract is deployed and audited —\n        there is nothing yet for them to send a transaction to.",
+   "kind": "text"
+  },
+  "d8889b8d01": {
+   "text": "Your tickets this round",
+   "kind": "text"
+  },
+  "845588abc8": {
+   "text": "Your USDC",
+   "kind": "text"
+  },
+  "6a89bc62b8": {
+   "text": "How many tickets?",
+   "kind": "text"
+  },
+  "029ab12666": {
+   "text": "Buy tickets",
+   "kind": "text"
+  },
+  "50d01737cb": {
+   "text": "Buying takes two transactions: approving the exact USDC these tickets cost, then the\n        purchase itself. The approval is never unlimited, and this page can send no other\n        transaction of any kind.",
+   "kind": "text"
+  },
+  "7612359705": {
+   "text": "How a round works",
+   "kind": "text"
+  },
+  "5c622a5170": {
+   "text": "Tickets",
+   "kind": "text"
+  },
+  "84cc517aa7": {
+   "text": "100 USDC each",
+   "kind": "text"
+  },
+  "1d50bf1d8b": {
+   "text": "Winners",
+   "kind": "text"
+  },
+  "3484071c2a": {
+   "text": "1 watch + 99 cash",
+   "kind": "text"
+  },
+  "94b88bfd2c": {
+   "text": "Cash prize",
+   "kind": "text"
+  },
+  "a27542f30d": {
+   "text": "USDC, to each of 99",
+   "kind": "text"
+  },
+  "f1d8b47782": {
+   "text": "Odds",
+   "kind": "text"
+  },
+  "eb400e4c6b": {
+   "text": "1 in 100",
+   "kind": "text"
+  },
+  "0b584d318a": {
+   "text": "per ticket",
+   "kind": "text"
+  },
+  "d44857be8b": {
+   "text": "It draws itself",
+   "kind": "text"
+  },
+  "17694a3118": {
+   "text": "The moment the last ticket sells, or six months after the first one, the draw\n        triggers. Anyone can trigger it, and a keeper does it automatically — so it does not\n        depend on us being awake, or willing.",
+   "kind": "text"
+  },
+  "9c5eb43da6": {
+   "text": "Nobody picks the winners",
+   "kind": "text"
+  },
+  "6f305907f3": {
+   "text": "Chainlink VRF produces the randomness with a proof that is checked on-chain before\n        the contract can use it. We deliberately do not use block data, which a miner could\n        re-roll.",
+   "kind": "text"
+  },
+  "ac6f75260a": {
+   "text": "There is no admin",
+   "kind": "text"
+  },
+  "fc918c7898": {
+   "text": "No owner, no pause, no upgrade, no withdrawal function. The house address is fixed\n        at deployment and no code path sends USDC anywhere else. Nothing can be changed\n        afterwards — including by us.",
+   "kind": "text"
+  },
+  "cbbecb2543": {
+   "text": "You can always take your prize",
+   "kind": "text"
+  },
+  "1246a21e14": {
+   "text": "Prizes are paid out in batches automatically, but if that ever stops, a winner can\n        pull their own prize directly from the contract at any time. It does not expire.",
+   "kind": "text"
+  },
+  "16852b8939": {
+   "text": "Where the money goes",
+   "kind": "text"
+  },
+  "0c673e1b99": {
+   "text": "<0>40.8% of everything collected is paid back out as prizes</0> — the watch plus\n      the ninety-nine cash prizes. The rest is the house's. That share is fixed in the contract\n      and cannot be changed.",
+   "kind": "block"
+  },
+  "7329991faa": {
+   "text": "This holds whether the round fills or not. A round that sells nine thousand tickets pays\n      the same 40.8%, scaled down, so nobody gains from a round failing to fill. Below 500\n      tickets the round is cancelled instead and buyers take back 80% of what they paid.",
+   "kind": "text"
+  },
+  "c9231138c0": {
+   "text": "Be clear-eyed about this.",
+   "kind": "text"
+  },
+  "90ecd3a4b8": {
+   "text": "A raffle is not an investment. Most tickets win\n      nothing, and the expected return on a ticket is less than what you paid for it. Only buy\n      what you are happy to lose.",
+   "kind": "text"
+  },
+  "71c60ea549": {
+   "text": "It has already been run, with real money",
+   "kind": "text"
+  },
+  "288df53006": {
+   "text": "Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of\n      the size — real USDC, real Chainlink randomness, our own money. Two thousand tickets,\n      one hundred winners, every prize delivered, nothing left in the contract.",
+   "kind": "text"
+  },
+  "ee8b79dc2b": {
+   "text": "See the rehearsal, transaction by transaction →",
+   "kind": "text"
+  },
+  "b83718146d": {
+   "text": "Round figures are read live from Ethereum mainnet through your own wallet — this page makes\n    no network requests of its own. The raffle is unaudited and not yet open.",
+   "kind": "text"
+  },
+  "feb5188993": {
+   "text": "The rehearsal — DFV Raffle",
+   "kind": "text"
+  },
+  "2112e90a39": {
+   "text": "A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink randomness, before the raffle took a single real entry. Every transaction is public.",
+   "kind": "attr"
+  },
+  "3b073bae47": {
+   "text": "← Back to the raffle",
+   "kind": "text"
+  },
+  "c6017d5e25": {
+   "text": "The rehearsal",
+   "kind": "text"
+  },
+  "74c22d736d": {
+   "text": "Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet\n    with our own money — real USDC, real Chainlink randomness, at one fifty-thousandth of the\n    size. It worked. Every transaction below is on the public chain and you can open all of them.",
+   "kind": "text"
+  },
+  "3d4dda9a5b": {
+   "text": "Settled and fully paid.",
+   "kind": "text"
+  },
+  "c4d32b606f": {
+   "text": "2,000 tickets sold, 100 winners drawn by Chainlink VRF, all 99 cash prizes delivered,\n    and",
+   "kind": "text"
+  },
+  "978db0027f": {
+   "text": "nothing left stranded",
+   "kind": "text"
+  },
+  "55d4cf2a3d": {
+   "text": "in the contract.",
+   "kind": "text"
+  },
+  "3c765682e5": {
+   "text": "What happened, in order",
+   "kind": "text"
+  },
+  "a6e9b8fdcf": {
+   "text": "Round opened",
+   "kind": "text"
+  },
+  "91d3270ce0": {
+   "text": "4 Sep 2026 UTC",
+   "kind": "text"
+  },
+  "ecb04c49ea": {
+   "text": "Draw requested",
+   "kind": "text"
+  },
+  "fb712b0cd2": {
+   "text": "after 2,000/2,000 sold",
+   "kind": "text"
+  },
+  "285916728f": {
+   "text": "Randomness arrived",
+   "kind": "text"
+  },
+  "a587c0fb6d": {
+   "text": "84 s",
+   "kind": "text"
+  },
+  "128a7e19c1": {
+   "text": "Chainlink VRF v2.5",
+   "kind": "text"
+  },
+  "e7cde6e8e9": {
+   "text": "Every prize paid",
+   "kind": "text"
+  },
+  "f6b830c1a9": {
+   "text": "5 batches, 99 winners",
+   "kind": "text"
+  },
+  "dc416e1088": {
+   "text": "Step",
+   "kind": "text"
+  },
+  "f0c868c4d8": {
+   "text": "First ticket bought",
+   "kind": "text"
+  },
+  "59d97307c6": {
+   "text": "…39 more purchase transactions",
+   "kind": "text"
+  },
+  "19cb9b98e9": {
+   "text": "2,000 tickets, 20.00 USDC in total",
+   "kind": "text"
+  },
+  "c6f08c91b2": {
+   "text": "Draw requested from Chainlink",
+   "kind": "text"
+  },
+  "9c4c3f22bc": {
+   "text": "Randomness delivered and round settled",
+   "kind": "text"
+  },
+  "d85b0425a9": {
+   "text": "The five payout transactions",
+   "kind": "text"
+  },
+  "575512e925": {
+   "text": "The money, reconciled",
+   "kind": "text"
+  },
+  "2a414271c2": {
+   "text": "The round collected 20.00 USDC and paid out 20.00 USDC. Because this was a rehearsal, the\n      same address was the house <0>and</0> every winner, so all of it came back — but the\n      contract did not know that, and split it exactly as it will in a real round.",
+   "kind": "block"
+  },
+  "5b0f7590d0": {
+   "text": "Collected",
+   "kind": "text"
+  },
+  "93fb329e78": {
+   "text": "2,000 × 0.01 USDC",
+   "kind": "text"
+  },
+  "1f7aeb800a": {
+   "text": "Prize budget",
+   "kind": "text"
+  },
+  "fa5806a7df": {
+   "text": "40.8% of the pot",
+   "kind": "text"
+  },
+  "0662e1abce": {
+   "text": "To 99 winners",
+   "kind": "text"
+  },
+  "08975e9248": {
+   "text": "0.08 USDC each",
+   "kind": "text"
+  },
+  "f050927fbf": {
+   "text": "To the house",
+   "kind": "text"
+  },
+  "791fb04069": {
+   "text": "including the watch value",
+   "kind": "text"
+  },
+  "c72e0fa8bf": {
+   "text": "Left in contract",
+   "kind": "text"
+  },
+  "1cc6b73452": {
+   "text": "nothing stranded",
+   "kind": "text"
+  },
+  "a58dc55350": {
+   "text": "Cost to run",
+   "kind": "text"
+  },
+  "841b525e81": {
+   "text": "ETH of gas, whole round",
+   "kind": "text"
+  },
+  "cc0b7f3c49": {
+   "text": "The randomness",
+   "kind": "text"
+  },
+  "bc405418bf": {
+   "text": "Winners are drawn by <0>Chainlink VRF v2.5</0>, which produces a random number\n      together with a cryptographic proof that it was not tampered with. The proof is verified\n      on-chain before our contract is allowed to use it. Nobody — not us, not a miner, not\n      Chainlink — can pick the winners.",
+   "kind": "block"
+  },
+  "4029518de9": {
+   "text": "We deliberately do <0>not</0> use block data for this. A block proposer can see values\n      like <1>prevrandao</1> before publishing, and could quietly re-roll a\n      draw worth a million dollars. Chainlink costs more and is worth it.",
+   "kind": "block"
+  },
+  "4aed03cac4": {
+   "text": "Request",
+   "kind": "text"
+  },
+  "64feecd068": {
+   "text": "Fulfilment",
+   "kind": "text"
+  },
+  "6b68f1f950": {
+   "text": "Time to answer",
+   "kind": "text"
+  },
+  "0ffd9d8e4e": {
+   "text": "84 seconds",
+   "kind": "text"
+  },
+  "e27d124ef4": {
+   "text": "LINK actually charged",
+   "kind": "text"
+  },
+  "e188b71f1f": {
+   "text": "0.017217 of 50 held in reserve",
+   "kind": "text"
+  },
+  "2f4f6b627a": {
+   "text": "The 100 winning tickets it produced",
+   "kind": "text"
+  },
+  "679c69f027": {
+   "text": "All 100 distinct, all inside the 0–1,999 range. The first drawn ticket\n      (<0>1501</0>, in red) takes the watch; the other 99 take cash.",
+   "kind": "block"
+  },
+  "a96ae859f3": {
+   "text": "Every prize, as paid",
+   "kind": "text"
+  },
+  "207fdec061": {
+   "text": "In the order the contract delivered them. Ticket 1501 is absent because it won\n      the watch, which is a physical object handed over off-chain rather than a transfer.",
+   "kind": "text"
+  },
+  "abfdf5fccf": {
+   "text": "Winning ticket",
+   "kind": "text"
+  },
+  "8973ce098e": {
+   "text": "USDC paid",
+   "kind": "text"
+  },
+  "7e1cf0e58d": {
+   "text": "What this does and does not prove",
+   "kind": "text"
+  },
+  "5ca4fe837f": {
+   "text": "It proves the machine runs",
+   "kind": "text"
+  },
+  "7fe0a98552": {
+   "text": "Real USDC moved, real randomness arrived, the arithmetic came out exact, and the\n        contract emptied itself to the last cent without anyone intervening.",
+   "kind": "text"
+  },
+  "eba40decde": {
+   "text": "It does not replace an audit",
+   "kind": "text"
+  },
+  "7bb9d257a0": {
+   "text": "A working rehearsal shows the contract does the right thing when nobody is attacking\n        it. That is a different question from whether it resists someone with a million dollars\n        to win, and only a professional audit answers the second.",
+   "kind": "text"
+  },
+  "07be2ac4ae": {
+   "text": "Rehearsal raffle",
+   "kind": "text"
+  },
+  "68f8bf5fc1": {
+   "text": "Keeper (runs it unattended)",
+   "kind": "text"
+  },
+  "ff5024d10d": {
+   "text": "Chainlink VRF coordinator",
+   "kind": "text"
+  },
+  "d8b55c8114": {
+   "text": "This rehearsal contract is <0>not</0> the one a real round will use. It is\n      configured at one fifty-thousandth scale, and its house and guardian addresses are the\n      test wallet. The production contract is deployed separately and its address will be\n      published here and on the raffle page before it accepts a single ticket.",
+   "kind": "block"
+  },
+  "62829cfaa3": {
+   "text": "Every figure on this page was read from Ethereum mainnet on 4 September 2026 and is fixed —\n    this is a record of a completed round, not a live view. Verify any of it on Etherscan.",
+   "kind": "text"
   }
  },
  "occurrences": {
@@ -1376,6 +1836,10 @@
     "kind": "text"
    },
    {
+    "hash": "ac37b40b76",
+    "kind": "text"
+   },
+   {
     "hash": "0381247a69",
     "kind": "text"
    },
@@ -1409,6 +1873,10 @@
    },
    {
     "hash": "8a5cbf4957",
+    "kind": "text"
+   },
+   {
+    "hash": "8bc8671440",
     "kind": "text"
    },
    {
@@ -2092,7 +2560,7 @@
     "kind": "text"
    },
    {
-    "hash": "4006167b45",
+    "hash": "1bd1e4502e",
     "kind": "text"
    },
    {
@@ -2100,7 +2568,7 @@
     "kind": "text"
    },
    {
-    "hash": "b218c139d5",
+    "hash": "367c1cb0da",
     "kind": "text"
    },
    {
@@ -2140,7 +2608,7 @@
     "kind": "text"
    },
    {
-    "hash": "ef4b4e44fa",
+    "hash": "27072e686d",
     "kind": "text"
    },
    {
@@ -2156,7 +2624,7 @@
     "kind": "text"
    },
    {
-    "hash": "15c3d99646",
+    "hash": "1e112acd8f",
     "kind": "block"
    },
    {
@@ -2184,7 +2652,7 @@
     "kind": "text"
    },
    {
-    "hash": "6e58941e2e",
+    "hash": "d3f8a9c0d8",
     "kind": "block"
    },
    {
@@ -2252,7 +2720,7 @@
     "kind": "text"
    },
    {
-    "hash": "4e83bda44c",
+    "hash": "7515b98ce7",
     "kind": "text"
    }
   ],
@@ -2451,6 +2919,22 @@
    },
    {
     "hash": "766e40fff4",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
     "kind": "text"
    },
    {
@@ -2742,7 +3226,7 @@
     "kind": "block"
    },
    {
-    "hash": "9f3ab34f60",
+    "hash": "1c7af64151",
     "kind": "text"
    }
   ],
@@ -3003,6 +3487,498 @@
    },
    {
     "hash": "cf604145b3",
+    "kind": "text"
+   }
+  ],
+  "raffle/index.html": [
+   {
+    "hash": "93d9c6c27b",
+    "kind": "text"
+   },
+   {
+    "hash": "13fa69caef",
+    "kind": "attr"
+   },
+   {
+    "hash": "68b3e230d5",
+    "kind": "text"
+   },
+   {
+    "hash": "762f8dfae8",
+    "kind": "text"
+   },
+   {
+    "hash": "05ab502f18",
+    "kind": "text"
+   },
+   {
+    "hash": "3ad2a4c195",
+    "kind": "text"
+   },
+   {
+    "hash": "a5d04ac952",
+    "kind": "block"
+   },
+   {
+    "hash": "da5935590c",
+    "kind": "text"
+   },
+   {
+    "hash": "17011de7fc",
+    "kind": "text"
+   },
+   {
+    "hash": "ad6a982801",
+    "kind": "text"
+   },
+   {
+    "hash": "80957e66c8",
+    "kind": "text"
+   },
+   {
+    "hash": "ec7b598335",
+    "kind": "text"
+   },
+   {
+    "hash": "3ef939e1a4",
+    "kind": "text"
+   },
+   {
+    "hash": "f2a7793147",
+    "kind": "text"
+   },
+   {
+    "hash": "ea6baf7da4",
+    "kind": "text"
+   },
+   {
+    "hash": "2b9eceb7a8",
+    "kind": "text"
+   },
+   {
+    "hash": "915be879ba",
+    "kind": "text"
+   },
+   {
+    "hash": "f739ad3438",
+    "kind": "text"
+   },
+   {
+    "hash": "ffee40873d",
+    "kind": "text"
+   },
+   {
+    "hash": "0a967aa35f",
+    "kind": "text"
+   },
+   {
+    "hash": "d8889b8d01",
+    "kind": "text"
+   },
+   {
+    "hash": "845588abc8",
+    "kind": "text"
+   },
+   {
+    "hash": "6a89bc62b8",
+    "kind": "text"
+   },
+   {
+    "hash": "029ab12666",
+    "kind": "text"
+   },
+   {
+    "hash": "50d01737cb",
+    "kind": "text"
+   },
+   {
+    "hash": "7612359705",
+    "kind": "text"
+   },
+   {
+    "hash": "5c622a5170",
+    "kind": "text"
+   },
+   {
+    "hash": "84cc517aa7",
+    "kind": "text"
+   },
+   {
+    "hash": "1d50bf1d8b",
+    "kind": "text"
+   },
+   {
+    "hash": "3484071c2a",
+    "kind": "text"
+   },
+   {
+    "hash": "94b88bfd2c",
+    "kind": "text"
+   },
+   {
+    "hash": "a27542f30d",
+    "kind": "text"
+   },
+   {
+    "hash": "f1d8b47782",
+    "kind": "text"
+   },
+   {
+    "hash": "eb400e4c6b",
+    "kind": "text"
+   },
+   {
+    "hash": "0b584d318a",
+    "kind": "text"
+   },
+   {
+    "hash": "d44857be8b",
+    "kind": "text"
+   },
+   {
+    "hash": "17694a3118",
+    "kind": "text"
+   },
+   {
+    "hash": "9c5eb43da6",
+    "kind": "text"
+   },
+   {
+    "hash": "6f305907f3",
+    "kind": "text"
+   },
+   {
+    "hash": "ac6f75260a",
+    "kind": "text"
+   },
+   {
+    "hash": "fc918c7898",
+    "kind": "text"
+   },
+   {
+    "hash": "cbbecb2543",
+    "kind": "text"
+   },
+   {
+    "hash": "1246a21e14",
+    "kind": "text"
+   },
+   {
+    "hash": "16852b8939",
+    "kind": "text"
+   },
+   {
+    "hash": "0c673e1b99",
+    "kind": "block"
+   },
+   {
+    "hash": "7329991faa",
+    "kind": "text"
+   },
+   {
+    "hash": "c9231138c0",
+    "kind": "text"
+   },
+   {
+    "hash": "90ecd3a4b8",
+    "kind": "text"
+   },
+   {
+    "hash": "71c60ea549",
+    "kind": "text"
+   },
+   {
+    "hash": "288df53006",
+    "kind": "text"
+   },
+   {
+    "hash": "ee8b79dc2b",
+    "kind": "text"
+   },
+   {
+    "hash": "b83718146d",
+    "kind": "text"
+   }
+  ],
+  "raffle/proof/index.html": [
+   {
+    "hash": "feb5188993",
+    "kind": "text"
+   },
+   {
+    "hash": "2112e90a39",
+    "kind": "attr"
+   },
+   {
+    "hash": "3b073bae47",
+    "kind": "text"
+   },
+   {
+    "hash": "c6017d5e25",
+    "kind": "text"
+   },
+   {
+    "hash": "74c22d736d",
+    "kind": "text"
+   },
+   {
+    "hash": "3d4dda9a5b",
+    "kind": "text"
+   },
+   {
+    "hash": "c4d32b606f",
+    "kind": "text"
+   },
+   {
+    "hash": "978db0027f",
+    "kind": "text"
+   },
+   {
+    "hash": "55d4cf2a3d",
+    "kind": "text"
+   },
+   {
+    "hash": "3c765682e5",
+    "kind": "text"
+   },
+   {
+    "hash": "a6e9b8fdcf",
+    "kind": "text"
+   },
+   {
+    "hash": "91d3270ce0",
+    "kind": "text"
+   },
+   {
+    "hash": "ecb04c49ea",
+    "kind": "text"
+   },
+   {
+    "hash": "fb712b0cd2",
+    "kind": "text"
+   },
+   {
+    "hash": "285916728f",
+    "kind": "text"
+   },
+   {
+    "hash": "a587c0fb6d",
+    "kind": "text"
+   },
+   {
+    "hash": "128a7e19c1",
+    "kind": "text"
+   },
+   {
+    "hash": "e7cde6e8e9",
+    "kind": "text"
+   },
+   {
+    "hash": "f6b830c1a9",
+    "kind": "text"
+   },
+   {
+    "hash": "dc416e1088",
+    "kind": "text"
+   },
+   {
+    "hash": "a37956d7b1",
+    "kind": "text"
+   },
+   {
+    "hash": "f0c868c4d8",
+    "kind": "text"
+   },
+   {
+    "hash": "59d97307c6",
+    "kind": "text"
+   },
+   {
+    "hash": "19cb9b98e9",
+    "kind": "text"
+   },
+   {
+    "hash": "c6f08c91b2",
+    "kind": "text"
+   },
+   {
+    "hash": "9c4c3f22bc",
+    "kind": "text"
+   },
+   {
+    "hash": "d85b0425a9",
+    "kind": "text"
+   },
+   {
+    "hash": "575512e925",
+    "kind": "text"
+   },
+   {
+    "hash": "2a414271c2",
+    "kind": "block"
+   },
+   {
+    "hash": "5b0f7590d0",
+    "kind": "text"
+   },
+   {
+    "hash": "93fb329e78",
+    "kind": "text"
+   },
+   {
+    "hash": "1f7aeb800a",
+    "kind": "text"
+   },
+   {
+    "hash": "fa5806a7df",
+    "kind": "text"
+   },
+   {
+    "hash": "0662e1abce",
+    "kind": "text"
+   },
+   {
+    "hash": "08975e9248",
+    "kind": "text"
+   },
+   {
+    "hash": "f050927fbf",
+    "kind": "text"
+   },
+   {
+    "hash": "791fb04069",
+    "kind": "text"
+   },
+   {
+    "hash": "c72e0fa8bf",
+    "kind": "text"
+   },
+   {
+    "hash": "1cc6b73452",
+    "kind": "text"
+   },
+   {
+    "hash": "a58dc55350",
+    "kind": "text"
+   },
+   {
+    "hash": "841b525e81",
+    "kind": "text"
+   },
+   {
+    "hash": "cc0b7f3c49",
+    "kind": "text"
+   },
+   {
+    "hash": "bc405418bf",
+    "kind": "block"
+   },
+   {
+    "hash": "4029518de9",
+    "kind": "block"
+   },
+   {
+    "hash": "4aed03cac4",
+    "kind": "text"
+   },
+   {
+    "hash": "64feecd068",
+    "kind": "text"
+   },
+   {
+    "hash": "6b68f1f950",
+    "kind": "text"
+   },
+   {
+    "hash": "0ffd9d8e4e",
+    "kind": "text"
+   },
+   {
+    "hash": "e27d124ef4",
+    "kind": "text"
+   },
+   {
+    "hash": "e188b71f1f",
+    "kind": "text"
+   },
+   {
+    "hash": "2f4f6b627a",
+    "kind": "text"
+   },
+   {
+    "hash": "679c69f027",
+    "kind": "block"
+   },
+   {
+    "hash": "a96ae859f3",
+    "kind": "text"
+   },
+   {
+    "hash": "207fdec061",
+    "kind": "text"
+   },
+   {
+    "hash": "abfdf5fccf",
+    "kind": "text"
+   },
+   {
+    "hash": "8973ce098e",
+    "kind": "text"
+   },
+   {
+    "hash": "7e1cf0e58d",
+    "kind": "text"
+   },
+   {
+    "hash": "5ca4fe837f",
+    "kind": "text"
+   },
+   {
+    "hash": "7fe0a98552",
+    "kind": "text"
+   },
+   {
+    "hash": "eba40decde",
+    "kind": "text"
+   },
+   {
+    "hash": "7bb9d257a0",
+    "kind": "text"
+   },
+   {
+    "hash": "32767bc87c",
+    "kind": "text"
+   },
+   {
+    "hash": "97211a8888",
+    "kind": "text"
+   },
+   {
+    "hash": "d70f93df5e",
+    "kind": "text"
+   },
+   {
+    "hash": "07be2ac4ae",
+    "kind": "text"
+   },
+   {
+    "hash": "68f8bf5fc1",
+    "kind": "text"
+   },
+   {
+    "hash": "17011de7fc",
+    "kind": "text"
+   },
+   {
+    "hash": "ff5024d10d",
+    "kind": "text"
+   },
+   {
+    "hash": "d8b55c8114",
+    "kind": "block"
+   },
+   {
+    "hash": "62829cfaa3",
     "kind": "text"
    }
   ]

@@ -10,6 +10,7 @@ ROOT = os.path.dirname(HERE)
 SITE = ROOT
 sys.path.insert(0, HERE)
 from site_i18n import locate, render, h
+from finalize import strip_generated
 
 PAGES = ["index.html", "claim/index.html", "dao/index.html",
          "leaderboard/index.html", "memes/index.html", "memes/gallery/index.html",
@@ -18,7 +19,10 @@ PAGES = ["index.html", "claim/index.html", "dao/index.html",
 def extract():
     strings, occ = {}, {}
     for p in PAGES:
-        src = open(os.path.join(SITE, p), encoding="utf-8").read()
+        # Extract from the SOURCE, not from a previous build's output. The
+        # language bar is generated, and its flag titles ("Français",
+        # "Deutsch") would otherwise be pulled in as translatable copy.
+        src = strip_generated(open(os.path.join(SITE, p), encoding="utf-8").read())
         spans = locate(src)
         rows = []
         for s in spans:

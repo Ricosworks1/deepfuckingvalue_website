@@ -8,8 +8,8 @@
 <link rel="alternate" hreflang="vi" href="https://dfv.fun/vi/raffle/">
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/"><!--/i18n:head-->
-<title>The raffle — DFV</title>
-<meta name="description" content="Ten thousand tickets, one hundred winners, drawn by Chainlink. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.">
+<title>El sorteo — DFV</title>
+<meta name="description" content="Diez mil boletos, cien ganadores, sorteados por Chainlink. Sin admin, sin pausa, sin manera de elegir a los ganadores. Mira el ensayo en mainnet.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -133,133 +133,117 @@
 
   <a class="back" href="/es/">← Volver a dfv.fun</a>
 
-  <h1>The raffle</h1>
+  <h1>El sorteo</h1>
   <p class="sub">
-    Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink — a Rolex and
-    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its
-    own. Nobody can stop it, delay it, or choose who wins.
+    Diez mil boletos a 100 USDC. Cien ganadores sorteados por Chainlink: un Rolex y noventa y nueve premios en efectivo de 4.000 USDC. En cuanto se vende el último boleto, el sorteo se ejecuta solo. Nadie puede pararlo, retrasarlo ni elegir quién gana.
   </p>
 
   <!-- ===== live round ===== -->
-  <div id="live-area" hidden>
+  <div id="live-area">
     <section>
-      <h2>This round</h2>
+      <h2>Esta ronda</h2>
       <div class="track"><div class="fill" id="r-fill" style="width:0%"></div></div>
       <p style="font-size:.9375rem;color:var(--ink-soft)">
-        <span id="r-sold">—</span> of <span id="r-total">—</span> tickets sold
-        (<span id="r-pct">—</span>) · <span id="r-left">—</span> left
+        <span id="r-sold">0</span> of <span id="r-total">10,000</span> tickets sold
+        (<span id="r-pct">0.0%</span>) · <span id="r-left">10,000</span> left
       </p>
 
       <dl class="grid">
-        <div class="cell"><dt>Ticket price</dt><dd><span id="r-price">—</span></dd><span class="sub2">USDC</span></div>
-        <div class="cell"><dt>In the pot</dt><dd><span id="r-pot">—</span></dd><span class="sub2">USDC collected so far</span></div>
-        <div class="cell"><dt>Round</dt><dd>#<span id="r-round">—</span></dd><span class="sub2">rounds run back to back</span></div>
+        <div class="cell"><dt>Precio del boleto</dt><dd><span id="r-price">100.00</span></dd><span class="sub2">USDC</span></div>
+        <div class="cell"><dt>En el bote</dt><dd><span id="r-pot">0</span></dd><span class="sub2">USDC recaudados hasta ahora</span></div>
+        <div class="cell"><dt>Ronda</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">rondas encadenadas</span></div>
       </dl>
 
       <div class="status" id="draw-note" hidden>
-        <strong>The draw is running.</strong> Chainlink is producing the randomness for this
-        round. Entries reopen automatically with the next one.
+        <strong>El sorteo está en marcha.</strong> Chainlink está generando la aleatoriedad de esta ronda. La participación se reabre automáticamente con la siguiente.
       </div>
     </section>
 
     <section>
-      <h2>Enter</h2>
+      <h2>Participar</h2>
+
+      <div class="status" id="preview-note">
+        <strong>Preview.</strong> This is exactly how entering will work. The
+        buttons are switched off until the contract is deployed and audited —
+        there is nothing yet for them to send a transaction to.
+      </div>
+
       <div class="panel">
-        <button class="btn" type="button" id="connect">Conectar wallet</button>
+        <button class="btn" type="button" id="connect" disabled>Conectar wallet</button>
         <div class="msg" id="connect-msg" hidden></div>
 
         <dl class="kv" id="you" hidden>
           <dt>Tu dirección</dt><dd id="you-addr">—</dd>
-          <dt>Your tickets this round</dt><dd id="you-tickets">—</dd>
-          <dt>Your USDC</dt><dd id="you-usdc">—</dd>
+          <dt>Tus boletos en esta ronda</dt><dd id="you-tickets">—</dd>
+          <dt>Tus USDC</dt><dd id="you-usdc">—</dd>
         </dl>
 
         <div id="buy-area" hidden>
-          <label for="count">How many tickets?</label>
-          <input type="text" id="count" inputmode="numeric" placeholder="1" spellcheck="false">
+          <label for="count">¿Cuántos boletos?</label>
+          <input type="text" id="count" inputmode="numeric" placeholder="1" spellcheck="false" disabled>
           <div class="msg" id="quote" hidden></div>
           <div class="actions">
-            <button class="btn" type="button" id="buy">Buy tickets</button>
+            <button class="btn" type="button" id="buy" disabled>Comprar boletos</button>
           </div>
           <div class="msg" id="buy-msg" hidden></div>
         </div>
       </div>
       <p style="margin-top:1rem;font-size:.9375rem;color:var(--ink-soft)">
-        Buying takes two transactions: approving the exact USDC these tickets cost, then the
-        purchase itself. The approval is never unlimited, and this page can send no other
-        transaction of any kind.
+        Comprar requiere dos transacciones: aprobar exactamente los USDC que cuestan estos boletos y luego la compra en sí. La aprobación nunca es ilimitada, y esta página no puede enviar ninguna otra transacción de ningún tipo.
       </p>
     </section>
   </div>
 
   <section>
-    <h2>How a round works</h2>
+    <h2>Cómo funciona una ronda</h2>
     <dl class="grid">
-      <div class="cell"><dt>Tickets</dt><dd>10,000</dd><span class="sub2">100 USDC each</span></div>
-      <div class="cell"><dt>Winners</dt><dd>100</dd><span class="sub2">1 watch + 99 cash</span></div>
-      <div class="cell"><dt>Cash prize</dt><dd>4,000</dd><span class="sub2">USDC, to each of 99</span></div>
-      <div class="cell"><dt>Odds</dt><dd>1 in 100</dd><span class="sub2">per ticket</span></div>
+      <div class="cell"><dt>Boletos</dt><dd>10,000</dd><span class="sub2">100 USDC cada uno</span></div>
+      <div class="cell"><dt>Ganadores</dt><dd>100</dd><span class="sub2">1 reloj + 99 en efectivo</span></div>
+      <div class="cell"><dt>Premio en efectivo</dt><dd>4,000</dd><span class="sub2">USDC, para cada uno de los 99</span></div>
+      <div class="cell"><dt>Probabilidad</dt><dd>1 entre 100</dd><span class="sub2">por boleto</span></div>
     </dl>
 
     <div class="odds">
       <div>
-        <h3>It draws itself</h3>
-        <p>The moment the last ticket sells, or six months after the first one, the draw
-        triggers. Anyone can trigger it, and a keeper does it automatically — so it does not
-        depend on us being awake, or willing.</p>
+        <h3>Se sortea solo</h3>
+        <p>En cuanto se vende el último boleto, o seis meses después del primero, el sorteo se dispara. Cualquiera puede dispararlo, y un keeper lo hace automáticamente, así que no depende de que estemos despiertos ni dispuestos.</p>
       </div>
       <div>
-        <h3>Nobody picks the winners</h3>
-        <p>Chainlink VRF produces the randomness with a proof that is checked on-chain before
-        the contract can use it. We deliberately do not use block data, which a miner could
-        re-roll.</p>
+        <h3>Nadie elige a los ganadores</h3>
+        <p>Chainlink VRF genera la aleatoriedad con una prueba que se verifica on-chain antes de que el contrato pueda usarla. Deliberadamente no usamos datos del bloque, que un minero podría volver a tirar.</p>
       </div>
       <div>
-        <h3>There is no admin</h3>
-        <p>No owner, no pause, no upgrade, no withdrawal function. The house address is fixed
-        at deployment and no code path sends USDC anywhere else. Nothing can be changed
-        afterwards — including by us.</p>
+        <h3>No hay admin</h3>
+        <p>Sin owner, sin pausa, sin actualización, sin función de retirada. La dirección de la casa queda fijada en el despliegue y ningún camino del código envía USDC a otro sitio. Después no se puede cambiar nada, ni siquiera nosotros.</p>
       </div>
       <div>
-        <h3>You can always take your prize</h3>
-        <p>Prizes are paid out in batches automatically, but if that ever stops, a winner can
-        pull their own prize directly from the contract at any time. It does not expire.</p>
+        <h3>Siempre puedes cobrar tu premio</h3>
+        <p>Los premios se pagan automáticamente por lotes, pero si eso llegara a pararse, un ganador puede retirar su premio directamente del contrato cuando quiera. No caduca.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Where the money goes</h2>
+    <h2>Adónde va el dinero</h2>
+    <p><strong>El 40,8 % de todo lo recaudado vuelve a salir en premios</strong>: el reloj más los noventa y nueve premios en efectivo. El resto es de la casa. Esa parte está fijada en el contrato y no se puede cambiar.</p>
     <p>
-      <strong>40.8% of everything collected is paid back out as prizes</strong> — the watch plus
-      the ninety-nine cash prizes. The rest is the house's. That share is fixed in the contract
-      and cannot be changed.
-    </p>
-    <p>
-      This holds whether the round fills or not. A round that sells nine thousand tickets pays
-      the same 40.8%, scaled down, so nobody gains from a round failing to fill. Below 500
-      tickets the round is cancelled instead and buyers take back 80% of what they paid.
+      Esto vale tanto si la ronda se llena como si no. Una ronda que venda nueve mil boletos paga el mismo 40,8 %, a escala, así que nadie gana con que una ronda no se llene. Por debajo de 500 boletos la ronda se cancela y los compradores recuperan el 80 % de lo que pagaron.
     </p>
     <div class="status">
-      <strong>Be clear-eyed about this.</strong> A raffle is not an investment. Most tickets win
-      nothing, and the expected return on a ticket is less than what you paid for it. Only buy
-      what you are happy to lose.
+      <strong>Ten esto muy claro.</strong> Un sorteo no es una inversión. La mayoría de los boletos no gana nada, y el retorno esperado de un boleto es menor que lo que pagaste por él. Compra solo lo que estés dispuesto a perder.
     </div>
   </section>
 
   <section>
-    <h2>It has already been run, with real money</h2>
+    <h2>Ya se ha ejecutado, con dinero real</h2>
     <p>
-      Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of
-      the size — real USDC, real Chainlink randomness, our own money. Two thousand tickets,
-      one hundred winners, every prize delivered, nothing left in the contract.
+      Antes de abrir, ejecutamos una ronda completa en la mainnet de Ethereum a una cincuentamilésima parte del tamaño: USDC real, aleatoriedad real de Chainlink, nuestro propio dinero. Dos mil boletos, cien ganadores, todos los premios entregados, nada quedó en el contrato.
     </p>
-    <p><a href="/raffle/proof/"><strong>See the rehearsal, transaction by transaction →</strong></a></p>
+    <p><a href="/raffle/proof/"><strong>Ver el ensayo, transacción a transacción →</strong></a></p>
   </section>
 
   <footer>
-    Round figures are read live from Ethereum mainnet through your own wallet — this page makes
-    no network requests of its own. The raffle is unaudited and not yet open.
+    Las cifras de la ronda se leen en vivo de la mainnet de Ethereum a través de tu propia cartera; esta página no hace ninguna petición de red por su cuenta. El sorteo no está auditado y todavía no está abierto.
   </footer>
 
 </div>

@@ -289,6 +289,30 @@ def translations():
                 dig_bad.append((lock[k]["text"][:44], cat[k][:44]))
         R.check(f"{l['code']}: large on-chain figures unaltered", not dig_bad, str(dig_bad[:2]))
 
+    # A page can exist, validate, and still be entirely in English — which is
+    # what happened when /raffle/ and /raffle/proof/ were added to PAGES but
+    # never sent to a translator. Structure checks all passed while a French
+    # visitor got an English page under a French URL.
+    #
+    # A string deliberately left in English (a brand name, an address) is
+    # PRESENT in the catalogue and equal to the source. A string that was never
+    # translated is ABSENT from it. That distinction is exact, so no percentage
+    # threshold is needed.
+    from finalize import strip_generated
+    untranslated = []
+    for l in LANGS:
+        if l["code"] == "en": continue
+        cat = json.load(open(os.path.join(HERE, f"catalogue.{l['code']}.json"), encoding="utf-8"))
+        for page in PAGES:
+            src = strip_generated(read(os.path.join(SITE, page)))
+            spans = __import__("site_i18n").locate(src)
+            if not spans: continue
+            absent = [sp for sp in spans if hashlib.sha1(sp["text"].encode()).hexdigest()[:10] not in cat]
+            if len(absent) > len(spans) * 0.5:
+                untranslated.append((page, l["code"], f"{len(absent)}/{len(spans)} strings never sent to a translator"))
+    R.check("no page is missing from the translation catalogues", not untranslated,
+            "" if not untranslated else f"{len(untranslated)} page/language pairs: {untranslated[:3]}")
+
     # <option value="..."> must never be translated: the JS compares against it
     sitemod = __import__("site_i18n")
     src = read(os.path.join(SITE, "memes/index.html"))
