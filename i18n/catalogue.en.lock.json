@@ -8,12 +8,40 @@
    "text": "A fair and transparent meme coin that radically revolutionizes crypto tokenomics. 138.84 billion DFV, 84.51% in public liquidity, every number verifiable on-chain.",
    "kind": "attr"
   },
-  "2d62a16755": {
-   "text": "Vesting claims open in",
-   "kind": "text"
+  "fac78ea276": {
+   "text": "Vesting claims are open",
+   "kind": "attr"
+  },
+  "6990f01ad9": {
+   "text": "LIVE",
+   "kind": "attr"
+  },
+  "67310edc41": {
+   "text": "claim now",
+   "kind": "attr"
+  },
+  "a2620cbc10": {
+   "text": "day",
+   "kind": "attr"
   },
   "5548ae4f34": {
    "text": "days",
+   "kind": "attr"
+  },
+  "a23c4292a1": {
+   "text": "hrs",
+   "kind": "attr"
+  },
+  "b6c935d4f3": {
+   "text": "min",
+   "kind": "attr"
+  },
+  "920a25ef68": {
+   "text": "sec",
+   "kind": "attr"
+  },
+  "2d62a16755": {
+   "text": "Vesting claims open in",
    "kind": "text"
   },
   "0a5dc1533c": {
@@ -1332,17 +1360,21 @@
    "text": "The raffle — DFV",
    "kind": "text"
   },
-  "13fa69caef": {
-   "text": "Ten thousand tickets, one hundred winners, drawn by Chainlink. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.",
+  "6d1d7b395d": {
+   "text": "Ten thousand tickets, one hundred winners, drawn by Chainlink VRF. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.",
    "kind": "attr"
   },
   "762f8dfae8": {
    "text": "The raffle",
    "kind": "text"
   },
-  "05ab502f18": {
-   "text": "Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink — a Rolex and\n    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its\n    own. Nobody can stop it, delay it, or choose who wins.",
+  "94960a7794": {
+   "text": "Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF — a Rolex and\n    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its\n    own. Nobody can stop it, delay it, or choose who wins.",
    "kind": "text"
+  },
+  "25b74b6339": {
+   "text": "The DFV cat in red glasses over the Singapore skyline at dusk, beside the words: onchain raffle with Chainlink VRF on Ethereum mainnet, for Token 2049 Singapore.",
+   "kind": "attr"
   },
   "3ad2a4c195": {
    "text": "This round",
@@ -1376,8 +1408,8 @@
    "text": "The draw is running.",
    "kind": "text"
   },
-  "ea6baf7da4": {
-   "text": "Chainlink is producing the randomness for this\n        round. Entries reopen automatically with the next one.",
+  "4786568b69": {
+   "text": "Chainlink VRF is producing the randomness for this\n        round. Entries reopen automatically with the next one.",
    "kind": "text"
   },
   "2b9eceb7a8": {
@@ -1390,6 +1422,10 @@
   },
   "f739ad3438": {
    "text": "This is exactly how entering will work. The\n        buttons are switched off until the contract is deployed and audited —\n        there is nothing yet for them to send a transaction to.",
+   "kind": "text"
+  },
+  "6faa30941b": {
+   "text": "connect to see",
    "kind": "text"
   },
   "d8889b8d01": {
@@ -1508,8 +1544,8 @@
    "text": "It has already been run, with real money",
    "kind": "text"
   },
-  "288df53006": {
-   "text": "Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of\n      the size — real USDC, real Chainlink randomness, our own money. Two thousand tickets,\n      one hundred winners, every prize delivered, nothing left in the contract.",
+  "f39db6e603": {
+   "text": "Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of\n      the size — real USDC, real Chainlink VRF randomness, our own money. Two thousand tickets,\n      one hundred winners, every prize delivered, nothing left in the contract.",
    "kind": "text"
   },
   "ee8b79dc2b": {
@@ -1524,8 +1560,8 @@
    "text": "The rehearsal — DFV Raffle",
    "kind": "text"
   },
-  "2112e90a39": {
-   "text": "A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink randomness, before the raffle took a single real entry. Every transaction is public.",
+  "56050afb47": {
+   "text": "A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink VRF randomness, before the raffle took a single real entry. Every transaction is public.",
    "kind": "attr"
   },
   "3b073bae47": {
@@ -1536,8 +1572,8 @@
    "text": "The rehearsal",
    "kind": "text"
   },
-  "74c22d736d": {
-   "text": "Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet\n    with our own money — real USDC, real Chainlink randomness, at one fifty-thousandth of the\n    size. It worked. Every transaction below is on the public chain and you can open all of them.",
+  "6a77db25c5": {
+   "text": "Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet\n    with our own money — real USDC, real Chainlink VRF randomness, at one fifty-thousandth of the\n    size. It worked. Every transaction below is on the public chain and you can open all of them.",
    "kind": "text"
   },
   "3d4dda9a5b": {
@@ -1612,8 +1648,8 @@
    "text": "2,000 tickets, 20.00 USDC in total",
    "kind": "text"
   },
-  "c6f08c91b2": {
-   "text": "Draw requested from Chainlink",
+  "34587b29eb": {
+   "text": "Draw requested from Chainlink VRF",
    "kind": "text"
   },
   "9c4c3f22bc": {
@@ -1688,8 +1724,8 @@
    "text": "Winners are drawn by <0>Chainlink VRF v2.5</0>, which produces a random number\n      together with a cryptographic proof that it was not tampered with. The proof is verified\n      on-chain before our contract is allowed to use it. Nobody — not us, not a miner, not\n      Chainlink — can pick the winners.",
    "kind": "block"
   },
-  "4029518de9": {
-   "text": "We deliberately do <0>not</0> use block data for this. A block proposer can see values\n      like <1>prevrandao</1> before publishing, and could quietly re-roll a\n      draw worth a million dollars. Chainlink costs more and is worth it.",
+  "6c5ace0649": {
+   "text": "We deliberately do <0>not</0> use block data for this. A block proposer can see values\n      like <1>prevrandao</1> before publishing, and could quietly re-roll a\n      draw worth a million dollars. Chainlink VRF costs more and is worth it.",
    "kind": "block"
   },
   "4aed03cac4": {
@@ -1789,6 +1825,38 @@
    },
    {
     "hash": "3e5f502f9a",
+    "kind": "attr"
+   },
+   {
+    "hash": "fac78ea276",
+    "kind": "attr"
+   },
+   {
+    "hash": "6990f01ad9",
+    "kind": "attr"
+   },
+   {
+    "hash": "67310edc41",
+    "kind": "attr"
+   },
+   {
+    "hash": "a2620cbc10",
+    "kind": "attr"
+   },
+   {
+    "hash": "5548ae4f34",
+    "kind": "attr"
+   },
+   {
+    "hash": "a23c4292a1",
+    "kind": "attr"
+   },
+   {
+    "hash": "b6c935d4f3",
+    "kind": "attr"
+   },
+   {
+    "hash": "920a25ef68",
     "kind": "attr"
    },
    {
@@ -3496,7 +3564,7 @@
     "kind": "text"
    },
    {
-    "hash": "13fa69caef",
+    "hash": "6d1d7b395d",
     "kind": "attr"
    },
    {
@@ -3508,8 +3576,12 @@
     "kind": "text"
    },
    {
-    "hash": "05ab502f18",
+    "hash": "94960a7794",
     "kind": "text"
+   },
+   {
+    "hash": "25b74b6339",
+    "kind": "attr"
    },
    {
     "hash": "3ad2a4c195",
@@ -3548,7 +3620,7 @@
     "kind": "text"
    },
    {
-    "hash": "ea6baf7da4",
+    "hash": "4786568b69",
     "kind": "text"
    },
    {
@@ -3572,11 +3644,23 @@
     "kind": "text"
    },
    {
+    "hash": "6faa30941b",
+    "kind": "text"
+   },
+   {
     "hash": "d8889b8d01",
     "kind": "text"
    },
    {
+    "hash": "6faa30941b",
+    "kind": "text"
+   },
+   {
     "hash": "845588abc8",
+    "kind": "text"
+   },
+   {
+    "hash": "6faa30941b",
     "kind": "text"
    },
    {
@@ -3688,7 +3772,7 @@
     "kind": "text"
    },
    {
-    "hash": "288df53006",
+    "hash": "f39db6e603",
     "kind": "text"
    },
    {
@@ -3706,7 +3790,7 @@
     "kind": "text"
    },
    {
-    "hash": "2112e90a39",
+    "hash": "56050afb47",
     "kind": "attr"
    },
    {
@@ -3718,7 +3802,7 @@
     "kind": "text"
    },
    {
-    "hash": "74c22d736d",
+    "hash": "6a77db25c5",
     "kind": "text"
    },
    {
@@ -3798,7 +3882,7 @@
     "kind": "text"
    },
    {
-    "hash": "c6f08c91b2",
+    "hash": "34587b29eb",
     "kind": "text"
    },
    {
@@ -3874,7 +3958,7 @@
     "kind": "block"
    },
    {
-    "hash": "4029518de9",
+    "hash": "6c5ace0649",
     "kind": "block"
    },
    {

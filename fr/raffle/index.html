@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/"><!--/i18n:head-->
 <title>La tombola — DFV</title>
-<meta name="description" content="Ten thousand tickets, one hundred winners, drawn by Chainlink VRF. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.">
+<meta name="description" content="Dix mille billets, cent gagnants, tirés par Chainlink VRF. Aucun admin, aucune pause, aucun moyen de choisir les gagnants. Voir la répétition sur le mainnet.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -142,23 +142,18 @@
 
   <h1>La tombola</h1>
   <p class="sub">
-    Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF — a Rolex and
-    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its
-    own. Nobody can stop it, delay it, or choose who wins.
+    Dix mille billets à 100 USDC. Cent gagnants tirés par Chainlink VRF — une Rolex et quatre-vingt-dix-neuf lots de 4 000 USDC. Dès que le dernier billet part, le tirage se déclenche tout seul. Personne ne peut l'arrêter, le retarder, ni choisir qui gagne.
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
-       alt="The DFV cat in red glasses over the Singapore skyline at dusk, beside the words: onchain raffle with Chainlink VRF on Ethereum mainnet, for Token 2049 Singapore.">
+       alt="Le chat DFV à lunettes rouges devant les gratte-ciel de Singapour au crépuscule, à côté des mots : tombola on-chain avec Chainlink VRF sur le mainnet Ethereum, pour Token 2049 Singapour.">
 
   <!-- ===== live round ===== -->
   <div id="live-area">
     <section>
       <h2>Ce tour</h2>
       <div class="track"><div class="fill" id="r-fill" style="width:0%"></div></div>
-      <p style="font-size:.9375rem;color:var(--ink-soft)">
-        <span id="r-sold">0</span> of <span id="r-total">10,000</span> tickets sold
-        (<span id="r-pct">0.0%</span>) · <span id="r-left">10,000</span> left
-      </p>
+      <p style="font-size:.9375rem;color:var(--ink-soft)"><span id="r-sold">0</span> sur <span id="r-total">10 000</span> billets vendus (<span id="r-pct">0,0 %</span>) · <span id="r-left">10 000</span> restants</p>
 
       <dl class="grid">
         <div class="cell"><dt>Prix du billet</dt><dd><span id="r-price">100.00</span></dd><span class="sub2">USDC</span></div>
@@ -167,8 +162,7 @@
       </dl>
 
       <div class="status" id="draw-note" hidden>
-        <strong>Le tirage est en cours.</strong> Chainlink VRF is producing the randomness for this
-        round. Entries reopen automatically with the next one.
+        <strong>Le tirage est en cours.</strong> Chainlink VRF produit l'aléa pour ce tour. Les inscriptions rouvrent automatiquement au tour suivant.
       </div>
     </section>
 
@@ -176,9 +170,7 @@
       <h2>Participer</h2>
 
       <div class="status" id="preview-note">
-        <strong>Preview.</strong> This is exactly how entering will work. The
-        buttons are switched off until the contract is deployed and audited —
-        there is nothing yet for them to send a transaction to.
+        <strong>Aperçu.</strong> C'est exactement ainsi que se passera la participation. Les boutons sont désactivés tant que le contrat n'est pas déployé et audité — il n'y a encore rien vers quoi envoyer une transaction.
       </div>
 
       <div class="panel">
@@ -186,9 +178,9 @@
         <div class="msg" id="connect-msg" hidden></div>
 
         <dl class="kv" id="you" hidden>
-          <dt>Votre adresse</dt><dd id="you-addr">connect to see</dd>
-          <dt>Vos billets pour ce tour</dt><dd id="you-tickets">connect to see</dd>
-          <dt>Vos USDC</dt><dd id="you-usdc">connect to see</dd>
+          <dt>Votre adresse</dt><dd id="you-addr">connectez-vous pour voir</dd>
+          <dt>Vos billets pour ce tour</dt><dd id="you-tickets">connectez-vous pour voir</dd>
+          <dt>Vos USDC</dt><dd id="you-usdc">connectez-vous pour voir</dd>
         </dl>
 
         <div id="buy-area" hidden>
@@ -250,9 +242,7 @@
   <section>
     <h2>Elle a déjà tourné, avec de l'argent réel</h2>
     <p>
-      Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of
-      the size — real USDC, real Chainlink VRF randomness, our own money. Two thousand tickets,
-      one hundred winners, every prize delivered, nothing left in the contract.
+      Avant l'ouverture, nous avons fait tourner un tour complet sur le mainnet Ethereum à un cinquante-millième de la taille — de vrais USDC, un vrai aléa Chainlink VRF, notre propre argent. Deux mille billets, cent gagnants, chaque lot livré, rien laissé dans le contrat.
     </p>
     <p><a href="/fr/raffle/proof/"><strong>Voir la répétition, transaction par transaction →</strong></a></p>
   </section>

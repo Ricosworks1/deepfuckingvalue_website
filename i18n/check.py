@@ -355,6 +355,43 @@ def equivalence():
             if len(en_alt) != len(tr_alt): miss.append((p, l["code"], "count differs"))
     R.check("every image keeps its alt text in every language", not miss, str(miss[:3]))
 
+# ===================================================== 7b. SCRIPTS AND MARKUP
+def scripts():
+    print("\n\033[1m7b. Scripts must not hardcode display text\033[0m")
+    # countdown.js runs on every page in every language. It used to assign
+    # 'Vesting claims are open' straight to textContent, overwriting the
+    # translated markup with English a millisecond after load — visible on
+    # every page, in every language, and invisible to every other check here.
+    # Words it writes must come from data-t-* attributes in the markup.
+    bad = []
+    for js in ["assets/countdown.js"]:
+        src = read(os.path.join(SITE, js))
+        src = re.sub(r"/\*.*?\*/", "", src, flags=re.S)
+        src = re.sub(r"^\s*//.*$", "", src, flags=re.M)
+        for m in re.finditer(r"textContent\s*=\s*['\"]([^'\"]{2,})['\"]", src):
+            bad.append((js, m.group(1)[:40]))
+        # a bare word passed as a unit label, rather than t(...)
+        for m in re.finditer(r"unit\([^)]*?['\"]([A-Za-z][A-Za-z ]{1,20})['\"]", src):
+            if "t(" not in m.group(0):
+                bad.append((js, f"unit label {m.group(1)!r}"))
+    R.check("no script assigns a hardcoded string to textContent", not bad, str(bad[:4]))
+
+    # Locale-aware number formatting: hardcoding en-US put "20,828,377,491.30"
+    # beside French copy reading "20 828 377 491,30".
+    hard = []
+    for js in ["assets/countdown.js"]:
+        if re.search(r"toLocaleString\(\s*['\"]en-US['\"]", read(os.path.join(SITE, js))):
+            hard.append(js)
+    R.check("numbers are formatted for the page's language, not en-US", not hard, str(hard))
+
+    # Every data-t-* attribute a script reads must exist in the markup.
+    used = set(re.findall(r"(?<![A-Za-z])t\('(\w+)'", read(os.path.join(SITE, "assets/countdown.js"))))
+    def camel_to_attr(c):
+        return "data-" + re.sub(r"(?<!^)(?=[A-Z])", "-", c).lower()
+    idx = read(os.path.join(SITE, "index.html"))
+    missing = [c for c in used if camel_to_attr(c) + '="' not in idx]
+    R.check("every data-t-* the script reads is present in the markup", not missing, str(missing))
+
 # =============================================================== 8. BUILD
 def build_is_idempotent():
     print("\n\033[1m8. Build\033[0m")
@@ -381,6 +418,7 @@ CHECKLIST = [
     ("5. Fonts", fonts),
     ("6. Translation integrity", translations),
     ("7. Content equivalence", equivalence),
+    ("7b. Scripts", scripts),
     ("8. Build", build_is_idempotent),
 ]
 

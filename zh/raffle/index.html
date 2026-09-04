@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/"><!--/i18n:head-->
 <title>抽奖 — DFV</title>
-<meta name="description" content="Ten thousand tickets, one hundred winners, drawn by Chainlink VRF. No admin, no pause, no way to pick the winners. See the mainnet rehearsal.">
+<meta name="description" content="一万张券，一百位中奖者，由 Chainlink VRF 开出。没有管理员，没有暂停，没有任何办法挑选中奖者。看看主网预演。">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -142,23 +142,18 @@
 
   <h1>抽奖</h1>
   <p class="sub">
-    Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF — a Rolex and
-    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its
-    own. Nobody can stop it, delay it, or choose who wins.
+    一万张券，每张 100 USDC。一百位中奖者由 Chainlink VRF 开出——一只劳力士，外加九十九份 4,000 USDC 的现金奖。最后一张券卖出的那一刻，开奖自动发生。没有人能叫停它、拖延它，或者决定谁中奖。
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
-       alt="The DFV cat in red glasses over the Singapore skyline at dusk, beside the words: onchain raffle with Chainlink VRF on Ethereum mainnet, for Token 2049 Singapore.">
+       alt="戴红框眼镜的 DFV 猫站在黄昏时分的新加坡天际线前，旁边写着：以太坊主网上、由 Chainlink VRF 驱动的链上抽奖，为 Token 2049 新加坡而设。">
 
   <!-- ===== live round ===== -->
   <div id="live-area">
     <section>
       <h2>本轮</h2>
       <div class="track"><div class="fill" id="r-fill" style="width:0%"></div></div>
-      <p style="font-size:.9375rem;color:var(--ink-soft)">
-        <span id="r-sold">0</span> of <span id="r-total">10,000</span> tickets sold
-        (<span id="r-pct">0.0%</span>) · <span id="r-left">10,000</span> left
-      </p>
+      <p style="font-size:.9375rem;color:var(--ink-soft)">已售 <span id="r-sold">0</span> / <span id="r-total">10,000</span> 张券（<span id="r-pct">0.0%</span>）· 剩余 <span id="r-left">10,000</span></p>
 
       <dl class="grid">
         <div class="cell"><dt>券价</dt><dd><span id="r-price">100.00</span></dd><span class="sub2">USDC</span></div>
@@ -167,8 +162,7 @@
       </dl>
 
       <div class="status" id="draw-note" hidden>
-        <strong>正在开奖。</strong> Chainlink VRF is producing the randomness for this
-        round. Entries reopen automatically with the next one.
+        <strong>正在开奖。</strong> Chainlink VRF 正在为本轮生成随机数。下一轮会自动重新开放参与。
       </div>
     </section>
 
@@ -176,9 +170,7 @@
       <h2>参与</h2>
 
       <div class="status" id="preview-note">
-        <strong>Preview.</strong> This is exactly how entering will work. The
-        buttons are switched off until the contract is deployed and audited —
-        there is nothing yet for them to send a transaction to.
+        <strong>预览。</strong> 参与的流程就是这样。在合约部署并完成审计之前，这些按钮是关闭的——目前还没有任何地方可以让它们发送交易。
       </div>
 
       <div class="panel">
@@ -186,9 +178,9 @@
         <div class="msg" id="connect-msg" hidden></div>
 
         <dl class="kv" id="you" hidden>
-          <dt>你的地址</dt><dd id="you-addr">connect to see</dd>
-          <dt>你本轮的券</dt><dd id="you-tickets">connect to see</dd>
-          <dt>你的 USDC</dt><dd id="you-usdc">connect to see</dd>
+          <dt>你的地址</dt><dd id="you-addr">连接钱包后可见</dd>
+          <dt>你本轮的券</dt><dd id="you-tickets">连接钱包后可见</dd>
+          <dt>你的 USDC</dt><dd id="you-usdc">连接钱包后可见</dd>
         </dl>
 
         <div id="buy-area" hidden>
@@ -250,9 +242,7 @@
   <section>
     <h2>它已经用真金白银跑过一次了</h2>
     <p>
-      Before opening, we ran a complete round on Ethereum mainnet at one fifty-thousandth of
-      the size — real USDC, real Chainlink VRF randomness, our own money. Two thousand tickets,
-      one hundred winners, every prize delivered, nothing left in the contract.
+      在开放之前，我们用五万分之一的规模在以太坊主网上完整跑了一轮——真的 USDC，真的 Chainlink VRF 随机数，我们自己的钱。两千张券，一百位中奖者，每一份奖都发到位，合约里什么都没剩下。
     </p>
     <p><a href="/zh/raffle/proof/"><strong>逐笔交易查看这次预演 →</strong></a></p>
   </section>

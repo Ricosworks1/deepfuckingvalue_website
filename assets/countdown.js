@@ -25,6 +25,12 @@
 
   const pad = (n) => String(n).padStart(2, '0');
 
+  /* Every word this script writes comes from the markup, so it is translated
+     by the normal pipeline rather than hardcoded here. The English is the
+     fallback, which keeps the script working on a page that predates the
+     attributes. */
+  const t = (name, fallback) => banner.dataset[name] || fallback;
+
   function unit(value, name) {
     const span = document.createElement('span');
     span.className = 'cd-unit';
@@ -41,9 +47,9 @@
 
     if (remaining <= 0) {
       banner.classList.add('is-live');
-      if (label) label.textContent = 'Vesting claims are open';
+      if (label) label.textContent = t('tOpen', 'Vesting claims are open');
       out.textContent = '';
-      out.append(unit('LIVE', 'claim now'));
+      out.append(unit(t('tLive', 'LIVE'), t('tClaimNow', 'claim now')));
       return true; // stop ticking
     }
 
@@ -54,8 +60,10 @@
     const secs = s % 60;
 
     out.textContent = '';
-    if (days > 0) out.append(unit(days, days === 1 ? 'day' : 'days'));
-    out.append(unit(pad(hours), 'hrs'), unit(pad(mins), 'min'), unit(pad(secs), 'sec'));
+    if (days > 0) out.append(unit(days, days === 1 ? t('tDay', 'day') : t('tDays', 'days')));
+    out.append(unit(pad(hours), t('tHrs', 'hrs')),
+               unit(pad(mins), t('tMin', 'min')),
+               unit(pad(secs), t('tSec', 'sec')));
     return false;
   }
 
@@ -98,7 +106,10 @@
     if (bar) bar.style.width = (fraction * 100).toFixed(6) + '%';
     if (pctOut) pctOut.textContent = (fraction * 100).toFixed(4) + '%';
     if (amtOut) {
-      amtOut.textContent = unlocked.toLocaleString('en-US', {
+      /* Follow the page's own language. Hardcoding en-US put
+         "20,828,377,491.30" next to French copy reading "20 828 377 491,30". */
+      const locale = document.documentElement.lang || 'en';
+      amtOut.textContent = unlocked.toLocaleString(locale, {
         minimumFractionDigits: 2, maximumFractionDigits: 2,
       }) + ' DFV';
     }

@@ -55,6 +55,12 @@ mutate "a CSP rule dropped for one language path" \
 mutate "a placeholder dropped from a translation" \
   "import json,re;p='i18n/catalogue.de.json';c=json.load(open(p,encoding='utf-8'));k=[k for k,v in c.items() if '<0>' in v and '</0>' in v][0];c[k]=c[k].replace('<0>','',1).replace('</0>','',1);json.dump(c,open(p,'w',encoding='utf-8'),ensure_ascii=False,indent=1)"
 
+mutate "a script hardcoding display text over translated markup" \
+  "p='assets/countdown.js';s=open(p,encoding='utf-8').read();open(p,'w',encoding='utf-8').write(s.replace(\"t('tOpen', 'Vesting claims are open')\",\"'Vesting claims are open'\",1))"
+
+mutate "a script formatting numbers as en-US regardless of page language" \
+  "p='assets/countdown.js';s=open(p,encoding='utf-8').read();open(p,'w',encoding='utf-8').write(s.replace('unlocked.toLocaleString(locale,','unlocked.toLocaleString(\'en-US\',',1))"
+
 echo
 if [ "$fails" -eq 0 ]; then
   echo "All mutations were caught. The audit can fail."

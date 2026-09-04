@@ -24,6 +24,14 @@ SKIP_TAGS = {"script", "style", "code", "pre", "svg"}
 # cat-position and animation selects. The visible label is the option's text
 # node, which is captured separately and correctly.
 ATTRS = {"alt", "title", "placeholder", "aria-label", "content"}
+
+# Any attribute named data-t-* is translatable text that a script writes into
+# the page. Putting those words in the markup rather than in the script keeps
+# them inside the normal pipeline: countdown.js used to hardcode "Vesting
+# claims are open" and overwrite the translated markup with English a
+# millisecond after load, on every page, in every language.
+def is_translatable_attr(name):
+    return name in ATTRS or name.startswith("data-t-")
 CONTENT_META = {"description", "og:title", "og:description", "twitter:title", "twitter:description"}
 INLINE = "a|em|strong|b|i|span|code|small|sup|sub|abbr|u|s|mark"
 BLOCK = "p|h1|h2|h3|h4|h5|h6|li|td|th|button|label|figcaption|blockquote|dt|dd|summary"
@@ -110,7 +118,7 @@ class Locator(HTMLParser):
         d, raw, base = dict(attrs), self.get_starttag_text() or "", self.off()
         if not self.skip:
             for k, v in attrs:
-                if k not in ATTRS or not v: continue
+                if not is_translatable_attr(k) or not v: continue
                 if k == "content":
                     if (d.get("name") or d.get("property") or "") not in CONTENT_META: continue
                 if not translatable(v): continue

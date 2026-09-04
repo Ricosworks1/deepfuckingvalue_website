@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://dfv.fun/zh/raffle/proof/">
 <link rel="alternate" hreflang="x-default" href="https://dfv.fun/raffle/proof/"><!--/i18n:head-->
 <title>预演 — DFV 抽奖</title>
-<meta name="description" content="A complete raffle round run on Ethereum mainnet with real USDC and real Chainlink VRF randomness, before the raffle took a single real entry. Every transaction is public.">
+<meta name="description" content="在抽奖接受任何一笔真实参与之前，我们用真的 USDC 和真的 Chainlink VRF 随机数，在以太坊主网上完整跑了一轮。每一笔交易都是公开的。">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -138,9 +138,7 @@
 
   <h1>预演</h1>
   <p class="sub">
-    Before the raffle took a single real entry, we ran a complete round on Ethereum mainnet
-    with our own money — real USDC, real Chainlink VRF randomness, at one fifty-thousandth of the
-    size. It worked. Every transaction below is on the public chain and you can open all of them.
+    在抽奖接受任何一笔真实参与之前，我们用自己的钱在以太坊主网上完整跑了一轮——真的 USDC，真的 Chainlink VRF 随机数，规模是五万分之一。它跑通了。下面每一笔交易都在公开链上，你可以全部打开看。
   </p>
 
   <div class="status" style="border-left-color:var(--ok);background:var(--ok-sunk)">
@@ -162,7 +160,7 @@
       <tbody>
         <tr><td>买下第一张券</td><td class="evi"><a href="https://etherscan.io/tx/0xd6abe8689f51e07df0b44928796362c5c9e4ce6df7028457a8ff52aa7ea90181" rel="noopener">0xd6abe868…a90181</a></td></tr>
         <tr><td>…另外 39 笔购买交易</td><td>2,000 张券，合计 20.00 USDC</td></tr>
-        <tr><td>Draw requested from Chainlink VRF</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
+        <tr><td>向 Chainlink VRF 发起开奖请求</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>
         <tr><td><strong>随机数送达，本轮结算</strong></td><td class="evi"><a href="https://etherscan.io/tx/0xe027c234c5955be23b51faa0cba2f401d1ef23dc5a327a66d89c8e053b3be700" rel="noopener">0xe027c234…3be700</a></td></tr>
       </tbody>
     </table></div>
@@ -187,11 +185,7 @@
   <section>
     <h2>随机数</h2>
     <p>中奖者由 <strong>Chainlink VRF v2.5</strong> 开出，它在给出随机数的同时附上一份密码学证明，证明这个数没有被动过手脚。证明会先在链上验证通过，我们的合约才被允许使用它。没有人——不是我们，不是矿工，也不是 Chainlink——能挑选中奖者。</p>
-    <p>
-      We deliberately do <em>not</em> use block data for this. A block proposer can see values
-      like <span class="addr">prevrandao</span> before publishing, and could quietly re-roll a
-      draw worth a million dollars. Chainlink VRF costs more and is worth it.
-    </p>
+    <p>我们刻意<em>不</em>用区块数据来做这件事。出块者在广播之前就能看到 <span class="addr">prevrandao</span> 这类值，完全可以悄悄把一次价值百万美元的开奖重掷一遍。Chainlink VRF 更贵，但值这个价。</p>
     <div class="scroll"><table>
       <tbody>
         <tr><td>请求</td><td class="evi"><a href="https://etherscan.io/tx/0xa9065817f569bea2baba0c1ba9687cfaa68c1332a7a263cae2db9c5f3e1d9f9a" rel="noopener">0xa9065817…1d9f9a</a></td></tr>

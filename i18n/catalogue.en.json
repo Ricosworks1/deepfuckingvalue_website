@@ -8,12 +8,40 @@
    "text": "A fair and transparent meme coin that radically revolutionizes crypto tokenomics. 138.84 billion DFV, 84.51% in public liquidity, every number verifiable on-chain.",
    "kind": "attr"
   },
-  "2d62a16755": {
-   "text": "Vesting claims open in",
-   "kind": "text"
+  "fac78ea276": {
+   "text": "Vesting claims are open",
+   "kind": "attr"
+  },
+  "6990f01ad9": {
+   "text": "LIVE",
+   "kind": "attr"
+  },
+  "67310edc41": {
+   "text": "claim now",
+   "kind": "attr"
+  },
+  "a2620cbc10": {
+   "text": "day",
+   "kind": "attr"
   },
   "5548ae4f34": {
    "text": "days",
+   "kind": "attr"
+  },
+  "a23c4292a1": {
+   "text": "hrs",
+   "kind": "attr"
+  },
+  "b6c935d4f3": {
+   "text": "min",
+   "kind": "attr"
+  },
+  "920a25ef68": {
+   "text": "sec",
+   "kind": "attr"
+  },
+  "2d62a16755": {
+   "text": "Vesting claims open in",
    "kind": "text"
   },
   "0a5dc1533c": {
@@ -1797,6 +1825,38 @@
    },
    {
     "hash": "3e5f502f9a",
+    "kind": "attr"
+   },
+   {
+    "hash": "fac78ea276",
+    "kind": "attr"
+   },
+   {
+    "hash": "6990f01ad9",
+    "kind": "attr"
+   },
+   {
+    "hash": "67310edc41",
+    "kind": "attr"
+   },
+   {
+    "hash": "a2620cbc10",
+    "kind": "attr"
+   },
+   {
+    "hash": "5548ae4f34",
+    "kind": "attr"
+   },
+   {
+    "hash": "a23c4292a1",
+    "kind": "attr"
+   },
+   {
+    "hash": "b6c935d4f3",
+    "kind": "attr"
+   },
+   {
+    "hash": "920a25ef68",
     "kind": "attr"
    },
    {
