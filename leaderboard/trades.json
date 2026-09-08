@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-04T23:49:04.598Z",
+  "generatedAt": "2026-09-08T23:56:18.785Z",
   "token": "0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07",
   "pool": "0x000000000004444c5dc75cB358380D2e3dE08A90",
   "quote": "USDC",
   "venue": "Uniswap V4",
-  "rpcCalls": 42,
+  "rpcCalls": 43,
   "trades": [
     {
       "hash": "0xf917700e70549217dbf72af38fe1e5b853e2bbd5c351bd96f5d19c829693b718",
@@ -355,6 +355,16 @@
       "dfv": 5587841.916638902,
       "usdc": 1270.74641,
       "gasUsed": 201150
+    },
+    {
+      "hash": "0xc70cd0c563e4cc633386350e25930fd49b67de88bc4b41e916214233a7b43915",
+      "block": 25935037,
+      "timestamp": "2026-09-08T20:28:59.000Z",
+      "trader": "0x9b228b4f71b3bc7e4b478251f218060d7b70dc25",
+      "side": "sell",
+      "dfv": 3900000,
+      "usdc": 869.673874,
+      "gasUsed": 505039
     }
   ],
   "liquidity": [
