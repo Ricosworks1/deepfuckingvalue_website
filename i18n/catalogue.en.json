@@ -760,16 +760,16 @@
    "text": "To propose",
    "kind": "text"
   },
-  "1bd1e4502e": {
-   "text": "DFV delegated · ≈ $159,969",
+  "eb257e8fac": {
+   "text": "DFV delegated · ≈ $156,200",
    "kind": "text"
   },
   "fdaafe2d97": {
    "text": "Quorum",
    "kind": "text"
   },
-  "367c1cb0da": {
-   "text": "20,826,000,000 DFV · ≈ $4,799,069",
+  "d3ea785180": {
+   "text": "20,826,000,000 DFV · ≈ $4,685,992",
    "kind": "text"
   },
   "19f804c3f6": {
@@ -808,8 +808,8 @@
    "text": "Expensive on purpose",
    "kind": "text"
   },
-  "27072e686d": {
-   "text": "Filing a proposal needs 694,200,000 DFV delegated — roughly $159,969 at\n        the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.",
+  "c8b2a01799": {
+   "text": "Filing a proposal needs 694,200,000 DFV delegated — roughly $156,200 at\n        the current market price. Proposals therefore cost real conviction, and spam is priced out entirely.",
    "kind": "text"
   },
   "50e635e87c": {
@@ -824,8 +824,8 @@
    "text": "Where things stand",
    "kind": "text"
   },
-  "1e112acd8f": {
-   "text": "Most DFV cannot vote. 117,495,846,526 sits in the Uniswap pool and 20,821,732,113 is\n      locked in the vesting contract — neither delegates, so neither has a voice. Voting power only\n      exists once tokens are held in a wallet <0>and</0> delegated.",
+  "d56f6f03dd": {
+   "text": "Most DFV cannot vote. 117,510,091,906 sits in the Uniswap pool and 20,776,600,855 is\n      locked in the vesting contract — neither delegates, so neither has a voice. Voting power only\n      exists once tokens are held in a wallet <0>and</0> delegated.",
    "kind": "block"
   },
   "f359fc7949": {
@@ -848,12 +848,12 @@
    "text": "Needed for quorum",
    "kind": "text"
   },
-  "1a45e255a1": {
-   "text": "2.51% of the tokens needed for quorum currently exist in a form that could vote.",
+  "02dd8c7177": {
+   "text": "2.66% of the tokens needed for quorum currently exist in a form that could vote.",
    "kind": "text"
   },
-  "d3f8a9c0d8": {
-   "text": "<0>Governance is not active yet.</0> Quorum needs 20,826,000,000 DFV of delegated\n      votes, and at most 522,421,361 could vote today even if every holder delegated.\n      That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —\n      roughly $4,799,069 of tokens must move into voting hands before the DAO can decide anything.\n      Until then this page is honest about it rather than pretending otherwise.",
+  "926699b208": {
+   "text": "<0>Governance is not active yet.</0> Quorum needs 20,826,000,000 DFV of delegated\n      votes, and at most 553,307,239 could vote today even if every holder delegated.\n      That gap closes as DFV is bought out of the pool and as vested tokens are claimed and delegated —\n      roughly $4,685,992 of tokens must move into voting hands before the DAO can decide anything.\n      Until then this page is honest about it rather than pretending otherwise.",
    "kind": "block"
   },
   "ef44f4b732": {
@@ -900,8 +900,8 @@
    "text": "The token itself is immutable: six functions, no mint, no burn, no pause, no upgrade, no owner.\n      The supply that exists is the supply that will always exist. Governance parameters live on the DAO\n      contract and can only be changed by a passed proposal.",
    "kind": "text"
   },
-  "7515b98ce7": {
-   "text": "Figures read from Ethereum mainnet Mon, 31 Aug 2026 00:57:05 GMT and refreshed daily.\n    Your balance, voting power and delegate are read live from your own wallet.",
+  "355930f21b": {
+   "text": "Figures read from Ethereum mainnet Tue, 22 Sep 2026 00:38:57 GMT and refreshed daily.\n    Your balance, voting power and delegate are read live from your own wallet.",
    "kind": "text"
   },
   "66cbdd8e53": {
@@ -928,6 +928,10 @@
    "text": "V4 PoolManager ↗",
    "kind": "text"
   },
+  "ca3e4f3ab7": {
+   "text": "Pool on GeckoTerminal ↗",
+   "kind": "text"
+  },
   "a4e4c7a930": {
    "text": "10% of pool revenue to the top trader",
    "kind": "text"
@@ -936,12 +940,12 @@
    "text": "Every month, the address with the highest trading volume receives\n      <0>10% of all revenue the DFV pool generates</0> that month.",
    "kind": "block"
   },
-  "7489923b61": {
-   "text": "Currently leading — August 2026",
+  "752fb7a760": {
+   "text": "Currently leading — September 2026",
    "kind": "text"
   },
-  "977e6d1149": {
-   "text": "$5,792.33 volume",
+  "b6b3e5561d": {
+   "text": "$2,541.49 volume",
    "kind": "text"
   },
   "ce7c06657a": {
@@ -972,8 +976,8 @@
    "text": "This month",
    "kind": "text"
   },
-  "5e447fba9a": {
-   "text": "August 2026 — resets on the first of each month. Ranked by USDC volume.",
+  "f8546bf45c": {
+   "text": "September 2026 — resets on the first of each month. Ranked by USDC volume.",
    "kind": "text"
   },
   "de5e044899": {
@@ -1024,9 +1028,13 @@
    "text": "USDC volume",
    "kind": "text"
   },
-  "e9d859cd59": {
-   "text": "August 2026 <0>current</0>",
+  "e9d57371ff": {
+   "text": "September 2026 <0>current</0>",
    "kind": "block"
+  },
+  "bd8aae602b": {
+   "text": "August 2026",
+   "kind": "text"
   },
   "db71b26bfd": {
    "text": "June 2026",
@@ -1108,8 +1116,8 @@
    "text": "Token <0>0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07</0> · pool <1>0x000000000004444c5dc75cB358380D2e3dE08A90</1> · quoted in USDC.",
    "kind": "block"
   },
-  "1c7af64151": {
-   "text": "Last rebuilt Mon, 31 Aug 2026 00:57:04 GMT. Updated daily at midnight\n    Central European Time. Data comes from Ethereum mainnet and can be reproduced by\n    anyone — the build script is in the repository.",
+  "924cb31c91": {
+   "text": "Last rebuilt Tue, 22 Sep 2026 00:38:57 GMT. Updated daily at midnight\n    Central European Time. Data comes from Ethereum mainnet and can be reproduced by\n    anyone — the build script is in the repository.",
    "kind": "text"
   },
   "037250ee8f": {
@@ -2656,7 +2664,7 @@
     "kind": "text"
    },
    {
-    "hash": "1bd1e4502e",
+    "hash": "eb257e8fac",
     "kind": "text"
    },
    {
@@ -2664,7 +2672,7 @@
     "kind": "text"
    },
    {
-    "hash": "367c1cb0da",
+    "hash": "d3ea785180",
     "kind": "text"
    },
    {
@@ -2704,7 +2712,7 @@
     "kind": "text"
    },
    {
-    "hash": "27072e686d",
+    "hash": "c8b2a01799",
     "kind": "text"
    },
    {
@@ -2720,7 +2728,7 @@
     "kind": "text"
    },
    {
-    "hash": "1e112acd8f",
+    "hash": "d56f6f03dd",
     "kind": "block"
    },
    {
@@ -2744,11 +2752,11 @@
     "kind": "text"
    },
    {
-    "hash": "1a45e255a1",
+    "hash": "02dd8c7177",
     "kind": "text"
    },
    {
-    "hash": "d3f8a9c0d8",
+    "hash": "926699b208",
     "kind": "block"
    },
    {
@@ -2816,7 +2824,7 @@
     "kind": "text"
    },
    {
-    "hash": "7515b98ce7",
+    "hash": "355930f21b",
     "kind": "text"
    }
   ],
@@ -2854,6 +2862,10 @@
     "kind": "text"
    },
    {
+    "hash": "ca3e4f3ab7",
+    "kind": "text"
+   },
+   {
     "hash": "a4e4c7a930",
     "kind": "text"
    },
@@ -2862,11 +2874,11 @@
     "kind": "block"
    },
    {
-    "hash": "7489923b61",
+    "hash": "752fb7a760",
     "kind": "text"
    },
    {
-    "hash": "977e6d1149",
+    "hash": "b6b3e5561d",
     "kind": "text"
    },
    {
@@ -2898,7 +2910,7 @@
     "kind": "text"
    },
    {
-    "hash": "5e447fba9a",
+    "hash": "f8546bf45c",
     "kind": "text"
    },
    {
@@ -2978,8 +2990,12 @@
     "kind": "text"
    },
    {
-    "hash": "e9d859cd59",
+    "hash": "e9d57371ff",
     "kind": "block"
+   },
+   {
+    "hash": "bd8aae602b",
+    "kind": "text"
    },
    {
     "hash": "db71b26bfd",
@@ -3015,6 +3031,38 @@
    },
    {
     "hash": "766e40fff4",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "a066f07017",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
+    "kind": "text"
+   },
+   {
+    "hash": "dee2dd34f4",
+    "kind": "text"
+   },
+   {
+    "hash": "8f3a075439",
     "kind": "text"
    },
    {
@@ -3322,7 +3370,7 @@
     "kind": "block"
    },
    {
-    "hash": "1c7af64151",
+    "hash": "924cb31c91",
     "kind": "text"
    }
   ],

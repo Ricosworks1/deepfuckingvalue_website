@@ -19,6 +19,13 @@ const FONT = readFileSync(here('../assets/architects-daughter.woff2')).toString(
 
 const { trades, liquidity, generatedAt, token, pool, venue, quote } = data;
 
+/* The Uniswap V4 pool id. Not an address — V4 keeps every pool inside the one
+   PoolManager singleton and identifies each by a bytes32 id, so GeckoTerminal
+   keys on the id while Etherscan keys on the PoolManager address. Verified
+   23 Sep 2026 against the GeckoTerminal API: "DFV / USDC 1%", base token
+   0x92513406…690f07, which matches `token` above. */
+const POOL_ID = '0xa77747dc6a4d218c76e914e7e0a9d5fd7110a290a9ea070699835f6a16940844';
+
 /* ---------- helpers ---------- */
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -304,6 +311,7 @@ const html = `<title>Trading Leaderboard — DFV</title>
     <a class="ql" href="https://app.uniswap.org/explore/tokens/ethereum/${esc(token)}" rel="noopener">Trade DFV on Uniswap ↗</a>
     <a class="ql ql-quiet" href="https://etherscan.io/token/${esc(token)}" rel="noopener">Token on Etherscan ↗</a>
     <a class="ql ql-quiet" href="https://etherscan.io/address/${esc(pool)}" rel="noopener">V4 PoolManager ↗</a>
+    <a class="ql ql-quiet" href="https://www.geckoterminal.com/eth/pools/${esc(POOL_ID)}" rel="noopener">Pool on GeckoTerminal ↗</a>
   </div>
 
   <div class="prize">
