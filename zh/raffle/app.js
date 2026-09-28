@@ -227,6 +227,7 @@ function paint() {
   const bar = $('r-fill'); if (bar) bar.style.width = pct + '%';
 
   if (state.pending) show($('draw-note')); else hide($('draw-note'));
+  renderCalc();                 // now with the config read from the contract
 
   /* The projection panel. Its markup ships with the full-round figures, so the
      page reads correctly before the raffle opens; from here on it reflects the
@@ -369,6 +370,221 @@ async function waitFor(hash) {
   throw new Error('Still pending after six minutes — check your wallet.');
 }
 
+/* ---------- the "try any round size" calculator ----------
+
+   Pure arithmetic, no chain access: it answers "what would a round of N
+   tickets pay?", which is a question about the rules rather than about the
+   current round. The rules come from the contract when the page has read them,
+   and from the panel's data attributes before that — the same immutable values
+   either way. It is hidden in the markup and revealed here, so a visitor
+   without JavaScript sees the static table instead of dead controls. */
+
+function calcConfig(box) {
+  const d = (k) => BigInt(box.getAttribute('data-' + k));
+  /* Live values win once the page has read them; both are the same immutable
+     constants, but reading beats trusting a copy. */
+  if (state && state.winners) return {
+    price: state.price, tickets: state.total, winners: state.winners,
+    prizeBps: state.prizeBps, watchValue: state.watchValue, watchFloor: state.watchFloor,
+    minTickets: state.minTickets, refundBps: state.refundBps,
+  };
+  return {
+    price: d('price'), tickets: d('tickets'), winners: d('winners'),
+    prizeBps: d('prize-bps'), watchValue: d('watch-value'), watchFloor: d('watch-floor'),
+    minTickets: d('min-tickets'), refundBps: d('refund-bps'),
+  };
+}
+
+/* The slider is logarithmic. On a linear one, every size a real round might
+   plausibly reach — ten tickets, fifty, five hundred — is crushed into the
+   first millimetre, and the whole point is to let someone feel the difference
+   between a small round and a full one. */
+const SLIDER_STEPS = 1000;
+
+/* The exact number of tickets under consideration. It is kept here rather than
+   read back off the slider, because a thousand-step log scale cannot land on
+   every integer — and the pair that matters most, 499 against 500, are one
+   step apart on it. A preset sets this exactly and moves the thumb to the
+   nearest position; dragging sets it from the thumb. */
+let calcSold = 1000;
+const sliderToTickets = (v, max) =>
+  Math.min(max, Math.max(1, Math.round(Math.pow(max, v / SLIDER_STEPS))));
+const ticketsToSlider = (n, max) =>
+  Math.round(Math.log(Math.max(1, n)) / Math.log(max) * SLIDER_STEPS);
+
+/* The chance that `n` tickets include at least one of the `w` winning tickets,
+   drawn without replacement from `t`: one minus the chance of missing every
+   time, which is the running product (t-w)/(t) · (t-w-1)/(t-1) · … */
+function chanceOfAny(n, w, t) {
+  if (w >= t) return 1;
+  let miss = 1;
+  for (let i = 0; i < n; i++) {
+    const left = t - w - i;
+    if (left <= 0) return 1;
+    miss *= left / (t - i);
+  }
+  return 1 - miss;
+}
+
+function pctText(x) {
+  const one = x >= 0.1 ? (Math.round(x * 1000) / 10).toFixed(1)
+                       : (Math.round(x * 10000) / 100).toFixed(2);
+  return one.replace('.', DECIMAL) + '%';
+}
+
+/* Write a sentence from the markup into `el`, emphasising each figure as it
+   goes in. The emphasis follows the {placeholders}, so the sentences stay
+   plain text: markup inside a translatable attribute does not survive the
+   build, and a translator should not have to carry tags around anyway. */
+function fillMarkup(el, tpl, vars) {
+  while (el.firstChild) el.removeChild(el.firstChild);
+  const parts = String(tpl).split(/(\{\w+\})/g);
+  for (const part of parts) {
+    const m = /^\{(\w+)\}$/.exec(part);
+    if (m && Object.prototype.hasOwnProperty.call(vars, m[1])) {
+      const b = document.createElement('b');
+      b.textContent = vars[m[1]];
+      el.appendChild(b);
+    } else if (part) {
+      el.appendChild(document.createTextNode(part));
+    }
+  }
+}
+
+/** One hundred dots, with the winning share lit: odds as a picture. */
+function paintDots(box, winners, sold) {
+  const grid = $('calc-dots');
+  if (!grid) return;
+  const lit = sold === 0 ? 0 : Math.max(winners > 0 ? 1 : 0, Math.round(winners / sold * 100));
+  while (grid.firstChild) grid.removeChild(grid.firstChild);
+  for (let i = 0; i < 100; i++) {
+    const dot = document.createElement('i');
+    if (i < lit) dot.className = 'win';
+    grid.appendChild(dot);
+  }
+  return lit;
+}
+
+function renderCalc() {
+  const box = $('calc');
+  if (!box) return;
+  const slider = $('calc-sold'), mineInput = $('calc-mine');
+  if (!slider || !mineInput) return;
+
+  const cfg = calcConfig(box);
+  const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
+  const maxTickets = Number(cfg.tickets);
+
+  const soldN = Math.min(maxTickets, Math.max(1, calcSold));
+  const sold = BigInt(soldN);
+
+  const raw = (mineInput.value || '').replace(/[^0-9]/g, '');
+  let mineN = raw === '' ? 1 : parseInt(raw, 10);
+  if (!(mineN >= 1)) mineN = 1;
+  if (mineN > soldN) mineN = soldN;          // you cannot hold more than were sold
+  const mine = BigInt(mineN);
+
+  const p = project({ sold: sold, price: cfg.price, winners: cfg.winners,
+                      prizeBps: cfg.prizeBps, watchFloor: cfg.watchFloor,
+                      watchValue: cfg.watchValue, minTickets: cfg.minTickets,
+                      refundBps: cfg.refundBps });
+
+  const chips = $('calc-chips');
+  if (chips) for (const b of chips.children)
+    b.setAttribute('aria-pressed', String(Number(b.getAttribute('data-n')) === soldN));
+
+  set('calc-sold-label', sold.toLocaleString(LOCALE));
+  set('calc-pot', fmtUSDC(sold * cfg.price, 0));
+  set('calc-spend', fmtUSDC(mine * cfg.price, 2));
+
+  const verdict = $('calc-verdict');
+
+  if (p.kind === 'cancelled') {
+    fillMarkup($('calc-headline'), t(box, 'tHeadlineCancel', ''), {
+      sold: sold.toLocaleString(LOCALE),
+      refund: fmtUSDC(p.refund, 2),
+      price: fmtUSDC(cfg.price, 2),
+    });
+    set('calc-chance', '0%');
+    set('calc-prize', fmtUSDC(p.refund, 2));
+    set('calc-prize-label', t(box, 'tRefundLabel', 'USDC refunded per ticket'));
+    set('calc-winners', t(box, 'tNone', 'Nobody'));
+    set('calc-watch', t(box, 'tNo', 'No'));
+    set('calc-odds', '—');
+    paintDots(box, 0, soldN);
+    fillMarkup($('calc-dots-note'), t(box, 'tDotsCancel', ''), {});
+    verdict.textContent = t(box, 'tCancelled', '');
+    verdict.className = 'verdict verdict-cancel';
+    set('calc-note', t(box, 'tCancelNote', '', {
+      min: cfg.minTickets.toLocaleString(LOCALE),
+      refund: fmtUSDC(p.refund, 2),
+      price: fmtUSDC(cfg.price, 2),
+      loss: fmtUSDC(cfg.price - p.refund, 2),
+    }));
+    return;
+  }
+
+  const chance = chanceOfAny(mineN, Number(p.winners), soldN);
+  const cashWinners = p.watch ? p.winners - 1n : p.winners;
+
+  fillMarkup($('calc-headline'), t(box, 'tHeadline', ''), {
+    mine: mine.toLocaleString(LOCALE),
+    sold: sold.toLocaleString(LOCALE),
+    chance: chance >= 0.9999 ? t(box, 'tCertain', 'Practically certain') : pctText(chance),
+    prize: fmtUSDC(p.cashPrize, 2),
+  });
+
+  set('calc-chance', chance >= 0.9999 ? '~100%' : pctText(chance));
+  set('calc-prize', fmtUSDC(p.cashPrize, 2));
+  set('calc-winners', p.winners.toLocaleString(LOCALE));
+  set('calc-watch', p.watch
+    ? t(box, 'tAwarded', 'Yes, awarded')
+    : t(box, 'tNotAwarded', '', { floor: fmtUSDC(cfg.watchFloor, 0) }));
+  set('calc-odds', oddsText(box, sold, p.winners));
+
+  const lit = paintDots(box, Number(p.winners), soldN);
+  fillMarkup($('calc-dots-note'), t(box, 'tDots', ''), { k: String(lit) });
+
+  verdict.textContent = t(box, 'tDrawn', '');
+  verdict.className = 'verdict verdict-draw';
+
+  /* What a ticket returns on average: everything the round pays out, the watch
+     included, spread over every ticket. It is PRIZE_BPS of the price at any
+     size, which is the point worth making. */
+  const paidOut = p.cashPrize * cashWinners + (p.watch ? cfg.watchValue : 0n);
+  set('calc-note', t(box, 'tDrawNote', '', {
+    ev: fmtUSDC(paidOut / sold, 2),
+    price: fmtUSDC(cfg.price, 2),
+    pct: pctText(Number(cfg.prizeBps) / 10000),
+  }));
+}
+
+function wireCalc() {
+  const box = $('calc');
+  if (!box) return;
+  const slider = $('calc-sold'), mine = $('calc-mine'), chips = $('calc-chips');
+  if (!slider || !mine || !chips) return;
+
+  box.hidden = false;                       // without JavaScript, no dead controls
+  const maxTickets = Number(box.getAttribute('data-tickets'));
+
+  slider.addEventListener('input', function () {
+    calcSold = sliderToTickets(Number(slider.value), maxTickets);
+    renderCalc();
+  });
+  mine.addEventListener('input', renderCalc);
+  for (const b of chips.children) {
+    b.addEventListener('click', function () {
+      calcSold = Number(b.getAttribute('data-n'));
+      slider.value = String(ticketsToSlider(calcSold, maxTickets));
+      renderCalc();
+    });
+  }
+
+  calcSold = sliderToTickets(Number(slider.value), maxTickets);
+  renderCalc();
+}
+
 /* ---------- boot ---------- */
 
 function boot() {
@@ -378,6 +594,8 @@ function boot() {
      With no contract deployed, the controls stay disabled as they are in the
      markup and NO handlers are attached, so there is no code path from a click
      to a transaction — the buttons are inert twice over, not merely greyed. */
+  wireCalc();
+
   if (!RAFFLE) {
     /* Preview. Show the whole entry flow so the page reads exactly as it will
        once the raffle opens — the wallet panel and the ticket controls, with

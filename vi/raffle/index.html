@@ -120,6 +120,67 @@
   .big{font-family:var(--f-mono);font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;
        font-variant-numeric:tabular-nums;line-height:1}
 
+  .calc label{display:block;font-size:.9375rem;color:var(--ink-soft);margin-bottom:.4rem}
+
+  /* The slider is the whole point, so it is drawn rather than left to the
+     browser. The track is shaded into the three things that can happen to a
+     round: too small to draw, drawn for cash, drawn with the watch. The stops
+     match the log scale in app.js — 500 tickets at 67.4%, 5,000 at 92.5%. */
+  .range{-webkit-appearance:none;appearance:none;width:100%;max-width:none;height:2rem;
+         background:transparent;border:0;padding:0;margin:.2rem 0 0;cursor:grab;display:block}
+  .range:active{cursor:grabbing}
+  .range::-webkit-slider-runnable-track{height:1rem;border-radius:999px;border:2px solid var(--rule);
+    background:linear-gradient(to right,var(--warn-sunk) 0 67.4%,var(--paper-sunk) 67.4% 92.5%,var(--ok-sunk) 92.5% 100%)}
+  .range::-moz-range-track{height:1rem;border-radius:999px;border:2px solid var(--rule);
+    background:linear-gradient(to right,var(--warn-sunk) 0 67.4%,var(--paper-sunk) 67.4% 92.5%,var(--ok-sunk) 92.5% 100%)}
+  .range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:1.9rem;height:1.9rem;
+    border-radius:50%;background:var(--red);border:3px solid var(--paper);
+    box-shadow:0 2px 6px rgba(0,0,0,.3);margin-top:-.55rem}
+  .range::-moz-range-thumb{width:1.9rem;height:1.9rem;border-radius:50%;background:var(--red);
+    border:3px solid var(--paper);box-shadow:0 2px 6px rgba(0,0,0,.3)}
+  .range:focus-visible::-webkit-slider-thumb{outline:3px solid var(--navy);outline-offset:2px}
+  .range:focus-visible::-moz-range-thumb{outline:3px solid var(--navy);outline-offset:2px}
+
+  .zones{display:flex;font-size:.6875rem;font-family:var(--f-mono);letter-spacing:.06em;
+         text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
+  .zones span{border-top:2px solid var(--rule);padding-top:.3rem}
+  .zones .z1{flex:0 0 67.4%;color:var(--warn);border-color:var(--warn)}
+  .zones .z2{flex:0 0 25.1%;padding-left:.4rem}
+  .zones .z3{flex:1 1 auto;padding-left:.4rem;color:var(--ok);border-color:var(--ok);
+             text-align:right;white-space:nowrap}
+
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.1rem 0 0}
+  .chip{font-family:var(--f-mono);font-size:.8125rem;font-weight:600;padding:.45rem .75rem;
+        border-radius:999px;border:2px solid var(--rule);background:var(--paper);
+        color:var(--ink-soft);cursor:pointer}
+  .chip:hover{border-color:var(--navy);color:var(--navy)}
+  .chip[aria-pressed="true"]{border-color:var(--red);background:var(--red);color:var(--on-accent)}
+
+  .headline{font-size:1.0625rem;line-height:1.5;margin:1.4rem 0 0;color:var(--ink)}
+  .headline b{color:var(--navy)}
+  .figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem,100%),1fr));
+           gap:1.1rem;margin:1.1rem 0 .4rem}
+  .figure{border-top:3px solid var(--red);padding-top:.7rem}
+  .figure b{display:block;font-family:var(--f-mono);font-size:clamp(1.5rem,1.1rem + 1.4vw,2.1rem);
+            font-weight:700;color:var(--navy);letter-spacing:-.03em;line-height:1.05;
+            font-variant-numeric:tabular-nums}
+  .figure span{display:block;font-size:.8125rem;color:var(--ink-soft);margin-top:.35rem}
+  .figure.muted{border-color:var(--rule)}
+  .figure.muted b{color:var(--ink-soft)}
+
+  /* One hundred dots, one per hundred tickets, with the winning share lit.
+     Odds as a picture, because "1 in 100" and "1 in 5" look identical as text. */
+  .dots{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;max-width:24rem;margin:.2rem 0 .5rem}
+  .dots i{display:block;aspect-ratio:1;border-radius:50%;background:var(--rule)}
+  .dots i.win{background:var(--red)}
+  .dots-note{font-size:.8125rem;color:var(--ink-soft);margin:0}
+
+  .verdict{font-weight:700;padding:.6rem .85rem;border-radius:8px;margin:1.2rem 0 0;font-size:.9375rem}
+  .verdict-draw{background:var(--ok-sunk);color:var(--ok)}
+  .verdict-cancel{background:var(--warn-sunk);color:var(--warn)}
+  .calc hr{border:0;border-top:1px solid var(--rule);margin:1.3rem 0}
+  .calc input[type=number]{max-width:7.5rem;margin:.1rem 0 0}
+
 /*i18n:css*/
   .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
   .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
@@ -227,6 +288,74 @@
     <p>
       Luôn có 100 người trúng — hoặc bằng số vé, nếu ít hơn. Thứ thay đổi là độ lớn của mỗi giải. Quỹ giải thưởng luôn là 40,8 % của tất cả số tiền thu được, nên một lượt nhỏ hơn nghĩa là giải nhỏ hơn và cơ hội tốt hơn nhiều. Mọi con số bên dưới đều đến từ phép tính của chính hợp đồng, không phải ước tính tiếp thị.
     </p>
+
+    <div class="panel calc" id="calc" hidden
+         data-price="100000000" data-tickets="10000" data-winners="100" data-prize-bps="4080"
+         data-watch-value="12000000000" data-watch-floor="500000000000"
+         data-min-tickets="500" data-refund-bps="8000"
+         data-t-headline="Nếu bạn giữ {mine} trong số {sold} vé đã bán, bạn có {chance} cơ hội thắng {prize} USDC."
+         data-t-headline-cancel="Chỉ với {sold} vé đã bán, lượt này không thể quay. Không ai thắng gì cả: bạn nhận lại {refund} USDC trong số {price} mà mỗi vé đã tốn."
+         data-t-drawn="Đủ vé — lượt này được quay."
+         data-t-cancelled="Quá ít vé — lượt này bị hủy và hoàn tiền."
+         data-t-awarded="Có, được trao"
+         data-t-not-awarded="Không — cần quỹ thưởng {floor} USDC"
+         data-t-refund="hoàn {amount} USDC"
+         data-t-refund-label="USDC hoàn lại mỗi vé"
+         data-t-odds="1 trên {n}"
+         data-t-none="Không ai"
+         data-t-certain="Gần như chắc chắn"
+         data-t-dots="Khoảng {k} trên mỗi 100 vé thắng được gì đó trong một lượt cỡ này."
+         data-t-dots-cancel="Không vé nào thắng gì trong một lượt cỡ này."
+         data-t-cancel-note="Dưới {min} vé thì không ai có thể quay lượt này: nó bị hủy và mỗi vé lấy lại {refund} USDC trong số {price} đã bỏ ra — lỗ {loss} mỗi vé."
+         data-t-draw-note="Tính trung bình trên mọi vé, một lượt cỡ này trả lại {ev} USDC trong số {price} mà một vé tốn. Tỉ lệ đó là {pct} ở mọi quy mô: lượt nhỏ hơn chỉ chia nó cho ít vé hơn, nên giải thưởng nhỏ đi trong khi cơ hội tốt lên.">
+      <h3>Điều gì xảy ra nếu bạn tham gia?</h3>
+      <label for="calc-sold">Kéo thanh trượt để xem một lượt ở bất kỳ quy mô nào</label>
+      <input type="range" class="range" id="calc-sold" min="0" max="1000" step="1" value="750"
+             aria-label="Vé đã bán trong lượt">
+      <div class="zones" aria-hidden="true">
+        <span class="z1">bị hủy</span><span class="z2">tiền mặt</span><span class="z3">+ Rolex</span>
+      </div>
+
+      <div class="chips" id="calc-chips">
+        <button class="chip" type="button" data-n="10">10</button>
+        <button class="chip" type="button" data-n="20">20</button>
+        <button class="chip" type="button" data-n="50">50</button>
+        <button class="chip" type="button" data-n="100">100</button>
+        <button class="chip" type="button" data-n="499">499</button>
+        <button class="chip" type="button" data-n="500">500</button>
+        <button class="chip" type="button" data-n="1000">1,000</button>
+        <button class="chip" type="button" data-n="3000">3,000</button>
+        <button class="chip" type="button" data-n="5000">5,000</button>
+        <button class="chip" type="button" data-n="10000">10,000</button>
+      </div>
+
+      <label for="calc-mine" style="margin-top:1.2rem">Bạn sẽ mua bao nhiêu vé?</label>
+      <input type="number" id="calc-mine" min="1" max="10000" step="1" value="1" inputmode="numeric">
+
+      <p class="headline" id="calc-headline"></p>
+      <p class="verdict" id="calc-verdict"></p>
+
+      <div class="figures">
+        <div class="figure"><b id="calc-chance">—</b><span id="calc-chance-label">cơ hội bạn trúng giải</span></div>
+        <div class="figure"><b id="calc-prize">—</b><span id="calc-prize-label">USDC cho mỗi người trúng</span></div>
+        <div class="figure muted"><b id="calc-spend">—</b><span id="calc-spend-label">USDC bạn sẽ chi</span></div>
+      </div>
+
+      <div class="dots" id="calc-dots" aria-hidden="true"></div>
+      <p class="dots-note" id="calc-dots-note"></p>
+
+      <hr>
+
+      <dl class="kv">
+        <dt>Vé đã bán trong lượt</dt><dd id="calc-sold-label">1,000</dd>
+        <dt>Trong hũ</dt><dd id="calc-pot">100,000</dd>
+        <dt>Người trúng</dt><dd id="calc-winners">100</dd>
+        <dt>Chiếc Rolex</dt><dd id="calc-watch">Không</dd>
+        <dt>Tỉ lệ</dt><dd id="calc-odds">1 trên 10</dd>
+      </dl>
+
+      <p id="calc-note" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)"></p>
+    </div>
 
     <div class="scroll"><table>
       <thead><tr>

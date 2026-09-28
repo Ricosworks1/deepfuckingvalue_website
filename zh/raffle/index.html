@@ -120,6 +120,67 @@
   .big{font-family:var(--f-mono);font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;
        font-variant-numeric:tabular-nums;line-height:1}
 
+  .calc label{display:block;font-size:.9375rem;color:var(--ink-soft);margin-bottom:.4rem}
+
+  /* The slider is the whole point, so it is drawn rather than left to the
+     browser. The track is shaded into the three things that can happen to a
+     round: too small to draw, drawn for cash, drawn with the watch. The stops
+     match the log scale in app.js — 500 tickets at 67.4%, 5,000 at 92.5%. */
+  .range{-webkit-appearance:none;appearance:none;width:100%;max-width:none;height:2rem;
+         background:transparent;border:0;padding:0;margin:.2rem 0 0;cursor:grab;display:block}
+  .range:active{cursor:grabbing}
+  .range::-webkit-slider-runnable-track{height:1rem;border-radius:999px;border:2px solid var(--rule);
+    background:linear-gradient(to right,var(--warn-sunk) 0 67.4%,var(--paper-sunk) 67.4% 92.5%,var(--ok-sunk) 92.5% 100%)}
+  .range::-moz-range-track{height:1rem;border-radius:999px;border:2px solid var(--rule);
+    background:linear-gradient(to right,var(--warn-sunk) 0 67.4%,var(--paper-sunk) 67.4% 92.5%,var(--ok-sunk) 92.5% 100%)}
+  .range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:1.9rem;height:1.9rem;
+    border-radius:50%;background:var(--red);border:3px solid var(--paper);
+    box-shadow:0 2px 6px rgba(0,0,0,.3);margin-top:-.55rem}
+  .range::-moz-range-thumb{width:1.9rem;height:1.9rem;border-radius:50%;background:var(--red);
+    border:3px solid var(--paper);box-shadow:0 2px 6px rgba(0,0,0,.3)}
+  .range:focus-visible::-webkit-slider-thumb{outline:3px solid var(--navy);outline-offset:2px}
+  .range:focus-visible::-moz-range-thumb{outline:3px solid var(--navy);outline-offset:2px}
+
+  .zones{display:flex;font-size:.6875rem;font-family:var(--f-mono);letter-spacing:.06em;
+         text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
+  .zones span{border-top:2px solid var(--rule);padding-top:.3rem}
+  .zones .z1{flex:0 0 67.4%;color:var(--warn);border-color:var(--warn)}
+  .zones .z2{flex:0 0 25.1%;padding-left:.4rem}
+  .zones .z3{flex:1 1 auto;padding-left:.4rem;color:var(--ok);border-color:var(--ok);
+             text-align:right;white-space:nowrap}
+
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.1rem 0 0}
+  .chip{font-family:var(--f-mono);font-size:.8125rem;font-weight:600;padding:.45rem .75rem;
+        border-radius:999px;border:2px solid var(--rule);background:var(--paper);
+        color:var(--ink-soft);cursor:pointer}
+  .chip:hover{border-color:var(--navy);color:var(--navy)}
+  .chip[aria-pressed="true"]{border-color:var(--red);background:var(--red);color:var(--on-accent)}
+
+  .headline{font-size:1.0625rem;line-height:1.5;margin:1.4rem 0 0;color:var(--ink)}
+  .headline b{color:var(--navy)}
+  .figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem,100%),1fr));
+           gap:1.1rem;margin:1.1rem 0 .4rem}
+  .figure{border-top:3px solid var(--red);padding-top:.7rem}
+  .figure b{display:block;font-family:var(--f-mono);font-size:clamp(1.5rem,1.1rem + 1.4vw,2.1rem);
+            font-weight:700;color:var(--navy);letter-spacing:-.03em;line-height:1.05;
+            font-variant-numeric:tabular-nums}
+  .figure span{display:block;font-size:.8125rem;color:var(--ink-soft);margin-top:.35rem}
+  .figure.muted{border-color:var(--rule)}
+  .figure.muted b{color:var(--ink-soft)}
+
+  /* One hundred dots, one per hundred tickets, with the winning share lit.
+     Odds as a picture, because "1 in 100" and "1 in 5" look identical as text. */
+  .dots{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;max-width:24rem;margin:.2rem 0 .5rem}
+  .dots i{display:block;aspect-ratio:1;border-radius:50%;background:var(--rule)}
+  .dots i.win{background:var(--red)}
+  .dots-note{font-size:.8125rem;color:var(--ink-soft);margin:0}
+
+  .verdict{font-weight:700;padding:.6rem .85rem;border-radius:8px;margin:1.2rem 0 0;font-size:.9375rem}
+  .verdict-draw{background:var(--ok-sunk);color:var(--ok)}
+  .verdict-cancel{background:var(--warn-sunk);color:var(--warn)}
+  .calc hr{border:0;border-top:1px solid var(--rule);margin:1.3rem 0}
+  .calc input[type=number]{max-width:7.5rem;margin:.1rem 0 0}
+
 /*i18n:css*/
   .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
   .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
@@ -227,6 +288,74 @@
     <p>
       中奖者始终是 100 位 —— 如果券数更少，则与券数相同。变的是每份奖金的大小。奖池永远是全部收入的 40.8%，所以一轮规模越小，奖金越小，中奖概率越高。下面每个数字都来自合约自身的算法，而不是营销估算。
     </p>
+
+    <div class="panel calc" id="calc" hidden
+         data-price="100000000" data-tickets="10000" data-winners="100" data-prize-bps="4080"
+         data-watch-value="12000000000" data-watch-floor="500000000000"
+         data-min-tickets="500" data-refund-bps="8000"
+         data-t-headline="如果你持有已售出的 {sold} 张券中的 {mine} 张，你有 {chance} 的概率赢得 {prize} USDC。"
+         data-t-headline-cancel="只售出 {sold} 张券时，本轮无法开奖。没有人赢得任何东西：每张券所付的 {price} 中，你取回 {refund} USDC。"
+         data-t-drawn="券数足够 —— 本轮开奖。"
+         data-t-cancelled="券数太少 —— 本轮取消并退款。"
+         data-t-awarded="会送出"
+         data-t-not-awarded="不送出 —— 需要 {floor} USDC 的奖池"
+         data-t-refund="退回 {amount} USDC"
+         data-t-refund-label="每张券退回的 USDC"
+         data-t-odds="1/{n}"
+         data-t-none="无人"
+         data-t-certain="几乎必中"
+         data-t-dots="在这种规模的一轮里，大约每 100 张券中有 {k} 张能赢到东西。"
+         data-t-dots-cancel="在这种规模的一轮里，没有任何券能赢到东西。"
+         data-t-cancel-note="低于 {min} 张券时，没有人能给本轮开奖：本轮取消，每张券取回所付 {price} 中的 {refund} USDC —— 每张券亏 {loss}。"
+         data-t-draw-note="按所有券平均，这种规模的一轮会返还一张券所付 {price} 中的 {ev} USDC。这个比例在任何规模下都是 {pct}：规模更小的一轮只是把它分摊到更少的券上，所以奖金变小而中奖概率变高。">
+      <h3>如果你参与，会怎样？</h3>
+      <label for="calc-sold">拖动滑块，查看任意规模的一轮</label>
+      <input type="range" class="range" id="calc-sold" min="0" max="1000" step="1" value="750"
+             aria-label="本轮已售券数">
+      <div class="zones" aria-hidden="true">
+        <span class="z1">取消</span><span class="z2">现金</span><span class="z3">+ Rolex</span>
+      </div>
+
+      <div class="chips" id="calc-chips">
+        <button class="chip" type="button" data-n="10">10</button>
+        <button class="chip" type="button" data-n="20">20</button>
+        <button class="chip" type="button" data-n="50">50</button>
+        <button class="chip" type="button" data-n="100">100</button>
+        <button class="chip" type="button" data-n="499">499</button>
+        <button class="chip" type="button" data-n="500">500</button>
+        <button class="chip" type="button" data-n="1000">1,000</button>
+        <button class="chip" type="button" data-n="3000">3,000</button>
+        <button class="chip" type="button" data-n="5000">5,000</button>
+        <button class="chip" type="button" data-n="10000">10,000</button>
+      </div>
+
+      <label for="calc-mine" style="margin-top:1.2rem">你会买多少张券？</label>
+      <input type="number" id="calc-mine" min="1" max="10000" step="1" value="1" inputmode="numeric">
+
+      <p class="headline" id="calc-headline"></p>
+      <p class="verdict" id="calc-verdict"></p>
+
+      <div class="figures">
+        <div class="figure"><b id="calc-chance">—</b><span id="calc-chance-label">你赢得奖品的概率</span></div>
+        <div class="figure"><b id="calc-prize">—</b><span id="calc-prize-label">每位中奖者的 USDC</span></div>
+        <div class="figure muted"><b id="calc-spend">—</b><span id="calc-spend-label">你会花的 USDC</span></div>
+      </div>
+
+      <div class="dots" id="calc-dots" aria-hidden="true"></div>
+      <p class="dots-note" id="calc-dots-note"></p>
+
+      <hr>
+
+      <dl class="kv">
+        <dt>本轮已售券数</dt><dd id="calc-sold-label">1,000</dd>
+        <dt>奖池</dt><dd id="calc-pot">100,000</dd>
+        <dt>中奖者</dt><dd id="calc-winners">100</dd>
+        <dt>Rolex 腕表</dt><dd id="calc-watch">否</dd>
+        <dt>中奖率</dt><dd id="calc-odds">1/10</dd>
+      </dl>
+
+      <p id="calc-note" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)"></p>
+    </div>
 
     <div class="scroll"><table>
       <thead><tr>

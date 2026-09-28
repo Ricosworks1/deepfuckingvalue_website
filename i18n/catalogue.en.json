@@ -1536,12 +1536,112 @@
    "text": "There are always 100 winners — or as many as there are tickets, if fewer. What changes is\n      the size of each prize. The prize pool is always 40.8% of whatever was collected, so a\n      smaller round means smaller prizes and much better odds. Every figure below is the\n      contract's own arithmetic, not a marketing estimate.",
    "kind": "text"
   },
-  "a960c7a9e1": {
-   "text": "Tickets sold",
+  "cda0741660": {
+   "text": "If you hold {mine} of the {sold} tickets sold, you have a {chance} chance of winning {prize} USDC.",
+   "kind": "attr"
+  },
+  "162b909717": {
+   "text": "With only {sold} tickets sold the round cannot be drawn. Nobody wins anything: you get {refund} USDC back of the {price} each ticket cost.",
+   "kind": "attr"
+  },
+  "64ac99a5f8": {
+   "text": "Enough tickets — this round is drawn.",
+   "kind": "attr"
+  },
+  "c5acad3731": {
+   "text": "Too few tickets — this round is cancelled and refunded.",
+   "kind": "attr"
+  },
+  "f1f6d3909d": {
+   "text": "Yes, awarded",
+   "kind": "attr"
+  },
+  "073c9796aa": {
+   "text": "No — needs a {floor} USDC pot",
+   "kind": "attr"
+  },
+  "096b432946": {
+   "text": "{amount} USDC refunded",
+   "kind": "attr"
+  },
+  "6d8b580923": {
+   "text": "USDC refunded per ticket",
+   "kind": "attr"
+  },
+  "148ba2d236": {
+   "text": "Nobody",
+   "kind": "attr"
+  },
+  "169e0dec0c": {
+   "text": "Practically certain",
+   "kind": "attr"
+  },
+  "ebeda1c8a7": {
+   "text": "About {k} in every 100 tickets wins something in a round this size.",
+   "kind": "attr"
+  },
+  "1486948d20": {
+   "text": "No ticket wins anything in a round this size.",
+   "kind": "attr"
+  },
+  "0a9d0a30ca": {
+   "text": "Below {min} tickets nobody can draw the round, so it is cancelled and every ticket takes back {refund} USDC of the {price} it cost — a loss of {loss} a ticket.",
+   "kind": "attr"
+  },
+  "b0734c499e": {
+   "text": "Averaged over every ticket, a round this size pays back {ev} USDC of the {price} a ticket costs. That share is {pct} at every size: a smaller round simply spreads it over fewer tickets, which is why the prizes shrink as the odds improve.",
+   "kind": "attr"
+  },
+  "6895e15775": {
+   "text": "What happens if you join?",
+   "kind": "text"
+  },
+  "d6278e3921": {
+   "text": "Move the slider to see a round of any size",
+   "kind": "text"
+  },
+  "96f8fe6f48": {
+   "text": "Tickets sold in the round",
+   "kind": "attr"
+  },
+  "8761d26fb8": {
+   "text": "cancelled",
+   "kind": "text"
+  },
+  "a34c860a99": {
+   "text": "cash",
+   "kind": "text"
+  },
+  "4d1accc9b7": {
+   "text": "+ Rolex",
+   "kind": "text"
+  },
+  "53d8fae1a1": {
+   "text": "How many tickets would you buy?",
+   "kind": "text"
+  },
+  "52ec020331": {
+   "text": "your chance of winning a prize",
+   "kind": "text"
+  },
+  "c4b17d6501": {
+   "text": "USDC to each winner",
+   "kind": "text"
+  },
+  "4838058932": {
+   "text": "USDC you would spend",
    "kind": "text"
   },
   "f1d8b47782": {
    "text": "Odds",
+   "kind": "text"
+  },
+  "7258dc93f2": {
+   "text": "1 in 10",
+   "kind": "text"
+  },
+  "a960c7a9e1": {
+   "text": "Tickets sold",
    "kind": "text"
   },
   "031638f370": {
@@ -1570,10 +1670,6 @@
   },
   "588a1e3ae3": {
    "text": "408.00 USDC",
-   "kind": "text"
-  },
-  "7258dc93f2": {
-   "text": "1 in 10",
    "kind": "text"
   },
   "fb360f9c09": {
@@ -3973,6 +4069,134 @@
    },
    {
     "hash": "a116e41d10",
+    "kind": "text"
+   },
+   {
+    "hash": "cda0741660",
+    "kind": "attr"
+   },
+   {
+    "hash": "162b909717",
+    "kind": "attr"
+   },
+   {
+    "hash": "64ac99a5f8",
+    "kind": "attr"
+   },
+   {
+    "hash": "c5acad3731",
+    "kind": "attr"
+   },
+   {
+    "hash": "f1f6d3909d",
+    "kind": "attr"
+   },
+   {
+    "hash": "073c9796aa",
+    "kind": "attr"
+   },
+   {
+    "hash": "096b432946",
+    "kind": "attr"
+   },
+   {
+    "hash": "6d8b580923",
+    "kind": "attr"
+   },
+   {
+    "hash": "c780444008",
+    "kind": "attr"
+   },
+   {
+    "hash": "148ba2d236",
+    "kind": "attr"
+   },
+   {
+    "hash": "169e0dec0c",
+    "kind": "attr"
+   },
+   {
+    "hash": "ebeda1c8a7",
+    "kind": "attr"
+   },
+   {
+    "hash": "1486948d20",
+    "kind": "attr"
+   },
+   {
+    "hash": "0a9d0a30ca",
+    "kind": "attr"
+   },
+   {
+    "hash": "b0734c499e",
+    "kind": "attr"
+   },
+   {
+    "hash": "6895e15775",
+    "kind": "text"
+   },
+   {
+    "hash": "d6278e3921",
+    "kind": "text"
+   },
+   {
+    "hash": "96f8fe6f48",
+    "kind": "attr"
+   },
+   {
+    "hash": "8761d26fb8",
+    "kind": "text"
+   },
+   {
+    "hash": "a34c860a99",
+    "kind": "text"
+   },
+   {
+    "hash": "4d1accc9b7",
+    "kind": "text"
+   },
+   {
+    "hash": "53d8fae1a1",
+    "kind": "text"
+   },
+   {
+    "hash": "52ec020331",
+    "kind": "text"
+   },
+   {
+    "hash": "c4b17d6501",
+    "kind": "text"
+   },
+   {
+    "hash": "4838058932",
+    "kind": "text"
+   },
+   {
+    "hash": "96f8fe6f48",
+    "kind": "text"
+   },
+   {
+    "hash": "ad6a982801",
+    "kind": "text"
+   },
+   {
+    "hash": "1d50bf1d8b",
+    "kind": "text"
+   },
+   {
+    "hash": "f11832dcac",
+    "kind": "text"
+   },
+   {
+    "hash": "816c52fd2b",
+    "kind": "text"
+   },
+   {
+    "hash": "f1d8b47782",
+    "kind": "text"
+   },
+   {
+    "hash": "7258dc93f2",
     "kind": "text"
    },
    {

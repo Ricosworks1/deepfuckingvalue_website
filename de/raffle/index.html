@@ -120,6 +120,67 @@
   .big{font-family:var(--f-mono);font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;
        font-variant-numeric:tabular-nums;line-height:1}
 
+  .calc label{display:block;font-size:.9375rem;color:var(--ink-soft);margin-bottom:.4rem}
+
+  /* The slider is the whole point, so it is drawn rather than left to the
+     browser. The track is shaded into the three things that can happen to a
+     round: too small to draw, drawn for cash, drawn with the watch. The stops
+     match the log scale in app.js — 500 tickets at 67.4%, 5,000 at 92.5%. */
+  .range{-webkit-appearance:none;appearance:none;width:100%;max-width:none;height:2rem;
+         background:transparent;border:0;padding:0;margin:.2rem 0 0;cursor:grab;display:block}
+  .range:active{cursor:grabbing}
+  .range::-webkit-slider-runnable-track{height:1rem;border-radius:999px;border:2px solid var(--rule);
+    background:linear-gradient(to right,var(--warn-sunk) 0 67.4%,var(--paper-sunk) 67.4% 92.5%,var(--ok-sunk) 92.5% 100%)}
+  .range::-moz-range-track{height:1rem;border-radius:999px;border:2px solid var(--rule);
+    background:linear-gradient(to right,var(--warn-sunk) 0 67.4%,var(--paper-sunk) 67.4% 92.5%,var(--ok-sunk) 92.5% 100%)}
+  .range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:1.9rem;height:1.9rem;
+    border-radius:50%;background:var(--red);border:3px solid var(--paper);
+    box-shadow:0 2px 6px rgba(0,0,0,.3);margin-top:-.55rem}
+  .range::-moz-range-thumb{width:1.9rem;height:1.9rem;border-radius:50%;background:var(--red);
+    border:3px solid var(--paper);box-shadow:0 2px 6px rgba(0,0,0,.3)}
+  .range:focus-visible::-webkit-slider-thumb{outline:3px solid var(--navy);outline-offset:2px}
+  .range:focus-visible::-moz-range-thumb{outline:3px solid var(--navy);outline-offset:2px}
+
+  .zones{display:flex;font-size:.6875rem;font-family:var(--f-mono);letter-spacing:.06em;
+         text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
+  .zones span{border-top:2px solid var(--rule);padding-top:.3rem}
+  .zones .z1{flex:0 0 67.4%;color:var(--warn);border-color:var(--warn)}
+  .zones .z2{flex:0 0 25.1%;padding-left:.4rem}
+  .zones .z3{flex:1 1 auto;padding-left:.4rem;color:var(--ok);border-color:var(--ok);
+             text-align:right;white-space:nowrap}
+
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.1rem 0 0}
+  .chip{font-family:var(--f-mono);font-size:.8125rem;font-weight:600;padding:.45rem .75rem;
+        border-radius:999px;border:2px solid var(--rule);background:var(--paper);
+        color:var(--ink-soft);cursor:pointer}
+  .chip:hover{border-color:var(--navy);color:var(--navy)}
+  .chip[aria-pressed="true"]{border-color:var(--red);background:var(--red);color:var(--on-accent)}
+
+  .headline{font-size:1.0625rem;line-height:1.5;margin:1.4rem 0 0;color:var(--ink)}
+  .headline b{color:var(--navy)}
+  .figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11rem,100%),1fr));
+           gap:1.1rem;margin:1.1rem 0 .4rem}
+  .figure{border-top:3px solid var(--red);padding-top:.7rem}
+  .figure b{display:block;font-family:var(--f-mono);font-size:clamp(1.5rem,1.1rem + 1.4vw,2.1rem);
+            font-weight:700;color:var(--navy);letter-spacing:-.03em;line-height:1.05;
+            font-variant-numeric:tabular-nums}
+  .figure span{display:block;font-size:.8125rem;color:var(--ink-soft);margin-top:.35rem}
+  .figure.muted{border-color:var(--rule)}
+  .figure.muted b{color:var(--ink-soft)}
+
+  /* One hundred dots, one per hundred tickets, with the winning share lit.
+     Odds as a picture, because "1 in 100" and "1 in 5" look identical as text. */
+  .dots{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;max-width:24rem;margin:.2rem 0 .5rem}
+  .dots i{display:block;aspect-ratio:1;border-radius:50%;background:var(--rule)}
+  .dots i.win{background:var(--red)}
+  .dots-note{font-size:.8125rem;color:var(--ink-soft);margin:0}
+
+  .verdict{font-weight:700;padding:.6rem .85rem;border-radius:8px;margin:1.2rem 0 0;font-size:.9375rem}
+  .verdict-draw{background:var(--ok-sunk);color:var(--ok)}
+  .verdict-cancel{background:var(--warn-sunk);color:var(--warn)}
+  .calc hr{border:0;border-top:1px solid var(--rule);margin:1.3rem 0}
+  .calc input[type=number]{max-width:7.5rem;margin:.1rem 0 0}
+
 /*i18n:css*/
   .langbar { background: var(--paper-sunk); border-bottom: 1px solid var(--pale); }
   .langbar ul { margin: 0 auto; padding: 0.4rem 1rem; list-style: none;
@@ -227,6 +288,74 @@
     <p>
       Es gibt immer 100 Gewinner — oder so viele, wie es Lose gibt, wenn es weniger sind. Was sich ändert, ist die Höhe jedes Preises. Der Preistopf sind immer 40,8 % von allem, was eingenommen wurde: Eine kleinere Runde bedeutet also kleinere Preise und viel bessere Chancen. Jede Zahl unten stammt aus der Arithmetik des Vertrags, nicht aus einer Marketing-Schätzung.
     </p>
+
+    <div class="panel calc" id="calc" hidden
+         data-price="100000000" data-tickets="10000" data-winners="100" data-prize-bps="4080"
+         data-watch-value="12000000000" data-watch-floor="500000000000"
+         data-min-tickets="500" data-refund-bps="8000"
+         data-t-headline="Wenn Sie {mine} von {sold} verkauften Losen halten, haben Sie eine Chance von {chance} auf {prize} USDC."
+         data-t-headline-cancel="Mit nur {sold} verkauften Losen kann die Runde nicht gezogen werden. Niemand gewinnt etwas: Sie bekommen {refund} USDC der {price} zurück, die jedes Los gekostet hat."
+         data-t-drawn="Genug Lose — diese Runde wird gezogen."
+         data-t-cancelled="Zu wenige Lose — diese Runde wird abgebrochen und erstattet."
+         data-t-awarded="Ja, wird vergeben"
+         data-t-not-awarded="Nein — braucht einen Topf von {floor} USDC"
+         data-t-refund="{amount} USDC erstattet"
+         data-t-refund-label="USDC erstattet je Los"
+         data-t-odds="1 von {n}"
+         data-t-none="Niemand"
+         data-t-certain="So gut wie sicher"
+         data-t-dots="Etwa {k} von je 100 Losen gewinnen in einer Runde dieser Größe etwas."
+         data-t-dots-cancel="In einer Runde dieser Größe gewinnt kein einziges Los etwas."
+         data-t-cancel-note="Unter {min} Losen kann niemand die Runde ziehen: Sie wird abgebrochen und jedes Los bekommt {refund} USDC der {price} zurück, die es gekostet hat — ein Verlust von {loss} je Los."
+         data-t-draw-note="Über alle Lose gemittelt zahlt eine Runde dieser Größe {ev} USDC der {price} zurück, die ein Los kostet. Dieser Anteil beträgt in jeder Größenordnung {pct}: Eine kleinere Runde verteilt ihn nur auf weniger Lose, weshalb die Preise sinken, während die Chancen steigen.">
+      <h3>Was passiert, wenn Sie mitmachen?</h3>
+      <label for="calc-sold">Bewegen Sie den Regler, um eine Runde beliebiger Größe zu sehen</label>
+      <input type="range" class="range" id="calc-sold" min="0" max="1000" step="1" value="750"
+             aria-label="Verkaufte Lose in der Runde">
+      <div class="zones" aria-hidden="true">
+        <span class="z1">abgebrochen</span><span class="z2">bar</span><span class="z3">+ Rolex</span>
+      </div>
+
+      <div class="chips" id="calc-chips">
+        <button class="chip" type="button" data-n="10">10</button>
+        <button class="chip" type="button" data-n="20">20</button>
+        <button class="chip" type="button" data-n="50">50</button>
+        <button class="chip" type="button" data-n="100">100</button>
+        <button class="chip" type="button" data-n="499">499</button>
+        <button class="chip" type="button" data-n="500">500</button>
+        <button class="chip" type="button" data-n="1000">1,000</button>
+        <button class="chip" type="button" data-n="3000">3,000</button>
+        <button class="chip" type="button" data-n="5000">5,000</button>
+        <button class="chip" type="button" data-n="10000">10,000</button>
+      </div>
+
+      <label for="calc-mine" style="margin-top:1.2rem">Wie viele Lose würden Sie kaufen?</label>
+      <input type="number" id="calc-mine" min="1" max="10000" step="1" value="1" inputmode="numeric">
+
+      <p class="headline" id="calc-headline"></p>
+      <p class="verdict" id="calc-verdict"></p>
+
+      <div class="figures">
+        <div class="figure"><b id="calc-chance">—</b><span id="calc-chance-label">Ihre Chance auf einen Preis</span></div>
+        <div class="figure"><b id="calc-prize">—</b><span id="calc-prize-label">USDC je Gewinner</span></div>
+        <div class="figure muted"><b id="calc-spend">—</b><span id="calc-spend-label">USDC, die Sie ausgeben würden</span></div>
+      </div>
+
+      <div class="dots" id="calc-dots" aria-hidden="true"></div>
+      <p class="dots-note" id="calc-dots-note"></p>
+
+      <hr>
+
+      <dl class="kv">
+        <dt>Verkaufte Lose in der Runde</dt><dd id="calc-sold-label">1,000</dd>
+        <dt>Im Topf</dt><dd id="calc-pot">100,000</dd>
+        <dt>Gewinner</dt><dd id="calc-winners">100</dd>
+        <dt>Die Rolex</dt><dd id="calc-watch">Nein</dd>
+        <dt>Chance</dt><dd id="calc-odds">1 von 10</dd>
+      </dl>
+
+      <p id="calc-note" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)"></p>
+    </div>
 
     <div class="scroll"><table>
       <thead><tr>
