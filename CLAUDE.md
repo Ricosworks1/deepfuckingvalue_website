@@ -90,6 +90,28 @@ The contract lives in a separate repo (`dfv-raffle`). The rehearsal the proof
 page documents settled on Ethereum mainnet on 4 September 2026 — those figures
 are fixed history, not a live view, and should not be "refreshed".
 
+### The prize figures are a copy of the contract's configuration
+
+Most of what `/raffle/` shows is read from the chain: the live panel and the
+"what happens if you join?" slider call `PRIZE_BPS`, `WINNERS`, `WATCH_FLOOR`,
+`WATCH_VALUE`, `MIN_TICKETS` and `REFUND_BPS` and run the contract's own
+arithmetic, so they follow the contract wherever it goes.
+
+Four things do **not**, and are copies that can go stale:
+
+1. the `data-*` defaults on `#calc`, used before the chain has answered;
+2. the table of what each round size pays;
+3. the prose — 100 USDC a ticket, 4,000 to each winner, the 500-ticket
+   minimum, the 500,000 pot the watch needs, the 80% refund;
+4. the translations of all of the above, in five catalogues.
+
+They mirror `MAINNET` in `config/rounds.ts` of the `dfv-raffle` repo. **If that
+configuration ever changes, these change with it** — and a change to the ticket
+price or the prize split makes the page state a payout the contract will not
+make, in six languages. Nothing in CI can catch it: the two repos do not see
+each other. Changing the contract's addresses is cheap by comparison; it is one
+line in `app.js` and the figures stay true.
+
 ## Contracts
 
 | Contract | Address |
