@@ -142,7 +142,7 @@
 
   <h1>抽奖</h1>
   <p class="sub">
-    一万张券，每张 100 USDC。一百位中奖者由 Chainlink VRF 开出——一只劳力士，外加九十九份 4,000 USDC 的现金奖。最后一张券卖出的那一刻，开奖自动发生。没有人能叫停它、拖延它，或者决定谁中奖。
+    一万张券，每张 100 USDC。一百位中奖者，由 Chainlink VRF 开出。若全部售罄，奖品是一只 Rolex 加九十九份 4,000 USDC 的现金奖 —— 规模更小的一轮奖金更小，但中奖概率高得多；低于 5,000 张券则完全不送腕表。最后一张券售出的那一刻，开奖自行发生。没有人能阻止、拖延或挑选谁中奖。
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
@@ -160,6 +160,29 @@
         <div class="cell"><dt>奖池</dt><dd><span id="r-pot">0</span></dd><span class="sub2">目前已募集的 USDC</span></div>
         <div class="cell"><dt>轮次</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">轮连续进行</span></div>
       </dl>
+
+      <div class="panel" id="projection" style="margin-top:1.25rem"
+           data-t-awarded="会送出"
+           data-t-not-awarded="不会送出 —— 奖池低于 {floor} USDC"
+           data-t-no="否"
+           data-t-empty-watch="还没有 —— 尚未售出任何券"
+           data-t-empty-context="本轮尚未售出任何券。"
+           data-t-cancelled-winners="没有 —— 本轮将被取消"
+           data-t-cancelled-context="低于 {min} 张券时，本轮根本无法开奖，而是会被取消，每张券可取回所付 {price} 中的 {refund} USDC。再售出 {more} 张券，本轮才可以开奖。"
+           data-t-context="基于目前已售出的 {sold} 张券。此后每多售出一张，奖金更高，中奖概率更低。"
+           data-t-context-no-watch="基于目前已售出的 {sold} 张券，并且在这个规模下不会送出腕表。此后每多售出一张，奖金更高，中奖概率更低。"
+           data-t-odds="1/{n}">
+        <h3>如果现在就开奖</h3>
+        <dl class="kv">
+          <dt>中奖者</dt><dd id="pj-winners">100</dd>
+          <dt>每位中奖者获得</dt><dd><span id="pj-prize">4,000.00</span> USDC</dd>
+          <dt>Rolex 腕表</dt><dd id="pj-watch">会送出</dd>
+          <dt>每张券的中奖概率</dt><dd id="pj-odds">百分之一</dd>
+        </dl>
+        <p id="pj-context" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)">
+          此处显示的是 10,000 张券售罄时的情形。抽奖开放后，本面板将按合约使用的同一套算法，根据实际售出的券数计算。
+        </p>
+      </div>
 
       <div class="status" id="draw-note" hidden>
         <strong>正在开奖。</strong> Chainlink VRF 正在为本轮生成随机数。下一轮会自动重新开放参与。
@@ -200,6 +223,39 @@
   </div>
 
   <section>
+    <h2>你能赢多少，取决于卖出多少张券</h2>
+    <p>
+      中奖者始终是 100 位 —— 如果券数更少，则与券数相同。变的是每份奖金的大小。奖池永远是全部收入的 40.8%，所以一轮规模越小，奖金越小，中奖概率越高。下面每个数字都来自合约自身的算法，而不是营销估算。
+    </p>
+
+    <div class="scroll"><table>
+      <thead><tr>
+        <th scope="col">已售券数</th>
+        <th scope="col">奖池</th>
+        <th scope="col">Rolex 腕表</th>
+        <th scope="col">中奖者</th>
+        <th scope="col">每位中奖者获得</th>
+        <th scope="col">中奖率</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>499 或更少</td><td>—</td><td>无</td><td>本轮取消</td><td>退回 80.00 USDC</td><td>—</td></tr>
+        <tr><td>500</td><td>50,000</td><td>无</td><td>100</td><td>204.00 USDC</td><td>1/5</td></tr>
+        <tr><td>1,000</td><td>100,000</td><td>无</td><td>100</td><td>408.00 USDC</td><td>1/10</td></tr>
+        <tr><td>5,000</td><td>500,000</td><td>有</td><td>100</td><td>1,939.39 USDC</td><td>1/50</td></tr>
+        <tr><td>10,000</td><td>1,000,000</td><td>有</td><td>100</td><td>4,000.00 USDC</td><td>百分之一</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="status">
+      <strong>Rolex 需要 5,000 张券。</strong> 只有当奖池达到 500,000 USDC 时才会送出腕表。低于该数额，全部奖金改为现金发放 —— 有钱可赢，但没有腕表。
+    </div>
+
+    <div class="status">
+      <strong>取消的一轮，退回的钱比勉强开奖的小轮更多。</strong> 低于 500 张券时，没有人能给本轮开奖：本轮会被取消，每张券取回所付 100 USDC 中的 80 USDC。而真正开奖的一轮，平均只返还 40.8%。所以越过 500 张券这条线，会降低一张券的平均价值，同时提高它可能赢到的金额。与其让你事后自己算出来，不如现在就告诉你。
+    </div>
+  </section>
+
+  <section>
     <h2>本轮有谁参与</h2>
     <p style="font-size:.9375rem;color:var(--ink-soft)">
       每一张已售出的券，按钱包列出。读取自以太坊主网，每小时刷新——这是链自己的记录，不是我们的。
@@ -227,8 +283,8 @@
     <dl class="grid">
       <div class="cell"><dt>券</dt><dd>10,000</dd><span class="sub2">每张 100 USDC</span></div>
       <div class="cell"><dt>中奖者</dt><dd>100</dd><span class="sub2">1 只手表 + 99 份现金</span></div>
-      <div class="cell"><dt>现金奖</dt><dd>4,000</dd><span class="sub2">USDC，99 人各得</span></div>
-      <div class="cell"><dt>中奖率</dt><dd>百分之一</dd><span class="sub2">每张券</span></div>
+      <div class="cell"><dt>现金奖</dt><dd>4,000</dd><span class="sub2">USDC 每位，若售罄</span></div>
+      <div class="cell"><dt>中奖率</dt><dd>百分之一</dd><span class="sub2">每张券，若售罄</span></div>
     </dl>
 
     <div class="odds">
@@ -255,7 +311,7 @@
     <h2>钱去了哪里</h2>
     <p><strong>募集到的每一分钱里，40.8% 会作为奖金发回去</strong>——手表加上那九十九份现金奖。其余归庄家。这个比例写死在合约里，改不了。</p>
     <p>
-      不管这一轮有没有售罄，都是这样。卖出九千张券的一轮同样支付 40.8%，按比例缩放，所以没有人能从一轮卖不满里得利。低于 500 张券，这一轮会直接取消，买家拿回所付金额的 80%。
+      无论本轮是否售罄，这一点都成立。卖出九千张券的一轮同样按 40.8% 的比例发放奖金，因此没有人会因为某一轮没卖满而获利。两种情况下中奖者都是 100 位，所以在规模较小的一轮里，每份奖金更小，而你拿到其中一份的概率更高。低于 500 张券时，本轮改为取消，购买者取回所付金额的 80%。
     </p>
     <div class="status">
       <strong>这一点要看清楚。</strong> 抽奖不是投资。大多数券什么都不会中，而一张券的期望回报低于你为它付的钱。只买你输得起的那部分。

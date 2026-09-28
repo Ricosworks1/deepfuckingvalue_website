@@ -1376,8 +1376,8 @@
    "text": "The raffle",
    "kind": "text"
   },
-  "94960a7794": {
-   "text": "Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF — a Rolex and\n    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its\n    own. Nobody can stop it, delay it, or choose who wins.",
+  "e5794e377b": {
+   "text": "Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF. Sell the lot\n    and that is a Rolex plus ninety-nine cash prizes of 4,000 USDC — a smaller round pays\n    smaller prizes and gives far better odds, and below 5,000 tickets there is no watch at all.\n    When the last ticket sells, the draw happens on its own. Nobody can stop it, delay it, or\n    choose who wins.",
    "kind": "text"
   },
   "25b74b6339": {
@@ -1410,6 +1410,78 @@
   },
   "3ef939e1a4": {
    "text": "rounds run back to back",
+   "kind": "text"
+  },
+  "4286cf2f1f": {
+   "text": "Awarded",
+   "kind": "attr"
+  },
+  "dc514bc945": {
+   "text": "Not awarded — the pot is below {floor} USDC",
+   "kind": "attr"
+  },
+  "816c52fd2b": {
+   "text": "No",
+   "kind": "attr"
+  },
+  "754881d363": {
+   "text": "Not yet — nothing has been sold",
+   "kind": "attr"
+  },
+  "7ec8904d68": {
+   "text": "No tickets have been sold in this round yet.",
+   "kind": "attr"
+  },
+  "d7345a71a5": {
+   "text": "None — the round would be cancelled",
+   "kind": "attr"
+  },
+  "f727d8ed43": {
+   "text": "Below {min} tickets a round cannot be drawn at all. It is cancelled instead, and every ticket takes back {refund} USDC of the {price} it cost. Another {more} tickets would make this round drawable.",
+   "kind": "attr"
+  },
+  "7df543ba7b": {
+   "text": "Based on the {sold} tickets sold so far. Every ticket after this one makes the prizes bigger and the odds longer.",
+   "kind": "attr"
+  },
+  "095e3a19ef": {
+   "text": "Based on the {sold} tickets sold so far, and on the watch not being awarded at this size. Every ticket after this one makes the prizes bigger and the odds longer.",
+   "kind": "attr"
+  },
+  "c780444008": {
+   "text": "1 in {n}",
+   "kind": "attr"
+  },
+  "b3eb7c5cab": {
+   "text": "If the round drew right now",
+   "kind": "text"
+  },
+  "1d50bf1d8b": {
+   "text": "Winners",
+   "kind": "text"
+  },
+  "af8d731cd3": {
+   "text": "Each cash winner gets",
+   "kind": "text"
+  },
+  "a1a7ffdba1": {
+   "text": "<0>4,000.00</0> USDC",
+   "kind": "block"
+  },
+  "f11832dcac": {
+   "text": "The Rolex",
+   "kind": "text"
+  },
+  "b095e8c235": {
+   "text": "Chance per ticket",
+   "kind": "text"
+  },
+  "eb400e4c6b": {
+   "text": "1 in 100",
+   "kind": "text"
+  },
+  "50be1ae77a": {
+   "text": "Shown for a full round of 10,000 tickets. Once the raffle opens, this panel is\n          calculated from the tickets actually sold, by the same arithmetic the contract uses.",
    "kind": "text"
   },
   "f2a7793147": {
@@ -1456,6 +1528,86 @@
    "text": "Buying takes two transactions: approving the exact USDC these tickets cost, then the\n        purchase itself. The approval is never unlimited, and this page can send no other\n        transaction of any kind.",
    "kind": "text"
   },
+  "519380e37e": {
+   "text": "What you win depends on how many tickets sell",
+   "kind": "text"
+  },
+  "a116e41d10": {
+   "text": "There are always 100 winners — or as many as there are tickets, if fewer. What changes is\n      the size of each prize. The prize pool is always 40.8% of whatever was collected, so a\n      smaller round means smaller prizes and much better odds. Every figure below is the\n      contract's own arithmetic, not a marketing estimate.",
+   "kind": "text"
+  },
+  "a960c7a9e1": {
+   "text": "Tickets sold",
+   "kind": "text"
+  },
+  "f1d8b47782": {
+   "text": "Odds",
+   "kind": "text"
+  },
+  "031638f370": {
+   "text": "499 or fewer",
+   "kind": "text"
+  },
+  "fd12863535": {
+   "text": "no",
+   "kind": "text"
+  },
+  "426681484f": {
+   "text": "round is cancelled",
+   "kind": "text"
+  },
+  "6b5f7a069a": {
+   "text": "80.00 USDC refunded",
+   "kind": "text"
+  },
+  "4c7f41c2f4": {
+   "text": "204.00 USDC",
+   "kind": "text"
+  },
+  "d844aeaf85": {
+   "text": "1 in 5",
+   "kind": "text"
+  },
+  "588a1e3ae3": {
+   "text": "408.00 USDC",
+   "kind": "text"
+  },
+  "7258dc93f2": {
+   "text": "1 in 10",
+   "kind": "text"
+  },
+  "fb360f9c09": {
+   "text": "yes",
+   "kind": "text"
+  },
+  "a10f658217": {
+   "text": "1,939.39 USDC",
+   "kind": "text"
+  },
+  "fc6ee958be": {
+   "text": "1 in 50",
+   "kind": "text"
+  },
+  "50ffd0b89b": {
+   "text": "4,000.00 USDC",
+   "kind": "text"
+  },
+  "8147a8edee": {
+   "text": "The Rolex needs 5,000 tickets.",
+   "kind": "text"
+  },
+  "6c94e54ddf": {
+   "text": "The watch is awarded only once the pot\n      reaches 500,000 USDC. Below that the entire prize budget is paid as cash instead — there\n      is money to win, but no watch.",
+   "kind": "text"
+  },
+  "8a075edfed": {
+   "text": "A cancelled round hands back more than a small round that draws.",
+   "kind": "text"
+  },
+  "baa1837be5": {
+   "text": "Below\n      500 tickets nobody can draw the round at all: it is cancelled and every ticket takes back\n      80 of the 100 USDC it cost. A round that does draw pays back 40.8% on average. So crossing\n      500 tickets lowers what a ticket is worth on average, and raises what it might win. We\n      would rather you knew that before buying than worked it out afterwards.",
+   "kind": "text"
+  },
   "efecd2d05d": {
    "text": "Who is in this round",
    "kind": "text"
@@ -1496,10 +1648,6 @@
    "text": "100 USDC each",
    "kind": "text"
   },
-  "1d50bf1d8b": {
-   "text": "Winners",
-   "kind": "text"
-  },
   "3484071c2a": {
    "text": "1 watch + 99 cash",
    "kind": "text"
@@ -1508,20 +1656,12 @@
    "text": "Cash prize",
    "kind": "text"
   },
-  "a27542f30d": {
-   "text": "USDC, to each of 99",
+  "75f359b55b": {
+   "text": "USDC each, if it sells out",
    "kind": "text"
   },
-  "f1d8b47782": {
-   "text": "Odds",
-   "kind": "text"
-  },
-  "eb400e4c6b": {
-   "text": "1 in 100",
-   "kind": "text"
-  },
-  "0b584d318a": {
-   "text": "per ticket",
+  "7990eeee6c": {
+   "text": "per ticket, if it sells out",
    "kind": "text"
   },
   "d44857be8b": {
@@ -1564,8 +1704,8 @@
    "text": "<0>40.8% of everything collected is paid back out as prizes</0> — the watch plus\n      the ninety-nine cash prizes. The rest is the house's. That share is fixed in the contract\n      and cannot be changed.",
    "kind": "block"
   },
-  "7329991faa": {
-   "text": "This holds whether the round fills or not. A round that sells nine thousand tickets pays\n      the same 40.8%, scaled down, so nobody gains from a round failing to fill. Below 500\n      tickets the round is cancelled instead and buyers take back 80% of what they paid.",
+  "f0d5218db4": {
+   "text": "This holds whether the round fills or not. A round that sells nine thousand tickets pays\n      the same 40.8%, scaled down, so nobody gains from a round failing to fill. The number of\n      winners stays at 100 either way, so in a smaller round each prize is smaller and your\n      chance of taking one is better. Below 500 tickets the round is cancelled instead and\n      buyers take back 80% of what they paid.",
    "kind": "text"
   },
   "c9231138c0": {
@@ -3652,7 +3792,7 @@
     "kind": "text"
    },
    {
-    "hash": "94960a7794",
+    "hash": "e5794e377b",
     "kind": "text"
    },
    {
@@ -3689,6 +3829,82 @@
    },
    {
     "hash": "3ef939e1a4",
+    "kind": "text"
+   },
+   {
+    "hash": "4286cf2f1f",
+    "kind": "attr"
+   },
+   {
+    "hash": "dc514bc945",
+    "kind": "attr"
+   },
+   {
+    "hash": "816c52fd2b",
+    "kind": "attr"
+   },
+   {
+    "hash": "754881d363",
+    "kind": "attr"
+   },
+   {
+    "hash": "7ec8904d68",
+    "kind": "attr"
+   },
+   {
+    "hash": "d7345a71a5",
+    "kind": "attr"
+   },
+   {
+    "hash": "f727d8ed43",
+    "kind": "attr"
+   },
+   {
+    "hash": "7df543ba7b",
+    "kind": "attr"
+   },
+   {
+    "hash": "095e3a19ef",
+    "kind": "attr"
+   },
+   {
+    "hash": "c780444008",
+    "kind": "attr"
+   },
+   {
+    "hash": "b3eb7c5cab",
+    "kind": "text"
+   },
+   {
+    "hash": "1d50bf1d8b",
+    "kind": "text"
+   },
+   {
+    "hash": "af8d731cd3",
+    "kind": "text"
+   },
+   {
+    "hash": "a1a7ffdba1",
+    "kind": "block"
+   },
+   {
+    "hash": "f11832dcac",
+    "kind": "text"
+   },
+   {
+    "hash": "4286cf2f1f",
+    "kind": "text"
+   },
+   {
+    "hash": "b095e8c235",
+    "kind": "text"
+   },
+   {
+    "hash": "eb400e4c6b",
+    "kind": "text"
+   },
+   {
+    "hash": "50be1ae77a",
     "kind": "text"
    },
    {
@@ -3752,6 +3968,118 @@
     "kind": "text"
    },
    {
+    "hash": "519380e37e",
+    "kind": "text"
+   },
+   {
+    "hash": "a116e41d10",
+    "kind": "text"
+   },
+   {
+    "hash": "a960c7a9e1",
+    "kind": "text"
+   },
+   {
+    "hash": "ad6a982801",
+    "kind": "text"
+   },
+   {
+    "hash": "f11832dcac",
+    "kind": "text"
+   },
+   {
+    "hash": "1d50bf1d8b",
+    "kind": "text"
+   },
+   {
+    "hash": "af8d731cd3",
+    "kind": "text"
+   },
+   {
+    "hash": "f1d8b47782",
+    "kind": "text"
+   },
+   {
+    "hash": "031638f370",
+    "kind": "text"
+   },
+   {
+    "hash": "fd12863535",
+    "kind": "text"
+   },
+   {
+    "hash": "426681484f",
+    "kind": "text"
+   },
+   {
+    "hash": "6b5f7a069a",
+    "kind": "text"
+   },
+   {
+    "hash": "fd12863535",
+    "kind": "text"
+   },
+   {
+    "hash": "4c7f41c2f4",
+    "kind": "text"
+   },
+   {
+    "hash": "d844aeaf85",
+    "kind": "text"
+   },
+   {
+    "hash": "fd12863535",
+    "kind": "text"
+   },
+   {
+    "hash": "588a1e3ae3",
+    "kind": "text"
+   },
+   {
+    "hash": "7258dc93f2",
+    "kind": "text"
+   },
+   {
+    "hash": "fb360f9c09",
+    "kind": "text"
+   },
+   {
+    "hash": "a10f658217",
+    "kind": "text"
+   },
+   {
+    "hash": "fc6ee958be",
+    "kind": "text"
+   },
+   {
+    "hash": "fb360f9c09",
+    "kind": "text"
+   },
+   {
+    "hash": "50ffd0b89b",
+    "kind": "text"
+   },
+   {
+    "hash": "eb400e4c6b",
+    "kind": "text"
+   },
+   {
+    "hash": "8147a8edee",
+    "kind": "text"
+   },
+   {
+    "hash": "6c94e54ddf",
+    "kind": "text"
+   },
+   {
+    "hash": "8a075edfed",
+    "kind": "text"
+   },
+   {
+    "hash": "baa1837be5",
+    "kind": "text"
+   },
+   {
     "hash": "efecd2d05d",
     "kind": "text"
    },
@@ -3808,7 +4136,7 @@
     "kind": "text"
    },
    {
-    "hash": "a27542f30d",
+    "hash": "75f359b55b",
     "kind": "text"
    },
    {
@@ -3820,7 +4148,7 @@
     "kind": "text"
    },
    {
-    "hash": "0b584d318a",
+    "hash": "7990eeee6c",
     "kind": "text"
    },
    {
@@ -3864,7 +4192,7 @@
     "kind": "block"
    },
    {
-    "hash": "7329991faa",
+    "hash": "f0d5218db4",
     "kind": "text"
    },
    {

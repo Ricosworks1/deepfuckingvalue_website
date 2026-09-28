@@ -142,7 +142,7 @@
 
   <h1>El sorteo</h1>
   <p class="sub">
-    Diez mil boletos a 100 USDC. Cien ganadores sorteados por Chainlink VRF: un Rolex y noventa y nueve premios en efectivo de 4.000 USDC. En cuanto se vende el último boleto, el sorteo se ejecuta solo. Nadie puede pararlo, retrasarlo ni elegir quién gana.
+    Diez mil boletos a 100 USDC. Cien ganadores sorteados por Chainlink VRF. Si se venden todos, eso es un Rolex más noventa y nueve premios en efectivo de 4.000 USDC — una ronda más pequeña paga premios más pequeños y da probabilidades mucho mejores, y por debajo de 5.000 boletos no hay reloj en absoluto. En cuanto se vende el último boleto, el sorteo ocurre solo. Nadie puede pararlo, retrasarlo ni elegir quién gana.
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
@@ -160,6 +160,29 @@
         <div class="cell"><dt>En el bote</dt><dd><span id="r-pot">0</span></dd><span class="sub2">USDC recaudados hasta ahora</span></div>
         <div class="cell"><dt>Ronda</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">rondas encadenadas</span></div>
       </dl>
+
+      <div class="panel" id="projection" style="margin-top:1.25rem"
+           data-t-awarded="Se entrega"
+           data-t-not-awarded="No se entrega — el bote está por debajo de {floor} USDC"
+           data-t-no="No"
+           data-t-empty-watch="Todavía no: no se ha vendido nada"
+           data-t-empty-context="Todavía no se ha vendido ningún boleto en esta ronda."
+           data-t-cancelled-winners="Ninguno: la ronda se cancelaría"
+           data-t-cancelled-context="Por debajo de {min} boletos una ronda no se puede sortear en absoluto. En su lugar se cancela, y cada boleto recupera {refund} USDC de los {price} que costó. Otros {more} boletos harían sorteable esta ronda."
+           data-t-context="Según los {sold} boletos vendidos hasta ahora. Cada boleto siguiente hace los premios más grandes y las probabilidades más largas."
+           data-t-context-no-watch="Según los {sold} boletos vendidos hasta ahora, y sin que se entregue el reloj a este tamaño. Cada boleto siguiente hace los premios más grandes y las probabilidades más largas."
+           data-t-odds="1 de cada {n}">
+        <h3>Si la ronda se sorteara ahora mismo</h3>
+        <dl class="kv">
+          <dt>Ganadores</dt><dd id="pj-winners">100</dd>
+          <dt>Premio por ganador</dt><dd><span id="pj-prize">4.000,00</span> USDC</dd>
+          <dt>El Rolex</dt><dd id="pj-watch">Se entrega</dd>
+          <dt>Probabilidad por boleto</dt><dd id="pj-odds">1 entre 100</dd>
+        </dl>
+        <p id="pj-context" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)">
+          Mostrado para una ronda completa de 10.000 boletos. Cuando se abra el sorteo, este panel se calcula a partir de los boletos realmente vendidos, con la misma aritmética que usa el contrato.
+        </p>
+      </div>
 
       <div class="status" id="draw-note" hidden>
         <strong>El sorteo está en marcha.</strong> Chainlink VRF está generando la aleatoriedad de esta ronda. La participación se reabre automáticamente con la siguiente.
@@ -200,6 +223,39 @@
   </div>
 
   <section>
+    <h2>Lo que ganas depende de cuántos boletos se vendan</h2>
+    <p>
+      Siempre hay 100 ganadores — o tantos como boletos haya, si son menos. Lo que cambia es el tamaño de cada premio. El bote de premios es siempre el 40,8 % de todo lo recaudado, así que una ronda más pequeña significa premios más pequeños y probabilidades mucho mejores. Cada cifra de abajo sale de la aritmética del propio contrato, no de una estimación de marketing.
+    </p>
+
+    <div class="scroll"><table>
+      <thead><tr>
+        <th scope="col">Boletos vendidos</th>
+        <th scope="col">En el bote</th>
+        <th scope="col">El Rolex</th>
+        <th scope="col">Ganadores</th>
+        <th scope="col">Premio por ganador</th>
+        <th scope="col">Probabilidad</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>499 o menos</td><td>—</td><td>no</td><td>la ronda se cancela</td><td>80,00 USDC reembolsados</td><td>—</td></tr>
+        <tr><td>500</td><td>50,000</td><td>no</td><td>100</td><td>204,00 USDC</td><td>1 de cada 5</td></tr>
+        <tr><td>1,000</td><td>100,000</td><td>no</td><td>100</td><td>408,00 USDC</td><td>1 de cada 10</td></tr>
+        <tr><td>5,000</td><td>500,000</td><td>sí</td><td>100</td><td>1.939,39 USDC</td><td>1 de cada 50</td></tr>
+        <tr><td>10,000</td><td>1,000,000</td><td>sí</td><td>100</td><td>4.000,00 USDC</td><td>1 entre 100</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="status">
+      <strong>El Rolex necesita 5.000 boletos.</strong> El reloj solo se entrega cuando el bote llega a 500.000 USDC. Por debajo de eso, todo el bote de premios se paga en efectivo — hay dinero que ganar, pero no reloj.
+    </div>
+
+    <div class="status">
+      <strong>Una ronda cancelada devuelve más que una ronda pequeña que sí se sortea.</strong> Por debajo de 500 boletos nadie puede sortear la ronda: se cancela y cada boleto recupera 80 de los 100 USDC que costó. Una ronda que sí se sortea devuelve un 40,8 % de media. Así que cruzar los 500 boletos baja lo que vale un boleto de media y sube lo que podría ganar. Preferimos que lo sepas antes de comprar a que lo descubras después.
+    </div>
+  </section>
+
+  <section>
     <h2>Quién participa en esta ronda</h2>
     <p style="font-size:.9375rem;color:var(--ink-soft)">
       Cada boleto comprado, por cartera. Leído de la mainnet de Ethereum y actualizado cada hora: es el registro de la propia cadena, no el nuestro.
@@ -227,8 +283,8 @@
     <dl class="grid">
       <div class="cell"><dt>Boletos</dt><dd>10,000</dd><span class="sub2">100 USDC cada uno</span></div>
       <div class="cell"><dt>Ganadores</dt><dd>100</dd><span class="sub2">1 reloj + 99 en efectivo</span></div>
-      <div class="cell"><dt>Premio en efectivo</dt><dd>4,000</dd><span class="sub2">USDC, para cada uno de los 99</span></div>
-      <div class="cell"><dt>Probabilidad</dt><dd>1 entre 100</dd><span class="sub2">por boleto</span></div>
+      <div class="cell"><dt>Premio en efectivo</dt><dd>4,000</dd><span class="sub2">USDC cada uno, si se vende todo</span></div>
+      <div class="cell"><dt>Probabilidad</dt><dd>1 entre 100</dd><span class="sub2">por boleto, si se vende todo</span></div>
     </dl>
 
     <div class="odds">
@@ -255,7 +311,7 @@
     <h2>Adónde va el dinero</h2>
     <p><strong>El 40,8 % de todo lo recaudado vuelve a salir en premios</strong>: el reloj más los noventa y nueve premios en efectivo. El resto es de la casa. Esa parte está fijada en el contrato y no se puede cambiar.</p>
     <p>
-      Esto vale tanto si la ronda se llena como si no. Una ronda que venda nueve mil boletos paga el mismo 40,8 %, a escala, así que nadie gana con que una ronda no se llene. Por debajo de 500 boletos la ronda se cancela y los compradores recuperan el 80 % de lo que pagaron.
+      Esto vale se llene la ronda o no. Una ronda que vende nueve mil boletos paga el mismo 40,8 %, a escala, así que nadie gana con que una ronda no se llene. El número de ganadores sigue siendo 100 en ambos casos, así que en una ronda más pequeña cada premio es menor y tu probabilidad de llevarte uno es mejor. Por debajo de 500 boletos la ronda se cancela y los compradores recuperan el 80 % de lo que pagaron.
     </p>
     <div class="status">
       <strong>Ten esto muy claro.</strong> Un sorteo no es una inversión. La mayoría de los boletos no gana nada, y el retorno esperado de un boleto es menor que lo que pagaste por él. Compra solo lo que estés dispuesto a perder.

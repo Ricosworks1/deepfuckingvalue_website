@@ -142,7 +142,7 @@
 
   <h1>La tombola</h1>
   <p class="sub">
-    Dix mille billets à 100 USDC. Cent gagnants tirés par Chainlink VRF — une Rolex et quatre-vingt-dix-neuf lots de 4 000 USDC. Dès que le dernier billet part, le tirage se déclenche tout seul. Personne ne peut l'arrêter, le retarder, ni choisir qui gagne.
+    Dix mille billets à 100 USDC. Cent gagnants tirés par Chainlink VRF. Vendez-les tous et cela fait une Rolex plus quatre-vingt-dix-neuf prix en espèces de 4 000 USDC — un tour plus petit verse des prix plus petits et offre de bien meilleures chances, et en dessous de 5 000 billets il n'y a pas de montre du tout. Dès que le dernier billet est vendu, le tirage se déclenche tout seul. Personne ne peut l'arrêter, le retarder ou choisir qui gagne.
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
@@ -160,6 +160,29 @@
         <div class="cell"><dt>Dans la cagnotte</dt><dd><span id="r-pot">0</span></dd><span class="sub2">USDC collectés à ce jour</span></div>
         <div class="cell"><dt>Tour</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">tours enchaînés</span></div>
       </dl>
+
+      <div class="panel" id="projection" style="margin-top:1.25rem"
+           data-t-awarded="Attribuée"
+           data-t-not-awarded="Non attribuée — la cagnotte est inférieure à {floor} USDC"
+           data-t-no="Non"
+           data-t-empty-watch="Pas encore — rien n'a été vendu"
+           data-t-empty-context="Aucun billet n'a encore été vendu dans ce tour."
+           data-t-cancelled-winners="Aucun — le tour serait annulé"
+           data-t-cancelled-context="En dessous de {min} billets, un tour ne peut pas être tiré du tout. Il est annulé à la place, et chaque billet récupère {refund} USDC sur les {price} qu'il a coûté. Encore {more} billets rendraient ce tour tirable."
+           data-t-context="D'après les {sold} billets vendus jusqu'ici. Chaque billet suivant augmente les prix et réduit vos chances d'en gagner un."
+           data-t-context-no-watch="D'après les {sold} billets vendus jusqu'ici, et sans attribution de la montre à cette taille. Chaque billet suivant augmente les prix et réduit vos chances d'en gagner un."
+           data-t-odds="1 sur {n}">
+        <h3>Si le tirage avait lieu maintenant</h3>
+        <dl class="kv">
+          <dt>Gagnants</dt><dd id="pj-winners">100</dd>
+          <dt>Gain par gagnant</dt><dd><span id="pj-prize">4 000,00</span> USDC</dd>
+          <dt>La Rolex</dt><dd id="pj-watch">Attribuée</dd>
+          <dt>Chance par billet</dt><dd id="pj-odds">1 sur 100</dd>
+        </dl>
+        <p id="pj-context" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)">
+          Affiché pour un tour complet de 10 000 billets. Dès l'ouverture de la loterie, ce panneau est calculé à partir des billets réellement vendus, avec l'arithmétique exacte du contrat.
+        </p>
+      </div>
 
       <div class="status" id="draw-note" hidden>
         <strong>Le tirage est en cours.</strong> Chainlink VRF produit l'aléa pour ce tour. Les inscriptions rouvrent automatiquement au tour suivant.
@@ -200,6 +223,39 @@
   </div>
 
   <section>
+    <h2>Ce que vous gagnez dépend du nombre de billets vendus</h2>
+    <p>
+      Il y a toujours 100 gagnants — ou autant qu'il y a de billets, s'il y en a moins. Ce qui change, c'est la taille de chaque prix. La dotation représente toujours 40,8 % de tout ce qui a été collecté : un tour plus petit signifie donc des prix plus petits et de bien meilleures chances. Chaque chiffre ci-dessous vient de l'arithmétique du contrat, pas d'une estimation marketing.
+    </p>
+
+    <div class="scroll"><table>
+      <thead><tr>
+        <th scope="col">Billets vendus</th>
+        <th scope="col">Dans la cagnotte</th>
+        <th scope="col">La Rolex</th>
+        <th scope="col">Gagnants</th>
+        <th scope="col">Gain par gagnant</th>
+        <th scope="col">Probabilité</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>499 ou moins</td><td>—</td><td>non</td><td>tour annulé</td><td>80,00 USDC remboursés</td><td>—</td></tr>
+        <tr><td>500</td><td>50,000</td><td>non</td><td>100</td><td>204,00 USDC</td><td>1 sur 5</td></tr>
+        <tr><td>1,000</td><td>100,000</td><td>non</td><td>100</td><td>408,00 USDC</td><td>1 sur 10</td></tr>
+        <tr><td>5,000</td><td>500,000</td><td>oui</td><td>100</td><td>1 939,39 USDC</td><td>1 sur 50</td></tr>
+        <tr><td>10,000</td><td>1,000,000</td><td>oui</td><td>100</td><td>4 000,00 USDC</td><td>1 sur 100</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="status">
+      <strong>La Rolex exige 5 000 billets.</strong> La montre n'est attribuée qu'une fois que la cagnotte atteint 500 000 USDC. En dessous, toute la dotation est versée en espèces — il y a de l'argent à gagner, mais pas de montre.
+    </div>
+
+    <div class="status">
+      <strong>Un tour annulé rend plus qu'un petit tour qui va au tirage.</strong> En dessous de 500 billets, personne ne peut tirer le tour : il est annulé et chaque billet récupère 80 des 100 USDC qu'il a coûté. Un tour qui va au tirage rembourse 40,8 % en moyenne. Franchir les 500 billets diminue donc la valeur moyenne d'un billet et augmente ce qu'il pourrait gagner. Nous préférons que vous le sachiez avant d'acheter plutôt que de le découvrir ensuite.
+    </div>
+  </section>
+
+  <section>
     <h2>Qui participe à ce tour</h2>
     <p style="font-size:.9375rem;color:var(--ink-soft)">
       Chaque billet acheté, par portefeuille. Lu sur le mainnet Ethereum et actualisé toutes les heures — c'est le registre de la chaîne elle-même, pas le nôtre.
@@ -227,8 +283,8 @@
     <dl class="grid">
       <div class="cell"><dt>Billets</dt><dd>10,000</dd><span class="sub2">100 USDC chacun</span></div>
       <div class="cell"><dt>Gagnants</dt><dd>100</dd><span class="sub2">1 montre + 99 en espèces</span></div>
-      <div class="cell"><dt>Lot en espèces</dt><dd>4,000</dd><span class="sub2">USDC, pour chacun des 99</span></div>
-      <div class="cell"><dt>Probabilité</dt><dd>1 sur 100</dd><span class="sub2">par billet</span></div>
+      <div class="cell"><dt>Lot en espèces</dt><dd>4,000</dd><span class="sub2">USDC chacun, si le tour se vend entièrement</span></div>
+      <div class="cell"><dt>Probabilité</dt><dd>1 sur 100</dd><span class="sub2">par billet, si le tour se vend entièrement</span></div>
     </dl>
 
     <div class="odds">
@@ -255,7 +311,7 @@
     <h2>Où va l'argent</h2>
     <p><strong>40,8 % de tout ce qui est collecté repart en lots</strong> — la montre plus les quatre-vingt-dix-neuf lots en espèces. Le reste revient à la maison. Cette part est fixée dans le contrat et ne peut pas être modifiée.</p>
     <p>
-      Cela vaut que le tour se remplisse ou non. Un tour qui vend neuf mille billets reverse les mêmes 40,8 %, à l'échelle, donc personne n'a intérêt à ce qu'un tour échoue. En dessous de 500 billets, le tour est annulé et les acheteurs récupèrent 80 % de ce qu'ils ont payé.
+      Cela vaut que le tour se remplisse ou non. Un tour qui vend neuf mille billets verse les mêmes 40,8 %, à l'échelle, donc personne ne gagne à ce qu'un tour ne se remplisse pas. Le nombre de gagnants reste de 100 dans tous les cas : dans un tour plus petit, chaque prix est donc plus petit et votre chance d'en décrocher un est meilleure. En dessous de 500 billets, le tour est annulé et les acheteurs récupèrent 80 % de ce qu'ils ont payé.
     </p>
     <div class="status">
       <strong>Soyez lucide là-dessus.</strong> Une tombola n'est pas un investissement. La plupart des billets ne gagnent rien, et l'espérance de gain d'un billet est inférieure à son prix. N'achetez que ce que vous acceptez de perdre.

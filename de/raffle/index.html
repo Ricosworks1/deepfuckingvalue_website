@@ -142,7 +142,7 @@
 
   <h1>Die Verlosung</h1>
   <p class="sub">
-    Zehntausend Lose zu je 100 USDC. Hundert Gewinner, gezogen von Chainlink VRF — eine Rolex und neunundneunzig Geldpreise zu 4.000 USDC. Sobald das letzte Los verkauft ist, läuft die Ziehung von selbst. Niemand kann sie stoppen, verzögern oder aussuchen, wer gewinnt.
+    Zehntausend Lose zu je 100 USDC. Hundert Gewinner, gezogen von Chainlink VRF. Wird alles verkauft, sind das eine Rolex und neunundneunzig Bargeldpreise zu je 4.000 USDC — eine kleinere Runde zahlt kleinere Preise und gibt deutlich bessere Chancen, und unter 5.000 Losen gibt es überhaupt keine Uhr. Sobald das letzte Los verkauft ist, läuft die Ziehung von selbst. Niemand kann sie stoppen, verzögern oder die Gewinner wählen.
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
@@ -160,6 +160,29 @@
         <div class="cell"><dt>Im Topf</dt><dd><span id="r-pot">0</span></dd><span class="sub2">USDC bisher eingesammelt</span></div>
         <div class="cell"><dt>Runde</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">Runden hintereinander</span></div>
       </dl>
+
+      <div class="panel" id="projection" style="margin-top:1.25rem"
+           data-t-awarded="Wird vergeben"
+           data-t-not-awarded="Wird nicht vergeben — der Topf liegt unter {floor} USDC"
+           data-t-no="Nein"
+           data-t-empty-watch="Noch nicht — es wurde nichts verkauft"
+           data-t-empty-context="In dieser Runde wurde noch kein Los verkauft."
+           data-t-cancelled-winners="Keine — die Runde würde abgebrochen"
+           data-t-cancelled-context="Unter {min} Losen kann eine Runde überhaupt nicht gezogen werden. Sie wird stattdessen abgebrochen, und jedes Los bekommt {refund} USDC der {price} zurück, die es gekostet hat. Weitere {more} Lose würden diese Runde ziehbar machen."
+           data-t-context="Auf Basis der bisher verkauften {sold} Lose. Jedes weitere Los vergrößert die Preise und verschlechtert die Chancen."
+           data-t-context-no-watch="Auf Basis der bisher verkauften {sold} Lose und ohne Vergabe der Uhr in dieser Größenordnung. Jedes weitere Los vergrößert die Preise und verschlechtert die Chancen."
+           data-t-odds="1 von {n}">
+        <h3>Wenn jetzt gezogen würde</h3>
+        <dl class="kv">
+          <dt>Gewinner</dt><dd id="pj-winners">100</dd>
+          <dt>Gewinn je Gewinner</dt><dd><span id="pj-prize">4.000,00</span> USDC</dd>
+          <dt>Die Rolex</dt><dd id="pj-watch">Wird vergeben</dd>
+          <dt>Chance pro Los</dt><dd id="pj-odds">1 zu 100</dd>
+        </dl>
+        <p id="pj-context" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)">
+          Gezeigt für eine volle Runde von 10.000 Losen. Sobald die Verlosung öffnet, wird dieses Feld aus den tatsächlich verkauften Losen berechnet, mit derselben Arithmetik wie im Vertrag.
+        </p>
+      </div>
 
       <div class="status" id="draw-note" hidden>
         <strong>Die Ziehung läuft.</strong> Chainlink VRF erzeugt gerade den Zufall für diese Runde. Die Teilnahme öffnet mit der nächsten automatisch wieder.
@@ -200,6 +223,39 @@
   </div>
 
   <section>
+    <h2>Was Sie gewinnen, hängt davon ab, wie viele Lose verkauft werden</h2>
+    <p>
+      Es gibt immer 100 Gewinner — oder so viele, wie es Lose gibt, wenn es weniger sind. Was sich ändert, ist die Höhe jedes Preises. Der Preistopf sind immer 40,8 % von allem, was eingenommen wurde: Eine kleinere Runde bedeutet also kleinere Preise und viel bessere Chancen. Jede Zahl unten stammt aus der Arithmetik des Vertrags, nicht aus einer Marketing-Schätzung.
+    </p>
+
+    <div class="scroll"><table>
+      <thead><tr>
+        <th scope="col">Verkaufte Lose</th>
+        <th scope="col">Im Topf</th>
+        <th scope="col">Die Rolex</th>
+        <th scope="col">Gewinner</th>
+        <th scope="col">Gewinn je Gewinner</th>
+        <th scope="col">Chance</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>499 oder weniger</td><td>—</td><td>nein</td><td>Runde wird abgebrochen</td><td>80,00 USDC erstattet</td><td>—</td></tr>
+        <tr><td>500</td><td>50,000</td><td>nein</td><td>100</td><td>204,00 USDC</td><td>1 von 5</td></tr>
+        <tr><td>1,000</td><td>100,000</td><td>nein</td><td>100</td><td>408,00 USDC</td><td>1 von 10</td></tr>
+        <tr><td>5,000</td><td>500,000</td><td>ja</td><td>100</td><td>1.939,39 USDC</td><td>1 von 50</td></tr>
+        <tr><td>10,000</td><td>1,000,000</td><td>ja</td><td>100</td><td>4.000,00 USDC</td><td>1 zu 100</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="status">
+      <strong>Die Rolex braucht 5.000 Lose.</strong> Die Uhr wird erst vergeben, wenn der Topf 500.000 USDC erreicht. Darunter wird der gesamte Preistopf stattdessen in bar ausgezahlt — es gibt Geld zu gewinnen, aber keine Uhr.
+    </div>
+
+    <div class="status">
+      <strong>Eine abgebrochene Runde zahlt mehr zurück als eine kleine Runde, die gezogen wird.</strong> Unter 500 Losen kann niemand die Runde ziehen: Sie wird abgebrochen und jedes Los bekommt 80 der 100 USDC zurück, die es gekostet hat. Eine Runde, die gezogen wird, zahlt im Schnitt 40,8 % zurück. Die 500 Lose zu überschreiten senkt also den Durchschnittswert eines Loses und erhöht, was es gewinnen könnte. Uns ist lieber, Sie wissen das vor dem Kauf, als dass Sie es danach ausrechnen.
+    </div>
+  </section>
+
+  <section>
     <h2>Wer in dieser Runde dabei ist</h2>
     <p style="font-size:.9375rem;color:var(--ink-soft)">
       Jedes gekaufte Los, nach Wallet. Vom Ethereum-Mainnet gelesen und stündlich aktualisiert — das ist die Aufzeichnung der Chain selbst, nicht unsere.
@@ -227,8 +283,8 @@
     <dl class="grid">
       <div class="cell"><dt>Lose</dt><dd>10,000</dd><span class="sub2">je 100 USDC</span></div>
       <div class="cell"><dt>Gewinner</dt><dd>100</dd><span class="sub2">1 Uhr + 99 in bar</span></div>
-      <div class="cell"><dt>Geldpreis</dt><dd>4,000</dd><span class="sub2">USDC, an jeden der 99</span></div>
-      <div class="cell"><dt>Chance</dt><dd>1 zu 100</dd><span class="sub2">pro Los</span></div>
+      <div class="cell"><dt>Geldpreis</dt><dd>4,000</dd><span class="sub2">USDC je Gewinner, wenn alles verkauft wird</span></div>
+      <div class="cell"><dt>Chance</dt><dd>1 zu 100</dd><span class="sub2">pro Los, wenn alles verkauft wird</span></div>
     </dl>
 
     <div class="odds">
@@ -255,7 +311,7 @@
     <h2>Wohin das Geld geht</h2>
     <p><strong>40,8 % von allem Eingesammelten gehen als Preise wieder raus</strong> — die Uhr plus die neunundneunzig Geldpreise. Der Rest gehört dem Haus. Dieser Anteil steht im Vertrag fest und lässt sich nicht ändern.</p>
     <p>
-      Das gilt, ob die Runde voll wird oder nicht. Eine Runde, die neuntausend Lose verkauft, zahlt dieselben 40,8 % aus, entsprechend skaliert — niemand profitiert also davon, dass eine Runde nicht voll wird. Unter 500 Losen wird die Runde stattdessen abgebrochen und die Käufer bekommen 80 % ihres Einsatzes zurück.
+      Das gilt, ob die Runde voll wird oder nicht. Eine Runde, die neuntausend Lose verkauft, zahlt dieselben 40,8 % aus, entsprechend skaliert, also gewinnt niemand daran, dass eine Runde nicht voll wird. Die Zahl der Gewinner bleibt in beiden Fällen 100: In einer kleineren Runde ist jeder Preis also kleiner und Ihre Chance auf einen davon besser. Unter 500 Losen wird die Runde stattdessen abgebrochen und die Käufer bekommen 80 % des gezahlten Betrags zurück.
     </p>
     <div class="status">
       <strong>Sei dir darüber im Klaren.</strong> Eine Verlosung ist keine Geldanlage. Die meisten Lose gewinnen nichts, und der Erwartungswert eines Loses liegt unter dem, was du dafür bezahlt hast. Kauf nur, was du bereit bist zu verlieren.

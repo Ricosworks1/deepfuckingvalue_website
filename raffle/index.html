@@ -142,9 +142,11 @@
 
   <h1>The raffle</h1>
   <p class="sub">
-    Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF — a Rolex and
-    ninety-nine cash prizes of 4,000 USDC. When the last ticket sells, the draw happens on its
-    own. Nobody can stop it, delay it, or choose who wins.
+    Ten thousand tickets at 100 USDC. One hundred winners drawn by Chainlink VRF. Sell the lot
+    and that is a Rolex plus ninety-nine cash prizes of 4,000 USDC — a smaller round pays
+    smaller prizes and gives far better odds, and below 5,000 tickets there is no watch at all.
+    When the last ticket sells, the draw happens on its own. Nobody can stop it, delay it, or
+    choose who wins.
   </p>
 
   <img class="hero" src="/raffle/hero.webp" width="1200" height="1125"
@@ -165,6 +167,30 @@
         <div class="cell"><dt>In the pot</dt><dd><span id="r-pot">0</span></dd><span class="sub2">USDC collected so far</span></div>
         <div class="cell"><dt>Round</dt><dd>#<span id="r-round">1</span></dd><span class="sub2">rounds run back to back</span></div>
       </dl>
+
+      <div class="panel" id="projection" style="margin-top:1.25rem"
+           data-t-awarded="Awarded"
+           data-t-not-awarded="Not awarded — the pot is below {floor} USDC"
+           data-t-no="No"
+           data-t-empty-watch="Not yet — nothing has been sold"
+           data-t-empty-context="No tickets have been sold in this round yet."
+           data-t-cancelled-winners="None — the round would be cancelled"
+           data-t-cancelled-context="Below {min} tickets a round cannot be drawn at all. It is cancelled instead, and every ticket takes back {refund} USDC of the {price} it cost. Another {more} tickets would make this round drawable."
+           data-t-context="Based on the {sold} tickets sold so far. Every ticket after this one makes the prizes bigger and the odds longer."
+           data-t-context-no-watch="Based on the {sold} tickets sold so far, and on the watch not being awarded at this size. Every ticket after this one makes the prizes bigger and the odds longer."
+           data-t-odds="1 in {n}">
+        <h3>If the round drew right now</h3>
+        <dl class="kv">
+          <dt>Winners</dt><dd id="pj-winners">100</dd>
+          <dt>Each cash winner gets</dt><dd><span id="pj-prize">4,000.00</span> USDC</dd>
+          <dt>The Rolex</dt><dd id="pj-watch">Awarded</dd>
+          <dt>Chance per ticket</dt><dd id="pj-odds">1 in 100</dd>
+        </dl>
+        <p id="pj-context" style="margin-top:.9rem;font-size:.875rem;color:var(--ink-faint)">
+          Shown for a full round of 10,000 tickets. Once the raffle opens, this panel is
+          calculated from the tickets actually sold, by the same arithmetic the contract uses.
+        </p>
+      </div>
 
       <div class="status" id="draw-note" hidden>
         <strong>The draw is running.</strong> Chainlink VRF is producing the randomness for this
@@ -210,6 +236,48 @@
   </div>
 
   <section>
+    <h2>What you win depends on how many tickets sell</h2>
+    <p>
+      There are always 100 winners — or as many as there are tickets, if fewer. What changes is
+      the size of each prize. The prize pool is always 40.8% of whatever was collected, so a
+      smaller round means smaller prizes and much better odds. Every figure below is the
+      contract's own arithmetic, not a marketing estimate.
+    </p>
+
+    <div class="scroll"><table>
+      <thead><tr>
+        <th scope="col">Tickets sold</th>
+        <th scope="col">In the pot</th>
+        <th scope="col">The Rolex</th>
+        <th scope="col">Winners</th>
+        <th scope="col">Each cash winner gets</th>
+        <th scope="col">Odds</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>499 or fewer</td><td>—</td><td>no</td><td>round is cancelled</td><td>80.00 USDC refunded</td><td>—</td></tr>
+        <tr><td>500</td><td>50,000</td><td>no</td><td>100</td><td>204.00 USDC</td><td>1 in 5</td></tr>
+        <tr><td>1,000</td><td>100,000</td><td>no</td><td>100</td><td>408.00 USDC</td><td>1 in 10</td></tr>
+        <tr><td>5,000</td><td>500,000</td><td>yes</td><td>100</td><td>1,939.39 USDC</td><td>1 in 50</td></tr>
+        <tr><td>10,000</td><td>1,000,000</td><td>yes</td><td>100</td><td>4,000.00 USDC</td><td>1 in 100</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="status">
+      <strong>The Rolex needs 5,000 tickets.</strong> The watch is awarded only once the pot
+      reaches 500,000 USDC. Below that the entire prize budget is paid as cash instead — there
+      is money to win, but no watch.
+    </div>
+
+    <div class="status">
+      <strong>A cancelled round hands back more than a small round that draws.</strong> Below
+      500 tickets nobody can draw the round at all: it is cancelled and every ticket takes back
+      80 of the 100 USDC it cost. A round that does draw pays back 40.8% on average. So crossing
+      500 tickets lowers what a ticket is worth on average, and raises what it might win. We
+      would rather you knew that before buying than worked it out afterwards.
+    </div>
+  </section>
+
+  <section>
     <h2>Who is in this round</h2>
     <p style="font-size:.9375rem;color:var(--ink-soft)">
       Every ticket bought, by wallet. Read from Ethereum mainnet and refreshed
@@ -239,8 +307,8 @@
     <dl class="grid">
       <div class="cell"><dt>Tickets</dt><dd>10,000</dd><span class="sub2">100 USDC each</span></div>
       <div class="cell"><dt>Winners</dt><dd>100</dd><span class="sub2">1 watch + 99 cash</span></div>
-      <div class="cell"><dt>Cash prize</dt><dd>4,000</dd><span class="sub2">USDC, to each of 99</span></div>
-      <div class="cell"><dt>Odds</dt><dd>1 in 100</dd><span class="sub2">per ticket</span></div>
+      <div class="cell"><dt>Cash prize</dt><dd>4,000</dd><span class="sub2">USDC each, if it sells out</span></div>
+      <div class="cell"><dt>Odds</dt><dd>1 in 100</dd><span class="sub2">per ticket, if it sells out</span></div>
     </dl>
 
     <div class="odds">
@@ -279,8 +347,10 @@
     </p>
     <p>
       This holds whether the round fills or not. A round that sells nine thousand tickets pays
-      the same 40.8%, scaled down, so nobody gains from a round failing to fill. Below 500
-      tickets the round is cancelled instead and buyers take back 80% of what they paid.
+      the same 40.8%, scaled down, so nobody gains from a round failing to fill. The number of
+      winners stays at 100 either way, so in a smaller round each prize is smaller and your
+      chance of taking one is better. Below 500 tickets the round is cancelled instead and
+      buyers take back 80% of what they paid.
     </p>
     <div class="status">
       <strong>Be clear-eyed about this.</strong> A raffle is not an investment. Most tickets win

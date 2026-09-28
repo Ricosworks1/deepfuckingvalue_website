@@ -16,6 +16,12 @@
      drawPending()                  0x6060ffaa   view
      ticketsBought(uint256,address) 0x500f1e4e   view
      enter(uint256)                 0xa59f3e0c   nonpayable
+     PRIZE_BPS()                    0x944d1210   view
+     WINNERS()                      0xc79078b8   view
+     WATCH_FLOOR()                  0xb6f29ee7   view
+     WATCH_VALUE()                  0x41b7fac5   view
+     MIN_TICKETS()                  0x4d221ef9   view
+     REFUND_BPS()                   0x37db35b3   view
 
    And on USDC:
      allowance(address,address)     0xdd62ed3e   view
@@ -48,10 +54,32 @@ const SEL = {
   pending:   '0x6060ffaa',
   mine:      '0x500f1e4e',
   enter:     '0xa59f3e0c',
+  prizeBps:  '0x944d1210',
+  winners:   '0xc79078b8',
+  watchFloor:'0xb6f29ee7',
+  watchValue:'0x41b7fac5',
+  minTickets:'0x4d221ef9',
+  refundBps: '0x37db35b3',
   allowance: '0xdd62ed3e',
   approve:   '0x095ea7b3',
   balanceOf: '0x70a08231',
 };
+
+/* ---------- language ---------- */
+
+/* This script is copied unchanged into all six language mirrors, so anything
+   it displays has to come from the page rather than from here. Numbers follow
+   the page's own language: 1,000.50 in English is 1 000,50 in French. */
+const LOCALE = document.documentElement.getAttribute('lang') || 'en-US';
+const DECIMAL = (1.1).toLocaleString(LOCALE).replace(/[0-9]/g, '') || '.';
+
+/** A phrase from the markup, where the translation pipeline can reach it.
+    `vars` fills {placeholders}; the English text is the fallback. */
+function t(el, name, fallback, vars) {
+  let out = (el && el.dataset[name]) || fallback;
+  if (vars) for (const k in vars) out = out.split('{' + k + '}').join(vars[k]);
+  return out;
+}
 
 /* ---------- tiny DOM helpers ---------- */
 const $ = (id) => document.getElementById(id);
@@ -81,10 +109,10 @@ function fmtUSDC(v, places) {
   if (places === undefined) places = 2;
   let neg = v < 0n; if (neg) v = -v;
   const whole = v / 1000000n, frac = v % 1000000n;
-  const s = whole.toLocaleString('en-US');
+  const s = whole.toLocaleString(LOCALE);
   if (places === 0) return (neg ? '-' : '') + s;
   const f = frac.toString().padStart(6, '0').slice(0, places);
-  return (neg ? '-' : '') + s + '.' + f;
+  return (neg ? '-' : '') + s + DECIMAL + f;
 }
 
 /* ---------- wallet plumbing ---------- */
@@ -140,13 +168,48 @@ async function loadRound() {
   const r = await Promise.all([
     readRaffle(SEL.sold), readRaffle(SEL.total), readRaffle(SEL.price),
     readRaffle(SEL.remaining), readRaffle(SEL.pending), readRaffle(SEL.round),
+    /* The prize shape. Read from the contract rather than written into this
+       page, so what a buyer is shown before paying and what the contract pays
+       afterwards can never drift apart. All six are immutable. */
+    readRaffle(SEL.prizeBps), readRaffle(SEL.winners), readRaffle(SEL.watchFloor),
+    readRaffle(SEL.watchValue), readRaffle(SEL.minTickets), readRaffle(SEL.refundBps),
   ]);
   state = {
     sold: decUint(r[0]), total: decUint(r[1]), price: decUint(r[2]),
     remaining: decUint(r[3]), pending: decBool(r[4]), round: decUint(r[5]),
+    prizeBps: decUint(r[6]), winners: decUint(r[7]), watchFloor: decUint(r[8]),
+    watchValue: decUint(r[9]), minTickets: decUint(r[10]), refundBps: decUint(r[11]),
   };
   paint();
   return state;
+}
+
+/* What this round would pay if it settled now, by exactly the arithmetic in
+   RolexRaffle.rawFulfillRandomWords: integer division throughout, the watch
+   only above WATCH_FLOOR, and never more winners than tickets sold. */
+function project(s) {
+  const pot = s.sold * s.price;
+  if (s.sold === 0n) return { kind: 'empty' };
+  if (s.sold < s.minTickets) {
+    return { kind: 'cancelled', refund: (s.price * s.refundBps) / 10000n, pot: pot };
+  }
+  const winners = s.sold < s.winners ? s.sold : s.winners;
+  const watch = pot >= s.watchFloor;
+  const cashWinners = watch ? winners - 1n : winners;
+  const budget = (pot * s.prizeBps) / 10000n;
+  const cashPrize = cashWinners === 0n
+    ? 0n
+    : (budget - (watch ? s.watchValue : 0n)) / cashWinners;
+  return { kind: 'draw', pot: pot, winners: winners, watch: watch, cashPrize: cashPrize };
+}
+
+/** "1 in 20", and "1 in 5.4" when the ratio is not a round number. */
+function oddsText(el, sold, winners) {
+  if (winners === 0n) return '—';
+  const tenths = (sold * 10n) / winners;
+  const whole = tenths / 10n, rest = tenths % 10n;
+  const n = whole.toLocaleString(LOCALE) + (rest === 0n ? '' : DECIMAL + rest);
+  return t(el, 'tOdds', '1 in {n}', { n: n });
 }
 
 function paint() {
@@ -154,9 +217,9 @@ function paint() {
   const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
   const pct = state.total ? Number(state.sold * 10000n / state.total) / 100 : 0;
 
-  set('r-sold', state.sold.toLocaleString('en-US'));
-  set('r-total', state.total.toLocaleString('en-US'));
-  set('r-left', state.remaining.toLocaleString('en-US'));
+  set('r-sold', state.sold.toLocaleString(LOCALE));
+  set('r-total', state.total.toLocaleString(LOCALE));
+  set('r-left', state.remaining.toLocaleString(LOCALE));
   set('r-price', fmtUSDC(state.price, 2));
   set('r-pot', fmtUSDC(state.sold * state.price, 0));
   set('r-round', state.round.toString());
@@ -164,6 +227,39 @@ function paint() {
   const bar = $('r-fill'); if (bar) bar.style.width = pct + '%';
 
   if (state.pending) show($('draw-note')); else hide($('draw-note'));
+
+  /* The projection panel. Its markup ships with the full-round figures, so the
+     page reads correctly before the raffle opens; from here on it reflects the
+     tickets actually sold. */
+  const box = $('projection');
+  const p = project(state);
+  if (p.kind === 'empty') {
+    set('pj-winners', '—');
+    set('pj-prize', '—');
+    set('pj-watch', t(box, 'tEmptyWatch', 'Not yet — nothing has been sold'));
+    set('pj-odds', '—');
+    set('pj-context', t(box, 'tEmptyContext', 'No tickets have been sold in this round yet.'));
+  } else if (p.kind === 'cancelled') {
+    set('pj-winners', t(box, 'tCancelledWinners', 'None — the round would be cancelled'));
+    set('pj-prize', fmtUSDC(p.refund, 2));
+    set('pj-watch', t(box, 'tNo', 'No'));
+    set('pj-odds', '—');
+    set('pj-context', t(box, 'tCancelledContext', '', {
+      min: state.minTickets.toLocaleString(LOCALE),
+      refund: fmtUSDC(p.refund, 2),
+      price: fmtUSDC(state.price, 2),
+      more: (state.minTickets - state.sold).toLocaleString(LOCALE),
+    }));
+  } else {
+    set('pj-winners', p.winners.toLocaleString(LOCALE));
+    set('pj-prize', fmtUSDC(p.cashPrize, 2));
+    set('pj-watch', p.watch
+      ? t(box, 'tAwarded', 'Awarded')
+      : t(box, 'tNotAwarded', '', { floor: fmtUSDC(state.watchFloor, 0) }));
+    set('pj-odds', oddsText(box, state.sold, p.winners));
+    set('pj-context', t(box, p.watch ? 'tContext' : 'tContextNoWatch', '',
+      { sold: state.sold.toLocaleString(LOCALE) }));
+  }
 }
 
 async function loadYou() {
@@ -173,7 +269,7 @@ async function loadYou() {
   ]);
   const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
   set('you-addr', account.slice(0, 6) + '…' + account.slice(-4));
-  set('you-tickets', decUint(r[0]).toLocaleString('en-US'));
+  set('you-tickets', decUint(r[0]).toLocaleString(LOCALE));
   set('you-usdc', fmtUSDC(decUint(r[1]), 2));
   show($('you'));
 }
