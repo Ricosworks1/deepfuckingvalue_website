@@ -1836,8 +1836,8 @@
    "text": "<0>No full third-party audit has been carried out.</0> We would rather tell\n      you that than let you assume otherwise. What exists instead: the source is\n      <1>verified\n      on Etherscan</1>, so you can read every line before you enter; 48 unit tests and 43\n      adversarial ones; seven invariants held across roughly 500,000 random sequences of calls;\n      and two complete rehearsals on mainnet with real money.",
    "kind": "block"
   },
-  "042d9da701": {
-   "text": "The scan reports and the full test and design documentation are available on request from\n      the DFV DAO: <0>deeepfckingvalue@gmail.com</0>",
+  "989ff03cf8": {
+   "text": "The scan reports and the full test and design documentation are available on request from\n      the DFV DAO:\n      <!--email_off--><0>deeepfckingvalue@gmail.com</0><!--/email_off-->",
    "kind": "block"
   },
   "2055c9b849": {
@@ -4468,7 +4468,7 @@
     "kind": "block"
    },
    {
-    "hash": "042d9da701",
+    "hash": "989ff03cf8",
     "kind": "block"
    },
    {
