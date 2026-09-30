@@ -38,9 +38,14 @@
 
 'use strict';
 
-/* The production raffle. Empty until it is deployed and audited — while it is
-   empty this page shows the "not open yet" state and can send nothing at all. */
-const RAFFLE = '';
+/* The production raffle, live on Ethereum mainnet since 30 September 2026:
+   deployed at block 26,090,539, source verified on Etherscan, and every
+   immutable read back off-chain and matched against the contract repo's
+   config before this line was filled in.
+
+   While this constant is empty the page shows its "not open yet" state and
+   wires up no handlers, so it can send nothing at all. */
+const RAFFLE = '0xcF5f2525c4e8B1328223B9AbC967FFFb800bf17C';
 
 const USDC  = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
 const CHAIN = '0x1';                 // Ethereum mainnet

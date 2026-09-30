@@ -81,10 +81,16 @@ gains or loses JavaScript needs its family in `headers.py` updated to match.
 cost of the tickets being bought — never unlimited — and `enter(count)`.
 `enter` credits `msg.sender`, so there is no recipient argument to redirect.
 
-**`const RAFFLE = ''` is deliberate.** The production contract is not deployed
-yet. While that constant is empty the page shows its "not open yet" state and
-wires up no handlers, so it can send nothing at all. Filling it in is the switch
-that opens the raffle: do it only once the contract is deployed and audited.
+**`RAFFLE` is now filled in and the raffle is open.** It holds
+`0xcF5f2525c4e8B1328223B9AbC967FFFb800bf17C`, live on Ethereum mainnet since
+30 September 2026 (block 26,090,539, verified on Etherscan). Before that line was
+filled in, every immutable was read back off-chain and matched against `MAINNET`
+in `config/rounds.ts` of the `dfv-raffle` repo, and the eight `data-*` fallbacks
+on `#calc` were checked against the same values.
+
+While that constant is empty the page shows its "not open yet" state and wires up
+no handlers, so it can send nothing at all. Emptying it is the switch that closes
+the raffle again.
 
 The contract lives in a separate repo (`dfv-raffle`). The rehearsal the proof
 page documents settled on Ethereum mainnet on 4 September 2026 — those figures
