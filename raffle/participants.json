@@ -1,10 +1,17 @@
 {
- "generatedAt": "2026-09-30T13:40:48.196Z",
+ "generatedAt": "2026-09-30T19:08:29.387Z",
  "raffle": "0xcF5f2525c4e8B1328223B9AbC967FFFb800bf17C",
- "round": null,
- "ticketsSold": 0,
- "ticketsTotal": 0,
- "participants": [],
+ "round": 0,
+ "ticketsSold": 1,
+ "ticketsTotal": 10000,
+ "ticketPriceUsdc": 100,
+ "participants": [
+  {
+   "address": "0x01031ea895b673925344535796c928791f461750",
+   "tickets": 1,
+   "share": 100
+  }
+ ],
  "complete": true,
- "note": "the round is open and no tickets have been sold yet"
+ "note": null
 }
