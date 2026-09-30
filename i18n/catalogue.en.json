@@ -1824,8 +1824,24 @@
    "text": "See the rehearsal, transaction by transaction →",
    "kind": "text"
   },
-  "b83718146d": {
-   "text": "Round figures are read live from Ethereum mainnet through your own wallet — this page makes\n    no network requests of its own. The raffle is unaudited and not yet open.",
+  "a81407ec16": {
+   "text": "What review this code has had",
+   "kind": "text"
+  },
+  "29b205c173": {
+   "text": "<0>Pre-audit — Olympix.</0> Automated security detection over the contract,\n      run twice: once on the original code, then again on the repairs. Six findings the first\n      time, every one fixed — and the second pass earned its keep by catching a defect inside\n      one of those fixes.",
+   "kind": "block"
+  },
+  "21cc0c3275": {
+   "text": "<0>No full third-party audit has been carried out.</0> We would rather tell\n      you that than let you assume otherwise. What exists instead: the source is\n      <1>verified\n      on Etherscan</1>, so you can read every line before you enter; 48 unit tests and 43\n      adversarial ones; seven invariants held across roughly 500,000 random sequences of calls;\n      and two complete rehearsals on mainnet with real money.",
+   "kind": "block"
+  },
+  "042d9da701": {
+   "text": "The scan reports and the full test and design documentation are available on request from\n      the DFV DAO: <0>deeepfckingvalue@gmail.com</0>",
+   "kind": "block"
+  },
+  "2055c9b849": {
+   "text": "Round figures are read live from Ethereum mainnet through your own wallet — this page makes\n    no network requests of its own. The raffle has had automated security scanning but no full\n    third-party audit.",
    "kind": "text"
   },
   "feb5188993": {
@@ -4440,7 +4456,23 @@
     "kind": "text"
    },
    {
-    "hash": "b83718146d",
+    "hash": "a81407ec16",
+    "kind": "text"
+   },
+   {
+    "hash": "29b205c173",
+    "kind": "block"
+   },
+   {
+    "hash": "21cc0c3275",
+    "kind": "block"
+   },
+   {
+    "hash": "042d9da701",
+    "kind": "block"
+   },
+   {
+    "hash": "2055c9b849",
     "kind": "text"
    }
   ],
