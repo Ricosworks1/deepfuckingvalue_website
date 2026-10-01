@@ -656,7 +656,22 @@ function boot() {
      we paint from those until the chain answers. Up to an hour stale, and
      replaced the moment a wallet is present. */
   paintFromMarkup();
-  if (window.ethereum) loadRound().catch(function () {});
+
+  if (!window.ethereum) {
+    /* Telling a phone user to "install MetaMask" is wrong advice — they often
+       have it, but Safari and Chrome inject no provider, so only the wallet's
+       own browser can reach this page. The deep link is built from the current
+       URL so each language sends the visitor back to its own page rather than
+       to the English one. */
+    const mm = $('mm-link');
+    if (mm) mm.href = 'https://metamask.app.link/dapp/' + location.host + location.pathname;
+    show($('nowallet'));
+    const btn = $('connect');
+    if (btn) btn.disabled = true;
+    return;
+  }
+
+  loadRound().catch(function () {});
 }
 
 document.addEventListener('DOMContentLoaded', boot);

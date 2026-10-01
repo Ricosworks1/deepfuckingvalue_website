@@ -1504,6 +1504,22 @@
    "text": "This is exactly how entering will work. The\n        buttons are switched off until the contract is deployed and audited —\n        there is nothing yet for them to send a transaction to.",
    "kind": "text"
   },
+  "6024d87da8": {
+   "text": "<0>No wallet found in this browser.</0> Entering the raffle means\n            signing a transaction, so a wallet is required — there is no way around that.",
+   "kind": "block"
+  },
+  "87b0c3fc21": {
+   "text": "<0>On a phone:</0> you probably have a wallet already, but Safari and\n            Chrome cannot see it. Open this page inside your wallet's own browser instead.\n            <1>Open this\n            page in MetaMask &rarr;</1>",
+   "kind": "block"
+  },
+  "c6ae8ac823": {
+   "text": "<0>On a computer:</0> install MetaMask or Rabby, then reload this page.",
+   "kind": "block"
+  },
+  "db16f9c67e": {
+   "text": "Everything above — the round, the odds, who is in it — is readable without a\n            wallet. Only buying needs one.",
+   "kind": "text"
+  },
   "6faa30941b": {
    "text": "connect to see",
    "kind": "text"
@@ -4041,6 +4057,22 @@
    },
    {
     "hash": "ffee40873d",
+    "kind": "text"
+   },
+   {
+    "hash": "6024d87da8",
+    "kind": "block"
+   },
+   {
+    "hash": "87b0c3fc21",
+    "kind": "block"
+   },
+   {
+    "hash": "c6ae8ac823",
+    "kind": "block"
+   },
+   {
+    "hash": "db16f9c67e",
     "kind": "text"
    },
    {

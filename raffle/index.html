@@ -272,6 +272,26 @@
         <button class="btn" type="button" id="connect" disabled>Connect wallet</button>
         <div class="msg" id="connect-msg" hidden></div>
 
+        <div class="status" id="nowallet" hidden>
+          <p>
+            <strong>No wallet found in this browser.</strong> Entering the raffle means
+            signing a transaction, so a wallet is required — there is no way around that.
+          </p>
+          <p>
+            <strong>On a phone:</strong> you probably have a wallet already, but Safari and
+            Chrome cannot see it. Open this page inside your wallet's own browser instead.
+            <a id="mm-link" href="https://metamask.app.link/dapp/dfv.fun/raffle/">Open this
+            page in MetaMask &rarr;</a>
+          </p>
+          <p>
+            <strong>On a computer:</strong> install MetaMask or Rabby, then reload this page.
+          </p>
+          <p>
+            Everything above — the round, the odds, who is in it — is readable without a
+            wallet. Only buying needs one.
+          </p>
+        </div>
+
         <dl class="kv" id="you" hidden>
           <dt>Your address</dt><dd id="you-addr">connect to see</dd>
           <dt>Your tickets this round</dt><dd id="you-tickets">connect to see</dd>
