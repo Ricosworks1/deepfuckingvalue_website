@@ -592,6 +592,29 @@ function wireCalc() {
 
 /* ---------- boot ---------- */
 
+/* Build a state object from the data-* the build step leaves in the markup.
+   The six immutables are already on #calc; only sold and round change. */
+function paintFromMarkup() {
+  const box = $('calc');
+  if (!box) return;
+  const n = (attr) => {
+    const v = box.getAttribute(attr);
+    return v === null || v === '' ? null : BigInt(v);
+  };
+  const sold = n('data-sold'), total = n('data-tickets'), price = n('data-price');
+  if (sold === null || total === null || price === null) return;
+  state = {
+    sold: sold, total: total, price: price,
+    remaining: total > sold ? total - sold : 0n,
+    pending: false,
+    round: n('data-round') === null ? 0n : n('data-round'),
+    prizeBps: n('data-prize-bps'), winners: n('data-winners'),
+    watchFloor: n('data-watch-floor'), watchValue: n('data-watch-value'),
+    minTickets: n('data-min-tickets'), refundBps: n('data-refund-bps'),
+  };
+  paint();
+}
+
 function boot() {
   /* The entry panel is always rendered, so the page shows exactly how entering
      will work. What changes is whether it is connected to anything.
@@ -621,7 +644,18 @@ function boot() {
     window.ethereum.on('accountsChanged', function () { location.reload(); });
     window.ethereum.on('chainChanged', function () { location.reload(); });
   }
-  // Read the round without asking for permission first.
+  /* With a wallet we read the round straight off the chain. Without one —
+     every phone browser, every desktop without an extension — there is no way
+     to reach the chain at all: connect-src is 'none' by design, so this page
+     cannot fetch anything itself. It used to leave the panel at its hardcoded
+     zeros, so a visitor without a wallet saw "0 of 10,000 tickets sold" on a
+     round that was live, directly above a table listing the people in it.
+
+     scripts/build-raffle.mjs now bakes the two changing numbers into the
+     markup hourly, from the same participants.json that fills that table, and
+     we paint from those until the chain answers. Up to an hour stale, and
+     replaced the moment a wallet is present. */
+  paintFromMarkup();
   if (window.ethereum) loadRound().catch(function () {});
 }
 

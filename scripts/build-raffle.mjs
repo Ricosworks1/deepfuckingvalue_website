@@ -50,6 +50,25 @@ let out = page.slice(0, a + START.length) +
           (rows ? '\n' + rows + '\n' : '') + page.slice(b);
 out = setHidden(out, 'p-empty',   data.participants.length > 0);
 out = setHidden(out, 'p-partial', data.complete !== false);
+
+/* The "This round" panel is painted by app.js from the chain — but only when
+   the visitor has a wallet. A phone browser has no provider and this page may
+   not fetch anything itself (connect-src 'none'), so without these two numbers
+   in the markup it showed "0 of 10,000 sold" on a live round. app.js paints
+   from them first and the chain overwrites them whenever it can.
+
+   Only the two that change are written. The six immutables beside them are
+   hand-written and must not be touched here: if the contract's configuration
+   ever changed, a build step quietly rewriting them would hide the mismatch
+   this page is supposed to make obvious. */
+const setAttr = (html, attr, value) => {
+  const re = new RegExp(`(id="calc"[\\s\\S]*?)${attr}="[^"]*"`);
+  if (!re.test(html)) { console.error(`${attr} not found on #calc`); process.exit(1); }
+  return html.replace(re, `$1${attr}="${value}"`);
+};
+out = setAttr(out, 'data-sold',  data.ticketsSold);
+out = setAttr(out, 'data-round', data.round ?? 0);
 writeFileSync(PAGE, out);
 console.log(`${PAGE}: ${data.participants.length} wallet(s), ` +
-            `${data.ticketsSold.toLocaleString('en-US')} tickets, complete=${data.complete}`);
+            `${data.ticketsSold.toLocaleString('en-US')} tickets, ` +
+            `round ${data.round ?? 0}, complete=${data.complete}`);
