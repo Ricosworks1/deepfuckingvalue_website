@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:59:42.187Z",
+  "generatedAt": "2026-10-05T00:33:43.830Z",
   "addresses": {
     "token": "0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07",
     "dao": "0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508",
@@ -21,11 +21,11 @@
   "supply": {
     "total": 138840000000,
     "inPool": 117516113272.3888,
-    "inVesting": 20770579488.773304,
+    "inVesting": 20765565399.458233,
     "inTreasury": 491353345.96,
     "inDao": 0,
     "inTimelock": 0,
-    "potentiallyVotable": 553307238.8379021
+    "potentiallyVotable": 558321328.1529732
   },
   "treasury": {
     "address": "0xaF786e8cDD7E4390BD629bfDec8f090268FE2934",
