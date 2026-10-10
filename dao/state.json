@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T01:37:07.508Z",
+  "generatedAt": "2026-10-10T01:34:35.714Z",
   "addresses": {
     "token": "0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07",
     "dao": "0xFa85F00e72B4EfD4d02BB252CdAE23EeE8294508",
@@ -20,12 +20,12 @@
   },
   "supply": {
     "total": 138840000000,
-    "inPool": 117518113272.38878,
-    "inVesting": 20765565399.458233,
+    "inPool": 117521113272.3888,
+    "inVesting": 20763644356.809834,
     "inTreasury": 491353345.96,
     "inDao": 0,
     "inTimelock": 0,
-    "potentiallyVotable": 556321328.1529884
+    "potentiallyVotable": 555242370.8013725
   },
   "treasury": {
     "address": "0xaF786e8cDD7E4390BD629bfDec8f090268FE2934",
@@ -42,6 +42,6 @@
     "threshold": 2,
     "delegate": "0x0000000000000000000000000000000000000000"
   },
-  "price": 0.0002234312007084721,
+  "price": 0.00022095729603509735,
   "proposals": []
 }
