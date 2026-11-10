@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-02T01:20:58.141Z",
+  "generatedAt": "2026-11-10T22:09:27.883Z",
   "token": "0x92513406F8AE28D83Dfeb401BCb0c9Df9b690f07",
   "pool": "0x000000000004444c5dc75cB358380D2e3dE08A90",
   "quote": "USDC",
   "venue": "Uniswap V4",
-  "rpcCalls": 54,
+  "rpcCalls": 63,
   "trades": [
     {
       "hash": "0xf917700e70549217dbf72af38fe1e5b853e2bbd5c351bd96f5d19c829693b718",
@@ -475,6 +475,96 @@
       "dfv": 5380732.02,
       "usdc": 451.96024,
       "gasUsed": 240920
+    },
+    {
+      "hash": "0xe2dabeab65ad78df234935f9ea6e776479663d6125dd358145ca94e13e371c6e",
+      "block": 26382108,
+      "timestamp": "2026-11-10T04:26:35.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 300000,
+      "usdc": 0,
+      "gasUsed": 230211
+    },
+    {
+      "hash": "0x57a5fb7485113db2f2b70f818cb5958301788731ca55b207e81bac190f05633b",
+      "block": 26382112,
+      "timestamp": "2026-11-10T04:27:23.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 400000,
+      "usdc": 0,
+      "gasUsed": 213478
+    },
+    {
+      "hash": "0x2524f06259a29b3d8583452bd4ce08ca5ebd3c2f14d6b915f289bb93d090fdf0",
+      "block": 26382119,
+      "timestamp": "2026-11-10T04:28:47.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 350000,
+      "usdc": 0,
+      "gasUsed": 212637
+    },
+    {
+      "hash": "0xe05cf2f20d3b4ab50f5b7c3d25199029b2e3fa15e4ac0fe0e4b477cf94078516",
+      "block": 26382126,
+      "timestamp": "2026-11-10T04:30:11.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 375000,
+      "usdc": 0,
+      "gasUsed": 213506
+    },
+    {
+      "hash": "0xdd1bd2df434d4b47bd9bf3d20519199b3de3d0673bea0cce7ac7d9a38f4d100a",
+      "block": 26382205,
+      "timestamp": "2026-11-10T04:46:11.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 400000,
+      "usdc": 0,
+      "gasUsed": 212585
+    },
+    {
+      "hash": "0xcdd22f7a9eaed05e8f0b8ba8d5e13de35c9fa5e553ccac68e4d381fdfb821b17",
+      "block": 26382222,
+      "timestamp": "2026-11-10T04:49:35.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 437453.2534246575,
+      "usdc": 0,
+      "gasUsed": 213586
+    },
+    {
+      "hash": "0xc966112ed9eef31cdaf1fdbd8021612439210c572910ce4367fa29950ef7a8db",
+      "block": 26382229,
+      "timestamp": "2026-11-10T04:50:59.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 328089.94006849313,
+      "usdc": 0,
+      "gasUsed": 213614
+    },
+    {
+      "hash": "0x4df85b1aa3dc6d7df10610cf5e6d6058abafc02a21a3756c0fc0bb16527e7ecc",
+      "block": 26382250,
+      "timestamp": "2026-11-10T04:55:11.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 492134.9101027397,
+      "usdc": 0,
+      "gasUsed": 213618
+    },
+    {
+      "hash": "0x3efbbb6e78cd06f49a68832c8a4e1d54cecd6a30c1833009721f0a4b44cc07ae",
+      "block": 26382255,
+      "timestamp": "2026-11-10T04:56:11.000Z",
+      "trader": "0x4bd6300fc61fa86b3d98a73cee89bb54140b45e3",
+      "side": "sell",
+      "dfv": 492134.9101027397,
+      "usdc": 0,
+      "gasUsed": 208910
     }
   ],
   "liquidity": [
